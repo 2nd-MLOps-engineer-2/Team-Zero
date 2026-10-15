@@ -1,0 +1,35 @@
+# Local datasets and generated artifacts (keep the files on this PC).
+/data/
+/output/
+/tmp/
+
+# Python environments and caches.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local pipeline runs, Delta storage, and database files.
+runs/
+LATEST_RUN.txt
+_delta_log/
+*.parquet
+*.parquet.crc
+*.db
+*.sqlite
+*.sqlite3
+*.log
+
+# Local credentials; retain shareable example configurations.
+.env
+.env.*
+!.env.example
+!.env.template
+
+# Operating system files.
+.DS_Store
+Thumbs.db
+Desktop.ini
