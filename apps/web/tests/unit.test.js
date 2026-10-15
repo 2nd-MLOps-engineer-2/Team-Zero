@@ -5,6 +5,7 @@ import { integer, ratio, csv, escape } from '../src/format.js';
 import { validate, dashboard } from '../src/api.js';
 import { exportRows } from '../src/export.js';
 import { chart } from '../src/charts.js';
+import { normalizeCRow, stateLabel, jointLabel } from '../src/c-contract.js';
 
 const query={stock_cd:'000660',market:'',start:'2026-06-01',as_of:'2026-06-30',year:'all',report:'11011',basis:'CFS',scenario:'normal'};
 test('large integer precision, NULL and zero stay distinct',()=>{
@@ -57,4 +58,18 @@ test('NULL creates chart gaps rather than connecting across missing points',()=>
 test('aborted requests cannot return data',async()=>{
  const c=new AbortController(); const pending=dashboard(query,c.signal);c.abort();
  await assert.rejects(pending,{name:'AbortError'});
+});
+test('C decimal strings, blank values and classification are mapped without recalculation',()=>{
+ const row=normalizeCRow({stock_cd:'005930',trd_dt:'2026-06-30',rev_yoy_rt:'0.10880093',event_excess_rt:'0.32769823',co_move_cd:'IMPROVE_STRONG',event_base_dt:'2026-03-09',frgn_flow_20d_rt:'',joint_improve_yn:'N'},'compare');
+ assert.equal(row.revenue_growth_rt,'0.10880093');assert.equal(row.frgn_flow_20d_rt,null);
+ assert.equal(row.observation_start,'2026-03-09');assert.match(row.classification,/강세 동행/);
+ assert.equal(ratio(row.revenue_growth_rt),'10.88 %');assert.equal(ratio(row.excess_return_rt,'%p'),'32.77 %p');
+ assert.equal(jointLabel('N'),'조건 미충족');assert.equal(jointLabel(null),'판단 불가');
+ for(const code of ['PRD_UNVERIFIED','DENOM_ZERO','NEG_BASE','WINDOW_SHORT','NO_PRE_EVENT_PRICE'])assert.notEqual(stateLabel(code),code);
+});
+test('sample price windows begin at 100 on the first requested observation',async()=>{
+ const d=await dashboard({...query,start:'2026-06-12'});
+ assert.equal(d.meta.price_base_date,'2026-06-15');
+ assert.equal(d.daily[0].stock_base100,100);assert.equal(d.daily[0].market_base100,100);
+ assert.equal(d.daily[0].frgn_flow_20d_rt,'0.014');
 });

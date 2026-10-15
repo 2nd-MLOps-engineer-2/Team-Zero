@@ -2,6 +2,20 @@
 
 작성: A 이어진 / 2026-10-15 / **제안·합성 구현 검증, B/C 합의 전**. G02·G03 / M08·M09·M12·M13.
 
+## G03 수신 검토 후 추가 사항
+
+C 고정 전달 SHA fb1f802c88e2d5b275c737200aa392deac0e628b(c-gold-0.1.0)의 실제 샘플·시안을 확인했다. 아래 기존 v1 내용보다 이 추가 사항이 우선한다.
+
+- rev_yoy_rt → revenue_growth_rt, event_excess_rt → excess_return_rt, event_base_dt → observation_start, trd_dt → as_of/observation_end(비교/근거)의 표현 매핑 지원. 원문 C 필드·소수 문자열을 보존한다.
+- 비율은 유한 숫자 또는 소수 문자열 허용. C CSV 샘플의 빈 문자열은 null로 정규화. 0과 빈값 구분. UI에서 C 지표를 재계산하지 않는다.
+- C co_move_cd·*_stts_cd 한글 문구, joint_improve_yn Y/N/판단 불가 표시. 복합 조건은 2축 분류와 별도로 설명.
+- frgn_flow_20d_rt, inst_flow_20d_rt를 %로 표시하는 별도 차트/표 추가. 일별 수량(주) 및 보유율과 혼동하지 않음. *_flow_20d_stts_cd 유지.
+- 사분면 x=매출 YoY %, y=공시 후 초과성과 %p, 0축 표시, NULL 점 제외 후 표 유지. 마우스·키보드로 상세 이동. 공시일·기준일·event_base_dt tooltip 포함.
+- 가격 차트는 조회 첫 유효 관측=100, 동일 기준일을 제공하는 B/C 응답 필요. 합성 예제는 미리 생성한 구간별 기준값을 선택. C Gold에 정규화 필드는 없어 B 응답 계약에서 추가해야 함. 없는 기준값을 A가 실제 값처럼 만들지 않음.
+- 재무 x축=prd_end_dt, YTD/원(표)·조 원(차트). 분기 단독/연간이라는 잘못된 고정 라벨 제거.
+
+실제 C 재생성 CSV로 만든 테스트 응답에서 삼성전자 2026-06-30 매출 333605938000000원, rev_yoy_rt 0.10880093, event_excess_rt 0.32769823, joint_improve_yn=N을 화면·CSV와 대조했다. B API 대신 브라우저 응답 주입이며 실제 서버/DB 연동 검증은 아니다. 상세 S3-C-to-A.md 참고.
+
 실행 구현: apps/web/src/api.js, fixtures/sample.json. B의 공식 API·C 분석/시각화 계약을 대체하지 않는다. 기존 Gold 컬럼명(금액·수급·보고서 키 등)은 재사용하고 신규 분석 필드는 아래 제안으로 구분한다.
 
 ## 화면 동선·조회

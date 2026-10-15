@@ -10,7 +10,7 @@ with (root / 'data/03_C_integration_20261014/04_output/silver/s_stock.csv').open
 meta = dict(schema_version='a-proposal-1', synthetic=True, data_end='2026-06-30',
             input_version='03_C_integration_20261014 (종목 식별자만 참조)', calc_version='synthetic-ui-v1',
             scope='보유 20종목 · 합성 수치 · 비교 기준일 2026-06-30', price_base_date='2026-06-01', units='금액 원 / 수급 주 / 비율 소수')
-result = dict(meta=meta, stocks=stocks, compare=[], daily={}, financials={}, evidence={})
+result = dict(meta=meta, stocks=stocks, compare=[], daily={}, financials={}, evidence={},price_windows={})
 for i, stock in enumerate(stocks):
     code = stock['stock_cd']
     unavailable = i % 7 == 3
@@ -25,6 +25,9 @@ for i, stock in enumerate(stocks):
         stock_base100=val, market_base100=market,
         frgn_net_buy_qty=None if j == 2 else str((j-2)*12300),
         inst_net_buy_qty=str((3-j)*7600), frgn_hold_rt=None if j == 2 else 0.42+j/1000,
+        frgn_flow_20d_rt=None if j == 2 else ['0.012','-0.008','0','0.014','0.02','0.01'][j],
+        inst_flow_20d_rt=['-0.004','0.006','0','0.002','0.008','0.003'][j],
+        frgn_flow_20d_stts_cd='NO_DATA' if j == 2 else 'OK', inst_flow_20d_stts_cd='OK',
         status='미연결' if j == 2 else '가용', reason='합성 수급 누락 예시' if j == 2 else None)
         for j, (day, val, market) in enumerate([(1,100,100),(5,101,100.4),(10,99,101),(15,104,102),(22,106,102.5),(30,108,103)])]
     result['financials'][code] = [dict(stock_cd=code, fin_rpt_id=f'SAMPLE-{code}-{year}',
@@ -44,11 +47,20 @@ for i, stock in enumerate(stocks):
         denominator='10000000000000' if growth is not None else None,
         formula='(당기 YTD 매출 − 전년동기 YTD 매출) / 전년동기 YTD 매출. 공시 후 시장 대비 성과는 별도 제공값.',
         threshold='0 (제안)', calc_status='계산 불가' if growth is None else '합성 계산값',
+        joint_improve_yn=None if growth is None else ('Y' if i%4==0 else 'N'),
+        joint_improve_stts_cd='UNAVAILABLE' if growth is None else 'OK',
         review='공시 이후 구간의 길이, 기간 적격, 기업행동 및 수급 누락을 함께 검토하세요.',
         lineage=[dict(layer='Bronze',status='미확보',file=None,row=None,key=None,version=None,reason='원천 CSV·공시 ZIP 실물 미포함'),
                  dict(layer='Silver',status='검토 중',file=None,row=None,key=f'{code} / SAMPLE',version=None,reason='합성 검토 예시 · 원천 행 미제공'),
                  dict(layer='Silver',status='격리',file=None,row=None,key=None,version=None,reason='합성 격리 예시 · 해당 값 사용 제외'),
                  dict(layer='Gold',status='계산 불가' if growth is None else '합성',file=None,row=None,key=f'SAMPLE-{code}-2025',version='synthetic-ui-v1',reason='실제 Gold 계산 결과 아님')])
+    # Precomputed synthetic display windows, never a recomputation of real Gold metrics.
+    result['price_windows'][code]={}
+    for start in range(len(result['daily'][code])):
+        window=result['daily'][code][start:]
+        result['price_windows'][code][window[0]['trd_dt']]=[
+            dict(row,stock_base100=round(row['stock_base100']/window[0]['stock_base100']*100,8),
+                 market_base100=round(row['market_base100']/window[0]['market_base100']*100,8)) for row in window]
 target = web / 'src/fixtures/sample.json'
 target.parent.mkdir(parents=True, exist_ok=True)
 target.write_text(json.dumps(result, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
