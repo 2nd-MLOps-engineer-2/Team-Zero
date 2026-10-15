@@ -1,0 +1,29 @@
+{
+  "request": "/stocks/999999/daily",
+  "response": {
+    "error": {
+      "code": "STOCK_NOT_FOUND",
+      "message": "제공 범위에 없는 종목입니다."
+    },
+    "meta": {
+      "api_version": "1.1.0",
+      "data_version": "handoff-sha256:4d0ed112f2cc1418",
+      "source_backend": "csv",
+      "data_min_date": "2022-12-01",
+      "data_final_date": "2026-06-30",
+      "stock_count": 20,
+      "calculation_version": "c-gold-0.1.0",
+      "analysis_status": "AVAILABLE",
+      "synthetic": false,
+      "input_version": "handoff-sha256:4d0ed112f2cc1418",
+      "analysis_data_version": "c-artifact-sha256:b55ee9b1d38c84977dd39a29c9c8e9066fe3cbc43cdadc7fe1286e9de05e4d25",
+      "units": {
+        "amount": "KRW",
+        "quantity": "shares",
+        "ratio": "decimal_fraction"
+      },
+      "numeric_encoding": "decimal_string"
+    }
+  },
+  "fixture_source": "actual verified C calculation and immutable handoff"
+}

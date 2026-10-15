@@ -1,0 +1,70 @@
+{
+  "company": "005930",
+  "as_of": "2026-06-30",
+  "meta": {
+    "api_version": "1.1.0",
+    "data_version": "handoff-sha256:4d0ed112f2cc1418",
+    "source_backend": "csv",
+    "data_min_date": "2022-12-01",
+    "data_final_date": "2026-06-30",
+    "stock_count": 20,
+    "calculation_version": "c-gold-0.1.0",
+    "analysis_status": "AVAILABLE",
+    "units": {
+      "amount": "KRW",
+      "quantity": "shares",
+      "ratio": "decimal_fraction"
+    },
+    "numeric_encoding": "decimal_string",
+    "synthetic": false,
+    "input_version": "handoff-sha256:4d0ed112f2cc1418",
+    "analysis_data_version": "c-artifact-sha256:b55ee9b1d38c84977dd39a29c9c8e9066fe3cbc43cdadc7fe1286e9de05e4d25",
+    "requested_as_of": "2026-06-30",
+    "effective_as_of": "2026-06-30"
+  },
+  "observation": {
+    "stock_cd": "005930",
+    "trd_dt": "2026-06-30",
+    "close_prc": "333000.0000",
+    "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+    "dscl_dt": "2026-03-10",
+    "rev_ytd_amt": "333605938000000",
+    "op_prft_ytd_amt": "43601051000000",
+    "net_incm_ytd_amt": "45206805000000",
+    "op_cf_ytd_amt": "85315148000000",
+    "frgn_net_buy_qty": "-2129985",
+    "inst_net_buy_qty": "3141266"
+  },
+  "analysis": {
+    "rev_yoy_rt": "0.10880093",
+    "op_margin_rt": "0.13069627",
+    "event_excess_rt": "0.32769823",
+    "event_base_dt": "2026-03-09",
+    "co_move_cd": "IMPROVE_STRONG",
+    "co_move_stts_cd": "OK",
+    "joint_improve_yn": "N",
+    "joint_improve_stts_cd": "OK",
+    "frgn_flow_20d_rt": "-0.06459243",
+    "inst_flow_20d_rt": "0.00119083"
+  },
+  "chart_first": {
+    "stock_cd": "005930",
+    "trd_dt": "2026-06-01",
+    "close_prc": "355000.0000",
+    "idx_close_prc": "8788.3800",
+    "stock_base100": "100.00000000",
+    "market_base100": "100.00000000",
+    "price_base_date": "2026-06-01",
+    "price_chart_stts_cd": "OK"
+  },
+  "chart_last": {
+    "stock_cd": "005930",
+    "trd_dt": "2026-06-30",
+    "close_prc": "333000.0000",
+    "idx_close_prc": "8476.4800",
+    "stock_base100": "93.80281690",
+    "market_base100": "96.45099552",
+    "price_base_date": "2026-06-01",
+    "price_chart_stts_cd": "OK"
+  }
+}
