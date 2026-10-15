@@ -8,7 +8,7 @@ test('desktop shows cards, charts, evidence and source states',async({page})=>{
  await page.goto('/');await ready(page);
  await expect(page.locator('#comparison tbody tr')).toHaveCount(20);
  await expect(page.locator('.metric').first()).toContainText('11,200,000,000,000 원');
- await expect(page.locator('svg')).toHaveCount(4);
+ await expect(page.locator('svg')).toHaveCount(6);
  await expect(page.locator('#evidence')).toContainText('미확보');
  await expect(page.locator('#evidence')).toContainText('격리');
  await page.screenshot({path:'test-results/desktop.png',fullPage:true});
@@ -91,4 +91,19 @@ test('API mode uses supplied responses, escapes markup, and never falls back on 
  fail=true;await page.locator('#submit').click();
  await expect(page.getByRole('alert')).toContainText('500');await expect(page.locator('#export')).toBeDisabled();
  await expect(page.locator('.metric')).toHaveCount(0);
+});
+test('G03 scatter supports keyboard selection and distinguishes joint improvement',async({page})=>{
+ await page.goto('/');await ready(page);
+ const point=page.locator('.scatter circle').first();await point.focus();await page.keyboard.press('Enter');await ready(page);
+ await expect(page.locator('#detail h2')).toContainText('SK하이닉스');
+ await expect(page.locator('#evidence')).toContainText('복합 동반 개선:');
+ await expect(page.getByRole('heading',{name:'20관측 수급 비율'})).toBeVisible();
+ await expect(page.locator('.scatter')).toContainText('판단 불가 5개');
+});
+test('G03 price baseline follows requested range without altering flow ratios',async({page})=>{
+ await page.goto('/');await ready(page);
+ await page.fill('[name=start]','2026-06-12');await page.locator('[name=start]').blur();await ready(page);
+ await expect(page.locator('#detail')).toContainText('2026-06-15 = 100');
+ await page.locator('summary').click();
+ await expect(page.locator('details tbody tr').first()).toContainText('1.4 %');
 });

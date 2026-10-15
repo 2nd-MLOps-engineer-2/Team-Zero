@@ -2,6 +2,24 @@
 
 상태: 합성 샘플 화면 구현·검증 완료. 실제 B API 연동 및 C 지표/차트 의미 합의 대기.
 
+## C 전달본 검토 후 갱신
+
+C 고정 SHA fb1f802c88e2d5b275c737200aa392deac0e628b의 G01/G03를 검토했다. 사분면(매출 YoY % / 공시 후 초과성과 %p), 20관측 순매수 수량/거래량 비율, 복합 동반 개선 Y/N/판단 불가, C 상태 문구를 표시한다. 기존 일별 수량·외국인 보유율과 별도 차트다. 재무 가로축은 보고기간 종료일, 같은 보고서 유형의 YTD로 표시한다.
+
+src/c-contract.js는 C decimal 문자열·빈 문자열·필드 별칭을 표현용으로 매핑한다. 금융 계산은 하지 않고 원문 C 필드를 CSV에도 보존한다. 샘플 가격은 생성 시 미리 준비한 구간별 기준값을 조회하며, 실제 API는 B/C가 동일 시작일의 기준값을 제공해야 한다.
+
+C 결과를 재현한 환경에서만 실행하는 추가 검증:
+
+```powershell
+# 저장소 루트에서 실행. C 모듈은 별도 review 브랜치에서 받은 상태여야 함.
+python apps/web/scripts/prepare-c-review.py --c-output build/a-c-review-output --output build/a-c-review-bundle.json
+cd apps/web
+$env:C_REVIEW_BUNDLE = (Resolve-Path ../../build/a-c-review-bundle.json).Path
+npm run test:e2e
+```
+
+기본 E2E는 11개 실행 + C 실제 입력 1개 명시적 skip, C_REVIEW_BUNDLE 제공 시 12개 모두 실행한다. 실제 C 입력은 build/에서만 보존하며 저장소/CI에 자동 업로드하지 않는다. CI는 샘플·모의 API 검사이고 실제 B 서버 검증 아님.
+
 ## 실행
 
 Node 22.12 이상(검증 24.21.0), npm 11.19.0. 이 폴더에서:
