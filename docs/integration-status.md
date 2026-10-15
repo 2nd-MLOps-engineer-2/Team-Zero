@@ -1,5 +1,7 @@
 # 단계별 통합 진행표
 
+**원격 병합 완료 — 2026-10-15:** PR #10 → integration (`81731cd1fafcc9c8604a95e401538295aa3ce449`). PR #4~#9 병합 완료, GitHub 통합/프론트 CI PASS. main은 미반영. [최종 결과와 남은 범위](handoffs/S5-integration.md). 아래 준비/미반영 기록은 이전 이력이다.
+
 **최신 통합 갱신:** B 1.1 고정 SHA와 C 검증 수정 3건을 A 작업 위에 병합하고 회귀검사를 통과했다. 이전 ZIP·미커밋·SHA 대기 기록은 역사 기록이다. 현재 판정·실행법·제한은 [S5 통합 기록](handoffs/S5-integration.md)을 따른다.
 
 

@@ -2,7 +2,7 @@
 
 ## 현재 판정
 
-고정 제공 데이터 기반 C 계산 → B API 1.1 → A 화면/CSV 통합 검증 PASS. 원격 integration 병합을 준비한 기록이다. main 반영 및 Bronze/MySQL 전체 재현 완료는 별도이며 이번 결과로 대신하지 않는다.
+고정 제공 데이터 기반 C 계산 → B API 1.1 → A 화면/CSV 통합 검증 PASS. **통합 PR #10을 원격 integration에 병합 완료했다.** 기능 병합 SHA `81731cd1fafcc9c8604a95e401538295aa3ce449`, 검증 소스 `fb74c253407fb124e3f4e6f04ba83880995374f3`. GitHub frontend 및 A B C integration checks 모두 PASS. PR #4/#5/#6도 포함 커밋이 integration에 도달해 병합 완료 상태가 됐다. C #7/#8/#9는 원래 review/s4-c-v1에도 각각 병합 완료. main 반영 및 Bronze/MySQL 전체 재현 완료는 별도이며 이번 결과로 대신하지 않는다.
 
 ## 포함 이력
 
@@ -54,3 +54,13 @@ npm --prefix apps/web run dev -- --port 5173 --strictPort
 ## 남은 전체 프로젝트 범위
 
 B의 G04 문서에는 원본/Delta/MySQL·복원 검증 결과가 기록되어 있으나 해당 외부 원본·실행 카탈로그·DB 자격정보는 A 환경에 없다. 이번에는 C 신규 Delta만 실제 재검증했다. 기존 58테이블 MySQL·덤프 복원·전체 Bronze 재현을 A에서 검증했다고 주장하지 않는다. 검토 가능한 B 실행 증빙을 확인한 뒤 최종 main 승격 판단에 포함한다. integration 병합은 기능 통합이며 main의 전체 완료 표시는 아니다.
+
+
+## 원격 최종 상태
+
+- 통합 PR: https://github.com/2nd-MLOps-engineer-2/Team-Zero/pull/10 (merged)
+- A·B·C 기능 PR #4/#5/#6: merged. C 검증 수정 PR #7/#8/#9: merged.
+- GitHub 검증: frontend run 38691439071, A B C integration run 38691439244 모두 success.
+- integration 기능 병합 SHA: `81731cd1fafcc9c8604a95e401538295aa3ce449`.
+- main: 아직 변경하지 않음. integration→main 초안 PR을 준비해 남은 외부 증빙/전체 수용 범위를 검토한다.
+- 작업 트리에 원본/비밀값/덤프 추가 없음. 추가 커밋은 이 최종 상태 기록이며 기능은 검증 소스와 동일하다.
