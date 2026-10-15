@@ -2,16 +2,16 @@
 
 **다른 역할의 결과를 받으면 이 문서에서 단계 → 전달 기록 → 고정 SHA → 실행법 → 검사 결과 순으로 확인한다.** [절차·브랜치 규칙](integration-workflow.md) · [전달 양식](handoffs/TEMPLATE.md).
 
-현재는 절차·양식 준비 단계다. 실제 구현 전달·수신 검증·기능 병합은 아직 없으며 빈 브랜치나 작성된 문서만으로 준비 완료를 표시하지 않는다.
+2026-10-15 B 실제 Delta·MySQL·기존 Gold API·덤프 복원 로컬 검증 완료. 고정 구현 전달은 `handoff/s4-b-to-a-v1` / `ba2aaf1008d52dc96d983f61cae40d8a628366a2`. 문서 후속 커밋은 feature/b-pipeline-api의 PR_PENDING. A·C 수신 검증과 integration/main 병합은 별도다.
 
 | 단계 | 합칠 내용 | 전달 → 확인 | 전달 브랜치·고정 SHA·PR | 수신 확인 브랜치·결과 | 상태·열린 의존성 |
 |---|---|---|---|---|---|
-| **S0 계약** | 지표·API·시각화·환경 계약, 정상/NULL/오류 예시 | B·C → A·B·C | 미등록 | 미등록 | 미착수 / 계약 작성·합의 |
-| **S1 Bronze** | 원본·명세·해시·AS-IS 근거, Bronze Delta | B 저장·C 진단 → C·B | 미등록 | 미등록 | 입력 미확보 / M01~M05 |
-| **S2 Silver** | Silver Delta·MySQL, 사전·키·기간·미해결 상태 | B 저장·C 검증 → C·B | 미등록 | 미등록 | 미착수 / M06~M08 |
-| **S3 Gold** | C 계산과 B 실행·저장, 분석·차트 데이터 | C → B 실행·A 해석 확인 | 미등록 | 미등록 | 미착수 / M09~M11 |
-| **S4 API→화면** | B의 실제 조회·품질·근거·다운로드 API | **B → A 연결 확인 / C 수치 확인** | [S4 전달 기록](handoffs/S4-B-to-A.md) / 브랜치·SHA·PR 미등록 | 미등록 | 미착수 / M12·M13 |
-| **S5 전체** | A 화면·B 서버/저장·C 계산·출처/검증·재현 | A·B·C → 공동 확인 | 미등록 | 미등록 | 미착수 / M14·G05·F01~F08 |
+| **S0 계약** | B API·환경 계약·샘플 | B → A·C | [API](../contracts/api.md)·[S4](handoffs/S4-B-to-A.md) | 미확인 | B 구현·검증 / C 분석·시각화 합의대기 |
+| **S1 Bronze** | 실제오염91CSV/인계18입력/28Delta | B → C | [G04](handoffs/G04-validation.md)·S4고정SHA | C 독립확인대기 | B 저장·복구재현 / 최초원본과정제인계구분 |
+| **S2 Silver** | 17Delta/MySQL·371437행 | B → C | [G04](handoffs/G04-validation.md)·S4고정SHA | C 독립확인대기 | B 전량대사PASS / 기간61·수급1검토유지 |
+| **S3 Gold** | 기존Gold2저장·API / 신규분석대기 | C → B·A | C 신규전달SHA미등록 | 신규계산미검증 | 사용자지시기존Gold제공 / 신규어댑터합성검사만 |
+| **S4 API→화면** | 실제조회·품질·근거·다운로드 | B → A·C | [S4](handoffs/S4-B-to-A.md) / `ba2aaf1008d52dc96d983f61cae40d8a628366a2` / PR_PENDING | A미확인 | B45자동·13HTTP·9MySQL API PASS / 수신확인대기 |
+| **S5 전체** | 화면·계산·API·재현 공동검수 | A·B·C | 미등록 | 미확인 | 미완료 / C신규분석·A화면·G05필요 |
 
 ## 갱신 시점과 책임
 

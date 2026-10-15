@@ -55,7 +55,7 @@ API·계산 규칙이 아직 없다는 이유로 다른 역할의 작업 전체�
 
 ## 실행 상태
 
-현재 실제 인계 데이터·기존 처리 코드·문서·역할 프롬프트·읽기 전용 무결성 검사 명령이 있다. 신규 서비스 실행 명령·lockfile·Docker 환경은 아직 없다. B01에서 실제 환경과 명령을 만들고 검증한 뒤 여기와 README에 등록한다. 고정 인계본의 기존 파이프라인은 외부 입력·DB를 요구하고 출력도 덮어쓰므로 그대로 실행하지 않는다.
+B의 Delta·MySQL·API·고정 환경·새 덤프 복원 검증이 구현됐다. [서비스 설치·시작·종료](backend/service/README.md)에서 `setup.ps1` 후 `run.py --backend csv`를 실행하면 저장소 데이터로 시작할 수 있다. 현재 PC는 `start_mysql_api.cmd`로 검증된 DB를 읽을 수 있다. [G04 검증](docs/handoffs/G04-validation.md)과 [S4 인계](docs/handoffs/S4-B-to-A.md)를 확인한다. A 화면 수신·C 신규 분석·S5 공동 검증은 대기다. Docker 환경은 만들지 않았다. 고정75파일 내부 코드를 그 위치에서 재실행하지 않는다.
 
 ## 문서 지도
 

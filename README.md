@@ -34,7 +34,7 @@ Team-Zero를 Codex 또는 Claude Code에서 열고 **자기 역할의 아래 문
 이 저장소의 AGENTS.md와 START_HERE.md를 읽고 prompts/C_analysis.md를 실행 지침으로 삼아 C Pandas 분석·시각화 작업을 구현·검증·인수인계까지 진행해 줘. 기존 변경을 보존하고, 없는 입력만 구체적으로 물어보면서 독립 작업은 계속해 줘.
 ```
 
-현재는 **실제 인계 데이터 75파일·기존 처리 코드·개발 시작 문서·역할 프롬프트**가 제공된다. 팀원은 clone 후 저장소 데이터로 작업을 시작한다. 신규 웹·API 서비스는 아직 구현 전이며, Bronze 입력 원본 등 빠진 입력은 아래 안내에서 구분한다.
+현재 고정 인계75파일과 기존 처리 코드에 더해 **B의 실제 Delta·MySQL·읽기 전용 API·덤프 복원 검증**이 준비됐다. [API 설치·실행](backend/service/README.md), [B→A 전달](docs/handoffs/S4-B-to-A.md), [검증](docs/handoffs/G04-validation.md)을 따른다. 팀원은 CSV 모드로 바로 시작할 수 있다. C 신규 분석 Gold와 A 화면 연결·공동 수신 검증은 대기 상태다.
 
 원래 과제인 **「레거시 데이터의 AI Ready Data 변환 및 표준 사전 구축」**에서 Bronze·Silver까지 완료된 데이터를 바탕으로, 목적별 지표와 분석 서비스를 제공하는 Gold를 완성하는 것이 현재 팀의 목표다.
 
@@ -130,7 +130,7 @@ python3 scripts/check_handoff.py
 
 - **[단계별 통합 진행표](docs/integration-status.md)**: S0 계약 → S1 Bronze → S2 Silver → S3 Gold → **S4 B API→A 화면** → S5 전체. 단계별 전달 브랜치·고정 SHA·PR·실행법·수신 확인 결과를 모은다.
 - **[브랜치·합치기·보고 절차](docs/integration-workflow.md)**: 각자 feature → 검사한 handoff → 받는 사람의 review → `integration` → S5 확인 후 `main`. B 결과를 받을 때 A는 자기 작업에서 review 브랜치를 만들어 B의 고정 SHA를 합친 뒤 확인한다.
-- **[B→A 바로 확인할 전달 기록](docs/handoffs/S4-B-to-A.md)**: B가 실제 실행법·API·샘플·검사를 채우고 A가 확인 결과를 남긴다. 현재 기능 전달은 미착수다.
+- **[B→A 바로 확인할 전달 기록](docs/handoffs/S4-B-to-A.md)**: B가 실제 실행법·API·샘플·검사를 채우고 A가 확인 결과를 남긴다. B 구현·로컬 검증 기록이 있으며 A의 수신 검증은 대기 상태다.
 
 - **[Bronze·Silver·Gold 누락·미구현 보완 업무](docs/missing-work.md)**: M01~M14에 확보할 자료, 추가할 문서·코드·검사, 역할별 책임과 완료 증빙을 지정했다. 각 역할 프롬프트가 이 업무를 함께 수행하도록 연결했다.
 

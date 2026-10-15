@@ -1,17 +1,22 @@
 # B 진행 기록 — 설호현 / 백엔드
 
-상태: 시작 전. [프롬프트](../../prompts/B_backend.md) · [체크북](../workbook.md).
+2026-10-15 상태: **기존 C Gold 기반 Delta·MySQL·API·새덤프 복원 로컬 검증 완료 / A·C 수신 검증 대기**. 활성 경로는 기존 `backend/medallion_pipeline/`과 신규 `backend/service/`를 재사용한다. 예정 apps/api 등에 중복 구현하지 않았다.
 
-단계 책임: S0 API/환경, S1 Bronze, S2 Silver, S3 C 계산을 B review에서 실행 확인, **S4 handoff 브랜치·고정 SHA·PR·실행법을 A에 전달**, S5 저장/API 통합. [진행표](../integration-status.md)와 [S4 기록](../handoffs/S4-B-to-A.md)을 갱신한다.
+선행 integration `b9b73a49bf169b17e3c324fcc9e51564d350b1ea`, 작업 feature/b-pipeline-api. 최종 전달 브랜치·SHA·원격 상태는 [S4](../handoffs/S4-B-to-A.md). 버전·설치·실행·종료는 [환경 계약](../../contracts/runtime.md)·[서비스 안내](../../backend/service/README.md), 전량 결과는 [G04](../handoffs/G04-validation.md).
 
-필수 보완: [M01·M03~M06·M08·M09·M11·M12·M14 및 B 역할](../missing-work.md). 원천 확보 명세와 실제 3레이어 Delta·MySQL·API·재실행·덤프/복원 증빙을 추가한다. 항목별 상태·증빙·의존성을 아래 기록에 추가한다. 현재 모두 미완료다.
+| 작업 | 결과·증빙 | 남은 범위 |
+|---|---|---|
+| B01 | Python3.12,39패키지lock,Delta-rs/MySQL/API실행 | Spark미사용 명시,운영배포 별도 |
+| B02~B03 / M01·M03·M05 | 실제오염91CSV/원본ZIP보존·프로파일링·A/B18입력해시·Bronze28Delta | 공시기간61보고서 C검토유지 |
+| B04 / M06 | C사전·모델·DDL재사용,Meta11실제적재 | C의새분석모델미전달 |
+| B05~B06 / M06·M08 | 기존정제·저장API복구·C변환 재실행,Silver17/371437행 | A지표매핑/B복구전변환기는전달본사용,수급1건유지 |
+| B07 / M09·M11 | 기존Gold2Delta/17760행,신규C입력어댑터 구현·합성검사 | 신규분석Gold실제계산·적재는대기 |
+| B08·B10·B11 | MySQL58테이블/32609487값,SQL87/Pandas599PASS,해시기반재개 | 새run/스냅샷증분운영은별도 |
+| B09 / M12 | 비교·일별·재무·품질·근거·CSV·OpenAPI | A화면연결/C수치수신검증 |
+| B12 / M04·M14 | 새덤프4/새DB4복원58전량PASS,API9MySQL비교PASS,문서·샘플 | 과거덤프미확보,AI규격/G05공동확인 |
 
-구현 예정 경로: `apps/api/`, `pipelines/`, `infra/`. 아직 환경 고정·Delta·DB·API 실행 구현은 없다.
+M09의 B API/환경 계약은 구현했고 C계산/시각화 정의는 C가 작성한다. M11은 기존Gold 실제Delta/MySQL은 완료, 신규두테이블 실데이터 검증은 C입력대기다. M14의 B재현부분은 구현했으며 최종AI학습규격·화면대사까지 완료로 표시하지 않는다. 원본·새덤프·출력·비밀번호는 커밋하지 않는다. 기존75파일 SHA보존.
 
-데이터 준비: `data/03_C_integration_20261014/`에 실제 Silver·Gold·Meta와 DDL·기존 코드가 포함되어 있다. [데이터 안내](../data-guide.md) 참조. Bronze 입력 원본 18개·별도 덤프·원문 ZIP은 미포함이다.
+정확한 의미: NULL≠0, 수급단위주, 비율소수, 공시일<거래일, 당일제외, 기간/연결구분보존. 일별반복재무·기관합계와세부중복합산 금지. 기준일2026-06-30/20종목. 괴리분류·매매추천을 임의추가하지 않았다.
 
-| 작업 ID | 변경·증빙 경로 | 실행 명령·결과 | 기준 커밋/데이터 버전 | 남은 의존성 |
-|---|---|---|---|---|
-| B01~B12 | 미등록 | 미실행 | 미등록 | Bronze 원본·C 계산 계약·실행 환경 |
-
-버전·설치·실행·종료·복원법과 G01·G02·G04·G05 handoff를 구현 후 기록한다.
+현재 PC에서 이미 DB적재는 끝났다. Workbench에127.0.0.1:3306으로 접속해 `backend/service/inspect_database.sql`을 실행한다. 서비스는 start_api.cmd 또는 start_mysql_api.cmd로 시작,Ctrl+C종료. 팀원PC는 CSV모드부터 사용한다. 새복원검증은 verify_mysql.cmd(로컬암호),기존DB는보존되며새검증DB가추가된다.
