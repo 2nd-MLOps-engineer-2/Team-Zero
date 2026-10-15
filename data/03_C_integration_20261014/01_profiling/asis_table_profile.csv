@@ -1,0 +1,15 @@
+﻿src_team,table,rows,cols,declared_key,key_dup_rows,full_row_dup_rows,null_cells,null_cell_rate
+A,company_master,20,8,corp_code,0,0,0,0.0
+A,disclosures,11748,15,rcept_no,0,0,29453,0.167138
+A,disclosure_documents,753,13,rcept_no,0,0,754,0.077025
+A,financial_summary,320,122,financial_report_id,0,0,6047,0.154892
+A,financial_items,66729,29,financial_item_id,0,0,354241,0.183057
+A,metric_definitions,36,7,metric,0,0,46,0.18254
+B,security_master,20,23,symbol,0,0,100,0.217391
+B,stock_daily_price,17440,18,symbol+trade_date,0,0,51434,0.163844
+B,market_index_daily,1744,17,index_code+trade_date,0,0,5122,0.17276
+B,investor_trading_daily,191829,19,symbol+trade_date+investor_type,0,0,639919,0.175573
+B,foreign_holding_daily,17439,16,symbol+trade_date,0,0,51833,0.185765
+B,cfd_daily,13719,17,symbol+trade_date,0,0,40775,0.174833
+B,price_investor_availability,17440,15,symbol+trade_date,0,0,86312,0.329939
+B,investor_source_daily,17439,18,symbol+trade_date,0,0,55553,0.176976

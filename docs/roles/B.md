@@ -1,0 +1,17 @@
+# B 진행 기록 — 설호현 / 백엔드
+
+상태: 시작 전. [프롬프트](../../prompts/B_backend.md) · [체크북](../workbook.md).
+
+단계 책임: S0 API/환경, S1 Bronze, S2 Silver, S3 C 계산을 B review에서 실행 확인, **S4 handoff 브랜치·고정 SHA·PR·실행법을 A에 전달**, S5 저장/API 통합. [진행표](../integration-status.md)와 [S4 기록](../handoffs/S4-B-to-A.md)을 갱신한다.
+
+필수 보완: [M01·M03~M06·M08·M09·M11·M12·M14 및 B 역할](../missing-work.md). 원천 확보 명세와 실제 3레이어 Delta·MySQL·API·재실행·덤프/복원 증빙을 추가한다. 항목별 상태·증빙·의존성을 아래 기록에 추가한다. 현재 모두 미완료다.
+
+구현 예정 경로: `apps/api/`, `pipelines/`, `infra/`. 아직 환경 고정·Delta·DB·API 실행 구현은 없다.
+
+데이터 준비: `data/03_C_integration_20261014/`에 실제 Silver·Gold·Meta와 DDL·기존 코드가 포함되어 있다. [데이터 안내](../data-guide.md) 참조. Bronze 입력 원본 18개·별도 덤프·원문 ZIP은 미포함이다.
+
+| 작업 ID | 변경·증빙 경로 | 실행 명령·결과 | 기준 커밋/데이터 버전 | 남은 의존성 |
+|---|---|---|---|---|
+| B01~B12 | 미등록 | 미실행 | 미등록 | Bronze 원본·C 계산 계약·실행 환경 |
+
+버전·설치·실행·종료·복원법과 G01·G02·G04·G05 handoff를 구현 후 기록한다.

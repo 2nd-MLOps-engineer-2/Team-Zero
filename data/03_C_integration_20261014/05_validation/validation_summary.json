@@ -1,0 +1,43 @@
+{
+  "total": 203,
+  "passed": 203,
+  "failed": 0,
+  "by_category": {
+    "V1 값 대사": {
+      "PASS": 5
+    },
+    "V1 건수 대사": {
+      "PASS": 19
+    },
+    "V2 출처 추적": {
+      "PASS": 6
+    },
+    "V2 키 무결성": {
+      "PASS": 41
+    },
+    "V3 표준 준수율": {
+      "PASS": 6
+    },
+    "V4 AS-IS→TO-BE": {
+      "PASS": 6
+    },
+    "V4 도메인 규칙": {
+      "PASS": 30
+    },
+    "V4 업무 규칙": {
+      "PASS": 16
+    },
+    "V4 코드 규칙": {
+      "PASS": 69
+    },
+    "V5 재실행 일관성": {
+      "PASS": 3
+    },
+    "V6 교차검증": {
+      "PASS": 2
+    }
+  },
+  "std_compliance_asis_pct": 2.92,
+  "std_compliance_tobe_pct": 100.0,
+  "domain_code_rule_violations_tobe": 0
+}

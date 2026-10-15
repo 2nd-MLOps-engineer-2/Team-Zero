@@ -1,0 +1,53 @@
+digraph G { graph [rankdir=LR, fontname="Noto Sans CJK KR", fontsize=20, labelloc=t, label="TEAM ZERO 개념 ERD (주제영역 · 엔터티 · 관계)", pad=0.4, nodesep=0.35, ranksep=0.9];
+node [shape=box, style="rounded,filled", fontname="Noto Sans CJK KR", fontsize=13, margin="0.18,0.08"]; edge [fontname="Noto Sans CJK KR", fontsize=10, color="#555555", arrowhead=none];
+subgraph cluster_0 { label="A · OpenDART (기업·공시·재무)"; style="rounded,filled"; fillcolor="#e8f0fb"; color="#bbbbbb"; fontsize=15;
+"s_corp" [label="기업", fillcolor="white"];
+"s_dscl" [label="공시", fillcolor="white"];
+"s_dscl_doc" [label="공시 원문 문서", fillcolor="white"];
+"s_fin_rpt" [label="재무 보고서", fillcolor="white"];
+"s_fin_mtrc_def" [label="재무 지표 정의", fillcolor="white"];
+"s_fin_mtrc" [label="재무 지표값", fillcolor="white"];
+"s_fin_item" [label="재무 계정 상세", fillcolor="white"];
+}
+subgraph cluster_1 { label="B · 토스증권 (종목·시세·수급)"; style="rounded,filled"; fillcolor="#fdeee6"; color="#bbbbbb"; fontsize=15;
+"s_stock" [label="종목", fillcolor="white"];
+"s_stock_daily_prc" [label="종목 일별 가격", fillcolor="white"];
+"s_idx_daily_prc" [label="지수 일별 가격", fillcolor="white"];
+"s_invstr_trd_daily" [label="투자자별 일별 매매", fillcolor="white"];
+"s_frgn_hold_daily" [label="외국인 보유 일별", fillcolor="white"];
+"s_cfd_bal_daily" [label="CFD 잔고 일별", fillcolor="white"];
+}
+subgraph cluster_2 { label="C · 통합·품질"; style="rounded,filled"; fillcolor="#eaf5ea"; color="#bbbbbb"; fontsize=15;
+"s_corp_stock_map" [label="기업-종목 매핑", fillcolor="white"];
+"s_conn_stts" [label="가격·수급 연결 상태", fillcolor="white"];
+"s_dq_issue" [label="데이터 품질 이슈", fillcolor="white"];
+"s_cmn_cd" [label="공통코드", fillcolor="white"];
+}
+subgraph cluster_3 { label="Gold · AI 활용"; style="rounded,filled"; fillcolor="#fbf4dd"; color="#bbbbbb"; fontsize=15;
+"g_ai_stock_daily" [label="AI 학습용 종목 일별 데이터셋", fillcolor="white"];
+"g_fin_rpt_mkt_smry" [label="재무 보고기간 시장 요약", fillcolor="white"];
+}
+"s_corp" -> "s_dscl" [label="N : 1", style=solid];
+"s_dscl" -> "s_dscl_doc" [label="N : 1", style=solid];
+"s_corp" -> "s_dscl_doc" [label="N : 1", style=solid];
+"s_corp" -> "s_fin_rpt" [label="N : 1", style=solid];
+"s_dscl" -> "s_fin_rpt" [label="N : 1 (논리)", style=dashed];
+"s_fin_rpt" -> "s_fin_mtrc" [label="N : 1", style=solid];
+"s_fin_mtrc_def" -> "s_fin_mtrc" [label="N : 1", style=solid];
+"s_fin_rpt" -> "s_fin_item" [label="N : 1", style=solid];
+"s_corp" -> "s_fin_item" [label="N : 1", style=solid];
+"s_stock" -> "s_stock_daily_prc" [label="N : 1", style=solid];
+"s_stock" -> "s_invstr_trd_daily" [label="N : 1", style=solid];
+"s_stock" -> "s_frgn_hold_daily" [label="N : 1", style=solid];
+"s_stock" -> "s_cfd_bal_daily" [label="N : 1", style=solid];
+"s_corp" -> "s_corp_stock_map" [label="N : 1", style=solid];
+"s_stock" -> "s_corp_stock_map" [label="N : 1", style=solid];
+"s_stock" -> "s_conn_stts" [label="N : 1", style=solid];
+"s_stock" -> "g_ai_stock_daily" [label="N : 1", style=solid];
+"s_fin_rpt" -> "g_ai_stock_daily" [label="N : 1", style=solid];
+"s_fin_rpt" -> "g_fin_rpt_mkt_smry" [label="N : 1", style=solid];
+"s_stock_daily_prc" -> "s_conn_stts" [label="N : 1 (논리)", style=dashed];
+"s_invstr_trd_daily" -> "s_conn_stts" [label="N : 1 (논리)", style=dashed];
+"s_corp_stock_map" -> "s_stock" [label="1 : 1"];
+"g_ai_stock_daily" -> "s_conn_stts" [label="1 : 1", style=dashed];
+}

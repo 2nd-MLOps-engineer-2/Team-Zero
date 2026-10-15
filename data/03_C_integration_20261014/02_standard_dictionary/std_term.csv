@@ -1,0 +1,346 @@
+﻿layer_cd,tbl_nm,tbl_kor_nm,col_nm,term_kor_nm,dmn_nm,data_type_nm,null_allow_yn,pk_yn,cd_grp_id,asis_src_txt,word_combination,std_check
+SILVER,s_cmn_cd,공통코드,cd_grp_id,코드그룹 식별자,ID_V64,VARCHAR(64),N,Y,,,cd(코드) + grp(그룹) + id(식별자),OK
+SILVER,s_cmn_cd,공통코드,cd_val,코드값,CODE_VAL,VARCHAR(200),N,Y,,,cd(코드) + val(값),OK
+SILVER,s_cmn_cd,공통코드,cd_nm,코드명,NAME_V200,VARCHAR(200),N,N,,,cd(코드) + nm(명),OK
+SILVER,s_cmn_cd,공통코드,cd_desc_txt,코드 설명,TEXT_V2000,VARCHAR(2000),Y,N,,,cd(코드) + desc(설명) + txt(내용),OK
+SILVER,s_cmn_cd,공통코드,sort_ord_no,정렬 순서 번호,ROW_NO,INT,N,N,,,sort(정렬) + ord(순서) + no(번호),OK
+SILVER,s_cmn_cd,공통코드,asis_val_txt,현행(AS-IS) 값 목록,TEXT_V2000,VARCHAR(2000),Y,N,,,asis(현행) + val(값) + txt(내용),OK
+SILVER,s_corp,기업,corp_cd,기업 코드,CORP_CD,CHAR(8),N,Y,,company_master.corp_code,corp(기업) + cd(코드),OK
+SILVER,s_corp,기업,corp_nm,기업명,NAME_V200,VARCHAR(200),N,N,,company_master.corp_name,corp(기업) + nm(명),OK
+SILVER,s_corp,기업,corp_eng_nm,기업 영문명,NAME_V200,VARCHAR(200),N,N,,company_master.corp_eng_name,corp(기업) + eng(영문) + nm(명),OK
+SILVER,s_corp,기업,stock_cd,종목 코드,STOCK_CD,CHAR(6),N,N,,company_master.stock_code,stock(종목) + cd(코드),OK
+SILVER,s_corp,기업,chg_dt,변경 일자,DATE,DATE,N,N,,company_master.modify_date (YYYYMMDD→DATE),chg(변경) + dt(일자),OK
+SILVER,s_corp,기업,src_team_cd,원천 팀 코드,CODE_V50,VARCHAR(50),N,N,TEAM,(C 부여) A,src(원천) + team(팀) + cd(코드),OK
+SILVER,s_corp,기업,src_file_path,원천 파일 경로,PATH,VARCHAR(500),N,N,,_source_file,src(원천) + file(파일) + path(경로),OK
+SILVER,s_corp,기업,src_row_no,원천 행 번호,ROW_NO,INT,N,N,,_source_row,src(원천) + row(행) + no(번호),OK
+SILVER,s_corp,기업,src_ver,원천 버전,VERSION,VARCHAR(80),N,N,,_source_version,src(원천) + ver(버전),OK
+SILVER,s_corp,기업,pipln_ver,파이프라인 버전,VERSION,VARCHAR(80),N,N,,(C 부여),pipln(파이프라인) + ver(버전),OK
+SILVER,s_dscl,공시,rcept_no,접수 번호,RCEPT_NO,CHAR(14),N,Y,,disclosures.rcept_no,rcept(접수) + no(번호),OK
+SILVER,s_dscl,공시,corp_cd,기업 코드,CORP_CD,CHAR(8),N,N,,disclosures.corp_code,corp(기업) + cd(코드),OK
+SILVER,s_dscl,공시,corp_nm,기업명(공시 당시),NAME_V200,VARCHAR(200),N,N,,disclosures.corp_name,corp(기업) + nm(명),OK
+SILVER,s_dscl,공시,corp_cls_cd,법인구분 코드,CODE_V50,VARCHAR(50),N,N,CORP_CLS,disclosures.corp_cls,corp(기업) + cls(분류) + cd(코드),OK
+SILVER,s_dscl,공시,stock_cd,종목 코드,STOCK_CD,CHAR(6),N,N,,disclosures.stock_code,stock(종목) + cd(코드),OK
+SILVER,s_dscl,공시,rpt_nm,보고서명,NAME_V500,VARCHAR(500),N,N,,disclosures.report_nm,rpt(보고서) + nm(명),OK
+SILVER,s_dscl,공시,flr_nm,제출인명,NAME_V200,VARCHAR(200),N,N,,disclosures.flr_nm,flr(제출인) + nm(명),OK
+SILVER,s_dscl,공시,rcept_dt,접수 일자,DATE,DATE,N,N,,disclosures.rcept_dt (YYYYMMDD→DATE),rcept(접수) + dt(일자),OK
+SILVER,s_dscl,공시,rmk_txt,비고 내용,TEXT_V2000,VARCHAR(2000),Y,N,,disclosures.rm,rmk(비고) + txt(내용),OK
+SILVER,s_dscl,공시,src_team_cd,원천 팀 코드,CODE_V50,VARCHAR(50),N,N,TEAM,(C 부여) A,src(원천) + team(팀) + cd(코드),OK
+SILVER,s_dscl,공시,src_file_path,원천 파일 경로,PATH,VARCHAR(500),N,N,,_source_file,src(원천) + file(파일) + path(경로),OK
+SILVER,s_dscl,공시,src_row_no,원천 행 번호,ROW_NO,INT,N,N,,_source_row,src(원천) + row(행) + no(번호),OK
+SILVER,s_dscl,공시,src_ver,원천 버전,VERSION,VARCHAR(80),N,N,,_source_version,src(원천) + ver(버전),OK
+SILVER,s_dscl,공시,pipln_ver,파이프라인 버전,VERSION,VARCHAR(80),N,N,,(C 부여),pipln(파이프라인) + ver(버전),OK
+SILVER,s_dscl_doc,공시 원문 문서,rcept_no,접수 번호,RCEPT_NO,CHAR(14),N,Y,,disclosure_documents.rcept_no,rcept(접수) + no(번호),OK
+SILVER,s_dscl_doc,공시 원문 문서,corp_cd,기업 코드,CORP_CD,CHAR(8),N,N,,disclosure_documents.corp_code,corp(기업) + cd(코드),OK
+SILVER,s_dscl_doc,공시 원문 문서,doc_stts_cd,문서 상태 코드,CODE_V50,VARCHAR(50),N,N,DOC_STTS,disclosure_documents.status,doc(문서) + stts(상태) + cd(코드),OK
+SILVER,s_dscl_doc,공시 원문 문서,doc_zip_path,문서 압축파일 경로,PATH,VARCHAR(500),Y,N,,disclosure_documents.zip_path,doc(문서) + zip(압축) + path(경로),OK
+SILVER,s_dscl_doc,공시 원문 문서,doc_hash,문서 해시값,HASH,VARCHAR(80),Y,N,,disclosure_documents.sha256,doc(문서) + hash(해시값),OK
+SILVER,s_dscl_doc,공시 원문 문서,err_msg_txt,오류 메시지 내용,TEXT_V2000,VARCHAR(2000),Y,N,,disclosure_documents.error,err(오류) + msg(메시지) + txt(내용),OK
+SILVER,s_dscl_doc,공시 원문 문서,src_team_cd,원천 팀 코드,CODE_V50,VARCHAR(50),N,N,TEAM,(C 부여) A,src(원천) + team(팀) + cd(코드),OK
+SILVER,s_dscl_doc,공시 원문 문서,src_file_path,원천 파일 경로,PATH,VARCHAR(500),N,N,,_source_file,src(원천) + file(파일) + path(경로),OK
+SILVER,s_dscl_doc,공시 원문 문서,src_row_no,원천 행 번호,ROW_NO,INT,N,N,,_source_row,src(원천) + row(행) + no(번호),OK
+SILVER,s_dscl_doc,공시 원문 문서,src_ver,원천 버전,VERSION,VARCHAR(80),N,N,,_source_version,src(원천) + ver(버전),OK
+SILVER,s_dscl_doc,공시 원문 문서,pipln_ver,파이프라인 버전,VERSION,VARCHAR(80),N,N,,(C 부여),pipln(파이프라인) + ver(버전),OK
+SILVER,s_fin_rpt,재무 보고서,fin_rpt_id,재무 보고서 식별자,ID_V64,VARCHAR(64),N,Y,,summary.financial_report_id,fin(재무) + rpt(보고서) + id(식별자),OK
+SILVER,s_fin_rpt,재무 보고서,corp_cd,기업 코드,CORP_CD,CHAR(8),N,N,,summary.corp_code,corp(기업) + cd(코드),OK
+SILVER,s_fin_rpt,재무 보고서,bsns_yr,사업 연도,YEAR,CHAR(4),N,N,,summary.bsns_year,bsns(사업) + yr(연도),OK
+SILVER,s_fin_rpt,재무 보고서,rpt_cd,보고서 코드,CODE_V50,VARCHAR(50),N,N,RPT,summary.reprt_code,rpt(보고서) + cd(코드),OK
+SILVER,s_fin_rpt,재무 보고서,fs_div_cd,재무제표 구분 코드,CODE_V50,VARCHAR(50),N,N,FS_DIV,summary.fs_div,fs(재무제표) + div(구분) + cd(코드),OK
+SILVER,s_fin_rpt,재무 보고서,rcept_no,접수 번호,RCEPT_NO,CHAR(14),N,N,,summary.rcept_no,rcept(접수) + no(번호),OK
+SILVER,s_fin_rpt,재무 보고서,crncy_cd,통화 코드,CODE_V50,VARCHAR(50),N,N,CRNCY,summary.currency,crncy(통화) + cd(코드),OK
+SILVER,s_fin_rpt,재무 보고서,flow_prd_mm_cnt,흐름 기간 개월 건수,COUNT,INT,N,N,,summary.flow_period_months,flow(흐름) + prd(기간) + mm(개월) + cnt(건수),OK
+SILVER,s_fin_rpt,재무 보고서,prd_start_dt,기간 시작 일자(명목),DATE,DATE,N,N,,summary.period_start_nominal,prd(기간) + start(시작) + dt(일자),OK
+SILVER,s_fin_rpt,재무 보고서,prd_end_dt,기간 종료 일자(명목),DATE,DATE,N,N,,summary.period_end_nominal,prd(기간) + end(종료) + dt(일자),OK
+SILVER,s_fin_rpt,재무 보고서,dscl_join_stts_cd,공시 연결 상태 코드,CODE_V50,VARCHAR(50),N,N,DSCL_JOIN_STTS,summary.disclosure_join_status,dscl(공시) + join(조인) + stts(상태) + cd(코드),OK
+SILVER,s_fin_rpt,재무 보고서,cal_prd_stts_cd,달력 기간 상태 코드,CODE_V50,VARCHAR(50),N,N,CAL_PRD_STTS,summary.calendar_period_status,cal(달력) + prd(기간) + stts(상태) + cd(코드),OK
+SILVER,s_fin_rpt,재무 보고서,cf_prd_stts_cd,현금흐름 기간 상태 코드,CODE_V50,VARCHAR(50),N,N,CF_PRD_STTS,summary.cf_period_status,cf(현금흐름) + prd(기간) + stts(상태) + cd(코드),OK
+SILVER,s_fin_rpt,재무 보고서,pit_join_elig_yn,시점 조인 적격 여부,YN,CHAR(1),N,N,YN,summary.point_in_time_join_eligible (1/0→Y/N),pit(시점) + join(조인) + elig(적격) + yn(여부),OK
+SILVER,s_fin_rpt,재무 보고서,same_prd_cmpr_elig_yn,동일 기간 비교 적격 여부,YN,CHAR(1),N,N,YN,summary.same_period_comparison_eligible (1/0→Y/N),same(동일) + prd(기간) + cmpr(비교) + elig(적격) + yn(여부),OK
+SILVER,s_fin_rpt,재무 보고서,mtrc_review_cnt,지표 검토 건수,COUNT,INT,N,N,,summary.metric_review_count,mtrc(지표) + review(검토) + cnt(건수),OK
+SILVER,s_fin_rpt,재무 보고서,custom_map_cnt,사용자정의 매핑 건수,COUNT,INT,N,N,,summary.custom_mapped_count,custom(사용자정의) + map(매핑) + cnt(건수),OK
+SILVER,s_fin_rpt,재무 보고서,mtrc_conflict_cnt,지표 충돌 건수,COUNT,INT,N,N,,summary.metric_conflict_count,mtrc(지표) + conflict(충돌) + cnt(건수),OK
+SILVER,s_fin_rpt,재무 보고서,core_mtrc_miss_txt,핵심 지표 누락 내용,TEXT_V2000,VARCHAR(2000),Y,N,,summary.missing_core_metrics,core(핵심) + mtrc(지표) + miss(누락) + txt(내용),OK
+SILVER,s_fin_rpt,재무 보고서,src_team_cd,원천 팀 코드,CODE_V50,VARCHAR(50),N,N,TEAM,(C 부여) A,src(원천) + team(팀) + cd(코드),OK
+SILVER,s_fin_rpt,재무 보고서,src_file_path,원천 파일 경로,PATH,VARCHAR(500),N,N,,(C 부여) opendart_financial_summary_20_companies.csv,src(원천) + file(파일) + path(경로),OK
+SILVER,s_fin_rpt,재무 보고서,src_row_no,원천 행 번호,ROW_NO,INT,N,N,,(C 부여) 요약 CSV 데이터 행 번호,src(원천) + row(행) + no(번호),OK
+SILVER,s_fin_rpt,재무 보고서,src_ver,원천 버전,VERSION,VARCHAR(80),N,N,,summary.source_version,src(원천) + ver(버전),OK
+SILVER,s_fin_rpt,재무 보고서,pipln_ver,파이프라인 버전,VERSION,VARCHAR(80),N,N,,(C 부여),pipln(파이프라인) + ver(버전),OK
+SILVER,s_fin_mtrc_def,재무 지표 정의,mtrc_cd,지표 코드,CODE_V50,VARCHAR(50),N,Y,MTRC,metric_definitions.metric (대문자),mtrc(지표) + cd(코드),OK
+SILVER,s_fin_mtrc_def,재무 지표 정의,mtrc_nm,지표명,NAME_V200,VARCHAR(200),N,N,,metric_definitions.label_ko,mtrc(지표) + nm(명),OK
+SILVER,s_fin_mtrc_def,재무 지표 정의,stmt_div_txt,재무제표 양식 내용,TEXT_V2000,VARCHAR(2000),N,N,,metric_definitions.statement,stmt(보고서양식) + div(구분) + txt(내용),OK
+SILVER,s_fin_mtrc_def,재무 지표 정의,acnt_id_txt,계정 식별자 목록 내용,TEXT_V2000,VARCHAR(2000),N,N,,metric_definitions.account_ids,acnt(계정) + id(식별자) + txt(내용),OK
+SILVER,s_fin_mtrc_def,재무 지표 정의,select_rsn_txt,선정 사유 내용,TEXT_V2000,VARCHAR(2000),N,N,,metric_definitions.reason_ko,select(선정) + rsn(사유) + txt(내용),OK
+SILVER,s_fin_mtrc_def,재무 지표 정의,custom_nm_txt,사용자정의 계정명 내용,TEXT_V2000,VARCHAR(2000),Y,N,,metric_definitions.custom_names,custom(사용자정의) + nm(명) + txt(내용),OK
+SILVER,s_fin_mtrc_def,재무 지표 정의,guard_txt,제외조건 내용,TEXT_V2000,VARCHAR(2000),Y,N,,metric_definitions.name_guard,guard(제외조건) + txt(내용),OK
+SILVER,s_fin_mtrc_def,재무 지표 정의,pipln_ver,파이프라인 버전,VERSION,VARCHAR(80),N,N,,(C 부여),pipln(파이프라인) + ver(버전),OK
+SILVER,s_fin_mtrc,재무 지표값,fin_rpt_id,재무 보고서 식별자,ID_V64,VARCHAR(64),N,Y,,summary.financial_report_id,fin(재무) + rpt(보고서) + id(식별자),OK
+SILVER,s_fin_mtrc,재무 지표값,mtrc_cd,지표 코드,CODE_V50,VARCHAR(50),N,Y,MTRC,summary.<metric>_* 컬럼명의 지표부,mtrc(지표) + cd(코드),OK
+SILVER,s_fin_mtrc,재무 지표값,prd_type_cd,기간 유형 코드,CODE_V50,VARCHAR(50),N,Y,PRD_TYPE,summary.<metric>_* 컬럼명의 기간 접미사,prd(기간) + type(유형) + cd(코드),OK
+SILVER,s_fin_mtrc,재무 지표값,mtrc_amt,지표 금액,AMT_KRW,"DECIMAL(20,0)",Y,N,,summary.<metric>_<period> 값(빈값=NULL),mtrc(지표) + amt(금액),OK
+SILVER,s_fin_mtrc,재무 지표값,src_col_nm,원천 컬럼명,NAME_V200,VARCHAR(200),N,N,,summary 컬럼명,src(원천) + col(컬럼) + nm(명),OK
+SILVER,s_fin_mtrc,재무 지표값,pipln_ver,파이프라인 버전,VERSION,VARCHAR(80),N,N,,(C 부여),pipln(파이프라인) + ver(버전),OK
+SILVER,s_fin_item,재무 계정 상세,fin_item_id,재무 항목 식별자,ID_V64,VARCHAR(64),N,Y,,financial_items_all.financial_item_id,fin(재무) + item(항목) + id(식별자),OK
+SILVER,s_fin_item,재무 계정 상세,fin_rpt_id,재무 보고서 식별자,ID_V64,VARCHAR(64),N,N,,financial_items_all.financial_report_id,fin(재무) + rpt(보고서) + id(식별자),OK
+SILVER,s_fin_item,재무 계정 상세,corp_cd,기업 코드,CORP_CD,CHAR(8),N,N,,financial_items_all.corp_code,corp(기업) + cd(코드),OK
+SILVER,s_fin_item,재무 계정 상세,rcept_no,접수 번호,RCEPT_NO,CHAR(14),N,N,,financial_items_all.rcept_no,rcept(접수) + no(번호),OK
+SILVER,s_fin_item,재무 계정 상세,bsns_yr,사업 연도,YEAR,CHAR(4),N,N,,financial_items_all.bsns_year,bsns(사업) + yr(연도),OK
+SILVER,s_fin_item,재무 계정 상세,rpt_cd,보고서 코드,CODE_V50,VARCHAR(50),N,N,RPT,financial_items_all.reprt_code,rpt(보고서) + cd(코드),OK
+SILVER,s_fin_item,재무 계정 상세,fs_div_cd,재무제표 구분 코드,CODE_V50,VARCHAR(50),N,N,FS_DIV,financial_items_all.fs_div,fs(재무제표) + div(구분) + cd(코드),OK
+SILVER,s_fin_item,재무 계정 상세,stmt_div_cd,재무제표 양식 코드,CODE_V50,VARCHAR(50),N,N,STMT_DIV,financial_items_all.sj_div,stmt(보고서양식) + div(구분) + cd(코드),OK
+SILVER,s_fin_item,재무 계정 상세,acnt_id,계정 식별자,ACNT_ID,VARCHAR(200),N,N,,financial_items_all.account_id ('-표준계정코드 미사용-' 원값 보존),acnt(계정) + id(식별자),OK
+SILVER,s_fin_item,재무 계정 상세,acnt_nm,계정명,NAME_V200,VARCHAR(200),N,N,,financial_items_all.account_nm,acnt(계정) + nm(명),OK
+SILVER,s_fin_item,재무 계정 상세,acnt_dtl_nm,계정 상세명,NAME_V500,VARCHAR(500),N,N,,"financial_items_all.account_detail ('-'=상세 없음, 원값 보존)",acnt(계정) + dtl(상세) + nm(명),OK
+SILVER,s_fin_item,재무 계정 상세,cur_prd_nm,당기 기간명,NAME_V200,VARCHAR(200),Y,N,,thstrm_nm,cur(당기) + prd(기간) + nm(명),OK
+SILVER,s_fin_item,재무 계정 상세,cur_amt,당기 금액,AMT_KRW,"DECIMAL(20,0)",Y,N,,thstrm_amount,cur(당기) + amt(금액),OK
+SILVER,s_fin_item,재무 계정 상세,cur_cum_amt,당기 누적 금액,AMT_KRW,"DECIMAL(20,0)",Y,N,,thstrm_add_amount,cur(당기) + cum(누적) + amt(금액),OK
+SILVER,s_fin_item,재무 계정 상세,prev_prd_nm,전기 기간명,NAME_V200,VARCHAR(200),Y,N,,frmtrm_nm,prev(전기) + prd(기간) + nm(명),OK
+SILVER,s_fin_item,재무 계정 상세,prev_amt,전기 금액,AMT_KRW,"DECIMAL(20,0)",Y,N,,frmtrm_amount,prev(전기) + amt(금액),OK
+SILVER,s_fin_item,재무 계정 상세,prev_qtr_prd_nm,전기 분기 기간명,NAME_V200,VARCHAR(200),Y,N,,frmtrm_q_nm,prev(전기) + qtr(분기) + prd(기간) + nm(명),OK
+SILVER,s_fin_item,재무 계정 상세,prev_qtr_amt,전기 분기 금액,AMT_KRW,"DECIMAL(20,0)",Y,N,,frmtrm_q_amount,prev(전기) + qtr(분기) + amt(금액),OK
+SILVER,s_fin_item,재무 계정 상세,prev_cum_amt,전기 누적 금액,AMT_KRW,"DECIMAL(20,0)",Y,N,,frmtrm_add_amount,prev(전기) + cum(누적) + amt(금액),OK
+SILVER,s_fin_item,재무 계정 상세,bfr_prev_prd_nm,전전기 기간명,NAME_V200,VARCHAR(200),Y,N,,bfefrmtrm_nm,bfr(전전) + prev(전기) + prd(기간) + nm(명),OK
+SILVER,s_fin_item,재무 계정 상세,bfr_prev_amt,전전기 금액,AMT_KRW,"DECIMAL(20,0)",Y,N,,bfefrmtrm_amount,bfr(전전) + prev(전기) + amt(금액),OK
+SILVER,s_fin_item,재무 계정 상세,sort_ord_no,정렬 순서 번호,ROW_NO,INT,N,N,,ord,sort(정렬) + ord(순서) + no(번호),OK
+SILVER,s_fin_item,재무 계정 상세,crncy_cd,통화 코드,CODE_V50,VARCHAR(50),N,N,CRNCY,currency,crncy(통화) + cd(코드),OK
+SILVER,s_fin_item,재무 계정 상세,src_team_cd,원천 팀 코드,CODE_V50,VARCHAR(50),N,N,TEAM,(C 부여) A,src(원천) + team(팀) + cd(코드),OK
+SILVER,s_fin_item,재무 계정 상세,src_file_path,원천 파일 경로,PATH,VARCHAR(500),N,N,,_source_file,src(원천) + file(파일) + path(경로),OK
+SILVER,s_fin_item,재무 계정 상세,src_row_no,원천 행 번호,ROW_NO,INT,N,N,,_source_row,src(원천) + row(행) + no(번호),OK
+SILVER,s_fin_item,재무 계정 상세,src_ver,원천 버전,VERSION,VARCHAR(80),N,N,,_source_version,src(원천) + ver(버전),OK
+SILVER,s_fin_item,재무 계정 상세,pipln_ver,파이프라인 버전,VERSION,VARCHAR(80),N,N,,(C 부여),pipln(파이프라인) + ver(버전),OK
+SILVER,s_stock,종목,stock_cd,종목 코드,STOCK_CD,CHAR(6),N,Y,,security_master.symbol,stock(종목) + cd(코드),OK
+SILVER,s_stock,종목,stock_nm,종목명,NAME_V200,VARCHAR(200),N,N,,security_master.name,stock(종목) + nm(명),OK
+SILVER,s_stock,종목,stock_eng_nm,종목 영문명,NAME_V200,VARCHAR(200),N,N,,security_master.englishName,stock(종목) + eng(영문) + nm(명),OK
+SILVER,s_stock,종목,isin_cd,ISIN 코드,ISIN_CD,CHAR(12),N,N,,security_master.isinCode,isin(국제증권식별) + cd(코드),OK
+SILVER,s_stock,종목,mkt_cd,시장 코드,CODE_V50,VARCHAR(50),N,N,MKT,security_master.market,mkt(시장) + cd(코드),OK
+SILVER,s_stock,종목,sec_type_cd,증권 유형 코드,CODE_V50,VARCHAR(50),N,N,SEC_TYPE,security_master.securityType,sec(증권) + type(유형) + cd(코드),OK
+SILVER,s_stock,종목,cmn_shr_yn,보통 주식 여부,YN,CHAR(1),N,N,YN,security_master.isCommonShare (True/False→Y/N),cmn(보통) + shr(주식) + yn(여부),OK
+SILVER,s_stock,종목,stock_stts_cd,종목 상태 코드,CODE_V50,VARCHAR(50),N,N,STOCK_STTS,security_master.status,stock(종목) + stts(상태) + cd(코드),OK
+SILVER,s_stock,종목,crncy_cd,통화 코드,CODE_V50,VARCHAR(50),N,N,CRNCY,security_master.currency,crncy(통화) + cd(코드),OK
+SILVER,s_stock,종목,list_dt,상장 일자,DATE,DATE,N,N,,security_master.listDate,list(상장) + dt(일자),OK
+SILVER,s_stock,종목,delist_dt,상장폐지 일자,DATE,DATE,Y,N,,security_master.delistDate,delist(상장폐지) + dt(일자),OK
+SILVER,s_stock,종목,outstd_shr_qty,발행 주식 수량,QTY,BIGINT,N,N,,security_master.sharesOutstanding,outstd(발행) + shr(주식) + qty(수량),OK
+SILVER,s_stock,종목,lvrg_val,레버리지 값,DEC_VAL,"DECIMAL(18,6)",Y,N,,security_master.leverageFactor,lvrg(레버리지) + val(값),OK
+SILVER,s_stock,종목,mkt_dtl_txt,시장 상세 내용(JSON),TEXT_LONG,TEXT,N,N,,security_master.koreanMarketDetail,mkt(시장) + dtl(상세) + txt(내용),OK
+SILVER,s_stock,종목,src_team_cd,원천 팀 코드,CODE_V50,VARCHAR(50),N,N,TEAM,(C 부여) B,src(원천) + team(팀) + cd(코드),OK
+SILVER,s_stock,종목,src_kind_cd,원천 종류 코드,CODE_V50,VARCHAR(50),N,N,SRC_KIND,source_kind,src(원천) + kind(종류) + cd(코드),OK
+SILVER,s_stock,종목,src_file_path,원천 파일 경로,PATH,VARCHAR(500),N,N,,source_file,src(원천) + file(파일) + path(경로),OK
+SILVER,s_stock,종목,src_row_no,원천 행 번호,ROW_NO,INT,N,N,,source_row,src(원천) + row(행) + no(번호),OK
+SILVER,s_stock,종목,bronze_row_no,브론즈 행 번호,ROW_NO,INT,Y,N,,bronze_row,bronze(브론즈) + row(행) + no(번호),OK
+SILVER,s_stock,종목,src_ver,원천 버전,VERSION,VARCHAR(80),N,N,,source_version,src(원천) + ver(버전),OK
+SILVER,s_stock,종목,fetch_dttm,API 조회 일시,DATETIME,DATETIME,Y,N,,fetched_at,fetch(조회) + dttm(일시),OK
+SILVER,s_stock,종목,api_raw_file_path,API 원응답 파일 경로,PATH,VARCHAR(500),Y,N,,api_raw_file,api(API) + raw(원응답) + file(파일) + path(경로),OK
+SILVER,s_stock,종목,api_rcrd_path,API 레코드 경로,PATH,VARCHAR(500),Y,N,,api_record_path,api(API) + rcrd(레코드) + path(경로),OK
+SILVER,s_stock,종목,pipln_ver,파이프라인 버전,VERSION,VARCHAR(80),N,N,,pipeline_version → C 버전으로 교체(원 값은 src_ver 계열로 추적),pipln(파이프라인) + ver(버전),OK
+SILVER,s_stock_daily_prc,종목 일별 가격,stock_cd,종목 코드,STOCK_CD,CHAR(6),N,Y,,stock_daily_price.symbol,stock(종목) + cd(코드),OK
+SILVER,s_stock_daily_prc,종목 일별 가격,trd_dt,거래 일자,DATE,DATE,N,Y,,stock_daily_price.trade_date,trd(거래) + dt(일자),OK
+SILVER,s_stock_daily_prc,종목 일별 가격,candle_dttm,봉 일시,DATETIME,DATETIME,N,N,,stock_daily_price.timestamp (+09:00 → KST DATETIME),candle(봉) + dttm(일시),OK
+SILVER,s_stock_daily_prc,종목 일별 가격,open_prc,시가 가격,PRICE,"DECIMAL(18,4)",N,N,,open_price,open(시가) + prc(가격),OK
+SILVER,s_stock_daily_prc,종목 일별 가격,high_prc,고가 가격,PRICE,"DECIMAL(18,4)",N,N,,high_price,high(고가) + prc(가격),OK
+SILVER,s_stock_daily_prc,종목 일별 가격,low_prc,저가 가격,PRICE,"DECIMAL(18,4)",N,N,,low_price,low(저가) + prc(가격),OK
+SILVER,s_stock_daily_prc,종목 일별 가격,close_prc,종가 가격,PRICE,"DECIMAL(18,4)",N,N,,close_price,close(종가) + prc(가격),OK
+SILVER,s_stock_daily_prc,종목 일별 가격,trd_qty,거래 수량,QTY,BIGINT,N,N,,volume,trd(거래) + qty(수량),OK
+SILVER,s_stock_daily_prc,종목 일별 가격,crncy_cd,통화 코드,CODE_V50,VARCHAR(50),N,N,CRNCY,currency,crncy(통화) + cd(코드),OK
+SILVER,s_stock_daily_prc,종목 일별 가격,src_team_cd,원천 팀 코드,CODE_V50,VARCHAR(50),N,N,TEAM,(C 부여) B,src(원천) + team(팀) + cd(코드),OK
+SILVER,s_stock_daily_prc,종목 일별 가격,src_kind_cd,원천 종류 코드,CODE_V50,VARCHAR(50),N,N,SRC_KIND,source_kind,src(원천) + kind(종류) + cd(코드),OK
+SILVER,s_stock_daily_prc,종목 일별 가격,src_file_path,원천 파일 경로,PATH,VARCHAR(500),N,N,,source_file,src(원천) + file(파일) + path(경로),OK
+SILVER,s_stock_daily_prc,종목 일별 가격,src_row_no,원천 행 번호,ROW_NO,INT,N,N,,source_row,src(원천) + row(행) + no(번호),OK
+SILVER,s_stock_daily_prc,종목 일별 가격,bronze_row_no,브론즈 행 번호,ROW_NO,INT,Y,N,,bronze_row,bronze(브론즈) + row(행) + no(번호),OK
+SILVER,s_stock_daily_prc,종목 일별 가격,src_ver,원천 버전,VERSION,VARCHAR(80),N,N,,source_version,src(원천) + ver(버전),OK
+SILVER,s_stock_daily_prc,종목 일별 가격,fetch_dttm,API 조회 일시,DATETIME,DATETIME,Y,N,,fetched_at,fetch(조회) + dttm(일시),OK
+SILVER,s_stock_daily_prc,종목 일별 가격,api_raw_file_path,API 원응답 파일 경로,PATH,VARCHAR(500),Y,N,,api_raw_file,api(API) + raw(원응답) + file(파일) + path(경로),OK
+SILVER,s_stock_daily_prc,종목 일별 가격,api_rcrd_path,API 레코드 경로,PATH,VARCHAR(500),Y,N,,api_record_path,api(API) + rcrd(레코드) + path(경로),OK
+SILVER,s_stock_daily_prc,종목 일별 가격,pipln_ver,파이프라인 버전,VERSION,VARCHAR(80),N,N,,pipeline_version → C 버전으로 교체(원 값은 src_ver 계열로 추적),pipln(파이프라인) + ver(버전),OK
+SILVER,s_idx_daily_prc,지수 일별 가격,idx_cd,지수 코드,CODE_V50,VARCHAR(50),N,Y,IDX,market_index_daily.index_code,idx(지수) + cd(코드),OK
+SILVER,s_idx_daily_prc,지수 일별 가격,trd_dt,거래 일자,DATE,DATE,N,Y,,trade_date,trd(거래) + dt(일자),OK
+SILVER,s_idx_daily_prc,지수 일별 가격,candle_dttm,봉 일시,DATETIME,DATETIME,N,N,,timestamp,candle(봉) + dttm(일시),OK
+SILVER,s_idx_daily_prc,지수 일별 가격,open_prc,시가 가격,PRICE,"DECIMAL(18,4)",N,N,,open_price,open(시가) + prc(가격),OK
+SILVER,s_idx_daily_prc,지수 일별 가격,high_prc,고가 가격,PRICE,"DECIMAL(18,4)",N,N,,high_price,high(고가) + prc(가격),OK
+SILVER,s_idx_daily_prc,지수 일별 가격,low_prc,저가 가격,PRICE,"DECIMAL(18,4)",N,N,,low_price,low(저가) + prc(가격),OK
+SILVER,s_idx_daily_prc,지수 일별 가격,close_prc,종가 가격,PRICE,"DECIMAL(18,4)",N,N,,close_price,close(종가) + prc(가격),OK
+SILVER,s_idx_daily_prc,지수 일별 가격,trd_qty,거래 수량,QTY,BIGINT,N,N,,volume (업무 단위 미확정: B 인계 참고),trd(거래) + qty(수량),OK
+SILVER,s_idx_daily_prc,지수 일별 가격,src_team_cd,원천 팀 코드,CODE_V50,VARCHAR(50),N,N,TEAM,(C 부여) B,src(원천) + team(팀) + cd(코드),OK
+SILVER,s_idx_daily_prc,지수 일별 가격,src_kind_cd,원천 종류 코드,CODE_V50,VARCHAR(50),N,N,SRC_KIND,source_kind,src(원천) + kind(종류) + cd(코드),OK
+SILVER,s_idx_daily_prc,지수 일별 가격,src_file_path,원천 파일 경로,PATH,VARCHAR(500),N,N,,source_file,src(원천) + file(파일) + path(경로),OK
+SILVER,s_idx_daily_prc,지수 일별 가격,src_row_no,원천 행 번호,ROW_NO,INT,N,N,,source_row,src(원천) + row(행) + no(번호),OK
+SILVER,s_idx_daily_prc,지수 일별 가격,bronze_row_no,브론즈 행 번호,ROW_NO,INT,Y,N,,bronze_row,bronze(브론즈) + row(행) + no(번호),OK
+SILVER,s_idx_daily_prc,지수 일별 가격,src_ver,원천 버전,VERSION,VARCHAR(80),N,N,,source_version,src(원천) + ver(버전),OK
+SILVER,s_idx_daily_prc,지수 일별 가격,fetch_dttm,API 조회 일시,DATETIME,DATETIME,Y,N,,fetched_at,fetch(조회) + dttm(일시),OK
+SILVER,s_idx_daily_prc,지수 일별 가격,api_raw_file_path,API 원응답 파일 경로,PATH,VARCHAR(500),Y,N,,api_raw_file,api(API) + raw(원응답) + file(파일) + path(경로),OK
+SILVER,s_idx_daily_prc,지수 일별 가격,api_rcrd_path,API 레코드 경로,PATH,VARCHAR(500),Y,N,,api_record_path,api(API) + rcrd(레코드) + path(경로),OK
+SILVER,s_idx_daily_prc,지수 일별 가격,pipln_ver,파이프라인 버전,VERSION,VARCHAR(80),N,N,,pipeline_version → C 버전으로 교체(원 값은 src_ver 계열로 추적),pipln(파이프라인) + ver(버전),OK
+SILVER,s_invstr_trd_daily,투자자별 일별 매매,stock_cd,종목 코드,STOCK_CD,CHAR(6),N,Y,,investor_trading_daily.symbol,stock(종목) + cd(코드),OK
+SILVER,s_invstr_trd_daily,투자자별 일별 매매,trd_dt,거래 일자,DATE,DATE,N,Y,,trade_date,trd(거래) + dt(일자),OK
+SILVER,s_invstr_trd_daily,투자자별 일별 매매,invstr_type_cd,투자자 유형 코드,CODE_V50,VARCHAR(50),N,Y,INVSTR_TYPE,investor_type (camelCase→표준 코드),invstr(투자자) + type(유형) + cd(코드),OK
+SILVER,s_invstr_trd_daily,투자자별 일별 매매,upper_invstr_type_cd,상위 투자자 유형 코드,CODE_V50,VARCHAR(50),Y,N,INVSTR_TYPE,parent_type,upper(상위) + invstr(투자자) + type(유형) + cd(코드),OK
+SILVER,s_invstr_trd_daily,투자자별 일별 매매,aggr_lvl_cd,집계 수준 코드,CODE_V50,VARCHAR(50),N,N,AGGR_LVL,aggregation_level,aggr(집계) + lvl(수준) + cd(코드),OK
+SILVER,s_invstr_trd_daily,투자자별 일별 매매,buy_qty,매수 수량,QTY,BIGINT,N,N,,buy_volume,buy(매수) + qty(수량),OK
+SILVER,s_invstr_trd_daily,투자자별 일별 매매,sell_qty,매도 수량,QTY,BIGINT,N,N,,sell_volume,sell(매도) + qty(수량),OK
+SILVER,s_invstr_trd_daily,투자자별 일별 매매,net_buy_qty,순매수 수량,QTY,BIGINT,N,N,,net_buy_volume,net(순) + buy(매수) + qty(수량),OK
+SILVER,s_invstr_trd_daily,투자자별 일별 매매,src_col_nm,원천 컬럼명,NAME_V200,VARCHAR(200),N,N,,source_column,src(원천) + col(컬럼) + nm(명),OK
+SILVER,s_invstr_trd_daily,투자자별 일별 매매,src_json_path,원천 JSON 경로,PATH,VARCHAR(500),N,N,,json_path,src(원천) + json(JSON) + path(경로),OK
+SILVER,s_invstr_trd_daily,투자자별 일별 매매,src_team_cd,원천 팀 코드,CODE_V50,VARCHAR(50),N,N,TEAM,(C 부여) B,src(원천) + team(팀) + cd(코드),OK
+SILVER,s_invstr_trd_daily,투자자별 일별 매매,src_kind_cd,원천 종류 코드,CODE_V50,VARCHAR(50),N,N,SRC_KIND,source_kind,src(원천) + kind(종류) + cd(코드),OK
+SILVER,s_invstr_trd_daily,투자자별 일별 매매,src_file_path,원천 파일 경로,PATH,VARCHAR(500),N,N,,source_file,src(원천) + file(파일) + path(경로),OK
+SILVER,s_invstr_trd_daily,투자자별 일별 매매,src_row_no,원천 행 번호,ROW_NO,INT,N,N,,source_row,src(원천) + row(행) + no(번호),OK
+SILVER,s_invstr_trd_daily,투자자별 일별 매매,bronze_row_no,브론즈 행 번호,ROW_NO,INT,Y,N,,bronze_row,bronze(브론즈) + row(행) + no(번호),OK
+SILVER,s_invstr_trd_daily,투자자별 일별 매매,src_ver,원천 버전,VERSION,VARCHAR(80),N,N,,source_version,src(원천) + ver(버전),OK
+SILVER,s_invstr_trd_daily,투자자별 일별 매매,fetch_dttm,API 조회 일시,DATETIME,DATETIME,Y,N,,fetched_at,fetch(조회) + dttm(일시),OK
+SILVER,s_invstr_trd_daily,투자자별 일별 매매,api_raw_file_path,API 원응답 파일 경로,PATH,VARCHAR(500),Y,N,,api_raw_file,api(API) + raw(원응답) + file(파일) + path(경로),OK
+SILVER,s_invstr_trd_daily,투자자별 일별 매매,api_rcrd_path,API 레코드 경로,PATH,VARCHAR(500),Y,N,,api_record_path,api(API) + rcrd(레코드) + path(경로),OK
+SILVER,s_invstr_trd_daily,투자자별 일별 매매,pipln_ver,파이프라인 버전,VERSION,VARCHAR(80),N,N,,pipeline_version → C 버전으로 교체(원 값은 src_ver 계열로 추적),pipln(파이프라인) + ver(버전),OK
+SILVER,s_frgn_hold_daily,외국인 보유 일별,stock_cd,종목 코드,STOCK_CD,CHAR(6),N,Y,,foreign_holding_daily.symbol,stock(종목) + cd(코드),OK
+SILVER,s_frgn_hold_daily,외국인 보유 일별,trd_dt,거래 일자,DATE,DATE,N,Y,,trade_date,trd(거래) + dt(일자),OK
+SILVER,s_frgn_hold_daily,외국인 보유 일별,hold_qty,보유 수량,QTY,BIGINT,N,N,,holding_quantity,hold(보유) + qty(수량),OK
+SILVER,s_frgn_hold_daily,외국인 보유 일별,limit_qty,한도 수량,QTY,BIGINT,N,N,,limit_quantity,limit(한도) + qty(수량),OK
+SILVER,s_frgn_hold_daily,외국인 보유 일별,hold_rt,보유 율,RATE,"DECIMAL(12,8)",N,N,,holding_rate (소수 비율),hold(보유) + rt(율),OK
+SILVER,s_frgn_hold_daily,외국인 보유 일별,src_col_nm,원천 컬럼명,NAME_V200,VARCHAR(200),N,N,,source_column,src(원천) + col(컬럼) + nm(명),OK
+SILVER,s_frgn_hold_daily,외국인 보유 일별,src_json_path,원천 JSON 경로,PATH,VARCHAR(500),N,N,,json_path,src(원천) + json(JSON) + path(경로),OK
+SILVER,s_frgn_hold_daily,외국인 보유 일별,src_team_cd,원천 팀 코드,CODE_V50,VARCHAR(50),N,N,TEAM,(C 부여) B,src(원천) + team(팀) + cd(코드),OK
+SILVER,s_frgn_hold_daily,외국인 보유 일별,src_kind_cd,원천 종류 코드,CODE_V50,VARCHAR(50),N,N,SRC_KIND,source_kind,src(원천) + kind(종류) + cd(코드),OK
+SILVER,s_frgn_hold_daily,외국인 보유 일별,src_file_path,원천 파일 경로,PATH,VARCHAR(500),N,N,,source_file,src(원천) + file(파일) + path(경로),OK
+SILVER,s_frgn_hold_daily,외국인 보유 일별,src_row_no,원천 행 번호,ROW_NO,INT,N,N,,source_row,src(원천) + row(행) + no(번호),OK
+SILVER,s_frgn_hold_daily,외국인 보유 일별,bronze_row_no,브론즈 행 번호,ROW_NO,INT,Y,N,,bronze_row,bronze(브론즈) + row(행) + no(번호),OK
+SILVER,s_frgn_hold_daily,외국인 보유 일별,src_ver,원천 버전,VERSION,VARCHAR(80),N,N,,source_version,src(원천) + ver(버전),OK
+SILVER,s_frgn_hold_daily,외국인 보유 일별,fetch_dttm,API 조회 일시,DATETIME,DATETIME,Y,N,,fetched_at,fetch(조회) + dttm(일시),OK
+SILVER,s_frgn_hold_daily,외국인 보유 일별,api_raw_file_path,API 원응답 파일 경로,PATH,VARCHAR(500),Y,N,,api_raw_file,api(API) + raw(원응답) + file(파일) + path(경로),OK
+SILVER,s_frgn_hold_daily,외국인 보유 일별,api_rcrd_path,API 레코드 경로,PATH,VARCHAR(500),Y,N,,api_record_path,api(API) + rcrd(레코드) + path(경로),OK
+SILVER,s_frgn_hold_daily,외국인 보유 일별,pipln_ver,파이프라인 버전,VERSION,VARCHAR(80),N,N,,pipeline_version → C 버전으로 교체(원 값은 src_ver 계열로 추적),pipln(파이프라인) + ver(버전),OK
+SILVER,s_cfd_bal_daily,CFD 잔고 일별,stock_cd,종목 코드,STOCK_CD,CHAR(6),N,Y,,cfd_daily.symbol,stock(종목) + cd(코드),OK
+SILVER,s_cfd_bal_daily,CFD 잔고 일별,trd_dt,거래 일자,DATE,DATE,N,Y,,trade_date,trd(거래) + dt(일자),OK
+SILVER,s_cfd_bal_daily,CFD 잔고 일별,buy_bal_qty,매수 잔고 수량,QTY,BIGINT,N,N,,buy_balance_quantity,buy(매수) + bal(잔고) + qty(수량),OK
+SILVER,s_cfd_bal_daily,CFD 잔고 일별,buy_bal_rt,매수 잔고 율,RATE,"DECIMAL(12,8)",N,N,,buy_balance_rate,buy(매수) + bal(잔고) + rt(율),OK
+SILVER,s_cfd_bal_daily,CFD 잔고 일별,sell_bal_qty,매도 잔고 수량,QTY,BIGINT,N,N,,sell_balance_quantity,sell(매도) + bal(잔고) + qty(수량),OK
+SILVER,s_cfd_bal_daily,CFD 잔고 일별,sell_bal_rt,매도 잔고 율,RATE,"DECIMAL(12,8)",N,N,,sell_balance_rate,sell(매도) + bal(잔고) + rt(율),OK
+SILVER,s_cfd_bal_daily,CFD 잔고 일별,src_col_nm,원천 컬럼명,NAME_V200,VARCHAR(200),N,N,,source_column,src(원천) + col(컬럼) + nm(명),OK
+SILVER,s_cfd_bal_daily,CFD 잔고 일별,src_json_path,원천 JSON 경로,PATH,VARCHAR(500),N,N,,json_path,src(원천) + json(JSON) + path(경로),OK
+SILVER,s_cfd_bal_daily,CFD 잔고 일별,src_team_cd,원천 팀 코드,CODE_V50,VARCHAR(50),N,N,TEAM,(C 부여) B,src(원천) + team(팀) + cd(코드),OK
+SILVER,s_cfd_bal_daily,CFD 잔고 일별,src_kind_cd,원천 종류 코드,CODE_V50,VARCHAR(50),N,N,SRC_KIND,source_kind,src(원천) + kind(종류) + cd(코드),OK
+SILVER,s_cfd_bal_daily,CFD 잔고 일별,src_file_path,원천 파일 경로,PATH,VARCHAR(500),N,N,,source_file,src(원천) + file(파일) + path(경로),OK
+SILVER,s_cfd_bal_daily,CFD 잔고 일별,src_row_no,원천 행 번호,ROW_NO,INT,N,N,,source_row,src(원천) + row(행) + no(번호),OK
+SILVER,s_cfd_bal_daily,CFD 잔고 일별,bronze_row_no,브론즈 행 번호,ROW_NO,INT,Y,N,,bronze_row,bronze(브론즈) + row(행) + no(번호),OK
+SILVER,s_cfd_bal_daily,CFD 잔고 일별,src_ver,원천 버전,VERSION,VARCHAR(80),N,N,,source_version,src(원천) + ver(버전),OK
+SILVER,s_cfd_bal_daily,CFD 잔고 일별,fetch_dttm,API 조회 일시,DATETIME,DATETIME,Y,N,,fetched_at,fetch(조회) + dttm(일시),OK
+SILVER,s_cfd_bal_daily,CFD 잔고 일별,api_raw_file_path,API 원응답 파일 경로,PATH,VARCHAR(500),Y,N,,api_raw_file,api(API) + raw(원응답) + file(파일) + path(경로),OK
+SILVER,s_cfd_bal_daily,CFD 잔고 일별,api_rcrd_path,API 레코드 경로,PATH,VARCHAR(500),Y,N,,api_record_path,api(API) + rcrd(레코드) + path(경로),OK
+SILVER,s_cfd_bal_daily,CFD 잔고 일별,pipln_ver,파이프라인 버전,VERSION,VARCHAR(80),N,N,,pipeline_version → C 버전으로 교체(원 값은 src_ver 계열로 추적),pipln(파이프라인) + ver(버전),OK
+SILVER,s_corp_stock_map,기업-종목 매핑,map_id,매핑 식별자,ID_V64,VARCHAR(64),N,Y,,(C 생성) corp_cd|stock_cd,map(매핑) + id(식별자),OK
+SILVER,s_corp_stock_map,기업-종목 매핑,corp_cd,기업 코드,CORP_CD,CHAR(8),Y,N,,s_corp.corp_cd,corp(기업) + cd(코드),OK
+SILVER,s_corp_stock_map,기업-종목 매핑,stock_cd,종목 코드,STOCK_CD,CHAR(6),Y,N,,s_stock.stock_cd / s_corp.stock_cd,stock(종목) + cd(코드),OK
+SILVER,s_corp_stock_map,기업-종목 매핑,map_stts_cd,매핑 상태 코드,CODE_V50,VARCHAR(50),N,N,MAP_STTS,,map(매핑) + stts(상태) + cd(코드),OK
+SILVER,s_corp_stock_map,기업-종목 매핑,map_mthd_cd,매핑 방법 코드,CODE_V50,VARCHAR(50),N,N,MAP_MTHD,,map(매핑) + mthd(방법) + cd(코드),OK
+SILVER,s_corp_stock_map,기업-종목 매핑,cand_cnt,후보 건수,COUNT,INT,N,N,,,cand(후보) + cnt(건수),OK
+SILVER,s_corp_stock_map,기업-종목 매핑,corp_nm,기업명,NAME_V200,VARCHAR(200),Y,N,,s_corp.corp_nm (검증 근거),corp(기업) + nm(명),OK
+SILVER,s_corp_stock_map,기업-종목 매핑,stock_nm,종목명,NAME_V200,VARCHAR(200),Y,N,,s_stock.stock_nm (검증 근거),stock(종목) + nm(명),OK
+SILVER,s_corp_stock_map,기업-종목 매핑,nm_match_yn,명칭 일치 여부,YN,CHAR(1),N,N,YN,,nm(명) + match(일치) + yn(여부),OK
+SILVER,s_corp_stock_map,기업-종목 매핑,map_rsn_txt,매핑 사유 내용,TEXT_V2000,VARCHAR(2000),Y,N,,,map(매핑) + rsn(사유) + txt(내용),OK
+SILVER,s_corp_stock_map,기업-종목 매핑,pipln_ver,파이프라인 버전,VERSION,VARCHAR(80),N,N,,,pipln(파이프라인) + ver(버전),OK
+SILVER,s_conn_stts,가격·수급 연결 상태,stock_cd,종목 코드,STOCK_CD,CHAR(6),N,Y,,,stock(종목) + cd(코드),OK
+SILVER,s_conn_stts,가격·수급 연결 상태,trd_dt,거래 일자,DATE,DATE,N,Y,,,trd(거래) + dt(일자),OK
+SILVER,s_conn_stts,가격·수급 연결 상태,corp_cd,기업 코드,CORP_CD,CHAR(8),Y,N,,,corp(기업) + cd(코드),OK
+SILVER,s_conn_stts,가격·수급 연결 상태,map_stts_cd,매핑 상태 코드,CODE_V50,VARCHAR(50),N,N,MAP_STTS,,map(매핑) + stts(상태) + cd(코드),OK
+SILVER,s_conn_stts,가격·수급 연결 상태,prc_exist_yn,가격 존재 여부,YN,CHAR(1),N,N,YN,B price_investor_availability.has_price 대응,prc(가격) + exist(존재) + yn(여부),OK
+SILVER,s_conn_stts,가격·수급 연결 상태,invstr_exist_yn,수급 존재 여부,YN,CHAR(1),N,N,YN,B price_investor_availability.has_investor_data 대응,invstr(투자자) + exist(존재) + yn(여부),OK
+SILVER,s_conn_stts,가격·수급 연결 상태,frgn_hold_exist_yn,외국인 보유 존재 여부,YN,CHAR(1),N,N,YN,,frgn(외국인) + hold(보유) + exist(존재) + yn(여부),OK
+SILVER,s_conn_stts,가격·수급 연결 상태,cfd_exist_yn,CFD 잔고 존재 여부,YN,CHAR(1),N,N,YN,,cfd(차액결제거래) + exist(존재) + yn(여부),OK
+SILVER,s_conn_stts,가격·수급 연결 상태,fin_avail_yn,재무 가용 여부(시점 기준),YN,CHAR(1),N,N,YN,,fin(재무) + avail(가용) + yn(여부),OK
+SILVER,s_conn_stts,가격·수급 연결 상태,conn_stts_cd,연결 상태 코드,CODE_V50,VARCHAR(50),N,N,CONN_STTS,,conn(연결) + stts(상태) + cd(코드),OK
+SILVER,s_conn_stts,가격·수급 연결 상태,miss_rsn_cd,부재 사유 코드,CODE_V50,VARCHAR(50),Y,N,MISS_RSN,,miss(누락) + rsn(사유) + cd(코드),OK
+SILVER,s_conn_stts,가격·수급 연결 상태,miss_rsn_txt,부재 사유 내용,TEXT_V2000,VARCHAR(2000),Y,N,,,miss(누락) + rsn(사유) + txt(내용),OK
+SILVER,s_conn_stts,가격·수급 연결 상태,pipln_ver,파이프라인 버전,VERSION,VARCHAR(80),N,N,,,pipln(파이프라인) + ver(버전),OK
+SILVER,s_dq_issue,데이터 품질 이슈,issue_id,이슈 식별자,ID_V64,VARCHAR(64),N,Y,,,issue(이슈) + id(식별자),OK
+SILVER,s_dq_issue,데이터 품질 이슈,detect_stage_cd,탐지 단계 코드,CODE_V50,VARCHAR(50),N,N,DETECT_STAGE,,detect(탐지) + stage(단계) + cd(코드),OK
+SILVER,s_dq_issue,데이터 품질 이슈,src_team_cd,원천 팀 코드,CODE_V50,VARCHAR(50),N,N,TEAM,,src(원천) + team(팀) + cd(코드),OK
+SILVER,s_dq_issue,데이터 품질 이슈,tbl_nm,테이블명,NAME_V200,VARCHAR(200),N,N,,,tbl(테이블) + nm(명),OK
+SILVER,s_dq_issue,데이터 품질 이슈,col_nm,컬럼명,NAME_V200,VARCHAR(200),Y,N,,,col(컬럼) + nm(명),OK
+SILVER,s_dq_issue,데이터 품질 이슈,rcrd_key_txt,레코드 키 내용,TEXT_V2000,VARCHAR(2000),Y,N,,,rcrd(레코드) + key(키) + txt(내용),OK
+SILVER,s_dq_issue,데이터 품질 이슈,src_file_path,원천 파일 경로,PATH,VARCHAR(500),Y,N,,,src(원천) + file(파일) + path(경로),OK
+SILVER,s_dq_issue,데이터 품질 이슈,src_row_no,원천 행 번호,ROW_NO,INT,Y,N,,,src(원천) + row(행) + no(번호),OK
+SILVER,s_dq_issue,데이터 품질 이슈,issue_type_cd,이슈 유형 코드,CODE_V50,VARCHAR(50),N,N,ISSUE_TYPE,,issue(이슈) + type(유형) + cd(코드),OK
+SILVER,s_dq_issue,데이터 품질 이슈,sev_cd,심각도 코드,CODE_V50,VARCHAR(50),N,N,SEV,,sev(심각도) + cd(코드),OK
+SILVER,s_dq_issue,데이터 품질 이슈,issue_rsn_txt,이슈 사유 내용,TEXT_V2000,VARCHAR(2000),N,N,,,issue(이슈) + rsn(사유) + txt(내용),OK
+SILVER,s_dq_issue,데이터 품질 이슈,resolve_stts_cd,조치 상태 코드,CODE_V50,VARCHAR(50),N,N,RESOLVE_STTS,,resolve(조치) + stts(상태) + cd(코드),OK
+SILVER,s_dq_issue,데이터 품질 이슈,pipln_ver,파이프라인 버전,VERSION,VARCHAR(80),N,N,,,pipln(파이프라인) + ver(버전),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,stock_cd,종목 코드,STOCK_CD,CHAR(6),N,Y,,,stock(종목) + cd(코드),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,trd_dt,거래 일자,DATE,DATE,N,Y,,,trd(거래) + dt(일자),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,corp_cd,기업 코드,CORP_CD,CHAR(8),Y,N,,,corp(기업) + cd(코드),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,mkt_cd,시장 코드,CODE_V50,VARCHAR(50),N,N,MKT,,mkt(시장) + cd(코드),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,open_prc,시가 가격,PRICE,"DECIMAL(18,4)",N,N,,,open(시가) + prc(가격),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,high_prc,고가 가격,PRICE,"DECIMAL(18,4)",N,N,,,high(고가) + prc(가격),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,low_prc,저가 가격,PRICE,"DECIMAL(18,4)",N,N,,,low(저가) + prc(가격),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,close_prc,종가 가격,PRICE,"DECIMAL(18,4)",N,N,,,close(종가) + prc(가격),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,trd_qty,거래 수량,QTY,BIGINT,N,N,,,trd(거래) + qty(수량),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,close_rtn_rt,종가 수익률(전 관측일 대비),RATE,"DECIMAL(12,8)",Y,N,,,close(종가) + rtn(수익률) + rt(율),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,idx_close_prc,지수 종가 가격,PRICE,"DECIMAL(18,4)",Y,N,,,idx(지수) + close(종가) + prc(가격),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,idx_rtn_rt,지수 수익률(전 관측일 대비),RATE,"DECIMAL(12,8)",Y,N,,,idx(지수) + rtn(수익률) + rt(율),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,indv_net_buy_qty,개인 순매수 수량,QTY,BIGINT,Y,N,,,indv(개인) + net(순) + buy(매수) + qty(수량),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,frgn_net_buy_qty,외국인 순매수 수량,QTY,BIGINT,Y,N,,,frgn(외국인) + net(순) + buy(매수) + qty(수량),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,inst_net_buy_qty,기관 순매수 수량,QTY,BIGINT,Y,N,,,inst(기관) + net(순) + buy(매수) + qty(수량),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,other_corp_net_buy_qty,기타법인 순매수 수량,QTY,BIGINT,Y,N,,,other(기타) + corp(기업) + net(순) + buy(매수) + qty(수량),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,frgn_hold_rt,외국인 보유 율,RATE,"DECIMAL(12,8)",Y,N,,,frgn(외국인) + hold(보유) + rt(율),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,cfd_buy_bal_rt,CFD 매수 잔고 율,RATE,"DECIMAL(12,8)",Y,N,,,cfd(차액결제거래) + buy(매수) + bal(잔고) + rt(율),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,invstr_exist_yn,수급 존재 여부,YN,CHAR(1),N,N,YN,,invstr(투자자) + exist(존재) + yn(여부),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,fin_avail_yn,재무 가용 여부,YN,CHAR(1),N,N,YN,,fin(재무) + avail(가용) + yn(여부),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,fin_rpt_id,재무 보고서 식별자,ID_V64,VARCHAR(64),Y,N,,,fin(재무) + rpt(보고서) + id(식별자),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,fin_bsns_yr,재무 사업 연도,YEAR,CHAR(4),Y,N,,,fin(재무) + bsns(사업) + yr(연도),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,fin_rpt_cd,재무 보고서 코드,CODE_V50,VARCHAR(50),Y,N,RPT,,fin(재무) + rpt(보고서) + cd(코드),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,fin_fs_div_cd,재무 재무제표 구분 코드,CODE_V50,VARCHAR(50),Y,N,FS_DIV,,fin(재무) + fs(재무제표) + div(구분) + cd(코드),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,dscl_dt,공시 일자,DATE,DATE,Y,N,,,dscl(공시) + dt(일자),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,dscl_elps_day_cnt,공시 경과 일 건수,COUNT,INT,Y,N,,,dscl(공시) + elps(경과) + day(일) + cnt(건수),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,rev_ytd_amt,매출 누적 금액,AMT_KRW,"DECIMAL(20,0)",Y,N,,,rev(매출) + ytd(연초누적) + amt(금액),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,op_prft_ytd_amt,영업 이익 누적 금액,AMT_KRW,"DECIMAL(20,0)",Y,N,,,op(영업) + prft(이익) + ytd(연초누적) + amt(금액),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,net_incm_ytd_amt,순이익 누적 금액,AMT_KRW,"DECIMAL(20,0)",Y,N,,,net(순) + incm(순이익) + ytd(연초누적) + amt(금액),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,op_cf_ytd_amt,영업 현금흐름 누적 금액,AMT_KRW,"DECIMAL(20,0)",Y,N,,,op(영업) + cf(현금흐름) + ytd(연초누적) + amt(금액),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,tot_asst_amt,총 자산 금액,AMT_KRW,"DECIMAL(20,0)",Y,N,,,tot(총) + asst(자산) + amt(금액),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,tot_liab_amt,총 부채 금액,AMT_KRW,"DECIMAL(20,0)",Y,N,,,tot(총) + liab(부채) + amt(금액),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,tot_eqty_amt,총 자본 금액,AMT_KRW,"DECIMAL(20,0)",Y,N,,,tot(총) + eqty(자본) + amt(금액),OK
+GOLD,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,pipln_ver,파이프라인 버전,VERSION,VARCHAR(80),N,N,,,pipln(파이프라인) + ver(버전),OK
+GOLD,g_fin_rpt_mkt_smry,재무 보고기간 시장 요약,fin_rpt_id,재무 보고서 식별자,ID_V64,VARCHAR(64),N,Y,,,fin(재무) + rpt(보고서) + id(식별자),OK
+GOLD,g_fin_rpt_mkt_smry,재무 보고기간 시장 요약,corp_cd,기업 코드,CORP_CD,CHAR(8),N,N,,,corp(기업) + cd(코드),OK
+GOLD,g_fin_rpt_mkt_smry,재무 보고기간 시장 요약,stock_cd,종목 코드,STOCK_CD,CHAR(6),N,N,,,stock(종목) + cd(코드),OK
+GOLD,g_fin_rpt_mkt_smry,재무 보고기간 시장 요약,bsns_yr,사업 연도,YEAR,CHAR(4),N,N,,,bsns(사업) + yr(연도),OK
+GOLD,g_fin_rpt_mkt_smry,재무 보고기간 시장 요약,rpt_cd,보고서 코드,CODE_V50,VARCHAR(50),N,N,RPT,,rpt(보고서) + cd(코드),OK
+GOLD,g_fin_rpt_mkt_smry,재무 보고기간 시장 요약,fs_div_cd,재무제표 구분 코드,CODE_V50,VARCHAR(50),N,N,FS_DIV,,fs(재무제표) + div(구분) + cd(코드),OK
+GOLD,g_fin_rpt_mkt_smry,재무 보고기간 시장 요약,prd_start_dt,기간 시작 일자,DATE,DATE,N,N,,,prd(기간) + start(시작) + dt(일자),OK
+GOLD,g_fin_rpt_mkt_smry,재무 보고기간 시장 요약,prd_end_dt,기간 종료 일자,DATE,DATE,N,N,,,prd(기간) + end(종료) + dt(일자),OK
+GOLD,g_fin_rpt_mkt_smry,재무 보고기간 시장 요약,same_prd_cmpr_elig_yn,동일 기간 비교 적격 여부,YN,CHAR(1),N,N,YN,,same(동일) + prd(기간) + cmpr(비교) + elig(적격) + yn(여부),OK
+GOLD,g_fin_rpt_mkt_smry,재무 보고기간 시장 요약,trd_day_cnt,거래 일 건수,COUNT,INT,N,N,,,trd(거래) + day(일) + cnt(건수),OK
+GOLD,g_fin_rpt_mkt_smry,재무 보고기간 시장 요약,full_cvrg_yn,기간 전체 커버리지 여부,YN,CHAR(1),N,N,YN,,full(전체) + cvrg(커버리지) + yn(여부),OK
+GOLD,g_fin_rpt_mkt_smry,재무 보고기간 시장 요약,first_close_prc,첫 종가 가격,PRICE,"DECIMAL(18,4)",Y,N,,,first(첫) + close(종가) + prc(가격),OK
+GOLD,g_fin_rpt_mkt_smry,재무 보고기간 시장 요약,last_close_prc,마지막 종가 가격,PRICE,"DECIMAL(18,4)",Y,N,,,last(마지막) + close(종가) + prc(가격),OK
+GOLD,g_fin_rpt_mkt_smry,재무 보고기간 시장 요약,prd_rtn_rt,기간 수익률,RATE,"DECIMAL(12,8)",Y,N,,,prd(기간) + rtn(수익률) + rt(율),OK
+GOLD,g_fin_rpt_mkt_smry,재무 보고기간 시장 요약,frgn_net_buy_qty,외국인 순매수 수량(기간 합),QTY,BIGINT,Y,N,,,frgn(외국인) + net(순) + buy(매수) + qty(수량),OK
+GOLD,g_fin_rpt_mkt_smry,재무 보고기간 시장 요약,inst_net_buy_qty,기관 순매수 수량(기간 합),QTY,BIGINT,Y,N,,,inst(기관) + net(순) + buy(매수) + qty(수량),OK
+GOLD,g_fin_rpt_mkt_smry,재무 보고기간 시장 요약,indv_net_buy_qty,개인 순매수 수량(기간 합),QTY,BIGINT,Y,N,,,indv(개인) + net(순) + buy(매수) + qty(수량),OK
+GOLD,g_fin_rpt_mkt_smry,재무 보고기간 시장 요약,rev_ytd_amt,매출 누적 금액,AMT_KRW,"DECIMAL(20,0)",Y,N,,,rev(매출) + ytd(연초누적) + amt(금액),OK
+GOLD,g_fin_rpt_mkt_smry,재무 보고기간 시장 요약,op_prft_ytd_amt,영업 이익 누적 금액,AMT_KRW,"DECIMAL(20,0)",Y,N,,,op(영업) + prft(이익) + ytd(연초누적) + amt(금액),OK
+GOLD,g_fin_rpt_mkt_smry,재무 보고기간 시장 요약,op_cf_ytd_amt,영업 현금흐름 누적 금액,AMT_KRW,"DECIMAL(20,0)",Y,N,,,op(영업) + cf(현금흐름) + ytd(연초누적) + amt(금액),OK
+GOLD,g_fin_rpt_mkt_smry,재무 보고기간 시장 요약,pipln_ver,파이프라인 버전,VERSION,VARCHAR(80),N,N,,,pipln(파이프라인) + ver(버전),OK
+META,m_exec_log,실행 기록,run_id,실행 식별자,ID_V64,VARCHAR(64),N,Y,,,run(실행) + id(식별자),OK
+META,m_exec_log,실행 기록,step_nm,절차명,NAME_V200,VARCHAR(200),N,Y,,,step(절차) + nm(명),OK
+META,m_exec_log,실행 기록,tbl_nm,테이블명,NAME_V200,VARCHAR(200),N,Y,,,tbl(테이블) + nm(명),OK
+META,m_exec_log,실행 기록,layer_cd,계층 코드,CODE_V50,VARCHAR(50),N,N,LAYER,,layer(계층) + cd(코드),OK
+META,m_exec_log,실행 기록,input_ver,입력 버전,VERSION,VARCHAR(80),N,N,,,input(입력) + ver(버전),OK
+META,m_exec_log,실행 기록,rcrd_cnt,레코드 건수,COUNT,INT,N,N,,,rcrd(레코드) + cnt(건수),OK
+META,m_exec_log,실행 기록,start_dttm,시작 일시,DATETIME,DATETIME,N,N,,,start(시작) + dttm(일시),OK
+META,m_exec_log,실행 기록,end_dttm,종료 일시,DATETIME,DATETIME,N,N,,,end(종료) + dttm(일시),OK
+META,m_exec_log,실행 기록,run_stts_cd,실행 상태 코드,CODE_V50,VARCHAR(50),N,N,RUN_STTS,,run(실행) + stts(상태) + cd(코드),OK
+META,m_exec_log,실행 기록,pipln_ver,파이프라인 버전,VERSION,VARCHAR(80),N,N,,,pipln(파이프라인) + ver(버전),OK
+META,m_std_word,표준 단어,word_nm,단어 물리명,NAME_V200,VARCHAR(200),N,Y,,,word(단어) + nm(명),OK
+META,m_std_word,표준 단어,word_kor_nm,단어 한글명,NAME_V200,VARCHAR(200),N,N,,,word(단어) + kor(한글) + nm(명),OK
+META,m_std_word,표준 단어,word_eng_nm,단어 영문명,NAME_V200,VARCHAR(200),N,N,,,word(단어) + eng(영문) + nm(명),OK
+META,m_std_word,표준 단어,word_cls_cd,단어 분류 코드,CODE_V50,VARCHAR(50),N,N,,,word(단어) + cls(분류) + cd(코드),OK
+META,m_std_dmn,표준 도메인,dmn_nm,도메인명,NAME_V200,VARCHAR(200),N,Y,,,dmn(도메인) + nm(명),OK
+META,m_std_dmn,표준 도메인,cls_word_nm,분류어명,NAME_V200,VARCHAR(200),N,N,,,cls(분류) + word(단어) + nm(명),OK
+META,m_std_dmn,표준 도메인,data_type_nm,데이터 유형명,NAME_V200,VARCHAR(200),N,N,,,data(데이터) + type(유형) + nm(명),OK
+META,m_std_dmn,표준 도메인,data_len_txt,데이터 길이 내용,TEXT_V2000,VARCHAR(2000),N,N,,,data(데이터) + len(길이) + txt(내용),OK
+META,m_std_dmn,표준 도메인,allow_ptrn_txt,허용 패턴 내용,TEXT_V2000,VARCHAR(2000),N,N,,,allow(허용) + ptrn(패턴) + txt(내용),OK
+META,m_std_dmn,표준 도메인,dmn_desc_txt,도메인 설명 내용,TEXT_V2000,VARCHAR(2000),N,N,,,dmn(도메인) + desc(설명) + txt(내용),OK
+META,m_std_term,표준 용어(컬럼),tbl_nm,테이블명,NAME_V200,VARCHAR(200),N,Y,,,tbl(테이블) + nm(명),OK
+META,m_std_term,표준 용어(컬럼),col_nm,컬럼명,NAME_V200,VARCHAR(200),N,Y,,,col(컬럼) + nm(명),OK
+META,m_std_term,표준 용어(컬럼),term_kor_nm,용어 한글명,NAME_V200,VARCHAR(200),N,N,,,term(용어) + kor(한글) + nm(명),OK
+META,m_std_term,표준 용어(컬럼),dmn_nm,도메인명,NAME_V200,VARCHAR(200),N,N,,,dmn(도메인) + nm(명),OK
+META,m_std_term,표준 용어(컬럼),data_type_nm,데이터 유형명,NAME_V200,VARCHAR(200),N,N,,,data(데이터) + type(유형) + nm(명),OK
+META,m_std_term,표준 용어(컬럼),null_allow_yn,널 허용 여부,YN,CHAR(1),N,N,,,null(널) + allow(허용) + yn(여부),OK
+META,m_std_term,표준 용어(컬럼),pk_yn,기본키 여부,YN,CHAR(1),N,N,,,pk(기본키) + yn(여부),OK
+META,m_std_term,표준 용어(컬럼),cd_grp_id,코드그룹 식별자,ID_V64,VARCHAR(64),Y,N,,,cd(코드) + grp(그룹) + id(식별자),OK
+META,m_std_term,표준 용어(컬럼),layer_cd,계층 코드,CODE_V50,VARCHAR(50),N,N,,,layer(계층) + cd(코드),OK
+META,m_std_term,표준 용어(컬럼),asis_src_txt,현행 원천 내용,TEXT_V2000,VARCHAR(2000),Y,N,,,asis(현행) + src(원천) + txt(내용),OK

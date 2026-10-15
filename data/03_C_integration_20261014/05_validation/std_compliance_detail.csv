@@ -1,0 +1,723 @@
+﻿schema,table,column,column_type,in_dictionary,name_ok,type_ok,null_ok,violation
+tz_bronze,b_a_company_master,corp_code,text,N,N,,,미등록 단어:code; 분류어로 끝나지 않음
+tz_bronze,b_a_company_master,corp_name,text,N,N,,,미등록 단어:name; 분류어로 끝나지 않음
+tz_bronze,b_a_company_master,corp_eng_name,text,N,N,,,미등록 단어:name; 분류어로 끝나지 않음
+tz_bronze,b_a_company_master,stock_code,text,N,N,,,미등록 단어:code; 분류어로 끝나지 않음
+tz_bronze,b_a_company_master,modify_date,text,N,N,,,"미등록 단어:modify,date; 분류어로 끝나지 않음"
+tz_bronze,b_a_company_master,_source_file,text,N,N,,,"소문자 snake_case 아님; 미등록 단어:,source; 분류어로 끝나지 않음"
+tz_bronze,b_a_company_master,_source_row,text,N,N,,,"소문자 snake_case 아님; 미등록 단어:,source; 분류어로 끝나지 않음"
+tz_bronze,b_a_company_master,_source_version,text,N,N,,,"소문자 snake_case 아님; 미등록 단어:,source,version; 분류어로 끝나지 않음"
+tz_bronze,b_a_disclosure_documents,rcept_no,text,N,Y,,,
+tz_bronze,b_a_disclosure_documents,corp_code,text,N,N,,,미등록 단어:code; 분류어로 끝나지 않음
+tz_bronze,b_a_disclosure_documents,stock_code,text,N,N,,,미등록 단어:code; 분류어로 끝나지 않음
+tz_bronze,b_a_disclosure_documents,corp_name,text,N,N,,,미등록 단어:name; 분류어로 끝나지 않음
+tz_bronze,b_a_disclosure_documents,report_nm,text,N,N,,,미등록 단어:report
+tz_bronze,b_a_disclosure_documents,rcept_dt,text,N,Y,,,
+tz_bronze,b_a_disclosure_documents,zip_path,text,N,Y,,,
+tz_bronze,b_a_disclosure_documents,sha256,text,N,N,,,미등록 단어:sha256; 분류어로 끝나지 않음
+tz_bronze,b_a_disclosure_documents,status,text,N,N,,,미등록 단어:status; 분류어로 끝나지 않음
+tz_bronze,b_a_disclosure_documents,error,text,N,N,,,미등록 단어:error; 분류어로 끝나지 않음
+tz_bronze,b_a_disclosure_documents,_source_file,text,N,N,,,"소문자 snake_case 아님; 미등록 단어:,source; 분류어로 끝나지 않음"
+tz_bronze,b_a_disclosure_documents,_source_row,text,N,N,,,"소문자 snake_case 아님; 미등록 단어:,source; 분류어로 끝나지 않음"
+tz_bronze,b_a_disclosure_documents,_source_version,text,N,N,,,"소문자 snake_case 아님; 미등록 단어:,source,version; 분류어로 끝나지 않음"
+tz_bronze,b_a_disclosures,corp_code,text,N,N,,,미등록 단어:code; 분류어로 끝나지 않음
+tz_bronze,b_a_disclosures,corp_name,text,N,N,,,미등록 단어:name; 분류어로 끝나지 않음
+tz_bronze,b_a_disclosures,corp_cls,text,N,N,,,분류어로 끝나지 않음
+tz_bronze,b_a_disclosures,stock_code,text,N,N,,,미등록 단어:code; 분류어로 끝나지 않음
+tz_bronze,b_a_disclosures,report_nm,text,N,N,,,미등록 단어:report
+tz_bronze,b_a_disclosures,rcept_no,text,N,Y,,,
+tz_bronze,b_a_disclosures,flr_nm,text,N,Y,,,
+tz_bronze,b_a_disclosures,rcept_dt,text,N,Y,,,
+tz_bronze,b_a_disclosures,rm,text,N,N,,,미등록 단어:rm; 분류어로 끝나지 않음
+tz_bronze,b_a_disclosures,_source_file,text,N,N,,,"소문자 snake_case 아님; 미등록 단어:,source; 분류어로 끝나지 않음"
+tz_bronze,b_a_disclosures,_source_row,text,N,N,,,"소문자 snake_case 아님; 미등록 단어:,source; 분류어로 끝나지 않음"
+tz_bronze,b_a_disclosures,_source_version,text,N,N,,,"소문자 snake_case 아님; 미등록 단어:,source,version; 분류어로 끝나지 않음"
+tz_bronze,b_a_disclosures,document_status,text,N,N,,,"미등록 단어:document,status; 분류어로 끝나지 않음"
+tz_bronze,b_a_disclosures,document_zip_path,text,N,N,,,미등록 단어:document
+tz_bronze,b_a_disclosures,document_sha256,text,N,N,,,"미등록 단어:document,sha256; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_items,corp_name,text,N,N,,,미등록 단어:name; 분류어로 끝나지 않음
+tz_bronze,b_a_financial_items,stock_code,text,N,N,,,미등록 단어:code; 분류어로 끝나지 않음
+tz_bronze,b_a_financial_items,rcept_no,text,N,Y,,,
+tz_bronze,b_a_financial_items,reprt_code,text,N,N,,,"미등록 단어:reprt,code; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_items,bsns_year,text,N,N,,,미등록 단어:year; 분류어로 끝나지 않음
+tz_bronze,b_a_financial_items,corp_code,text,N,N,,,미등록 단어:code; 분류어로 끝나지 않음
+tz_bronze,b_a_financial_items,fs_div,text,N,N,,,분류어로 끝나지 않음
+tz_bronze,b_a_financial_items,sj_div,text,N,N,,,미등록 단어:sj; 분류어로 끝나지 않음
+tz_bronze,b_a_financial_items,sj_nm,text,N,N,,,미등록 단어:sj
+tz_bronze,b_a_financial_items,account_id,text,N,N,,,미등록 단어:account
+tz_bronze,b_a_financial_items,account_nm,text,N,N,,,미등록 단어:account
+tz_bronze,b_a_financial_items,account_detail,text,N,N,,,"미등록 단어:account,detail; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_items,thstrm_nm,text,N,N,,,미등록 단어:thstrm
+tz_bronze,b_a_financial_items,thstrm_amount,text,N,N,,,"미등록 단어:thstrm,amount; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_items,thstrm_add_amount,text,N,N,,,"미등록 단어:thstrm,add,amount; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_items,frmtrm_nm,text,N,N,,,미등록 단어:frmtrm
+tz_bronze,b_a_financial_items,frmtrm_amount,text,N,N,,,"미등록 단어:frmtrm,amount; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_items,frmtrm_q_nm,text,N,N,,,"미등록 단어:frmtrm,q"
+tz_bronze,b_a_financial_items,frmtrm_q_amount,text,N,N,,,"미등록 단어:frmtrm,q,amount; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_items,frmtrm_add_amount,text,N,N,,,"미등록 단어:frmtrm,add,amount; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_items,bfefrmtrm_nm,text,N,N,,,미등록 단어:bfefrmtrm
+tz_bronze,b_a_financial_items,bfefrmtrm_amount,text,N,N,,,"미등록 단어:bfefrmtrm,amount; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_items,ord,text,N,N,,,분류어로 끝나지 않음
+tz_bronze,b_a_financial_items,currency,text,N,N,,,미등록 단어:currency; 분류어로 끝나지 않음
+tz_bronze,b_a_financial_items,_source_file,text,N,N,,,"소문자 snake_case 아님; 미등록 단어:,source; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_items,_source_row,text,N,N,,,"소문자 snake_case 아님; 미등록 단어:,source; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_items,_source_version,text,N,N,,,"소문자 snake_case 아님; 미등록 단어:,source,version; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_items,financial_report_id,text,N,N,,,"미등록 단어:financial,report"
+tz_bronze,b_a_financial_items,financial_item_id,text,N,N,,,미등록 단어:financial
+tz_bronze,b_a_financial_summary,financial_report_id,text,N,N,,,"미등록 단어:financial,report"
+tz_bronze,b_a_financial_summary,corp_code,text,N,N,,,미등록 단어:code; 분류어로 끝나지 않음
+tz_bronze,b_a_financial_summary,stock_code,text,N,N,,,미등록 단어:code; 분류어로 끝나지 않음
+tz_bronze,b_a_financial_summary,corp_name,text,N,N,,,미등록 단어:name; 분류어로 끝나지 않음
+tz_bronze,b_a_financial_summary,bsns_year,text,N,N,,,미등록 단어:year; 분류어로 끝나지 않음
+tz_bronze,b_a_financial_summary,reprt_code,text,N,N,,,"미등록 단어:reprt,code; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,report_label,text,N,N,,,"미등록 단어:report,label; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,report_quarter,text,N,N,,,"미등록 단어:report,quarter; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,fs_div,text,N,N,,,분류어로 끝나지 않음
+tz_bronze,b_a_financial_summary,rcept_no,text,N,Y,,,
+tz_bronze,b_a_financial_summary,report_nm,text,N,N,,,미등록 단어:report
+tz_bronze,b_a_financial_summary,disclosure_date,text,N,N,,,"미등록 단어:disclosure,date; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,disclosure_join_status,text,N,N,,,"미등록 단어:disclosure,status; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,document_status,text,N,N,,,"미등록 단어:document,status; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,document_zip_path,text,N,N,,,미등록 단어:document
+tz_bronze,b_a_financial_summary,currency,text,N,N,,,미등록 단어:currency; 분류어로 끝나지 않음
+tz_bronze,b_a_financial_summary,flow_period_months,text,N,N,,,"미등록 단어:period,months; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,period_start_nominal,text,N,N,,,"미등록 단어:period,nominal; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,period_end_nominal,text,N,N,,,"미등록 단어:period,nominal; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,calendar_period_status,text,N,N,,,"미등록 단어:calendar,period,status; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,cf_period_status,text,N,N,,,"미등록 단어:period,status; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,point_in_time_join_eligible,text,N,N,,,"미등록 단어:point,in,time,eligible; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,same_period_comparison_eligible,text,N,N,,,"미등록 단어:period,comparison,eligible; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,source_version,text,N,N,,,"미등록 단어:source,version; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,revenue_ytd,text,N,N,,,미등록 단어:revenue; 분류어로 끝나지 않음
+tz_bronze,b_a_financial_summary,revenue_prior_ytd,text,N,N,,,"미등록 단어:revenue,prior; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,revenue_3m,text,N,N,,,"미등록 단어:revenue,3m; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,revenue_prior_3m,text,N,N,,,"미등록 단어:revenue,prior,3m; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,cost_of_sales_ytd,text,N,N,,,"미등록 단어:cost,of,sales; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,cost_of_sales_prior_ytd,text,N,N,,,"미등록 단어:cost,of,sales,prior; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,cost_of_sales_3m,text,N,N,,,"미등록 단어:cost,of,sales,3m; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,cost_of_sales_prior_3m,text,N,N,,,"미등록 단어:cost,of,sales,prior,3m; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,gross_profit_ytd,text,N,N,,,"미등록 단어:gross,profit; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,gross_profit_prior_ytd,text,N,N,,,"미등록 단어:gross,profit,prior; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,gross_profit_3m,text,N,N,,,"미등록 단어:gross,profit,3m; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,gross_profit_prior_3m,text,N,N,,,"미등록 단어:gross,profit,prior,3m; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,sga_ytd,text,N,N,,,미등록 단어:sga; 분류어로 끝나지 않음
+tz_bronze,b_a_financial_summary,sga_prior_ytd,text,N,N,,,"미등록 단어:sga,prior; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,sga_3m,text,N,N,,,"미등록 단어:sga,3m; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,sga_prior_3m,text,N,N,,,"미등록 단어:sga,prior,3m; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,operating_profit_ytd,text,N,N,,,"미등록 단어:operating,profit; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,operating_profit_prior_ytd,text,N,N,,,"미등록 단어:operating,profit,prior; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,operating_profit_3m,text,N,N,,,"미등록 단어:operating,profit,3m; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,operating_profit_prior_3m,text,N,N,,,"미등록 단어:operating,profit,prior,3m; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,finance_income_ytd,text,N,N,,,"미등록 단어:finance,income; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,finance_income_prior_ytd,text,N,N,,,"미등록 단어:finance,income,prior; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,finance_income_3m,text,N,N,,,"미등록 단어:finance,income,3m; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,finance_income_prior_3m,text,N,N,,,"미등록 단어:finance,income,prior,3m; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,finance_cost_ytd,text,N,N,,,"미등록 단어:finance,cost; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,finance_cost_prior_ytd,text,N,N,,,"미등록 단어:finance,cost,prior; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,finance_cost_3m,text,N,N,,,"미등록 단어:finance,cost,3m; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,finance_cost_prior_3m,text,N,N,,,"미등록 단어:finance,cost,prior,3m; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,pretax_profit_ytd,text,N,N,,,"미등록 단어:pretax,profit; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,pretax_profit_prior_ytd,text,N,N,,,"미등록 단어:pretax,profit,prior; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,pretax_profit_3m,text,N,N,,,"미등록 단어:pretax,profit,3m; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,pretax_profit_prior_3m,text,N,N,,,"미등록 단어:pretax,profit,prior,3m; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,income_tax_ytd,text,N,N,,,"미등록 단어:income,tax; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,income_tax_prior_ytd,text,N,N,,,"미등록 단어:income,tax,prior; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,income_tax_3m,text,N,N,,,"미등록 단어:income,tax,3m; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,income_tax_prior_3m,text,N,N,,,"미등록 단어:income,tax,prior,3m; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,net_income_ytd,text,N,N,,,미등록 단어:income; 분류어로 끝나지 않음
+tz_bronze,b_a_financial_summary,net_income_prior_ytd,text,N,N,,,"미등록 단어:income,prior; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,net_income_3m,text,N,N,,,"미등록 단어:income,3m; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,net_income_prior_3m,text,N,N,,,"미등록 단어:income,prior,3m; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,net_income_parent_ytd,text,N,N,,,"미등록 단어:income,parent; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,net_income_parent_prior_ytd,text,N,N,,,"미등록 단어:income,parent,prior; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,net_income_parent_3m,text,N,N,,,"미등록 단어:income,parent,3m; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,net_income_parent_prior_3m,text,N,N,,,"미등록 단어:income,parent,prior,3m; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,total_assets_asof,text,N,N,,,"미등록 단어:total,assets,asof; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,total_assets_prior_year_end,text,N,N,,,"미등록 단어:total,assets,prior,year; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,total_liabilities_asof,text,N,N,,,"미등록 단어:total,liabilities,asof; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,total_liabilities_prior_year_end,text,N,N,,,"미등록 단어:total,liabilities,prior,year; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,total_equity_asof,text,N,N,,,"미등록 단어:total,equity,asof; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,total_equity_prior_year_end,text,N,N,,,"미등록 단어:total,equity,prior,year; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,current_assets_asof,text,N,N,,,"미등록 단어:current,assets,asof; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,current_assets_prior_year_end,text,N,N,,,"미등록 단어:current,assets,prior,year; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,noncurrent_assets_asof,text,N,N,,,"미등록 단어:noncurrent,assets,asof; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,noncurrent_assets_prior_year_end,text,N,N,,,"미등록 단어:noncurrent,assets,prior,year; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,current_liabilities_asof,text,N,N,,,"미등록 단어:current,liabilities,asof; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,current_liabilities_prior_year_end,text,N,N,,,"미등록 단어:current,liabilities,prior,year; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,noncurrent_liabilities_asof,text,N,N,,,"미등록 단어:noncurrent,liabilities,asof; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,noncurrent_liabilities_prior_year_end,text,N,N,,,"미등록 단어:noncurrent,liabilities,prior,year; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,cash_and_equivalents_asof,text,N,N,,,"미등록 단어:cash,and,equivalents,asof; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,cash_and_equivalents_prior_year_end,text,N,N,,,"미등록 단어:cash,and,equivalents,prior,year; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,trade_receivables_asof,text,N,N,,,"미등록 단어:trade,receivables,asof; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,trade_receivables_prior_year_end,text,N,N,,,"미등록 단어:trade,receivables,prior,year; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,trade_and_other_receivables_asof,text,N,N,,,"미등록 단어:trade,and,receivables,asof; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,trade_and_other_receivables_prior_year_end,text,N,N,,,"40자 초과; 미등록 단어:trade,and,receivables,prior,year; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,inventories_asof,text,N,N,,,"미등록 단어:inventories,asof; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,inventories_prior_year_end,text,N,N,,,"미등록 단어:inventories,prior,year; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,trade_payables_asof,text,N,N,,,"미등록 단어:trade,payables,asof; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,trade_payables_prior_year_end,text,N,N,,,"미등록 단어:trade,payables,prior,year; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,trade_and_other_payables_asof,text,N,N,,,"미등록 단어:trade,and,payables,asof; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,trade_and_other_payables_prior_year_end,text,N,N,,,"미등록 단어:trade,and,payables,prior,year; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,short_term_borrowings_reported_asof,text,N,N,,,"미등록 단어:short,borrowings,reported,asof; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,short_term_borrowings_reported_prior_year_end,text,N,N,,,"40자 초과; 미등록 단어:short,borrowings,reported,prior,year; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,long_term_borrowings_reported_asof,text,N,N,,,"미등록 단어:long,borrowings,reported,asof; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,long_term_borrowings_reported_prior_year_end,text,N,N,,,"40자 초과; 미등록 단어:long,borrowings,reported,prior,year; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,current_portion_long_term_debt_reported_asof,text,N,N,,,"40자 초과; 미등록 단어:current,portion,long,debt,reported,asof; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,current_portion_long_term_debt_reported_prior_year_end,text,N,N,,,"40자 초과; 미등록 단어:current,portion,long,debt,reported,prior,year; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,current_lease_liabilities_asof,text,N,N,,,"미등록 단어:current,lease,liabilities,asof; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,current_lease_liabilities_prior_year_end,text,N,N,,,"미등록 단어:current,lease,liabilities,prior,year; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,noncurrent_lease_liabilities_asof,text,N,N,,,"미등록 단어:noncurrent,lease,liabilities,asof; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,noncurrent_lease_liabilities_prior_year_end,text,N,N,,,"40자 초과; 미등록 단어:noncurrent,lease,liabilities,prior,year; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,property_plant_equipment_asof,text,N,N,,,"미등록 단어:property,plant,equipment,asof; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,property_plant_equipment_prior_year_end,text,N,N,,,"미등록 단어:property,plant,equipment,prior,year; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,intangible_assets_asof,text,N,N,,,"미등록 단어:intangible,assets,asof; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,intangible_assets_prior_year_end,text,N,N,,,"미등록 단어:intangible,assets,prior,year; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,operating_cash_flow_ytd,text,N,N,,,"미등록 단어:operating,cash; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,operating_cash_flow_prior_ytd,text,N,N,,,"미등록 단어:operating,cash,prior; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,investing_cash_flow_ytd,text,N,N,,,"미등록 단어:investing,cash; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,investing_cash_flow_prior_ytd,text,N,N,,,"미등록 단어:investing,cash,prior; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,financing_cash_flow_ytd,text,N,N,,,"미등록 단어:financing,cash; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,financing_cash_flow_prior_ytd,text,N,N,,,"미등록 단어:financing,cash,prior; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,ppe_purchase_reported_ytd,text,N,N,,,"미등록 단어:ppe,purchase,reported; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,ppe_purchase_reported_prior_ytd,text,N,N,,,"미등록 단어:ppe,purchase,reported,prior; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,intangible_purchase_reported_ytd,text,N,N,,,"미등록 단어:intangible,purchase,reported; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,intangible_purchase_reported_prior_ytd,text,N,N,,,"미등록 단어:intangible,purchase,reported,prior; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,metric_review_count,text,N,N,,,"미등록 단어:metric,count; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,custom_mapped_count,text,N,N,,,"미등록 단어:mapped,count; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,metric_conflict_count,text,N,N,,,"미등록 단어:metric,count; 분류어로 끝나지 않음"
+tz_bronze,b_a_financial_summary,missing_core_metrics,text,N,N,,,"미등록 단어:missing,metrics; 분류어로 끝나지 않음"
+tz_bronze,b_a_metric_definitions,metric,text,N,N,,,미등록 단어:metric; 분류어로 끝나지 않음
+tz_bronze,b_a_metric_definitions,label_ko,text,N,N,,,"미등록 단어:label,ko; 분류어로 끝나지 않음"
+tz_bronze,b_a_metric_definitions,statement,text,N,N,,,미등록 단어:statement; 분류어로 끝나지 않음
+tz_bronze,b_a_metric_definitions,account_ids,text,N,N,,,"미등록 단어:account,ids; 분류어로 끝나지 않음"
+tz_bronze,b_a_metric_definitions,reason_ko,text,N,N,,,"미등록 단어:reason,ko; 분류어로 끝나지 않음"
+tz_bronze,b_a_metric_definitions,custom_names,text,N,N,,,미등록 단어:names; 분류어로 끝나지 않음
+tz_bronze,b_a_metric_definitions,name_guard,text,N,N,,,미등록 단어:name; 분류어로 끝나지 않음
+tz_bronze,b_a_review_issues,financial_report_id,text,N,N,,,"미등록 단어:financial,report"
+tz_bronze,b_a_review_issues,corp_name,text,N,N,,,미등록 단어:name; 분류어로 끝나지 않음
+tz_bronze,b_a_review_issues,metric,text,N,N,,,미등록 단어:metric; 분류어로 끝나지 않음
+tz_bronze,b_a_review_issues,severity,text,N,N,,,미등록 단어:severity; 분류어로 끝나지 않음
+tz_bronze,b_a_review_issues,issue,text,N,N,,,분류어로 끝나지 않음
+tz_bronze,b_a_review_issues,detail,text,N,N,,,미등록 단어:detail; 분류어로 끝나지 않음
+tz_bronze,b_b_bronze_unresolved_issues,dataset,text,N,N,,,미등록 단어:dataset; 분류어로 끝나지 않음
+tz_bronze,b_b_bronze_unresolved_issues,source_file,text,N,N,,,미등록 단어:source; 분류어로 끝나지 않음
+tz_bronze,b_b_bronze_unresolved_issues,source_data_row_1based,text,N,N,,,"미등록 단어:source,1based; 분류어로 끝나지 않음"
+tz_bronze,b_b_bronze_unresolved_issues,symbol,text,N,N,,,미등록 단어:symbol; 분류어로 끝나지 않음
+tz_bronze,b_b_bronze_unresolved_issues,date,text,N,N,,,예약어 단독 사용; 미등록 단어:date; 분류어로 끝나지 않음
+tz_bronze,b_b_bronze_unresolved_issues,column_or_group,text,N,N,,,"미등록 단어:column,or,group; 분류어로 끝나지 않음"
+tz_bronze,b_b_bronze_unresolved_issues,issue_code,text,N,N,,,미등록 단어:code; 분류어로 끝나지 않음
+tz_bronze,b_b_bronze_unresolved_issues,original_value,text,N,N,,,"미등록 단어:original,value; 분류어로 끝나지 않음"
+tz_bronze,b_b_bronze_unresolved_issues,current_value,text,N,N,,,"미등록 단어:current,value; 분류어로 끝나지 않음"
+tz_bronze,b_b_bronze_unresolved_issues,reason,text,N,N,,,미등록 단어:reason; 분류어로 끝나지 않음
+tz_bronze,b_b_bronze_unresolved_issues,required_evidence,text,N,N,,,"미등록 단어:required,evidence; 분류어로 끝나지 않음"
+tz_bronze,b_b_bronze_unresolved_issues,resolution,text,N,N,,,미등록 단어:resolution; 분류어로 끝나지 않음
+tz_bronze,b_b_cfd_daily,symbol,text,N,N,,,미등록 단어:symbol; 분류어로 끝나지 않음
+tz_bronze,b_b_cfd_daily,trade_date,text,N,N,,,"미등록 단어:trade,date; 분류어로 끝나지 않음"
+tz_bronze,b_b_cfd_daily,buy_balance_quantity,text,N,N,,,"미등록 단어:balance,quantity; 분류어로 끝나지 않음"
+tz_bronze,b_b_cfd_daily,buy_balance_rate,text,N,N,,,"미등록 단어:balance,rate; 분류어로 끝나지 않음"
+tz_bronze,b_b_cfd_daily,sell_balance_quantity,text,N,N,,,"미등록 단어:balance,quantity; 분류어로 끝나지 않음"
+tz_bronze,b_b_cfd_daily,sell_balance_rate,text,N,N,,,"미등록 단어:balance,rate; 분류어로 끝나지 않음"
+tz_bronze,b_b_cfd_daily,source_column,text,N,N,,,"미등록 단어:source,column; 분류어로 끝나지 않음"
+tz_bronze,b_b_cfd_daily,json_path,text,N,Y,,,
+tz_bronze,b_b_cfd_daily,source_file,text,N,N,,,미등록 단어:source; 분류어로 끝나지 않음
+tz_bronze,b_b_cfd_daily,source_row,text,N,N,,,미등록 단어:source; 분류어로 끝나지 않음
+tz_bronze,b_b_cfd_daily,bronze_row,text,N,N,,,분류어로 끝나지 않음
+tz_bronze,b_b_cfd_daily,source_version,text,N,N,,,"미등록 단어:source,version; 분류어로 끝나지 않음"
+tz_bronze,b_b_cfd_daily,pipeline_version,text,N,N,,,"미등록 단어:pipeline,version; 분류어로 끝나지 않음"
+tz_bronze,b_b_cfd_daily,source_kind,text,N,N,,,미등록 단어:source; 분류어로 끝나지 않음
+tz_bronze,b_b_cfd_daily,fetched_at,text,N,N,,,"미등록 단어:fetched,at; 분류어로 끝나지 않음"
+tz_bronze,b_b_cfd_daily,api_raw_file,text,N,N,,,분류어로 끝나지 않음
+tz_bronze,b_b_cfd_daily,api_record_path,text,N,N,,,미등록 단어:record
+tz_bronze,b_b_data_quality_issues,table,text,N,N,,,예약어 단독 사용; 미등록 단어:table; 분류어로 끝나지 않음
+tz_bronze,b_b_data_quality_issues,source_file,text,N,N,,,미등록 단어:source; 분류어로 끝나지 않음
+tz_bronze,b_b_data_quality_issues,source_row,text,N,N,,,미등록 단어:source; 분류어로 끝나지 않음
+tz_bronze,b_b_data_quality_issues,column,text,N,N,,,미등록 단어:column; 분류어로 끝나지 않음
+tz_bronze,b_b_data_quality_issues,issue_code,text,N,N,,,미등록 단어:code; 분류어로 끝나지 않음
+tz_bronze,b_b_data_quality_issues,reason,text,N,N,,,미등록 단어:reason; 분류어로 끝나지 않음
+tz_bronze,b_b_foreign_holding_daily,symbol,text,N,N,,,미등록 단어:symbol; 분류어로 끝나지 않음
+tz_bronze,b_b_foreign_holding_daily,trade_date,text,N,N,,,"미등록 단어:trade,date; 분류어로 끝나지 않음"
+tz_bronze,b_b_foreign_holding_daily,holding_quantity,text,N,N,,,"미등록 단어:holding,quantity; 분류어로 끝나지 않음"
+tz_bronze,b_b_foreign_holding_daily,limit_quantity,text,N,N,,,미등록 단어:quantity; 분류어로 끝나지 않음
+tz_bronze,b_b_foreign_holding_daily,holding_rate,text,N,N,,,"미등록 단어:holding,rate; 분류어로 끝나지 않음"
+tz_bronze,b_b_foreign_holding_daily,source_column,text,N,N,,,"미등록 단어:source,column; 분류어로 끝나지 않음"
+tz_bronze,b_b_foreign_holding_daily,json_path,text,N,Y,,,
+tz_bronze,b_b_foreign_holding_daily,source_file,text,N,N,,,미등록 단어:source; 분류어로 끝나지 않음
+tz_bronze,b_b_foreign_holding_daily,source_row,text,N,N,,,미등록 단어:source; 분류어로 끝나지 않음
+tz_bronze,b_b_foreign_holding_daily,bronze_row,text,N,N,,,분류어로 끝나지 않음
+tz_bronze,b_b_foreign_holding_daily,source_version,text,N,N,,,"미등록 단어:source,version; 분류어로 끝나지 않음"
+tz_bronze,b_b_foreign_holding_daily,pipeline_version,text,N,N,,,"미등록 단어:pipeline,version; 분류어로 끝나지 않음"
+tz_bronze,b_b_foreign_holding_daily,source_kind,text,N,N,,,미등록 단어:source; 분류어로 끝나지 않음
+tz_bronze,b_b_foreign_holding_daily,fetched_at,text,N,N,,,"미등록 단어:fetched,at; 분류어로 끝나지 않음"
+tz_bronze,b_b_foreign_holding_daily,api_raw_file,text,N,N,,,분류어로 끝나지 않음
+tz_bronze,b_b_foreign_holding_daily,api_record_path,text,N,N,,,미등록 단어:record
+tz_bronze,b_b_investor_source_daily,symbol,text,N,N,,,미등록 단어:symbol; 분류어로 끝나지 않음
+tz_bronze,b_b_investor_source_daily,trade_date,text,N,N,,,"미등록 단어:trade,date; 분류어로 끝나지 않음"
+tz_bronze,b_b_investor_source_daily,updated_at,text,N,N,,,"미등록 단어:updated,at; 분류어로 끝나지 않음"
+tz_bronze,b_b_investor_source_daily,individual,mediumtext,N,N,,,미등록 단어:individual; 분류어로 끝나지 않음
+tz_bronze,b_b_investor_source_daily,foreigner,mediumtext,N,N,,,미등록 단어:foreigner; 분류어로 끝나지 않음
+tz_bronze,b_b_investor_source_daily,institution,mediumtext,N,N,,,미등록 단어:institution; 분류어로 끝나지 않음
+tz_bronze,b_b_investor_source_daily,otherCorporation,mediumtext,N,N,,,소문자 snake_case 아님; 미등록 단어:otherCorporation; 분류어로 끝나지 않음
+tz_bronze,b_b_investor_source_daily,foreignerHolding,mediumtext,N,N,,,소문자 snake_case 아님; 미등록 단어:foreignerHolding; 분류어로 끝나지 않음
+tz_bronze,b_b_investor_source_daily,cfd,mediumtext,N,N,,,분류어로 끝나지 않음
+tz_bronze,b_b_investor_source_daily,source_file,text,N,N,,,미등록 단어:source; 분류어로 끝나지 않음
+tz_bronze,b_b_investor_source_daily,source_row,text,N,N,,,미등록 단어:source; 분류어로 끝나지 않음
+tz_bronze,b_b_investor_source_daily,bronze_row,text,N,N,,,분류어로 끝나지 않음
+tz_bronze,b_b_investor_source_daily,source_version,text,N,N,,,"미등록 단어:source,version; 분류어로 끝나지 않음"
+tz_bronze,b_b_investor_source_daily,pipeline_version,text,N,N,,,"미등록 단어:pipeline,version; 분류어로 끝나지 않음"
+tz_bronze,b_b_investor_source_daily,source_kind,text,N,N,,,미등록 단어:source; 분류어로 끝나지 않음
+tz_bronze,b_b_investor_source_daily,fetched_at,text,N,N,,,"미등록 단어:fetched,at; 분류어로 끝나지 않음"
+tz_bronze,b_b_investor_source_daily,api_raw_file,text,N,N,,,분류어로 끝나지 않음
+tz_bronze,b_b_investor_source_daily,api_record_path,text,N,N,,,미등록 단어:record
+tz_bronze,b_b_investor_trading_daily,symbol,text,N,N,,,미등록 단어:symbol; 분류어로 끝나지 않음
+tz_bronze,b_b_investor_trading_daily,trade_date,text,N,N,,,"미등록 단어:trade,date; 분류어로 끝나지 않음"
+tz_bronze,b_b_investor_trading_daily,investor_type,text,N,N,,,미등록 단어:investor; 분류어로 끝나지 않음
+tz_bronze,b_b_investor_trading_daily,parent_type,text,N,N,,,미등록 단어:parent; 분류어로 끝나지 않음
+tz_bronze,b_b_investor_trading_daily,aggregation_level,text,N,N,,,"미등록 단어:aggregation,level; 분류어로 끝나지 않음"
+tz_bronze,b_b_investor_trading_daily,buy_volume,text,N,N,,,미등록 단어:volume; 분류어로 끝나지 않음
+tz_bronze,b_b_investor_trading_daily,sell_volume,text,N,N,,,미등록 단어:volume; 분류어로 끝나지 않음
+tz_bronze,b_b_investor_trading_daily,net_buy_volume,text,N,N,,,미등록 단어:volume; 분류어로 끝나지 않음
+tz_bronze,b_b_investor_trading_daily,source_column,text,N,N,,,"미등록 단어:source,column; 분류어로 끝나지 않음"
+tz_bronze,b_b_investor_trading_daily,json_path,text,N,Y,,,
+tz_bronze,b_b_investor_trading_daily,source_file,text,N,N,,,미등록 단어:source; 분류어로 끝나지 않음
+tz_bronze,b_b_investor_trading_daily,source_row,text,N,N,,,미등록 단어:source; 분류어로 끝나지 않음
+tz_bronze,b_b_investor_trading_daily,bronze_row,text,N,N,,,분류어로 끝나지 않음
+tz_bronze,b_b_investor_trading_daily,source_version,text,N,N,,,"미등록 단어:source,version; 분류어로 끝나지 않음"
+tz_bronze,b_b_investor_trading_daily,pipeline_version,text,N,N,,,"미등록 단어:pipeline,version; 분류어로 끝나지 않음"
+tz_bronze,b_b_investor_trading_daily,source_kind,text,N,N,,,미등록 단어:source; 분류어로 끝나지 않음
+tz_bronze,b_b_investor_trading_daily,fetched_at,text,N,N,,,"미등록 단어:fetched,at; 분류어로 끝나지 않음"
+tz_bronze,b_b_investor_trading_daily,api_raw_file,text,N,N,,,분류어로 끝나지 않음
+tz_bronze,b_b_investor_trading_daily,api_record_path,text,N,N,,,미등록 단어:record
+tz_bronze,b_b_market_index_daily,index_code,text,N,N,,,"미등록 단어:index,code; 분류어로 끝나지 않음"
+tz_bronze,b_b_market_index_daily,trade_date,text,N,N,,,"미등록 단어:trade,date; 분류어로 끝나지 않음"
+tz_bronze,b_b_market_index_daily,timestamp,text,N,N,,,미등록 단어:timestamp; 분류어로 끝나지 않음
+tz_bronze,b_b_market_index_daily,open_price,text,N,N,,,미등록 단어:price; 분류어로 끝나지 않음
+tz_bronze,b_b_market_index_daily,high_price,text,N,N,,,미등록 단어:price; 분류어로 끝나지 않음
+tz_bronze,b_b_market_index_daily,low_price,text,N,N,,,미등록 단어:price; 분류어로 끝나지 않음
+tz_bronze,b_b_market_index_daily,close_price,text,N,N,,,미등록 단어:price; 분류어로 끝나지 않음
+tz_bronze,b_b_market_index_daily,volume,text,N,N,,,미등록 단어:volume; 분류어로 끝나지 않음
+tz_bronze,b_b_market_index_daily,source_file,text,N,N,,,미등록 단어:source; 분류어로 끝나지 않음
+tz_bronze,b_b_market_index_daily,source_row,text,N,N,,,미등록 단어:source; 분류어로 끝나지 않음
+tz_bronze,b_b_market_index_daily,bronze_row,text,N,N,,,분류어로 끝나지 않음
+tz_bronze,b_b_market_index_daily,source_version,text,N,N,,,"미등록 단어:source,version; 분류어로 끝나지 않음"
+tz_bronze,b_b_market_index_daily,pipeline_version,text,N,N,,,"미등록 단어:pipeline,version; 분류어로 끝나지 않음"
+tz_bronze,b_b_market_index_daily,source_kind,text,N,N,,,미등록 단어:source; 분류어로 끝나지 않음
+tz_bronze,b_b_market_index_daily,fetched_at,text,N,N,,,"미등록 단어:fetched,at; 분류어로 끝나지 않음"
+tz_bronze,b_b_market_index_daily,api_raw_file,text,N,N,,,분류어로 끝나지 않음
+tz_bronze,b_b_market_index_daily,api_record_path,text,N,N,,,미등록 단어:record
+tz_bronze,b_b_pending_recovery_review,source_file,text,N,N,,,미등록 단어:source; 분류어로 끝나지 않음
+tz_bronze,b_b_pending_recovery_review,source_row,text,N,N,,,미등록 단어:source; 분류어로 끝나지 않음
+tz_bronze,b_b_pending_recovery_review,symbol,text,N,N,,,미등록 단어:symbol; 분류어로 끝나지 않음
+tz_bronze,b_b_pending_recovery_review,trade_date,text,N,N,,,"미등록 단어:trade,date; 분류어로 끝나지 않음"
+tz_bronze,b_b_pending_recovery_review,issue_codes,text,N,N,,,미등록 단어:codes; 분류어로 끝나지 않음
+tz_bronze,b_b_pending_recovery_review,affected_columns,text,N,N,,,"미등록 단어:affected,columns; 분류어로 끝나지 않음"
+tz_bronze,b_b_pending_recovery_review,status,text,N,N,,,미등록 단어:status; 분류어로 끝나지 않음
+tz_bronze,b_b_pending_recovery_review,raw_file,text,N,N,,,분류어로 끝나지 않음
+tz_bronze,b_b_pending_recovery_review,fetched_at,text,N,N,,,"미등록 단어:fetched,at; 분류어로 끝나지 않음"
+tz_bronze,b_b_pending_recovery_review,api_record_json,mediumtext,N,N,,,미등록 단어:record; 분류어로 끝나지 않음
+tz_bronze,b_b_pending_recovery_review,overlap_rows,text,N,N,,,"미등록 단어:overlap,rows; 분류어로 끝나지 않음"
+tz_bronze,b_b_pending_recovery_review,overlap_matched,text,N,N,,,"미등록 단어:overlap,matched; 분류어로 끝나지 않음"
+tz_bronze,b_b_pending_recovery_review,overlap_mismatched,text,N,N,,,"미등록 단어:overlap,mismatched; 분류어로 끝나지 않음"
+tz_bronze,b_b_pending_recovery_review,error,text,N,N,,,미등록 단어:error; 분류어로 끝나지 않음
+tz_bronze,b_b_pending_recovery_review,review_status,text,N,N,,,미등록 단어:status; 분류어로 끝나지 않음
+tz_bronze,b_b_pending_recovery_review,review_notes,text,N,N,,,미등록 단어:notes; 분류어로 끝나지 않음
+tz_bronze,b_b_price_investor_availability,symbol,text,N,N,,,미등록 단어:symbol; 분류어로 끝나지 않음
+tz_bronze,b_b_price_investor_availability,trade_date,text,N,N,,,"미등록 단어:trade,date; 분류어로 끝나지 않음"
+tz_bronze,b_b_price_investor_availability,has_price,text,N,N,,,"미등록 단어:has,price; 분류어로 끝나지 않음"
+tz_bronze,b_b_price_investor_availability,has_investor_data,text,N,N,,,"미등록 단어:has,investor; 분류어로 끝나지 않음"
+tz_bronze,b_b_price_investor_availability,missing_reason,text,N,N,,,"미등록 단어:missing,reason; 분류어로 끝나지 않음"
+tz_bronze,b_b_price_investor_availability,missing_issue_codes,text,N,N,,,"미등록 단어:missing,codes; 분류어로 끝나지 않음"
+tz_bronze,b_b_price_investor_availability,source_file,text,N,N,,,미등록 단어:source; 분류어로 끝나지 않음
+tz_bronze,b_b_price_investor_availability,source_row,text,N,N,,,미등록 단어:source; 분류어로 끝나지 않음
+tz_bronze,b_b_price_investor_availability,bronze_row,text,N,N,,,분류어로 끝나지 않음
+tz_bronze,b_b_price_investor_availability,source_version,text,N,N,,,"미등록 단어:source,version; 분류어로 끝나지 않음"
+tz_bronze,b_b_price_investor_availability,pipeline_version,text,N,N,,,"미등록 단어:pipeline,version; 분류어로 끝나지 않음"
+tz_bronze,b_b_price_investor_availability,source_kind,text,N,N,,,미등록 단어:source; 분류어로 끝나지 않음
+tz_bronze,b_b_price_investor_availability,fetched_at,text,N,N,,,"미등록 단어:fetched,at; 분류어로 끝나지 않음"
+tz_bronze,b_b_price_investor_availability,api_raw_file,text,N,N,,,분류어로 끝나지 않음
+tz_bronze,b_b_price_investor_availability,api_record_path,text,N,N,,,미등록 단어:record
+tz_bronze,b_b_security_master,symbol,text,N,N,,,미등록 단어:symbol; 분류어로 끝나지 않음
+tz_bronze,b_b_security_master,name,text,N,N,,,미등록 단어:name; 분류어로 끝나지 않음
+tz_bronze,b_b_security_master,englishName,text,N,N,,,소문자 snake_case 아님; 미등록 단어:englishName; 분류어로 끝나지 않음
+tz_bronze,b_b_security_master,isinCode,text,N,N,,,소문자 snake_case 아님; 미등록 단어:isinCode; 분류어로 끝나지 않음
+tz_bronze,b_b_security_master,market,text,N,N,,,미등록 단어:market; 분류어로 끝나지 않음
+tz_bronze,b_b_security_master,securityType,text,N,N,,,소문자 snake_case 아님; 미등록 단어:securityType; 분류어로 끝나지 않음
+tz_bronze,b_b_security_master,isCommonShare,text,N,N,,,소문자 snake_case 아님; 미등록 단어:isCommonShare; 분류어로 끝나지 않음
+tz_bronze,b_b_security_master,status,text,N,N,,,미등록 단어:status; 분류어로 끝나지 않음
+tz_bronze,b_b_security_master,currency,text,N,N,,,미등록 단어:currency; 분류어로 끝나지 않음
+tz_bronze,b_b_security_master,listDate,text,N,N,,,소문자 snake_case 아님; 미등록 단어:listDate; 분류어로 끝나지 않음
+tz_bronze,b_b_security_master,delistDate,text,N,N,,,소문자 snake_case 아님; 미등록 단어:delistDate; 분류어로 끝나지 않음
+tz_bronze,b_b_security_master,sharesOutstanding,text,N,N,,,소문자 snake_case 아님; 미등록 단어:sharesOutstanding; 분류어로 끝나지 않음
+tz_bronze,b_b_security_master,leverageFactor,text,N,N,,,소문자 snake_case 아님; 미등록 단어:leverageFactor; 분류어로 끝나지 않음
+tz_bronze,b_b_security_master,koreanMarketDetail,mediumtext,N,N,,,소문자 snake_case 아님; 미등록 단어:koreanMarketDetail; 분류어로 끝나지 않음
+tz_bronze,b_b_security_master,source_file,text,N,N,,,미등록 단어:source; 분류어로 끝나지 않음
+tz_bronze,b_b_security_master,source_row,text,N,N,,,미등록 단어:source; 분류어로 끝나지 않음
+tz_bronze,b_b_security_master,bronze_row,text,N,N,,,분류어로 끝나지 않음
+tz_bronze,b_b_security_master,source_version,text,N,N,,,"미등록 단어:source,version; 분류어로 끝나지 않음"
+tz_bronze,b_b_security_master,pipeline_version,text,N,N,,,"미등록 단어:pipeline,version; 분류어로 끝나지 않음"
+tz_bronze,b_b_security_master,source_kind,text,N,N,,,미등록 단어:source; 분류어로 끝나지 않음
+tz_bronze,b_b_security_master,fetched_at,text,N,N,,,"미등록 단어:fetched,at; 분류어로 끝나지 않음"
+tz_bronze,b_b_security_master,api_raw_file,text,N,N,,,분류어로 끝나지 않음
+tz_bronze,b_b_security_master,api_record_path,text,N,N,,,미등록 단어:record
+tz_bronze,b_b_stock_daily_price,symbol,text,N,N,,,미등록 단어:symbol; 분류어로 끝나지 않음
+tz_bronze,b_b_stock_daily_price,trade_date,text,N,N,,,"미등록 단어:trade,date; 분류어로 끝나지 않음"
+tz_bronze,b_b_stock_daily_price,timestamp,text,N,N,,,미등록 단어:timestamp; 분류어로 끝나지 않음
+tz_bronze,b_b_stock_daily_price,open_price,text,N,N,,,미등록 단어:price; 분류어로 끝나지 않음
+tz_bronze,b_b_stock_daily_price,high_price,text,N,N,,,미등록 단어:price; 분류어로 끝나지 않음
+tz_bronze,b_b_stock_daily_price,low_price,text,N,N,,,미등록 단어:price; 분류어로 끝나지 않음
+tz_bronze,b_b_stock_daily_price,close_price,text,N,N,,,미등록 단어:price; 분류어로 끝나지 않음
+tz_bronze,b_b_stock_daily_price,volume,text,N,N,,,미등록 단어:volume; 분류어로 끝나지 않음
+tz_bronze,b_b_stock_daily_price,currency,text,N,N,,,미등록 단어:currency; 분류어로 끝나지 않음
+tz_bronze,b_b_stock_daily_price,source_file,text,N,N,,,미등록 단어:source; 분류어로 끝나지 않음
+tz_bronze,b_b_stock_daily_price,source_row,text,N,N,,,미등록 단어:source; 분류어로 끝나지 않음
+tz_bronze,b_b_stock_daily_price,bronze_row,text,N,N,,,분류어로 끝나지 않음
+tz_bronze,b_b_stock_daily_price,source_version,text,N,N,,,"미등록 단어:source,version; 분류어로 끝나지 않음"
+tz_bronze,b_b_stock_daily_price,pipeline_version,text,N,N,,,"미등록 단어:pipeline,version; 분류어로 끝나지 않음"
+tz_bronze,b_b_stock_daily_price,source_kind,text,N,N,,,미등록 단어:source; 분류어로 끝나지 않음
+tz_bronze,b_b_stock_daily_price,fetched_at,text,N,N,,,"미등록 단어:fetched,at; 분류어로 끝나지 않음"
+tz_bronze,b_b_stock_daily_price,api_raw_file,text,N,N,,,분류어로 끝나지 않음
+tz_bronze,b_b_stock_daily_price,api_record_path,text,N,N,,,미등록 단어:record
+tz_gold,g_ai_stock_daily,stock_cd,char(6),Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,trd_dt,date,Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,corp_cd,char(8),Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,mkt_cd,varchar(50),Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,open_prc,"decimal(18,4)",Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,high_prc,"decimal(18,4)",Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,low_prc,"decimal(18,4)",Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,close_prc,"decimal(18,4)",Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,trd_qty,bigint,Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,close_rtn_rt,"decimal(12,8)",Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,idx_close_prc,"decimal(18,4)",Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,idx_rtn_rt,"decimal(12,8)",Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,indv_net_buy_qty,bigint,Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,frgn_net_buy_qty,bigint,Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,inst_net_buy_qty,bigint,Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,other_corp_net_buy_qty,bigint,Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,frgn_hold_rt,"decimal(12,8)",Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,cfd_buy_bal_rt,"decimal(12,8)",Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,invstr_exist_yn,char(1),Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,fin_avail_yn,char(1),Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,fin_rpt_id,varchar(64),Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,fin_bsns_yr,char(4),Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,fin_rpt_cd,varchar(50),Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,fin_fs_div_cd,varchar(50),Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,dscl_dt,date,Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,dscl_elps_day_cnt,int,Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,rev_ytd_amt,"decimal(20,0)",Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,op_prft_ytd_amt,"decimal(20,0)",Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,net_incm_ytd_amt,"decimal(20,0)",Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,op_cf_ytd_amt,"decimal(20,0)",Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,tot_asst_amt,"decimal(20,0)",Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,tot_liab_amt,"decimal(20,0)",Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,tot_eqty_amt,"decimal(20,0)",Y,Y,Y,Y,
+tz_gold,g_ai_stock_daily,pipln_ver,varchar(80),Y,Y,Y,Y,
+tz_gold,g_fin_rpt_mkt_smry,fin_rpt_id,varchar(64),Y,Y,Y,Y,
+tz_gold,g_fin_rpt_mkt_smry,corp_cd,char(8),Y,Y,Y,Y,
+tz_gold,g_fin_rpt_mkt_smry,stock_cd,char(6),Y,Y,Y,Y,
+tz_gold,g_fin_rpt_mkt_smry,bsns_yr,char(4),Y,Y,Y,Y,
+tz_gold,g_fin_rpt_mkt_smry,rpt_cd,varchar(50),Y,Y,Y,Y,
+tz_gold,g_fin_rpt_mkt_smry,fs_div_cd,varchar(50),Y,Y,Y,Y,
+tz_gold,g_fin_rpt_mkt_smry,prd_start_dt,date,Y,Y,Y,Y,
+tz_gold,g_fin_rpt_mkt_smry,prd_end_dt,date,Y,Y,Y,Y,
+tz_gold,g_fin_rpt_mkt_smry,same_prd_cmpr_elig_yn,char(1),Y,Y,Y,Y,
+tz_gold,g_fin_rpt_mkt_smry,trd_day_cnt,int,Y,Y,Y,Y,
+tz_gold,g_fin_rpt_mkt_smry,full_cvrg_yn,char(1),Y,Y,Y,Y,
+tz_gold,g_fin_rpt_mkt_smry,first_close_prc,"decimal(18,4)",Y,Y,Y,Y,
+tz_gold,g_fin_rpt_mkt_smry,last_close_prc,"decimal(18,4)",Y,Y,Y,Y,
+tz_gold,g_fin_rpt_mkt_smry,prd_rtn_rt,"decimal(12,8)",Y,Y,Y,Y,
+tz_gold,g_fin_rpt_mkt_smry,frgn_net_buy_qty,bigint,Y,Y,Y,Y,
+tz_gold,g_fin_rpt_mkt_smry,inst_net_buy_qty,bigint,Y,Y,Y,Y,
+tz_gold,g_fin_rpt_mkt_smry,indv_net_buy_qty,bigint,Y,Y,Y,Y,
+tz_gold,g_fin_rpt_mkt_smry,rev_ytd_amt,"decimal(20,0)",Y,Y,Y,Y,
+tz_gold,g_fin_rpt_mkt_smry,op_prft_ytd_amt,"decimal(20,0)",Y,Y,Y,Y,
+tz_gold,g_fin_rpt_mkt_smry,op_cf_ytd_amt,"decimal(20,0)",Y,Y,Y,Y,
+tz_gold,g_fin_rpt_mkt_smry,pipln_ver,varchar(80),Y,Y,Y,Y,
+tz_meta,m_exec_log,run_id,varchar(64),Y,Y,Y,Y,
+tz_meta,m_exec_log,step_nm,varchar(200),Y,Y,Y,Y,
+tz_meta,m_exec_log,tbl_nm,varchar(200),Y,Y,Y,Y,
+tz_meta,m_exec_log,layer_cd,varchar(50),Y,Y,Y,Y,
+tz_meta,m_exec_log,input_ver,varchar(80),Y,Y,Y,Y,
+tz_meta,m_exec_log,rcrd_cnt,int,Y,Y,Y,Y,
+tz_meta,m_exec_log,start_dttm,datetime,Y,Y,Y,Y,
+tz_meta,m_exec_log,end_dttm,datetime,Y,Y,Y,Y,
+tz_meta,m_exec_log,run_stts_cd,varchar(50),Y,Y,Y,Y,
+tz_meta,m_exec_log,pipln_ver,varchar(80),Y,Y,Y,Y,
+tz_meta,m_std_dmn,dmn_nm,varchar(200),Y,Y,Y,Y,
+tz_meta,m_std_dmn,cls_word_nm,varchar(200),Y,Y,Y,Y,
+tz_meta,m_std_dmn,data_type_nm,varchar(200),Y,Y,Y,Y,
+tz_meta,m_std_dmn,data_len_txt,varchar(2000),Y,Y,Y,Y,
+tz_meta,m_std_dmn,allow_ptrn_txt,varchar(2000),Y,Y,Y,Y,
+tz_meta,m_std_dmn,dmn_desc_txt,varchar(2000),Y,Y,Y,Y,
+tz_meta,m_std_term,tbl_nm,varchar(200),Y,Y,Y,Y,
+tz_meta,m_std_term,col_nm,varchar(200),Y,Y,Y,Y,
+tz_meta,m_std_term,term_kor_nm,varchar(200),Y,Y,Y,Y,
+tz_meta,m_std_term,dmn_nm,varchar(200),Y,Y,Y,Y,
+tz_meta,m_std_term,data_type_nm,varchar(200),Y,Y,Y,Y,
+tz_meta,m_std_term,null_allow_yn,char(1),Y,Y,Y,Y,
+tz_meta,m_std_term,pk_yn,char(1),Y,Y,Y,Y,
+tz_meta,m_std_term,cd_grp_id,varchar(64),Y,Y,Y,Y,
+tz_meta,m_std_term,layer_cd,varchar(50),Y,Y,Y,Y,
+tz_meta,m_std_term,asis_src_txt,varchar(2000),Y,Y,Y,Y,
+tz_meta,m_std_word,word_nm,varchar(200),Y,Y,Y,Y,
+tz_meta,m_std_word,word_kor_nm,varchar(200),Y,Y,Y,Y,
+tz_meta,m_std_word,word_eng_nm,varchar(200),Y,Y,Y,Y,
+tz_meta,m_std_word,word_cls_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_cfd_bal_daily,stock_cd,char(6),Y,Y,Y,Y,
+tz_silver,s_cfd_bal_daily,trd_dt,date,Y,Y,Y,Y,
+tz_silver,s_cfd_bal_daily,buy_bal_qty,bigint,Y,Y,Y,Y,
+tz_silver,s_cfd_bal_daily,buy_bal_rt,"decimal(12,8)",Y,Y,Y,Y,
+tz_silver,s_cfd_bal_daily,sell_bal_qty,bigint,Y,Y,Y,Y,
+tz_silver,s_cfd_bal_daily,sell_bal_rt,"decimal(12,8)",Y,Y,Y,Y,
+tz_silver,s_cfd_bal_daily,src_col_nm,varchar(200),Y,Y,Y,Y,
+tz_silver,s_cfd_bal_daily,src_json_path,varchar(500),Y,Y,Y,Y,
+tz_silver,s_cfd_bal_daily,src_team_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_cfd_bal_daily,src_kind_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_cfd_bal_daily,src_file_path,varchar(500),Y,Y,Y,Y,
+tz_silver,s_cfd_bal_daily,src_row_no,int,Y,Y,Y,Y,
+tz_silver,s_cfd_bal_daily,bronze_row_no,int,Y,Y,Y,Y,
+tz_silver,s_cfd_bal_daily,src_ver,varchar(80),Y,Y,Y,Y,
+tz_silver,s_cfd_bal_daily,fetch_dttm,datetime,Y,Y,Y,Y,
+tz_silver,s_cfd_bal_daily,api_raw_file_path,varchar(500),Y,Y,Y,Y,
+tz_silver,s_cfd_bal_daily,api_rcrd_path,varchar(500),Y,Y,Y,Y,
+tz_silver,s_cfd_bal_daily,pipln_ver,varchar(80),Y,Y,Y,Y,
+tz_silver,s_cmn_cd,cd_grp_id,varchar(64),Y,Y,Y,Y,
+tz_silver,s_cmn_cd,cd_val,varchar(200),Y,Y,Y,Y,
+tz_silver,s_cmn_cd,cd_nm,varchar(200),Y,Y,Y,Y,
+tz_silver,s_cmn_cd,cd_desc_txt,varchar(2000),Y,Y,Y,Y,
+tz_silver,s_cmn_cd,sort_ord_no,int,Y,Y,Y,Y,
+tz_silver,s_cmn_cd,asis_val_txt,varchar(2000),Y,Y,Y,Y,
+tz_silver,s_conn_stts,stock_cd,char(6),Y,Y,Y,Y,
+tz_silver,s_conn_stts,trd_dt,date,Y,Y,Y,Y,
+tz_silver,s_conn_stts,corp_cd,char(8),Y,Y,Y,Y,
+tz_silver,s_conn_stts,map_stts_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_conn_stts,prc_exist_yn,char(1),Y,Y,Y,Y,
+tz_silver,s_conn_stts,invstr_exist_yn,char(1),Y,Y,Y,Y,
+tz_silver,s_conn_stts,frgn_hold_exist_yn,char(1),Y,Y,Y,Y,
+tz_silver,s_conn_stts,cfd_exist_yn,char(1),Y,Y,Y,Y,
+tz_silver,s_conn_stts,fin_avail_yn,char(1),Y,Y,Y,Y,
+tz_silver,s_conn_stts,conn_stts_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_conn_stts,miss_rsn_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_conn_stts,miss_rsn_txt,varchar(2000),Y,Y,Y,Y,
+tz_silver,s_conn_stts,pipln_ver,varchar(80),Y,Y,Y,Y,
+tz_silver,s_corp,corp_cd,char(8),Y,Y,Y,Y,
+tz_silver,s_corp,corp_nm,varchar(200),Y,Y,Y,Y,
+tz_silver,s_corp,corp_eng_nm,varchar(200),Y,Y,Y,Y,
+tz_silver,s_corp,stock_cd,char(6),Y,Y,Y,Y,
+tz_silver,s_corp,chg_dt,date,Y,Y,Y,Y,
+tz_silver,s_corp,src_team_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_corp,src_file_path,varchar(500),Y,Y,Y,Y,
+tz_silver,s_corp,src_row_no,int,Y,Y,Y,Y,
+tz_silver,s_corp,src_ver,varchar(80),Y,Y,Y,Y,
+tz_silver,s_corp,pipln_ver,varchar(80),Y,Y,Y,Y,
+tz_silver,s_corp_stock_map,map_id,varchar(64),Y,Y,Y,Y,
+tz_silver,s_corp_stock_map,corp_cd,char(8),Y,Y,Y,Y,
+tz_silver,s_corp_stock_map,stock_cd,char(6),Y,Y,Y,Y,
+tz_silver,s_corp_stock_map,map_stts_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_corp_stock_map,map_mthd_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_corp_stock_map,cand_cnt,int,Y,Y,Y,Y,
+tz_silver,s_corp_stock_map,corp_nm,varchar(200),Y,Y,Y,Y,
+tz_silver,s_corp_stock_map,stock_nm,varchar(200),Y,Y,Y,Y,
+tz_silver,s_corp_stock_map,nm_match_yn,char(1),Y,Y,Y,Y,
+tz_silver,s_corp_stock_map,map_rsn_txt,varchar(2000),Y,Y,Y,Y,
+tz_silver,s_corp_stock_map,pipln_ver,varchar(80),Y,Y,Y,Y,
+tz_silver,s_dq_issue,issue_id,varchar(64),Y,Y,Y,Y,
+tz_silver,s_dq_issue,detect_stage_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_dq_issue,src_team_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_dq_issue,tbl_nm,varchar(200),Y,Y,Y,Y,
+tz_silver,s_dq_issue,col_nm,varchar(200),Y,Y,Y,Y,
+tz_silver,s_dq_issue,rcrd_key_txt,varchar(2000),Y,Y,Y,Y,
+tz_silver,s_dq_issue,src_file_path,varchar(500),Y,Y,Y,Y,
+tz_silver,s_dq_issue,src_row_no,int,Y,Y,Y,Y,
+tz_silver,s_dq_issue,issue_type_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_dq_issue,sev_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_dq_issue,issue_rsn_txt,varchar(2000),Y,Y,Y,Y,
+tz_silver,s_dq_issue,resolve_stts_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_dq_issue,pipln_ver,varchar(80),Y,Y,Y,Y,
+tz_silver,s_dscl,rcept_no,char(14),Y,Y,Y,Y,
+tz_silver,s_dscl,corp_cd,char(8),Y,Y,Y,Y,
+tz_silver,s_dscl,corp_nm,varchar(200),Y,Y,Y,Y,
+tz_silver,s_dscl,corp_cls_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_dscl,stock_cd,char(6),Y,Y,Y,Y,
+tz_silver,s_dscl,rpt_nm,varchar(500),Y,Y,Y,Y,
+tz_silver,s_dscl,flr_nm,varchar(200),Y,Y,Y,Y,
+tz_silver,s_dscl,rcept_dt,date,Y,Y,Y,Y,
+tz_silver,s_dscl,rmk_txt,varchar(2000),Y,Y,Y,Y,
+tz_silver,s_dscl,src_team_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_dscl,src_file_path,varchar(500),Y,Y,Y,Y,
+tz_silver,s_dscl,src_row_no,int,Y,Y,Y,Y,
+tz_silver,s_dscl,src_ver,varchar(80),Y,Y,Y,Y,
+tz_silver,s_dscl,pipln_ver,varchar(80),Y,Y,Y,Y,
+tz_silver,s_dscl_doc,rcept_no,char(14),Y,Y,Y,Y,
+tz_silver,s_dscl_doc,corp_cd,char(8),Y,Y,Y,Y,
+tz_silver,s_dscl_doc,doc_stts_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_dscl_doc,doc_zip_path,varchar(500),Y,Y,Y,Y,
+tz_silver,s_dscl_doc,doc_hash,varchar(80),Y,Y,Y,Y,
+tz_silver,s_dscl_doc,err_msg_txt,varchar(2000),Y,Y,Y,Y,
+tz_silver,s_dscl_doc,src_team_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_dscl_doc,src_file_path,varchar(500),Y,Y,Y,Y,
+tz_silver,s_dscl_doc,src_row_no,int,Y,Y,Y,Y,
+tz_silver,s_dscl_doc,src_ver,varchar(80),Y,Y,Y,Y,
+tz_silver,s_dscl_doc,pipln_ver,varchar(80),Y,Y,Y,Y,
+tz_silver,s_fin_item,fin_item_id,varchar(64),Y,Y,Y,Y,
+tz_silver,s_fin_item,fin_rpt_id,varchar(64),Y,Y,Y,Y,
+tz_silver,s_fin_item,corp_cd,char(8),Y,Y,Y,Y,
+tz_silver,s_fin_item,rcept_no,char(14),Y,Y,Y,Y,
+tz_silver,s_fin_item,bsns_yr,char(4),Y,Y,Y,Y,
+tz_silver,s_fin_item,rpt_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_fin_item,fs_div_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_fin_item,stmt_div_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_fin_item,acnt_id,varchar(200),Y,Y,Y,Y,
+tz_silver,s_fin_item,acnt_nm,varchar(200),Y,Y,Y,Y,
+tz_silver,s_fin_item,acnt_dtl_nm,varchar(500),Y,Y,Y,Y,
+tz_silver,s_fin_item,cur_prd_nm,varchar(200),Y,Y,Y,Y,
+tz_silver,s_fin_item,cur_amt,"decimal(20,0)",Y,Y,Y,Y,
+tz_silver,s_fin_item,cur_cum_amt,"decimal(20,0)",Y,Y,Y,Y,
+tz_silver,s_fin_item,prev_prd_nm,varchar(200),Y,Y,Y,Y,
+tz_silver,s_fin_item,prev_amt,"decimal(20,0)",Y,Y,Y,Y,
+tz_silver,s_fin_item,prev_qtr_prd_nm,varchar(200),Y,Y,Y,Y,
+tz_silver,s_fin_item,prev_qtr_amt,"decimal(20,0)",Y,Y,Y,Y,
+tz_silver,s_fin_item,prev_cum_amt,"decimal(20,0)",Y,Y,Y,Y,
+tz_silver,s_fin_item,bfr_prev_prd_nm,varchar(200),Y,Y,Y,Y,
+tz_silver,s_fin_item,bfr_prev_amt,"decimal(20,0)",Y,Y,Y,Y,
+tz_silver,s_fin_item,sort_ord_no,int,Y,Y,Y,Y,
+tz_silver,s_fin_item,crncy_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_fin_item,src_team_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_fin_item,src_file_path,varchar(500),Y,Y,Y,Y,
+tz_silver,s_fin_item,src_row_no,int,Y,Y,Y,Y,
+tz_silver,s_fin_item,src_ver,varchar(80),Y,Y,Y,Y,
+tz_silver,s_fin_item,pipln_ver,varchar(80),Y,Y,Y,Y,
+tz_silver,s_fin_mtrc,fin_rpt_id,varchar(64),Y,Y,Y,Y,
+tz_silver,s_fin_mtrc,mtrc_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_fin_mtrc,prd_type_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_fin_mtrc,mtrc_amt,"decimal(20,0)",Y,Y,Y,Y,
+tz_silver,s_fin_mtrc,src_col_nm,varchar(200),Y,Y,Y,Y,
+tz_silver,s_fin_mtrc,pipln_ver,varchar(80),Y,Y,Y,Y,
+tz_silver,s_fin_mtrc_def,mtrc_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_fin_mtrc_def,mtrc_nm,varchar(200),Y,Y,Y,Y,
+tz_silver,s_fin_mtrc_def,stmt_div_txt,varchar(2000),Y,Y,Y,Y,
+tz_silver,s_fin_mtrc_def,acnt_id_txt,varchar(2000),Y,Y,Y,Y,
+tz_silver,s_fin_mtrc_def,select_rsn_txt,varchar(2000),Y,Y,Y,Y,
+tz_silver,s_fin_mtrc_def,custom_nm_txt,varchar(2000),Y,Y,Y,Y,
+tz_silver,s_fin_mtrc_def,guard_txt,varchar(2000),Y,Y,Y,Y,
+tz_silver,s_fin_mtrc_def,pipln_ver,varchar(80),Y,Y,Y,Y,
+tz_silver,s_fin_rpt,fin_rpt_id,varchar(64),Y,Y,Y,Y,
+tz_silver,s_fin_rpt,corp_cd,char(8),Y,Y,Y,Y,
+tz_silver,s_fin_rpt,bsns_yr,char(4),Y,Y,Y,Y,
+tz_silver,s_fin_rpt,rpt_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_fin_rpt,fs_div_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_fin_rpt,rcept_no,char(14),Y,Y,Y,Y,
+tz_silver,s_fin_rpt,crncy_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_fin_rpt,flow_prd_mm_cnt,int,Y,Y,Y,Y,
+tz_silver,s_fin_rpt,prd_start_dt,date,Y,Y,Y,Y,
+tz_silver,s_fin_rpt,prd_end_dt,date,Y,Y,Y,Y,
+tz_silver,s_fin_rpt,dscl_join_stts_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_fin_rpt,cal_prd_stts_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_fin_rpt,cf_prd_stts_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_fin_rpt,pit_join_elig_yn,char(1),Y,Y,Y,Y,
+tz_silver,s_fin_rpt,same_prd_cmpr_elig_yn,char(1),Y,Y,Y,Y,
+tz_silver,s_fin_rpt,mtrc_review_cnt,int,Y,Y,Y,Y,
+tz_silver,s_fin_rpt,custom_map_cnt,int,Y,Y,Y,Y,
+tz_silver,s_fin_rpt,mtrc_conflict_cnt,int,Y,Y,Y,Y,
+tz_silver,s_fin_rpt,core_mtrc_miss_txt,varchar(2000),Y,Y,Y,Y,
+tz_silver,s_fin_rpt,src_team_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_fin_rpt,src_file_path,varchar(500),Y,Y,Y,Y,
+tz_silver,s_fin_rpt,src_row_no,int,Y,Y,Y,Y,
+tz_silver,s_fin_rpt,src_ver,varchar(80),Y,Y,Y,Y,
+tz_silver,s_fin_rpt,pipln_ver,varchar(80),Y,Y,Y,Y,
+tz_silver,s_frgn_hold_daily,stock_cd,char(6),Y,Y,Y,Y,
+tz_silver,s_frgn_hold_daily,trd_dt,date,Y,Y,Y,Y,
+tz_silver,s_frgn_hold_daily,hold_qty,bigint,Y,Y,Y,Y,
+tz_silver,s_frgn_hold_daily,limit_qty,bigint,Y,Y,Y,Y,
+tz_silver,s_frgn_hold_daily,hold_rt,"decimal(12,8)",Y,Y,Y,Y,
+tz_silver,s_frgn_hold_daily,src_col_nm,varchar(200),Y,Y,Y,Y,
+tz_silver,s_frgn_hold_daily,src_json_path,varchar(500),Y,Y,Y,Y,
+tz_silver,s_frgn_hold_daily,src_team_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_frgn_hold_daily,src_kind_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_frgn_hold_daily,src_file_path,varchar(500),Y,Y,Y,Y,
+tz_silver,s_frgn_hold_daily,src_row_no,int,Y,Y,Y,Y,
+tz_silver,s_frgn_hold_daily,bronze_row_no,int,Y,Y,Y,Y,
+tz_silver,s_frgn_hold_daily,src_ver,varchar(80),Y,Y,Y,Y,
+tz_silver,s_frgn_hold_daily,fetch_dttm,datetime,Y,Y,Y,Y,
+tz_silver,s_frgn_hold_daily,api_raw_file_path,varchar(500),Y,Y,Y,Y,
+tz_silver,s_frgn_hold_daily,api_rcrd_path,varchar(500),Y,Y,Y,Y,
+tz_silver,s_frgn_hold_daily,pipln_ver,varchar(80),Y,Y,Y,Y,
+tz_silver,s_idx_daily_prc,idx_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_idx_daily_prc,trd_dt,date,Y,Y,Y,Y,
+tz_silver,s_idx_daily_prc,candle_dttm,datetime,Y,Y,Y,Y,
+tz_silver,s_idx_daily_prc,open_prc,"decimal(18,4)",Y,Y,Y,Y,
+tz_silver,s_idx_daily_prc,high_prc,"decimal(18,4)",Y,Y,Y,Y,
+tz_silver,s_idx_daily_prc,low_prc,"decimal(18,4)",Y,Y,Y,Y,
+tz_silver,s_idx_daily_prc,close_prc,"decimal(18,4)",Y,Y,Y,Y,
+tz_silver,s_idx_daily_prc,trd_qty,bigint,Y,Y,Y,Y,
+tz_silver,s_idx_daily_prc,src_team_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_idx_daily_prc,src_kind_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_idx_daily_prc,src_file_path,varchar(500),Y,Y,Y,Y,
+tz_silver,s_idx_daily_prc,src_row_no,int,Y,Y,Y,Y,
+tz_silver,s_idx_daily_prc,bronze_row_no,int,Y,Y,Y,Y,
+tz_silver,s_idx_daily_prc,src_ver,varchar(80),Y,Y,Y,Y,
+tz_silver,s_idx_daily_prc,fetch_dttm,datetime,Y,Y,Y,Y,
+tz_silver,s_idx_daily_prc,api_raw_file_path,varchar(500),Y,Y,Y,Y,
+tz_silver,s_idx_daily_prc,api_rcrd_path,varchar(500),Y,Y,Y,Y,
+tz_silver,s_idx_daily_prc,pipln_ver,varchar(80),Y,Y,Y,Y,
+tz_silver,s_invstr_trd_daily,stock_cd,char(6),Y,Y,Y,Y,
+tz_silver,s_invstr_trd_daily,trd_dt,date,Y,Y,Y,Y,
+tz_silver,s_invstr_trd_daily,invstr_type_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_invstr_trd_daily,upper_invstr_type_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_invstr_trd_daily,aggr_lvl_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_invstr_trd_daily,buy_qty,bigint,Y,Y,Y,Y,
+tz_silver,s_invstr_trd_daily,sell_qty,bigint,Y,Y,Y,Y,
+tz_silver,s_invstr_trd_daily,net_buy_qty,bigint,Y,Y,Y,Y,
+tz_silver,s_invstr_trd_daily,src_col_nm,varchar(200),Y,Y,Y,Y,
+tz_silver,s_invstr_trd_daily,src_json_path,varchar(500),Y,Y,Y,Y,
+tz_silver,s_invstr_trd_daily,src_team_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_invstr_trd_daily,src_kind_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_invstr_trd_daily,src_file_path,varchar(500),Y,Y,Y,Y,
+tz_silver,s_invstr_trd_daily,src_row_no,int,Y,Y,Y,Y,
+tz_silver,s_invstr_trd_daily,bronze_row_no,int,Y,Y,Y,Y,
+tz_silver,s_invstr_trd_daily,src_ver,varchar(80),Y,Y,Y,Y,
+tz_silver,s_invstr_trd_daily,fetch_dttm,datetime,Y,Y,Y,Y,
+tz_silver,s_invstr_trd_daily,api_raw_file_path,varchar(500),Y,Y,Y,Y,
+tz_silver,s_invstr_trd_daily,api_rcrd_path,varchar(500),Y,Y,Y,Y,
+tz_silver,s_invstr_trd_daily,pipln_ver,varchar(80),Y,Y,Y,Y,
+tz_silver,s_stock,stock_cd,char(6),Y,Y,Y,Y,
+tz_silver,s_stock,stock_nm,varchar(200),Y,Y,Y,Y,
+tz_silver,s_stock,stock_eng_nm,varchar(200),Y,Y,Y,Y,
+tz_silver,s_stock,isin_cd,char(12),Y,Y,Y,Y,
+tz_silver,s_stock,mkt_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_stock,sec_type_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_stock,cmn_shr_yn,char(1),Y,Y,Y,Y,
+tz_silver,s_stock,stock_stts_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_stock,crncy_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_stock,list_dt,date,Y,Y,Y,Y,
+tz_silver,s_stock,delist_dt,date,Y,Y,Y,Y,
+tz_silver,s_stock,outstd_shr_qty,bigint,Y,Y,Y,Y,
+tz_silver,s_stock,lvrg_val,"decimal(18,6)",Y,Y,Y,Y,
+tz_silver,s_stock,mkt_dtl_txt,text,Y,Y,Y,Y,
+tz_silver,s_stock,src_team_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_stock,src_kind_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_stock,src_file_path,varchar(500),Y,Y,Y,Y,
+tz_silver,s_stock,src_row_no,int,Y,Y,Y,Y,
+tz_silver,s_stock,bronze_row_no,int,Y,Y,Y,Y,
+tz_silver,s_stock,src_ver,varchar(80),Y,Y,Y,Y,
+tz_silver,s_stock,fetch_dttm,datetime,Y,Y,Y,Y,
+tz_silver,s_stock,api_raw_file_path,varchar(500),Y,Y,Y,Y,
+tz_silver,s_stock,api_rcrd_path,varchar(500),Y,Y,Y,Y,
+tz_silver,s_stock,pipln_ver,varchar(80),Y,Y,Y,Y,
+tz_silver,s_stock_daily_prc,stock_cd,char(6),Y,Y,Y,Y,
+tz_silver,s_stock_daily_prc,trd_dt,date,Y,Y,Y,Y,
+tz_silver,s_stock_daily_prc,candle_dttm,datetime,Y,Y,Y,Y,
+tz_silver,s_stock_daily_prc,open_prc,"decimal(18,4)",Y,Y,Y,Y,
+tz_silver,s_stock_daily_prc,high_prc,"decimal(18,4)",Y,Y,Y,Y,
+tz_silver,s_stock_daily_prc,low_prc,"decimal(18,4)",Y,Y,Y,Y,
+tz_silver,s_stock_daily_prc,close_prc,"decimal(18,4)",Y,Y,Y,Y,
+tz_silver,s_stock_daily_prc,trd_qty,bigint,Y,Y,Y,Y,
+tz_silver,s_stock_daily_prc,crncy_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_stock_daily_prc,src_team_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_stock_daily_prc,src_kind_cd,varchar(50),Y,Y,Y,Y,
+tz_silver,s_stock_daily_prc,src_file_path,varchar(500),Y,Y,Y,Y,
+tz_silver,s_stock_daily_prc,src_row_no,int,Y,Y,Y,Y,
+tz_silver,s_stock_daily_prc,bronze_row_no,int,Y,Y,Y,Y,
+tz_silver,s_stock_daily_prc,src_ver,varchar(80),Y,Y,Y,Y,
+tz_silver,s_stock_daily_prc,fetch_dttm,datetime,Y,Y,Y,Y,
+tz_silver,s_stock_daily_prc,api_raw_file_path,varchar(500),Y,Y,Y,Y,
+tz_silver,s_stock_daily_prc,api_rcrd_path,varchar(500),Y,Y,Y,Y,
+tz_silver,s_stock_daily_prc,pipln_ver,varchar(80),Y,Y,Y,Y,

@@ -1,0 +1,24 @@
+﻿layer_cd,db_nm,tbl_nm,tbl_kor_nm,grain_txt,pk_txt,fk_txt,logical_fk_txt,col_cnt,src_txt
+SILVER,tz_silver,s_cmn_cd,공통코드,코드그룹·코드값당 1행,cd_grp_id+cd_val,,,6,C 표준 사전
+SILVER,tz_silver,s_corp,기업,OpenDART 고유번호당 1행,corp_cd,,,10,A support/company_master.csv
+SILVER,tz_silver,s_dscl,공시,공시 접수번호당 1행,rcept_no,corp_cd→s_corp.corp_cd,,14,A support/disclosures_with_documents.csv (문서 컬럼 제외: s_dscl_doc 로 분리)
+SILVER,tz_silver,s_dscl_doc,공시 원문 문서,원문 수집 대상 접수번호당 1행,rcept_no,rcept_no→s_dscl.rcept_no; corp_cd→s_corp.corp_cd,,11,A support/disclosure_documents.csv
+SILVER,tz_silver,s_fin_rpt,재무 보고서,기업·사업연도·보고서·연결구분·접수번호당 1행,fin_rpt_id,corp_cd→s_corp.corp_cd,"rcept_no→s_dscl.rcept_no (61건 공시목록 수집 범위 밖 → 물리 FK 미적용, 검증으로 관리)",24,A opendart_financial_summary_20_companies.csv (헤더 컬럼; report_label·report_quarter·report_nm·disclosure_date·document_* 는 정규화로 제거)
+SILVER,tz_silver,s_fin_mtrc_def,재무 지표 정의,지표당 1행,mtrc_cd,,,8,A support/metric_definitions.csv
+SILVER,tz_silver,s_fin_mtrc,재무 지표값,재무보고서·지표·기간유형당 1행(넓은 표 → 세로 표 정규화),fin_rpt_id+mtrc_cd+prd_type_cd,fin_rpt_id→s_fin_rpt.fin_rpt_id; mtrc_cd→s_fin_mtrc_def.mtrc_cd,,6,A opendart_financial_summary_20_companies.csv (94개 지표 컬럼 UNPIVOT)
+SILVER,tz_silver,s_fin_item,재무 계정 상세,원천 재무 CSV 1행 = 1행,fin_item_id,fin_rpt_id→s_fin_rpt.fin_rpt_id; corp_cd→s_corp.corp_cd,,28,A support/financial_items_all.csv (corp_name·stock_code·sj_nm 은 정규화로 제거)
+SILVER,tz_silver,s_stock,종목,종목코드당 1행,stock_cd,,,24,B silver/security_master.csv
+SILVER,tz_silver,s_stock_daily_prc,종목 일별 가격,종목·거래일당 1행,stock_cd+trd_dt,stock_cd→s_stock.stock_cd,,19,B silver/stock_daily_price.csv
+SILVER,tz_silver,s_idx_daily_prc,지수 일별 가격,지수·거래일당 1행,idx_cd+trd_dt,,,18,B silver/market_index_daily.csv
+SILVER,tz_silver,s_invstr_trd_daily,투자자별 일별 매매,종목·거래일·투자자유형당 1행,stock_cd+trd_dt+invstr_type_cd,stock_cd→s_stock.stock_cd,,20,B silver/investor_trading_daily.csv
+SILVER,tz_silver,s_frgn_hold_daily,외국인 보유 일별,종목·거래일당 1행,stock_cd+trd_dt,stock_cd→s_stock.stock_cd,,17,B silver/foreign_holding_daily.csv
+SILVER,tz_silver,s_cfd_bal_daily,CFD 잔고 일별,종목·거래일당 1행,stock_cd+trd_dt,stock_cd→s_stock.stock_cd,,18,B silver/cfd_daily.csv
+SILVER,tz_silver,s_corp_stock_map,기업-종목 매핑,기업·종목 대응 1건당 1행(미연결 포함),map_id,corp_cd→s_corp.corp_cd; stock_cd→s_stock.stock_cd,,11,C 생성
+SILVER,tz_silver,s_conn_stts,가격·수급 연결 상태,종목·거래일 키 합집합당 1행,stock_cd+trd_dt,stock_cd→s_stock.stock_cd,,13,"C 생성 (가격 ∪ 수급 키, 내부조인 아님)"
+SILVER,tz_silver,s_dq_issue,데이터 품질 이슈,이슈 1건당 1행,issue_id,,,13,A review_issues + B data_quality_issues/bronze_unresolved/pending + C 통합 검증
+GOLD,tz_gold,g_ai_stock_daily,AI 학습용 종목 일별 데이터셋,종목·거래일당 1행(가격 기준),stock_cd+trd_dt,stock_cd→s_stock.stock_cd; fin_rpt_id→s_fin_rpt.fin_rpt_id,,34,s_stock_daily_prc ⟕ s_invstr_trd_daily(TOP_LEVEL) ⟕ s_frgn_hold_daily ⟕ s_cfd_bal_daily ⟕ s_idx_daily_prc ⟕ 시점 기준 s_fin_rpt/s_fin_mtrc
+GOLD,tz_gold,g_fin_rpt_mkt_smry,재무 보고기간 시장 요약,재무 보고서당 1행,fin_rpt_id,fin_rpt_id→s_fin_rpt.fin_rpt_id,,21,s_fin_rpt + s_fin_mtrc + s_stock_daily_prc + s_invstr_trd_daily (A 인계 '방법 B')
+META,tz_meta,m_exec_log,실행 기록,실행·절차·테이블당 1행,run_id+step_nm+tbl_nm,,,10,C run_pipeline.py / load_mysql.py
+META,tz_meta,m_std_word,표준 단어,단어당 1행,word_nm,,,4,
+META,tz_meta,m_std_dmn,표준 도메인,도메인당 1행,dmn_nm,,,6,
+META,tz_meta,m_std_term,표준 용어(컬럼),테이블·컬럼당 1행,tbl_nm+col_nm,,,10,

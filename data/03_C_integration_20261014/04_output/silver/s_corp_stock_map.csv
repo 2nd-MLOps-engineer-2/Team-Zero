@@ -1,0 +1,21 @@
+﻿map_id,corp_cd,stock_cd,map_stts_cd,map_mthd_cd,cand_cnt,corp_nm,stock_nm,nm_match_yn,map_rsn_txt,pipln_ver
+00164779|000660,00164779,000660,MATCHED,STOCK_CD_EXACT,1,SK하이닉스,SK하이닉스,Y,"종목코드 완전일치, 명칭 일치",c-integration-1.0.0
+00113526|003490,00113526,003490,MATCHED,STOCK_CD_EXACT,1,대한항공,대한항공,Y,"종목코드 완전일치, 명칭 일치",c-integration-1.0.0
+00164742|005380,00164742,005380,MATCHED,STOCK_CD_EXACT,1,현대자동차,현대차,N,"종목코드 완전일치. 명칭 상이(기업 '현대자동차' / 종목 '현대차') — 약칭 차이로 판단, 종목코드 기준 확정",c-integration-1.0.0
+00155319|005490,00155319,005490,MATCHED,STOCK_CD_EXACT,1,POSCO홀딩스,POSCO홀딩스,Y,"종목코드 완전일치, 명칭 일치",c-integration-1.0.0
+00126380|005930,00126380,005930,MATCHED,STOCK_CD_EXACT,1,삼성전자,삼성전자,Y,"종목코드 완전일치, 명칭 일치",c-integration-1.0.0
+00126362|006400,00126362,006400,MATCHED,STOCK_CD_EXACT,1,삼성SDI,삼성SDI,Y,"종목코드 완전일치, 명칭 일치",c-integration-1.0.0
+00159023|017670,00159023,017670,MATCHED,STOCK_CD_EXACT,1,SK텔레콤,SK텔레콤,Y,"종목코드 완전일치, 명칭 일치",c-integration-1.0.0
+00159616|034020,00159616,034020,MATCHED,STOCK_CD_EXACT,1,두산에너빌리티,두산에너빌리티,Y,"종목코드 완전일치, 명칭 일치",c-integration-1.0.0
+00266961|035420,00266961,035420,MATCHED,STOCK_CD_EXACT,1,NAVER,NAVER,Y,"종목코드 완전일치, 명칭 일치",c-integration-1.0.0
+00258689|035900,00258689,035900,MATCHED,STOCK_CD_EXACT,1,JYP Ent.,JYP Ent.,Y,"종목코드 완전일치, 명칭 일치",c-integration-1.0.0
+00356361|051910,00356361,051910,MATCHED,STOCK_CD_EXACT,1,LG화학,LG화학,Y,"종목코드 완전일치, 명칭 일치",c-integration-1.0.0
+00369657|058470,00369657,058470,MATCHED,STOCK_CD_EXACT,1,리노공업,리노공업,Y,"종목코드 완전일치, 명칭 일치",c-integration-1.0.0
+00401731|066570,00401731,066570,MATCHED,STOCK_CD_EXACT,1,LG전자,LG전자,Y,"종목코드 완전일치, 명칭 일치",c-integration-1.0.0
+00413046|068270,00413046,068270,MATCHED,STOCK_CD_EXACT,1,셀트리온,셀트리온,Y,"종목코드 완전일치, 명칭 일치",c-integration-1.0.0
+00583424|090430,00583424,090430,MATCHED,STOCK_CD_EXACT,1,아모레퍼시픽,아모레퍼시픽,Y,"종목코드 완전일치, 명칭 일치",c-integration-1.0.0
+00635134|097950,00635134,097950,MATCHED,STOCK_CD_EXACT,1,CJ제일제당,CJ제일제당,Y,"종목코드 완전일치, 명칭 일치",c-integration-1.0.0
+00989619|196170,00989619,196170,MATCHED,STOCK_CD_EXACT,1,알테오젠,알테오젠,Y,"종목코드 완전일치, 명칭 일치",c-integration-1.0.0
+01160363|247540,01160363,247540,MATCHED,STOCK_CD_EXACT,1,에코프로비엠,에코프로비엠,Y,"종목코드 완전일치, 명칭 일치",c-integration-1.0.0
+01152470|263750,01152470,263750,MATCHED,STOCK_CD_EXACT,1,펄어비스,펄어비스,Y,"종목코드 완전일치, 명칭 일치",c-integration-1.0.0
+01489648|357780,01489648,357780,MATCHED,STOCK_CD_EXACT,1,솔브레인,솔브레인,Y,"종목코드 완전일치, 명칭 일치",c-integration-1.0.0

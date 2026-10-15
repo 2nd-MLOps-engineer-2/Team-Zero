@@ -33,3 +33,7 @@ _delta_log/
 .DS_Store
 Thumbs.db
 Desktop.ini
+
+# Shared work and build outputs from main.
+work/
+build/

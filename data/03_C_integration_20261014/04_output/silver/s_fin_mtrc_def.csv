@@ -1,0 +1,37 @@
+﻿mtrc_cd,mtrc_nm,stmt_div_txt,acnt_id_txt,select_rsn_txt,custom_nm_txt,guard_txt,pipln_ver
+REVENUE,매출액·영업수익,IS|CIS,ifrs-full_Revenue,주가와 매출 규모의 변화가 함께 나타나는지 비교,매출액|영업수익,,c-integration-1.0.0
+COST_OF_SALES,매출원가,IS|CIS,ifrs-full_CostOfSales,매출 증가가 원가 증가로 상쇄되는지 검토,매출원가,,c-integration-1.0.0
+GROSS_PROFIT,매출총이익,IS|CIS,ifrs-full_GrossProfit,매출에서 원가를 차감한 수익성 변화 확인,,,c-integration-1.0.0
+SGA,판매비와관리비,IS|CIS,dart_TotalSellingGeneralAdministrativeExpenses,영업이익 변화를 비용 측면에서 설명,판매비와관리비,판매|판관,c-integration-1.0.0
+OPERATING_PROFIT,영업이익,IS|CIS,dart_OperatingIncomeLoss,본업의 수익성과 주가·현금흐름의 동행 여부 확인,영업이익|영업이익(손실)|영업손익,,c-integration-1.0.0
+FINANCE_INCOME,금융수익,IS|CIS,ifrs-full_FinanceIncome,본업 이외 금융수익이 순이익에 미친 영향 확인,금융수익,금융수익,c-integration-1.0.0
+FINANCE_COST,금융비용,IS|CIS,ifrs-full_FinanceCosts,금융비용 부담으로 영업이익과 순이익이 달라지는지 확인,금융비용,,c-integration-1.0.0
+PRETAX_PROFIT,법인세비용차감전순이익,IS|CIS,ifrs-full_ProfitLossBeforeTax,영업외손익과 세금 효과를 구분,법인세비용차감전순이익,,c-integration-1.0.0
+INCOME_TAX,법인세비용(수익),IS|CIS,ifrs-full_IncomeTaxExpenseContinuingOperations,세금이 순이익 변화에 미친 영향 확인,법인세비용,,c-integration-1.0.0
+NET_INCOME,당기순이익,IS|CIS,ifrs-full_ProfitLoss,회계상 최종 이익과 영업현금흐름 비교,당기순이익|당기순이익(손실)|분기순이익|분기순이익(손실)|반기순이익|반기순이익(손실)|연결당기순이익|연결분기순이익|연결반기순이익,,c-integration-1.0.0
+NET_INCOME_PARENT,지배기업 소유주 귀속 순이익,IS|CIS,ifrs-full_ProfitLossAttributableToOwnersOfParent,전체 연결순이익과 지배기업 주주 귀속 이익 구분,,,c-integration-1.0.0
+TOTAL_ASSETS,자산총계,BS,ifrs-full_Assets,기업 규모와 재무구조 변화의 기준,,,c-integration-1.0.0
+TOTAL_LIABILITIES,부채총계,BS,ifrs-full_Liabilities,현금 증가가 부채 증가와 동반되는지 검토,,,c-integration-1.0.0
+TOTAL_EQUITY,자본총계,BS,ifrs-full_Equity,부채와 자본의 관계 및 자본 훼손 여부 검토,자본총계,,c-integration-1.0.0
+CURRENT_ASSETS,유동자산,BS,ifrs-full_CurrentAssets,단기 지급능력의 자산 측면 확인,,,c-integration-1.0.0
+NONCURRENT_ASSETS,비유동자산,BS,ifrs-full_NoncurrentAssets,장기 자산 증가와 투자현금흐름 비교,,,c-integration-1.0.0
+CURRENT_LIABILITIES,유동부채,BS,ifrs-full_CurrentLiabilities,단기 상환 부담 확인,,,c-integration-1.0.0
+NONCURRENT_LIABILITIES,비유동부채,BS,ifrs-full_NoncurrentLiabilities,장기 부채 구조 확인,,,c-integration-1.0.0
+CASH_AND_EQUIVALENTS,현금및현금성자산,BS,ifrs-full_CashAndCashEquivalents,기말 현금 잔액과 현금흐름을 구분,,,c-integration-1.0.0
+TRADE_RECEIVABLES,유동 매출채권,BS,ifrs-full_CurrentTradeReceivables|dart_ShortTermTradeReceivable,매출 증가가 채권에 묶였는지 추가 검토,매출채권|유동매출채권|유동성매출채권,,c-integration-1.0.0
+TRADE_AND_OTHER_RECEIVABLES,유동 매출채권 및 기타채권,BS,ifrs-full_TradeAndOtherCurrentReceivables,채권 통합 공시를 별도 보존. 순수 매출채권과 직접 비교 금지,매출채권및기타채권|매출채권및기타유동채권,매출채권,c-integration-1.0.0
+INVENTORIES,재고자산,BS,ifrs-full_Inventories,이익과 현금흐름의 괴리를 재고 관점에서 검토,재고자산|유동재고자산,,c-integration-1.0.0
+TRADE_PAYABLES,유동 매입채무,BS,dart_ShortTermTradePayables|ifrs-full_TradeAndOtherCurrentPayablesToTradeSuppliers,대금 지급 시점이 현금흐름에 미친 영향 검토,매입채무|유동매입채무|단기매입채무,,c-integration-1.0.0
+TRADE_AND_OTHER_PAYABLES,유동 매입채무 및 기타채무,BS,ifrs-full_TradeAndOtherCurrentPayables,통합 채무 공시를 별도 보존. 순수 매입채무와 중복 합산 금지,매입채무및기타채무|매입채무및기타유동채무,매입채무.*기타,c-integration-1.0.0
+SHORT_TERM_BORROWINGS_REPORTED,단기차입금 공시금액,BS,ifrs-full_ShorttermBorrowings,단기 차입 부담 확인. 다른 차입금 항목과 중복 범위 검토,단기차입금|단기차입부채,,c-integration-1.0.0
+LONG_TERM_BORROWINGS_REPORTED,장기차입금 공시금액,BS,ifrs-full_LongtermBorrowings|dart_LongTermBorrowingsGross|ifrs-full_NoncurrentPortionOfNoncurrentLoansReceived,장기 차입 부담 확인. 사채 포함 여부가 기업별로 달라 단순 합산 금지,장기차입금|장기차입부채,,c-integration-1.0.0
+CURRENT_PORTION_LONG_TERM_DEBT_REPORTED,유동성 장기차입금·부채 공시금액,BS,ifrs-full_CurrentPortionOfLongtermBorrowings,장기 차입의 단기 만기 도래 부담 확인. 포함 범위는 원본 계정명 확인,유동성장기차입금|유동성장기부채,,c-integration-1.0.0
+CURRENT_LEASE_LIABILITIES,유동 리스부채,BS,ifrs-full_CurrentLeaseLiabilities,단기 리스 상환 부담 확인,유동리스부채|리스유동부채|유동성리스부채,,c-integration-1.0.0
+NONCURRENT_LEASE_LIABILITIES,비유동 리스부채,BS,ifrs-full_NoncurrentLeaseLiabilities,장기 리스 상환 부담 확인,비유동리스부채|리스비유동부채,,c-integration-1.0.0
+PROPERTY_PLANT_EQUIPMENT,유형자산,BS,ifrs-full_PropertyPlantAndEquipment,설비 자산 잔액과 투자 현금 유출 구분,,,c-integration-1.0.0
+INTANGIBLE_ASSETS,무형자산,BS,ifrs-full_IntangibleAssetsOtherThanGoodwill,영업권 제외 무형자산 잔액과 투자 현금 유출 구분,,,c-integration-1.0.0
+OPERATING_CASH_FLOW,영업활동현금흐름,CF,ifrs-full_CashFlowsFromUsedInOperatingActivities,매출·순이익 개선이 실제 영업 현금 유입과 동반되는지 확인,,,c-integration-1.0.0
+INVESTING_CASH_FLOW,투자활동현금흐름,CF,ifrs-full_CashFlowsFromUsedInInvestingActivities,현금 감소가 투자 확대에서 비롯됐는지 검토,,,c-integration-1.0.0
+FINANCING_CASH_FLOW,재무활동현금흐름,CF,ifrs-full_CashFlowsFromUsedInFinancingActivities,현금 증가가 차입·증자 등 자금 조달 때문인지 검토,,,c-integration-1.0.0
+PPE_PURCHASE_REPORTED,유형자산 취득 현금흐름 공시금액,CF,ifrs-full_PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities,설비 투자성 지출을 분리. 원본 부호 보존,유형자산의취득|유형자산취득,,c-integration-1.0.0
+INTANGIBLE_PURCHASE_REPORTED,무형자산 취득 현금흐름 공시금액,CF,ifrs-full_PurchaseOfIntangibleAssetsClassifiedAsInvestingActivities,무형자산 투자성 지출을 분리. 원본 부호 보존,무형자산의취득|무형자산취득,,c-integration-1.0.0
