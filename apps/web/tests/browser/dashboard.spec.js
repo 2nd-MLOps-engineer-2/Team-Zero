@@ -56,7 +56,7 @@ test('CSV contains the same exact financial value and NULL provenance',async({pa
 test('mobile layout has no document overflow and remains usable',async({page})=>{
  await page.setViewportSize({width:390,height:844});await page.goto('/');await ready(page);
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
- await page.locator('summary').click();await expect(page.locator('details')).toHaveAttribute('open','');
+ await page.locator('#raw-values summary').click();await expect(page.locator('#raw-values')).toHaveAttribute('open','');
  await page.screenshot({path:'test-results/mobile.png',fullPage:true});
 });
 test('invalid date range clears previous results and blocks download',async({page})=>{
@@ -104,6 +104,26 @@ test('G03 price baseline follows requested range without altering flow ratios',a
  await page.goto('/');await ready(page);
  await page.fill('[name=start]','2026-06-12');await page.locator('[name=start]').blur();await ready(page);
  await expect(page.locator('#detail')).toContainText('2026-06-15 = 100');
- await page.locator('summary').click();
- await expect(page.locator('details tbody tr').first()).toContainText('1.4 %');
+ await page.locator('#raw-values summary').click();
+ await expect(page.locator('#raw-values tbody tr').first()).toContainText('1.4 %');
+});
+
+test('report charts support keyboard observations, series toggles and period selection',async({page})=>{
+ await page.goto('/');await ready(page);
+ await expect(page.locator('#company-summary')).toContainText('SK하이닉스');
+ const price=page.locator('#price-report'),slider=price.locator('input[type=range]');
+ await slider.focus();await page.keyboard.press('Home');
+ await expect(price.locator('.chart-readout')).toContainText('2026-06-01');
+ const market=price.locator('[data-series-toggle="1"]');await market.click();
+ await expect(market).toHaveAttribute('aria-pressed','false');
+ await expect(price.locator('[data-series="1"]')).toBeHidden();
+ await market.click();await expect(price.locator('[data-series="1"]')).toBeVisible();
+ expect(await page.locator('#financial-report rect').count()).toBeGreaterThan(0);
+ expect(await page.locator('#flow-report rect').count()).toBeGreaterThan(0);
+ await price.getByRole('button',{name:'3M',exact:true}).click();await ready(page);
+ await expect(page.locator('[name=start]')).toHaveValue('2026-04-02');
+ await expect(price.getByRole('button',{name:'3M',exact:true})).toHaveAttribute('aria-pressed','true');
+ await page.locator('.report-sidebar a[href="#price-report"]').click();
+ await expect(price).toBeInViewport();
+ await page.screenshot({path:'test-results/report-chart.png'});
 });

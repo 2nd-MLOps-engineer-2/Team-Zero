@@ -15,8 +15,8 @@ test('C actual Gold response values agree with rendered amounts, ratios and expo
  await expect(page.locator('#evidence')).toContainText('10.88 %');
  await expect(page.locator('#evidence')).toContainText('32.77 %p');
  await expect(page.locator('#evidence')).toContainText('조건 미충족');
- await page.locator('summary').click();
- await expect(page.locator('details')).toContainText('-6.46 %');
+ await page.locator('#raw-values summary').click();
+ await expect(page.locator('#raw-values')).toContainText('-6.46 %');
  const pending=page.waitForEvent('download');await page.locator('#export').click();
  const file=await pending;const csv=await fs.readFile(await file.path(),'utf8');
  expect(csv).toContain('333605938000000');expect(csv).toContain('0.32769823');expect(csv).toContain('c-gold-0.1.0');
