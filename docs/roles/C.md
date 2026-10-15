@@ -174,4 +174,4 @@ Silver 규칙 결과(c-gold-0.1.0):
 | C10 | 미체크 | 시각화 계약·시안 있음, A 확인 필요 |
 | C12 | 미체크 | Pandas 측 기대값·`sql/reconcile.sql` 준비, B SQL 결과 필요 |
 
-실행: `.venv/bin/python -m unittest discover -s analysis/tests -v` → 18 OK. `.venv/bin/python -m analysis.run --cleanup-zip <로컬 안쪽 ZIP>` → PASS(320/17,440). 작은 출력 사본 `analysis/evidence/`(개인 경로 없음 확인). 전달 기록 [S3-C-to-B](../handoffs/S3-C-to-B.md), 진행표 S0·S3 `작업 중`. 커밋·전달 브랜치·push·PR 미실행.
+실행: `.venv/bin/python -m unittest discover -s analysis/tests -v` → 18 OK. `.venv/bin/python -m analysis.run --cleanup-zip <로컬 안쪽 ZIP>` → PASS(320/17,440). 작은 출력 사본 `analysis/evidence/`(개인 경로 없음 확인). 전달 기록 [S3-C-to-B](../handoffs/S3-C-to-B.md). 개발 커밋 `feature/c-gold-analysis` `b5d2028`(main 기준, 미push). 전달: `handoff/s3-c-to-b-v1` 검사 대상 `fb1f802c88e2d5b275c737200aa392deac0e628b`(integration `b9b73a4` 위에 C 커밋만 재적용, 내용 동일) → [PR #4](https://github.com/2nd-MLOps-engineer-2/Team-Zero/pull/4), 상태 수신 확인 대기.

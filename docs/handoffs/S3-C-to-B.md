@@ -1,6 +1,6 @@
 # S3 — C Gold 계산을 B 실행·저장에 전달 (A는 차트 의미 확인)
 
-**상태: 작업 중 — C 로컬 구현·검사 완료, 전달 브랜치·PR 미생성.** [절차](../integration-workflow.md) · [진행표](../integration-status.md).
+**상태: 수신 확인 대기 — 전달 브랜치 push·PR 생성 완료, B·A 확인 전.** [절차](../integration-workflow.md) · [진행표](../integration-status.md).
 
 ## 전달 요약
 
@@ -8,9 +8,9 @@
 |---|---|
 | 단계·회차·대상 | S3 v1 / C06~C09·C11, G01·G04(C 측), M07·M09·M10·M14(C 범위) |
 | 전달자 → 수신 확인자 | C 김형준 → B 설호현(실행·저장·SQL 대조), A 이어진(차트 의미) |
-| 상태 | 작업 중. 수신 확인 없음 |
-| PR base·선행 integration SHA | `integration` / `1971dcb`(origin/main=integration, 2026-10-15 fetch) |
-| 전달 원격 브랜치·전체 SHA·PR URL | 미등록 — 예정 `handoff/s3-c-to-b-v1` |
+| 상태 | 수신 확인 대기 (2026-10-15) |
+| PR base·선행 integration SHA | `integration` / `b9b73a49bf169b17e3c324fcc9e51564d350b1ea` |
+| 전달 원격 브랜치·전체 SHA·PR URL | `handoff/s3-c-to-b-v1` / 검사 대상 `fb1f802c88e2d5b275c737200aa392deac0e628b` / [PR #4](https://github.com/2nd-MLOps-engineer-2/Team-Zero/pull/4). 브랜치 최종 커밋은 이 기록만 갱신한 문서 커밋이며 `git diff fb1f802 origin/handoff/s3-c-to-b-v1 -- analysis contracts`는 비어 있다 |
 | 데이터·계약·계산 버전 | `03_C_integration_20261014`(75파일 PASS) / [contracts/analysis.md](../../contracts/analysis.md) 제안 / `c-gold-0.1.0` |
 | 포함 범위 | `analysis/`(gold·rules·asis·audit·standards·run·tests·sql·evidence), `contracts/analysis.md`, `contracts/visualization.md` |
 | 제외 범위 | 원천 오염·정화 ZIP, 평가자 정답 이력, 전체 Gold CSV(재생성 대상), DB·Delta·API |
@@ -30,7 +30,7 @@ build/c-venv/bin/python -m analysis.run
 
 기대값: 테스트 18개 OK, `{"rows": {"financial": 320, "daily": 17440}, "checks": "PASS"}`, 출력 Gold SHA-256 `g_fin_rpt_analysis.csv` `4514982c…d22b`, `g_stock_daily_analysis.csv` `a094a995…0707`(전체는 `analysis/evidence/validation.json` `output_sha256`).
 
-## 전달자 검사 (C, 로컬, 실제 공개 인계본)
+## 전달자 검사 (C, 로컬, 실제 공개 인계본, `fb1f802` 깨끗한 체크아웃)
 
 | 검사 | 결과 |
 |---|---|
