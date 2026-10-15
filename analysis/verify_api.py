@@ -265,7 +265,7 @@ def run(base: str, gold_dir: Path, page_size: int = DAILY_PAGE) -> dict:
     }
 
 
-def main() -> None:
+def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--gold", type=Path, default=Path("build/analysis"))
     ap.add_argument("--base", default="http://127.0.0.1:8000")
@@ -281,7 +281,8 @@ def main() -> None:
         args.out.parent.mkdir(parents=True, exist_ok=True)
         args.out.write_text(text + "\n", encoding="utf-8")
     print(text)
+    return 0 if report["overall"] == "PASS" else 1
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
