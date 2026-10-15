@@ -1,5 +1,9 @@
 # A → B: API·환경 인수인계 준비
 
+## C 계약 수신 후 추가 요청
+
+C PR #4 고정 SHA fb1f802c88e2d5b275c737200aa392deac0e628b의 G01/G03와 실제 Gold를 A가 재현/검토했다([수신 기록](S3-C-to-A.md)). 비율 문자열과 빈값/null·C 상태 코드를 화면에서 처리하고 사분면·20관측 수급 비율·joint_improve를 표시할 수 있다. 실제 B API에서는 C 계약을 유지하고, 가격/시장에 **조회 첫 유효 관측 기준 100 + 동일 price_base_date**를 함께 제공해 달라. C CSV에 정규화 필드는 없으므로 A 실제 계산값으로 채우지 않았다. B S4 브랜치·전체 SHA·실행법·endpoint/쿼리·출처·export 계약은 여전히 필요하다.
+
 2026-10-15 / A 이어진 → B 설호현 / **요청 정리, 합의·전달·수신 검증 전**.
 
 G02 / A08~A10 / M08·M09·M12·M13·M14. 기준 feature/a-dashboard, HEAD 및 선행 integration `8af915fba1c40849b4cb80d7d8c2bd1768f674b7`. 미커밋 초안이며 기능 전달 SHA·PR 없음.
