@@ -31,7 +31,26 @@
 
 ## A·C 확인 결과
 
+### 최신 A 독립 검증 — 재개 후
+
+A 화면은 샘플 기반 구현 완료. npm test 10개·build·Chromium E2E 9개 PASS. API 모드는 모의 네트워크 응답과 HTTP 500/markup escape로 검사했으며 실제 B 서버 검사 아님. 이전 main.js/test 파일 부재로 인한 실패는 해소했다.
+
+A는 feature/a-dashboard에서 최신 main `1971dcbdfae2e2d29d1bc77ef712e40256014b34`를 반영했고 선행 integration `b9b73a49bf169b17e3c324fcc9e51564d350b1ea`를 포함한다. A 변경은 미커밋 보존 중이다. B S4 고정 SHA·실행법이 없어 review/실제 merge는 미실행. 판정은 **실제 API 미확인** 유지. [A 로컬 전달 준비](S5-A-to-team.md)·[A 화면 제안](../../contracts/A-screen.md).
+
+아래는 준비 단계 당시 기록이며 실패/미구현 상태는 위 최신 결과로 갱신한다.
+
 확인 브랜치·SHA / 실행 명령·환경 / 실제 결과·증빙 / C 수치 대조 / 충돌·수정 요청 / 확인자·일시: **미등록**.
+
+### A 사전 점검 — 2026-10-15 (실제 수신 검증 아님)
+
+- A 이어진의 작업 브랜치 feature/a-dashboard. A HEAD 및 선행 integration `8af915fba1c40849b4cb80d7d8c2bd1768f674b7`.
+- B 전달 브랜치·전체 SHA·PR·실행법 미등록이며 사용자가 별도 API/C 가이드도 없다고 확인함.
+- A의 기존 작업은 미커밋 로컬 초안으로 보존. 실제 전달본이 없어 review 브랜치 생성/merge는 미실행. 충돌 없음.
+- 상태: **미확인 / B 입력 대기**. 합성 fixture 생성 및 JS 구문 확인은 실제 API 연결·수신 확인 증거가 아님.
+- A 초안 빌드는 src/main.js 미작성, npm test는 tests/unit.test.js 미작성으로 실패. 실제 UI·브라우저 검증은 수행하지 않음.
+- 다음 수신 시 필터·오류·빈 목록·NULL/0·큰 금액·공시일 경계·기간·출처·CSV를 확인하고 C 기대값과 대조. B 자체 검사를 A 확인으로 대신하지 않음.
+- 요청/실행 환경/제한: [A→B](A-to-B.md), [A→C](A-to-C.md), [A 진행 기록](../roles/A.md).
+- 이번에는 기준 점검·준비만 수행. 실제 전달 브랜치·기능 SHA·PR·수신 완료·integration 병합 기록은 생성하지 않음.
 
 ## integration 병합 결과
 

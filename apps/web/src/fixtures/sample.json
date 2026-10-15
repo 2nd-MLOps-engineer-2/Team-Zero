@@ -1,0 +1,3582 @@
+{
+  "meta": {
+    "schema_version": "a-proposal-1",
+    "synthetic": true,
+    "data_end": "2026-06-30",
+    "input_version": "03_C_integration_20261014 (종목 식별자만 참조)",
+    "calc_version": "synthetic-ui-v1",
+    "scope": "보유 20종목 · 합성 수치 · 비교 기준일 2026-06-30",
+    "price_base_date": "2026-06-01",
+    "units": "금액 원 / 수급 주 / 비율 소수"
+  },
+  "stocks": [
+    {
+      "stock_cd": "000660",
+      "stock_nm": "SK하이닉스",
+      "mkt_cd": "KOSPI"
+    },
+    {
+      "stock_cd": "003490",
+      "stock_nm": "대한항공",
+      "mkt_cd": "KOSPI"
+    },
+    {
+      "stock_cd": "005380",
+      "stock_nm": "현대차",
+      "mkt_cd": "KOSPI"
+    },
+    {
+      "stock_cd": "005490",
+      "stock_nm": "POSCO홀딩스",
+      "mkt_cd": "KOSPI"
+    },
+    {
+      "stock_cd": "005930",
+      "stock_nm": "삼성전자",
+      "mkt_cd": "KOSPI"
+    },
+    {
+      "stock_cd": "006400",
+      "stock_nm": "삼성SDI",
+      "mkt_cd": "KOSPI"
+    },
+    {
+      "stock_cd": "017670",
+      "stock_nm": "SK텔레콤",
+      "mkt_cd": "KOSPI"
+    },
+    {
+      "stock_cd": "034020",
+      "stock_nm": "두산에너빌리티",
+      "mkt_cd": "KOSPI"
+    },
+    {
+      "stock_cd": "035420",
+      "stock_nm": "NAVER",
+      "mkt_cd": "KOSPI"
+    },
+    {
+      "stock_cd": "035900",
+      "stock_nm": "JYP Ent.",
+      "mkt_cd": "KOSDAQ"
+    },
+    {
+      "stock_cd": "051910",
+      "stock_nm": "LG화학",
+      "mkt_cd": "KOSPI"
+    },
+    {
+      "stock_cd": "058470",
+      "stock_nm": "리노공업",
+      "mkt_cd": "KOSDAQ"
+    },
+    {
+      "stock_cd": "066570",
+      "stock_nm": "LG전자",
+      "mkt_cd": "KOSPI"
+    },
+    {
+      "stock_cd": "068270",
+      "stock_nm": "셀트리온",
+      "mkt_cd": "KOSPI"
+    },
+    {
+      "stock_cd": "090430",
+      "stock_nm": "아모레퍼시픽",
+      "mkt_cd": "KOSPI"
+    },
+    {
+      "stock_cd": "097950",
+      "stock_nm": "CJ제일제당",
+      "mkt_cd": "KOSPI"
+    },
+    {
+      "stock_cd": "196170",
+      "stock_nm": "알테오젠",
+      "mkt_cd": "KOSDAQ"
+    },
+    {
+      "stock_cd": "247540",
+      "stock_nm": "에코프로비엠",
+      "mkt_cd": "KOSDAQ"
+    },
+    {
+      "stock_cd": "263750",
+      "stock_nm": "펄어비스",
+      "mkt_cd": "KOSDAQ"
+    },
+    {
+      "stock_cd": "357780",
+      "stock_nm": "솔브레인",
+      "mkt_cd": "KOSDAQ"
+    }
+  ],
+  "compare": [
+    {
+      "stock_cd": "000660",
+      "stock_nm": "SK하이닉스",
+      "mkt_cd": "KOSPI",
+      "as_of": "2026-06-30",
+      "revenue_growth_rt": 0.12,
+      "excess_return_rt": 0.054,
+      "classification": "개선·강세 동행",
+      "dscl_dt": "2026-03-20",
+      "dscl_elps_day_cnt": 102,
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "reason": "합성 예시 · 임계값 0"
+    },
+    {
+      "stock_cd": "003490",
+      "stock_nm": "대한항공",
+      "mkt_cd": "KOSPI",
+      "as_of": "2026-06-30",
+      "revenue_growth_rt": -0.08,
+      "excess_return_rt": 0.023,
+      "classification": "둔화·강세 괴리",
+      "dscl_dt": "2026-03-20",
+      "dscl_elps_day_cnt": 102,
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "reason": "합성 예시 · 임계값 0"
+    },
+    {
+      "stock_cd": "005380",
+      "stock_nm": "현대차",
+      "mkt_cd": "KOSPI",
+      "as_of": "2026-06-30",
+      "revenue_growth_rt": 0,
+      "excess_return_rt": 0,
+      "classification": "중립",
+      "dscl_dt": "2026-03-20",
+      "dscl_elps_day_cnt": 102,
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "reason": "합성 예시 · 임계값 0"
+    },
+    {
+      "stock_cd": "005490",
+      "stock_nm": "POSCO홀딩스",
+      "mkt_cd": "KOSPI",
+      "as_of": "2026-06-30",
+      "revenue_growth_rt": null,
+      "excess_return_rt": null,
+      "classification": "판단 불가",
+      "dscl_dt": "2026-03-20",
+      "dscl_elps_day_cnt": 102,
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "reason": "기간 미검증"
+    },
+    {
+      "stock_cd": "005930",
+      "stock_nm": "삼성전자",
+      "mkt_cd": "KOSPI",
+      "as_of": "2026-06-30",
+      "revenue_growth_rt": 0.12,
+      "excess_return_rt": 0.054,
+      "classification": "개선·강세 동행",
+      "dscl_dt": "2026-03-20",
+      "dscl_elps_day_cnt": 102,
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "reason": "합성 예시 · 임계값 0"
+    },
+    {
+      "stock_cd": "006400",
+      "stock_nm": "삼성SDI",
+      "mkt_cd": "KOSPI",
+      "as_of": "2026-06-30",
+      "revenue_growth_rt": -0.08,
+      "excess_return_rt": 0.023,
+      "classification": "둔화·강세 괴리",
+      "dscl_dt": "2026-03-20",
+      "dscl_elps_day_cnt": 102,
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "reason": "합성 예시 · 임계값 0"
+    },
+    {
+      "stock_cd": "017670",
+      "stock_nm": "SK텔레콤",
+      "mkt_cd": "KOSPI",
+      "as_of": "2026-06-30",
+      "revenue_growth_rt": 0,
+      "excess_return_rt": 0,
+      "classification": "중립",
+      "dscl_dt": "2026-03-20",
+      "dscl_elps_day_cnt": 102,
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "reason": "합성 예시 · 임계값 0"
+    },
+    {
+      "stock_cd": "034020",
+      "stock_nm": "두산에너빌리티",
+      "mkt_cd": "KOSPI",
+      "as_of": "2026-06-30",
+      "revenue_growth_rt": null,
+      "excess_return_rt": null,
+      "classification": "판단 불가",
+      "dscl_dt": "2026-03-20",
+      "dscl_elps_day_cnt": 102,
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "reason": "기간 미검증"
+    },
+    {
+      "stock_cd": "035420",
+      "stock_nm": "NAVER",
+      "mkt_cd": "KOSPI",
+      "as_of": "2026-06-30",
+      "revenue_growth_rt": 0.12,
+      "excess_return_rt": 0.054,
+      "classification": "개선·강세 동행",
+      "dscl_dt": "2026-03-20",
+      "dscl_elps_day_cnt": 102,
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "reason": "합성 예시 · 임계값 0"
+    },
+    {
+      "stock_cd": "035900",
+      "stock_nm": "JYP Ent.",
+      "mkt_cd": "KOSDAQ",
+      "as_of": "2026-06-30",
+      "revenue_growth_rt": -0.08,
+      "excess_return_rt": 0.023,
+      "classification": "둔화·강세 괴리",
+      "dscl_dt": "2026-03-20",
+      "dscl_elps_day_cnt": 102,
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "reason": "합성 예시 · 임계값 0"
+    },
+    {
+      "stock_cd": "051910",
+      "stock_nm": "LG화학",
+      "mkt_cd": "KOSPI",
+      "as_of": "2026-06-30",
+      "revenue_growth_rt": 0,
+      "excess_return_rt": 0,
+      "classification": "중립",
+      "dscl_dt": "2026-03-20",
+      "dscl_elps_day_cnt": 102,
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "reason": "합성 예시 · 임계값 0"
+    },
+    {
+      "stock_cd": "058470",
+      "stock_nm": "리노공업",
+      "mkt_cd": "KOSDAQ",
+      "as_of": "2026-06-30",
+      "revenue_growth_rt": null,
+      "excess_return_rt": null,
+      "classification": "판단 불가",
+      "dscl_dt": "2026-03-20",
+      "dscl_elps_day_cnt": 102,
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "reason": "기간 미검증"
+    },
+    {
+      "stock_cd": "066570",
+      "stock_nm": "LG전자",
+      "mkt_cd": "KOSPI",
+      "as_of": "2026-06-30",
+      "revenue_growth_rt": 0.12,
+      "excess_return_rt": 0.054,
+      "classification": "개선·강세 동행",
+      "dscl_dt": "2026-03-20",
+      "dscl_elps_day_cnt": 102,
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "reason": "합성 예시 · 임계값 0"
+    },
+    {
+      "stock_cd": "068270",
+      "stock_nm": "셀트리온",
+      "mkt_cd": "KOSPI",
+      "as_of": "2026-06-30",
+      "revenue_growth_rt": -0.08,
+      "excess_return_rt": 0.023,
+      "classification": "둔화·강세 괴리",
+      "dscl_dt": "2026-03-20",
+      "dscl_elps_day_cnt": 102,
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "reason": "합성 예시 · 임계값 0"
+    },
+    {
+      "stock_cd": "090430",
+      "stock_nm": "아모레퍼시픽",
+      "mkt_cd": "KOSPI",
+      "as_of": "2026-06-30",
+      "revenue_growth_rt": 0,
+      "excess_return_rt": 0,
+      "classification": "중립",
+      "dscl_dt": "2026-03-20",
+      "dscl_elps_day_cnt": 102,
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "reason": "합성 예시 · 임계값 0"
+    },
+    {
+      "stock_cd": "097950",
+      "stock_nm": "CJ제일제당",
+      "mkt_cd": "KOSPI",
+      "as_of": "2026-06-30",
+      "revenue_growth_rt": null,
+      "excess_return_rt": null,
+      "classification": "판단 불가",
+      "dscl_dt": "2026-03-20",
+      "dscl_elps_day_cnt": 102,
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "reason": "기간 미검증"
+    },
+    {
+      "stock_cd": "196170",
+      "stock_nm": "알테오젠",
+      "mkt_cd": "KOSDAQ",
+      "as_of": "2026-06-30",
+      "revenue_growth_rt": 0.12,
+      "excess_return_rt": 0.054,
+      "classification": "개선·강세 동행",
+      "dscl_dt": "2026-03-20",
+      "dscl_elps_day_cnt": 102,
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "reason": "합성 예시 · 임계값 0"
+    },
+    {
+      "stock_cd": "247540",
+      "stock_nm": "에코프로비엠",
+      "mkt_cd": "KOSDAQ",
+      "as_of": "2026-06-30",
+      "revenue_growth_rt": -0.08,
+      "excess_return_rt": 0.023,
+      "classification": "둔화·강세 괴리",
+      "dscl_dt": "2026-03-20",
+      "dscl_elps_day_cnt": 102,
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "reason": "합성 예시 · 임계값 0"
+    },
+    {
+      "stock_cd": "263750",
+      "stock_nm": "펄어비스",
+      "mkt_cd": "KOSDAQ",
+      "as_of": "2026-06-30",
+      "revenue_growth_rt": 0,
+      "excess_return_rt": 0,
+      "classification": "중립",
+      "dscl_dt": "2026-03-20",
+      "dscl_elps_day_cnt": 102,
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "reason": "합성 예시 · 임계값 0"
+    },
+    {
+      "stock_cd": "357780",
+      "stock_nm": "솔브레인",
+      "mkt_cd": "KOSDAQ",
+      "as_of": "2026-06-30",
+      "revenue_growth_rt": null,
+      "excess_return_rt": null,
+      "classification": "판단 불가",
+      "dscl_dt": "2026-03-20",
+      "dscl_elps_day_cnt": 102,
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "reason": "기간 미검증"
+    }
+  ],
+  "daily": {
+    "000660": [
+      {
+        "stock_cd": "000660",
+        "trd_dt": "2026-06-01",
+        "stock_base100": 100,
+        "market_base100": 100,
+        "frgn_net_buy_qty": "-24600",
+        "inst_net_buy_qty": "22800",
+        "frgn_hold_rt": 0.42,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "000660",
+        "trd_dt": "2026-06-05",
+        "stock_base100": 101,
+        "market_base100": 100.4,
+        "frgn_net_buy_qty": "-12300",
+        "inst_net_buy_qty": "15200",
+        "frgn_hold_rt": 0.421,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "000660",
+        "trd_dt": "2026-06-10",
+        "stock_base100": 99,
+        "market_base100": 101,
+        "frgn_net_buy_qty": null,
+        "inst_net_buy_qty": "7600",
+        "frgn_hold_rt": null,
+        "status": "미연결",
+        "reason": "합성 수급 누락 예시"
+      },
+      {
+        "stock_cd": "000660",
+        "trd_dt": "2026-06-15",
+        "stock_base100": 104,
+        "market_base100": 102,
+        "frgn_net_buy_qty": "12300",
+        "inst_net_buy_qty": "0",
+        "frgn_hold_rt": 0.423,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "000660",
+        "trd_dt": "2026-06-22",
+        "stock_base100": 106,
+        "market_base100": 102.5,
+        "frgn_net_buy_qty": "24600",
+        "inst_net_buy_qty": "-7600",
+        "frgn_hold_rt": 0.424,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "000660",
+        "trd_dt": "2026-06-30",
+        "stock_base100": 108,
+        "market_base100": 103,
+        "frgn_net_buy_qty": "36900",
+        "inst_net_buy_qty": "-15200",
+        "frgn_hold_rt": 0.425,
+        "status": "가용",
+        "reason": null
+      }
+    ],
+    "003490": [
+      {
+        "stock_cd": "003490",
+        "trd_dt": "2026-06-01",
+        "stock_base100": 100,
+        "market_base100": 100,
+        "frgn_net_buy_qty": "-24600",
+        "inst_net_buy_qty": "22800",
+        "frgn_hold_rt": 0.42,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "003490",
+        "trd_dt": "2026-06-05",
+        "stock_base100": 101,
+        "market_base100": 100.4,
+        "frgn_net_buy_qty": "-12300",
+        "inst_net_buy_qty": "15200",
+        "frgn_hold_rt": 0.421,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "003490",
+        "trd_dt": "2026-06-10",
+        "stock_base100": 99,
+        "market_base100": 101,
+        "frgn_net_buy_qty": null,
+        "inst_net_buy_qty": "7600",
+        "frgn_hold_rt": null,
+        "status": "미연결",
+        "reason": "합성 수급 누락 예시"
+      },
+      {
+        "stock_cd": "003490",
+        "trd_dt": "2026-06-15",
+        "stock_base100": 104,
+        "market_base100": 102,
+        "frgn_net_buy_qty": "12300",
+        "inst_net_buy_qty": "0",
+        "frgn_hold_rt": 0.423,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "003490",
+        "trd_dt": "2026-06-22",
+        "stock_base100": 106,
+        "market_base100": 102.5,
+        "frgn_net_buy_qty": "24600",
+        "inst_net_buy_qty": "-7600",
+        "frgn_hold_rt": 0.424,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "003490",
+        "trd_dt": "2026-06-30",
+        "stock_base100": 108,
+        "market_base100": 103,
+        "frgn_net_buy_qty": "36900",
+        "inst_net_buy_qty": "-15200",
+        "frgn_hold_rt": 0.425,
+        "status": "가용",
+        "reason": null
+      }
+    ],
+    "005380": [
+      {
+        "stock_cd": "005380",
+        "trd_dt": "2026-06-01",
+        "stock_base100": 100,
+        "market_base100": 100,
+        "frgn_net_buy_qty": "-24600",
+        "inst_net_buy_qty": "22800",
+        "frgn_hold_rt": 0.42,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "005380",
+        "trd_dt": "2026-06-05",
+        "stock_base100": 101,
+        "market_base100": 100.4,
+        "frgn_net_buy_qty": "-12300",
+        "inst_net_buy_qty": "15200",
+        "frgn_hold_rt": 0.421,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "005380",
+        "trd_dt": "2026-06-10",
+        "stock_base100": 99,
+        "market_base100": 101,
+        "frgn_net_buy_qty": null,
+        "inst_net_buy_qty": "7600",
+        "frgn_hold_rt": null,
+        "status": "미연결",
+        "reason": "합성 수급 누락 예시"
+      },
+      {
+        "stock_cd": "005380",
+        "trd_dt": "2026-06-15",
+        "stock_base100": 104,
+        "market_base100": 102,
+        "frgn_net_buy_qty": "12300",
+        "inst_net_buy_qty": "0",
+        "frgn_hold_rt": 0.423,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "005380",
+        "trd_dt": "2026-06-22",
+        "stock_base100": 106,
+        "market_base100": 102.5,
+        "frgn_net_buy_qty": "24600",
+        "inst_net_buy_qty": "-7600",
+        "frgn_hold_rt": 0.424,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "005380",
+        "trd_dt": "2026-06-30",
+        "stock_base100": 108,
+        "market_base100": 103,
+        "frgn_net_buy_qty": "36900",
+        "inst_net_buy_qty": "-15200",
+        "frgn_hold_rt": 0.425,
+        "status": "가용",
+        "reason": null
+      }
+    ],
+    "005490": [
+      {
+        "stock_cd": "005490",
+        "trd_dt": "2026-06-01",
+        "stock_base100": 100,
+        "market_base100": 100,
+        "frgn_net_buy_qty": "-24600",
+        "inst_net_buy_qty": "22800",
+        "frgn_hold_rt": 0.42,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "005490",
+        "trd_dt": "2026-06-05",
+        "stock_base100": 101,
+        "market_base100": 100.4,
+        "frgn_net_buy_qty": "-12300",
+        "inst_net_buy_qty": "15200",
+        "frgn_hold_rt": 0.421,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "005490",
+        "trd_dt": "2026-06-10",
+        "stock_base100": 99,
+        "market_base100": 101,
+        "frgn_net_buy_qty": null,
+        "inst_net_buy_qty": "7600",
+        "frgn_hold_rt": null,
+        "status": "미연결",
+        "reason": "합성 수급 누락 예시"
+      },
+      {
+        "stock_cd": "005490",
+        "trd_dt": "2026-06-15",
+        "stock_base100": 104,
+        "market_base100": 102,
+        "frgn_net_buy_qty": "12300",
+        "inst_net_buy_qty": "0",
+        "frgn_hold_rt": 0.423,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "005490",
+        "trd_dt": "2026-06-22",
+        "stock_base100": 106,
+        "market_base100": 102.5,
+        "frgn_net_buy_qty": "24600",
+        "inst_net_buy_qty": "-7600",
+        "frgn_hold_rt": 0.424,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "005490",
+        "trd_dt": "2026-06-30",
+        "stock_base100": 108,
+        "market_base100": 103,
+        "frgn_net_buy_qty": "36900",
+        "inst_net_buy_qty": "-15200",
+        "frgn_hold_rt": 0.425,
+        "status": "가용",
+        "reason": null
+      }
+    ],
+    "005930": [
+      {
+        "stock_cd": "005930",
+        "trd_dt": "2026-06-01",
+        "stock_base100": 100,
+        "market_base100": 100,
+        "frgn_net_buy_qty": "-24600",
+        "inst_net_buy_qty": "22800",
+        "frgn_hold_rt": 0.42,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "005930",
+        "trd_dt": "2026-06-05",
+        "stock_base100": 101,
+        "market_base100": 100.4,
+        "frgn_net_buy_qty": "-12300",
+        "inst_net_buy_qty": "15200",
+        "frgn_hold_rt": 0.421,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "005930",
+        "trd_dt": "2026-06-10",
+        "stock_base100": 99,
+        "market_base100": 101,
+        "frgn_net_buy_qty": null,
+        "inst_net_buy_qty": "7600",
+        "frgn_hold_rt": null,
+        "status": "미연결",
+        "reason": "합성 수급 누락 예시"
+      },
+      {
+        "stock_cd": "005930",
+        "trd_dt": "2026-06-15",
+        "stock_base100": 104,
+        "market_base100": 102,
+        "frgn_net_buy_qty": "12300",
+        "inst_net_buy_qty": "0",
+        "frgn_hold_rt": 0.423,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "005930",
+        "trd_dt": "2026-06-22",
+        "stock_base100": 106,
+        "market_base100": 102.5,
+        "frgn_net_buy_qty": "24600",
+        "inst_net_buy_qty": "-7600",
+        "frgn_hold_rt": 0.424,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "005930",
+        "trd_dt": "2026-06-30",
+        "stock_base100": 108,
+        "market_base100": 103,
+        "frgn_net_buy_qty": "36900",
+        "inst_net_buy_qty": "-15200",
+        "frgn_hold_rt": 0.425,
+        "status": "가용",
+        "reason": null
+      }
+    ],
+    "006400": [
+      {
+        "stock_cd": "006400",
+        "trd_dt": "2026-06-01",
+        "stock_base100": 100,
+        "market_base100": 100,
+        "frgn_net_buy_qty": "-24600",
+        "inst_net_buy_qty": "22800",
+        "frgn_hold_rt": 0.42,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "006400",
+        "trd_dt": "2026-06-05",
+        "stock_base100": 101,
+        "market_base100": 100.4,
+        "frgn_net_buy_qty": "-12300",
+        "inst_net_buy_qty": "15200",
+        "frgn_hold_rt": 0.421,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "006400",
+        "trd_dt": "2026-06-10",
+        "stock_base100": 99,
+        "market_base100": 101,
+        "frgn_net_buy_qty": null,
+        "inst_net_buy_qty": "7600",
+        "frgn_hold_rt": null,
+        "status": "미연결",
+        "reason": "합성 수급 누락 예시"
+      },
+      {
+        "stock_cd": "006400",
+        "trd_dt": "2026-06-15",
+        "stock_base100": 104,
+        "market_base100": 102,
+        "frgn_net_buy_qty": "12300",
+        "inst_net_buy_qty": "0",
+        "frgn_hold_rt": 0.423,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "006400",
+        "trd_dt": "2026-06-22",
+        "stock_base100": 106,
+        "market_base100": 102.5,
+        "frgn_net_buy_qty": "24600",
+        "inst_net_buy_qty": "-7600",
+        "frgn_hold_rt": 0.424,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "006400",
+        "trd_dt": "2026-06-30",
+        "stock_base100": 108,
+        "market_base100": 103,
+        "frgn_net_buy_qty": "36900",
+        "inst_net_buy_qty": "-15200",
+        "frgn_hold_rt": 0.425,
+        "status": "가용",
+        "reason": null
+      }
+    ],
+    "017670": [
+      {
+        "stock_cd": "017670",
+        "trd_dt": "2026-06-01",
+        "stock_base100": 100,
+        "market_base100": 100,
+        "frgn_net_buy_qty": "-24600",
+        "inst_net_buy_qty": "22800",
+        "frgn_hold_rt": 0.42,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "017670",
+        "trd_dt": "2026-06-05",
+        "stock_base100": 101,
+        "market_base100": 100.4,
+        "frgn_net_buy_qty": "-12300",
+        "inst_net_buy_qty": "15200",
+        "frgn_hold_rt": 0.421,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "017670",
+        "trd_dt": "2026-06-10",
+        "stock_base100": 99,
+        "market_base100": 101,
+        "frgn_net_buy_qty": null,
+        "inst_net_buy_qty": "7600",
+        "frgn_hold_rt": null,
+        "status": "미연결",
+        "reason": "합성 수급 누락 예시"
+      },
+      {
+        "stock_cd": "017670",
+        "trd_dt": "2026-06-15",
+        "stock_base100": 104,
+        "market_base100": 102,
+        "frgn_net_buy_qty": "12300",
+        "inst_net_buy_qty": "0",
+        "frgn_hold_rt": 0.423,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "017670",
+        "trd_dt": "2026-06-22",
+        "stock_base100": 106,
+        "market_base100": 102.5,
+        "frgn_net_buy_qty": "24600",
+        "inst_net_buy_qty": "-7600",
+        "frgn_hold_rt": 0.424,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "017670",
+        "trd_dt": "2026-06-30",
+        "stock_base100": 108,
+        "market_base100": 103,
+        "frgn_net_buy_qty": "36900",
+        "inst_net_buy_qty": "-15200",
+        "frgn_hold_rt": 0.425,
+        "status": "가용",
+        "reason": null
+      }
+    ],
+    "034020": [
+      {
+        "stock_cd": "034020",
+        "trd_dt": "2026-06-01",
+        "stock_base100": 100,
+        "market_base100": 100,
+        "frgn_net_buy_qty": "-24600",
+        "inst_net_buy_qty": "22800",
+        "frgn_hold_rt": 0.42,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "034020",
+        "trd_dt": "2026-06-05",
+        "stock_base100": 101,
+        "market_base100": 100.4,
+        "frgn_net_buy_qty": "-12300",
+        "inst_net_buy_qty": "15200",
+        "frgn_hold_rt": 0.421,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "034020",
+        "trd_dt": "2026-06-10",
+        "stock_base100": 99,
+        "market_base100": 101,
+        "frgn_net_buy_qty": null,
+        "inst_net_buy_qty": "7600",
+        "frgn_hold_rt": null,
+        "status": "미연결",
+        "reason": "합성 수급 누락 예시"
+      },
+      {
+        "stock_cd": "034020",
+        "trd_dt": "2026-06-15",
+        "stock_base100": 104,
+        "market_base100": 102,
+        "frgn_net_buy_qty": "12300",
+        "inst_net_buy_qty": "0",
+        "frgn_hold_rt": 0.423,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "034020",
+        "trd_dt": "2026-06-22",
+        "stock_base100": 106,
+        "market_base100": 102.5,
+        "frgn_net_buy_qty": "24600",
+        "inst_net_buy_qty": "-7600",
+        "frgn_hold_rt": 0.424,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "034020",
+        "trd_dt": "2026-06-30",
+        "stock_base100": 108,
+        "market_base100": 103,
+        "frgn_net_buy_qty": "36900",
+        "inst_net_buy_qty": "-15200",
+        "frgn_hold_rt": 0.425,
+        "status": "가용",
+        "reason": null
+      }
+    ],
+    "035420": [
+      {
+        "stock_cd": "035420",
+        "trd_dt": "2026-06-01",
+        "stock_base100": 100,
+        "market_base100": 100,
+        "frgn_net_buy_qty": "-24600",
+        "inst_net_buy_qty": "22800",
+        "frgn_hold_rt": 0.42,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "035420",
+        "trd_dt": "2026-06-05",
+        "stock_base100": 101,
+        "market_base100": 100.4,
+        "frgn_net_buy_qty": "-12300",
+        "inst_net_buy_qty": "15200",
+        "frgn_hold_rt": 0.421,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "035420",
+        "trd_dt": "2026-06-10",
+        "stock_base100": 99,
+        "market_base100": 101,
+        "frgn_net_buy_qty": null,
+        "inst_net_buy_qty": "7600",
+        "frgn_hold_rt": null,
+        "status": "미연결",
+        "reason": "합성 수급 누락 예시"
+      },
+      {
+        "stock_cd": "035420",
+        "trd_dt": "2026-06-15",
+        "stock_base100": 104,
+        "market_base100": 102,
+        "frgn_net_buy_qty": "12300",
+        "inst_net_buy_qty": "0",
+        "frgn_hold_rt": 0.423,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "035420",
+        "trd_dt": "2026-06-22",
+        "stock_base100": 106,
+        "market_base100": 102.5,
+        "frgn_net_buy_qty": "24600",
+        "inst_net_buy_qty": "-7600",
+        "frgn_hold_rt": 0.424,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "035420",
+        "trd_dt": "2026-06-30",
+        "stock_base100": 108,
+        "market_base100": 103,
+        "frgn_net_buy_qty": "36900",
+        "inst_net_buy_qty": "-15200",
+        "frgn_hold_rt": 0.425,
+        "status": "가용",
+        "reason": null
+      }
+    ],
+    "035900": [
+      {
+        "stock_cd": "035900",
+        "trd_dt": "2026-06-01",
+        "stock_base100": 100,
+        "market_base100": 100,
+        "frgn_net_buy_qty": "-24600",
+        "inst_net_buy_qty": "22800",
+        "frgn_hold_rt": 0.42,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "035900",
+        "trd_dt": "2026-06-05",
+        "stock_base100": 101,
+        "market_base100": 100.4,
+        "frgn_net_buy_qty": "-12300",
+        "inst_net_buy_qty": "15200",
+        "frgn_hold_rt": 0.421,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "035900",
+        "trd_dt": "2026-06-10",
+        "stock_base100": 99,
+        "market_base100": 101,
+        "frgn_net_buy_qty": null,
+        "inst_net_buy_qty": "7600",
+        "frgn_hold_rt": null,
+        "status": "미연결",
+        "reason": "합성 수급 누락 예시"
+      },
+      {
+        "stock_cd": "035900",
+        "trd_dt": "2026-06-15",
+        "stock_base100": 104,
+        "market_base100": 102,
+        "frgn_net_buy_qty": "12300",
+        "inst_net_buy_qty": "0",
+        "frgn_hold_rt": 0.423,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "035900",
+        "trd_dt": "2026-06-22",
+        "stock_base100": 106,
+        "market_base100": 102.5,
+        "frgn_net_buy_qty": "24600",
+        "inst_net_buy_qty": "-7600",
+        "frgn_hold_rt": 0.424,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "035900",
+        "trd_dt": "2026-06-30",
+        "stock_base100": 108,
+        "market_base100": 103,
+        "frgn_net_buy_qty": "36900",
+        "inst_net_buy_qty": "-15200",
+        "frgn_hold_rt": 0.425,
+        "status": "가용",
+        "reason": null
+      }
+    ],
+    "051910": [
+      {
+        "stock_cd": "051910",
+        "trd_dt": "2026-06-01",
+        "stock_base100": 100,
+        "market_base100": 100,
+        "frgn_net_buy_qty": "-24600",
+        "inst_net_buy_qty": "22800",
+        "frgn_hold_rt": 0.42,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "051910",
+        "trd_dt": "2026-06-05",
+        "stock_base100": 101,
+        "market_base100": 100.4,
+        "frgn_net_buy_qty": "-12300",
+        "inst_net_buy_qty": "15200",
+        "frgn_hold_rt": 0.421,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "051910",
+        "trd_dt": "2026-06-10",
+        "stock_base100": 99,
+        "market_base100": 101,
+        "frgn_net_buy_qty": null,
+        "inst_net_buy_qty": "7600",
+        "frgn_hold_rt": null,
+        "status": "미연결",
+        "reason": "합성 수급 누락 예시"
+      },
+      {
+        "stock_cd": "051910",
+        "trd_dt": "2026-06-15",
+        "stock_base100": 104,
+        "market_base100": 102,
+        "frgn_net_buy_qty": "12300",
+        "inst_net_buy_qty": "0",
+        "frgn_hold_rt": 0.423,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "051910",
+        "trd_dt": "2026-06-22",
+        "stock_base100": 106,
+        "market_base100": 102.5,
+        "frgn_net_buy_qty": "24600",
+        "inst_net_buy_qty": "-7600",
+        "frgn_hold_rt": 0.424,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "051910",
+        "trd_dt": "2026-06-30",
+        "stock_base100": 108,
+        "market_base100": 103,
+        "frgn_net_buy_qty": "36900",
+        "inst_net_buy_qty": "-15200",
+        "frgn_hold_rt": 0.425,
+        "status": "가용",
+        "reason": null
+      }
+    ],
+    "058470": [
+      {
+        "stock_cd": "058470",
+        "trd_dt": "2026-06-01",
+        "stock_base100": 100,
+        "market_base100": 100,
+        "frgn_net_buy_qty": "-24600",
+        "inst_net_buy_qty": "22800",
+        "frgn_hold_rt": 0.42,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "058470",
+        "trd_dt": "2026-06-05",
+        "stock_base100": 101,
+        "market_base100": 100.4,
+        "frgn_net_buy_qty": "-12300",
+        "inst_net_buy_qty": "15200",
+        "frgn_hold_rt": 0.421,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "058470",
+        "trd_dt": "2026-06-10",
+        "stock_base100": 99,
+        "market_base100": 101,
+        "frgn_net_buy_qty": null,
+        "inst_net_buy_qty": "7600",
+        "frgn_hold_rt": null,
+        "status": "미연결",
+        "reason": "합성 수급 누락 예시"
+      },
+      {
+        "stock_cd": "058470",
+        "trd_dt": "2026-06-15",
+        "stock_base100": 104,
+        "market_base100": 102,
+        "frgn_net_buy_qty": "12300",
+        "inst_net_buy_qty": "0",
+        "frgn_hold_rt": 0.423,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "058470",
+        "trd_dt": "2026-06-22",
+        "stock_base100": 106,
+        "market_base100": 102.5,
+        "frgn_net_buy_qty": "24600",
+        "inst_net_buy_qty": "-7600",
+        "frgn_hold_rt": 0.424,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "058470",
+        "trd_dt": "2026-06-30",
+        "stock_base100": 108,
+        "market_base100": 103,
+        "frgn_net_buy_qty": "36900",
+        "inst_net_buy_qty": "-15200",
+        "frgn_hold_rt": 0.425,
+        "status": "가용",
+        "reason": null
+      }
+    ],
+    "066570": [
+      {
+        "stock_cd": "066570",
+        "trd_dt": "2026-06-01",
+        "stock_base100": 100,
+        "market_base100": 100,
+        "frgn_net_buy_qty": "-24600",
+        "inst_net_buy_qty": "22800",
+        "frgn_hold_rt": 0.42,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "066570",
+        "trd_dt": "2026-06-05",
+        "stock_base100": 101,
+        "market_base100": 100.4,
+        "frgn_net_buy_qty": "-12300",
+        "inst_net_buy_qty": "15200",
+        "frgn_hold_rt": 0.421,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "066570",
+        "trd_dt": "2026-06-10",
+        "stock_base100": 99,
+        "market_base100": 101,
+        "frgn_net_buy_qty": null,
+        "inst_net_buy_qty": "7600",
+        "frgn_hold_rt": null,
+        "status": "미연결",
+        "reason": "합성 수급 누락 예시"
+      },
+      {
+        "stock_cd": "066570",
+        "trd_dt": "2026-06-15",
+        "stock_base100": 104,
+        "market_base100": 102,
+        "frgn_net_buy_qty": "12300",
+        "inst_net_buy_qty": "0",
+        "frgn_hold_rt": 0.423,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "066570",
+        "trd_dt": "2026-06-22",
+        "stock_base100": 106,
+        "market_base100": 102.5,
+        "frgn_net_buy_qty": "24600",
+        "inst_net_buy_qty": "-7600",
+        "frgn_hold_rt": 0.424,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "066570",
+        "trd_dt": "2026-06-30",
+        "stock_base100": 108,
+        "market_base100": 103,
+        "frgn_net_buy_qty": "36900",
+        "inst_net_buy_qty": "-15200",
+        "frgn_hold_rt": 0.425,
+        "status": "가용",
+        "reason": null
+      }
+    ],
+    "068270": [
+      {
+        "stock_cd": "068270",
+        "trd_dt": "2026-06-01",
+        "stock_base100": 100,
+        "market_base100": 100,
+        "frgn_net_buy_qty": "-24600",
+        "inst_net_buy_qty": "22800",
+        "frgn_hold_rt": 0.42,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "068270",
+        "trd_dt": "2026-06-05",
+        "stock_base100": 101,
+        "market_base100": 100.4,
+        "frgn_net_buy_qty": "-12300",
+        "inst_net_buy_qty": "15200",
+        "frgn_hold_rt": 0.421,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "068270",
+        "trd_dt": "2026-06-10",
+        "stock_base100": 99,
+        "market_base100": 101,
+        "frgn_net_buy_qty": null,
+        "inst_net_buy_qty": "7600",
+        "frgn_hold_rt": null,
+        "status": "미연결",
+        "reason": "합성 수급 누락 예시"
+      },
+      {
+        "stock_cd": "068270",
+        "trd_dt": "2026-06-15",
+        "stock_base100": 104,
+        "market_base100": 102,
+        "frgn_net_buy_qty": "12300",
+        "inst_net_buy_qty": "0",
+        "frgn_hold_rt": 0.423,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "068270",
+        "trd_dt": "2026-06-22",
+        "stock_base100": 106,
+        "market_base100": 102.5,
+        "frgn_net_buy_qty": "24600",
+        "inst_net_buy_qty": "-7600",
+        "frgn_hold_rt": 0.424,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "068270",
+        "trd_dt": "2026-06-30",
+        "stock_base100": 108,
+        "market_base100": 103,
+        "frgn_net_buy_qty": "36900",
+        "inst_net_buy_qty": "-15200",
+        "frgn_hold_rt": 0.425,
+        "status": "가용",
+        "reason": null
+      }
+    ],
+    "090430": [
+      {
+        "stock_cd": "090430",
+        "trd_dt": "2026-06-01",
+        "stock_base100": 100,
+        "market_base100": 100,
+        "frgn_net_buy_qty": "-24600",
+        "inst_net_buy_qty": "22800",
+        "frgn_hold_rt": 0.42,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "090430",
+        "trd_dt": "2026-06-05",
+        "stock_base100": 101,
+        "market_base100": 100.4,
+        "frgn_net_buy_qty": "-12300",
+        "inst_net_buy_qty": "15200",
+        "frgn_hold_rt": 0.421,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "090430",
+        "trd_dt": "2026-06-10",
+        "stock_base100": 99,
+        "market_base100": 101,
+        "frgn_net_buy_qty": null,
+        "inst_net_buy_qty": "7600",
+        "frgn_hold_rt": null,
+        "status": "미연결",
+        "reason": "합성 수급 누락 예시"
+      },
+      {
+        "stock_cd": "090430",
+        "trd_dt": "2026-06-15",
+        "stock_base100": 104,
+        "market_base100": 102,
+        "frgn_net_buy_qty": "12300",
+        "inst_net_buy_qty": "0",
+        "frgn_hold_rt": 0.423,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "090430",
+        "trd_dt": "2026-06-22",
+        "stock_base100": 106,
+        "market_base100": 102.5,
+        "frgn_net_buy_qty": "24600",
+        "inst_net_buy_qty": "-7600",
+        "frgn_hold_rt": 0.424,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "090430",
+        "trd_dt": "2026-06-30",
+        "stock_base100": 108,
+        "market_base100": 103,
+        "frgn_net_buy_qty": "36900",
+        "inst_net_buy_qty": "-15200",
+        "frgn_hold_rt": 0.425,
+        "status": "가용",
+        "reason": null
+      }
+    ],
+    "097950": [
+      {
+        "stock_cd": "097950",
+        "trd_dt": "2026-06-01",
+        "stock_base100": 100,
+        "market_base100": 100,
+        "frgn_net_buy_qty": "-24600",
+        "inst_net_buy_qty": "22800",
+        "frgn_hold_rt": 0.42,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "097950",
+        "trd_dt": "2026-06-05",
+        "stock_base100": 101,
+        "market_base100": 100.4,
+        "frgn_net_buy_qty": "-12300",
+        "inst_net_buy_qty": "15200",
+        "frgn_hold_rt": 0.421,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "097950",
+        "trd_dt": "2026-06-10",
+        "stock_base100": 99,
+        "market_base100": 101,
+        "frgn_net_buy_qty": null,
+        "inst_net_buy_qty": "7600",
+        "frgn_hold_rt": null,
+        "status": "미연결",
+        "reason": "합성 수급 누락 예시"
+      },
+      {
+        "stock_cd": "097950",
+        "trd_dt": "2026-06-15",
+        "stock_base100": 104,
+        "market_base100": 102,
+        "frgn_net_buy_qty": "12300",
+        "inst_net_buy_qty": "0",
+        "frgn_hold_rt": 0.423,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "097950",
+        "trd_dt": "2026-06-22",
+        "stock_base100": 106,
+        "market_base100": 102.5,
+        "frgn_net_buy_qty": "24600",
+        "inst_net_buy_qty": "-7600",
+        "frgn_hold_rt": 0.424,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "097950",
+        "trd_dt": "2026-06-30",
+        "stock_base100": 108,
+        "market_base100": 103,
+        "frgn_net_buy_qty": "36900",
+        "inst_net_buy_qty": "-15200",
+        "frgn_hold_rt": 0.425,
+        "status": "가용",
+        "reason": null
+      }
+    ],
+    "196170": [
+      {
+        "stock_cd": "196170",
+        "trd_dt": "2026-06-01",
+        "stock_base100": 100,
+        "market_base100": 100,
+        "frgn_net_buy_qty": "-24600",
+        "inst_net_buy_qty": "22800",
+        "frgn_hold_rt": 0.42,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "196170",
+        "trd_dt": "2026-06-05",
+        "stock_base100": 101,
+        "market_base100": 100.4,
+        "frgn_net_buy_qty": "-12300",
+        "inst_net_buy_qty": "15200",
+        "frgn_hold_rt": 0.421,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "196170",
+        "trd_dt": "2026-06-10",
+        "stock_base100": 99,
+        "market_base100": 101,
+        "frgn_net_buy_qty": null,
+        "inst_net_buy_qty": "7600",
+        "frgn_hold_rt": null,
+        "status": "미연결",
+        "reason": "합성 수급 누락 예시"
+      },
+      {
+        "stock_cd": "196170",
+        "trd_dt": "2026-06-15",
+        "stock_base100": 104,
+        "market_base100": 102,
+        "frgn_net_buy_qty": "12300",
+        "inst_net_buy_qty": "0",
+        "frgn_hold_rt": 0.423,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "196170",
+        "trd_dt": "2026-06-22",
+        "stock_base100": 106,
+        "market_base100": 102.5,
+        "frgn_net_buy_qty": "24600",
+        "inst_net_buy_qty": "-7600",
+        "frgn_hold_rt": 0.424,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "196170",
+        "trd_dt": "2026-06-30",
+        "stock_base100": 108,
+        "market_base100": 103,
+        "frgn_net_buy_qty": "36900",
+        "inst_net_buy_qty": "-15200",
+        "frgn_hold_rt": 0.425,
+        "status": "가용",
+        "reason": null
+      }
+    ],
+    "247540": [
+      {
+        "stock_cd": "247540",
+        "trd_dt": "2026-06-01",
+        "stock_base100": 100,
+        "market_base100": 100,
+        "frgn_net_buy_qty": "-24600",
+        "inst_net_buy_qty": "22800",
+        "frgn_hold_rt": 0.42,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "247540",
+        "trd_dt": "2026-06-05",
+        "stock_base100": 101,
+        "market_base100": 100.4,
+        "frgn_net_buy_qty": "-12300",
+        "inst_net_buy_qty": "15200",
+        "frgn_hold_rt": 0.421,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "247540",
+        "trd_dt": "2026-06-10",
+        "stock_base100": 99,
+        "market_base100": 101,
+        "frgn_net_buy_qty": null,
+        "inst_net_buy_qty": "7600",
+        "frgn_hold_rt": null,
+        "status": "미연결",
+        "reason": "합성 수급 누락 예시"
+      },
+      {
+        "stock_cd": "247540",
+        "trd_dt": "2026-06-15",
+        "stock_base100": 104,
+        "market_base100": 102,
+        "frgn_net_buy_qty": "12300",
+        "inst_net_buy_qty": "0",
+        "frgn_hold_rt": 0.423,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "247540",
+        "trd_dt": "2026-06-22",
+        "stock_base100": 106,
+        "market_base100": 102.5,
+        "frgn_net_buy_qty": "24600",
+        "inst_net_buy_qty": "-7600",
+        "frgn_hold_rt": 0.424,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "247540",
+        "trd_dt": "2026-06-30",
+        "stock_base100": 108,
+        "market_base100": 103,
+        "frgn_net_buy_qty": "36900",
+        "inst_net_buy_qty": "-15200",
+        "frgn_hold_rt": 0.425,
+        "status": "가용",
+        "reason": null
+      }
+    ],
+    "263750": [
+      {
+        "stock_cd": "263750",
+        "trd_dt": "2026-06-01",
+        "stock_base100": 100,
+        "market_base100": 100,
+        "frgn_net_buy_qty": "-24600",
+        "inst_net_buy_qty": "22800",
+        "frgn_hold_rt": 0.42,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "263750",
+        "trd_dt": "2026-06-05",
+        "stock_base100": 101,
+        "market_base100": 100.4,
+        "frgn_net_buy_qty": "-12300",
+        "inst_net_buy_qty": "15200",
+        "frgn_hold_rt": 0.421,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "263750",
+        "trd_dt": "2026-06-10",
+        "stock_base100": 99,
+        "market_base100": 101,
+        "frgn_net_buy_qty": null,
+        "inst_net_buy_qty": "7600",
+        "frgn_hold_rt": null,
+        "status": "미연결",
+        "reason": "합성 수급 누락 예시"
+      },
+      {
+        "stock_cd": "263750",
+        "trd_dt": "2026-06-15",
+        "stock_base100": 104,
+        "market_base100": 102,
+        "frgn_net_buy_qty": "12300",
+        "inst_net_buy_qty": "0",
+        "frgn_hold_rt": 0.423,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "263750",
+        "trd_dt": "2026-06-22",
+        "stock_base100": 106,
+        "market_base100": 102.5,
+        "frgn_net_buy_qty": "24600",
+        "inst_net_buy_qty": "-7600",
+        "frgn_hold_rt": 0.424,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "263750",
+        "trd_dt": "2026-06-30",
+        "stock_base100": 108,
+        "market_base100": 103,
+        "frgn_net_buy_qty": "36900",
+        "inst_net_buy_qty": "-15200",
+        "frgn_hold_rt": 0.425,
+        "status": "가용",
+        "reason": null
+      }
+    ],
+    "357780": [
+      {
+        "stock_cd": "357780",
+        "trd_dt": "2026-06-01",
+        "stock_base100": 100,
+        "market_base100": 100,
+        "frgn_net_buy_qty": "-24600",
+        "inst_net_buy_qty": "22800",
+        "frgn_hold_rt": 0.42,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "357780",
+        "trd_dt": "2026-06-05",
+        "stock_base100": 101,
+        "market_base100": 100.4,
+        "frgn_net_buy_qty": "-12300",
+        "inst_net_buy_qty": "15200",
+        "frgn_hold_rt": 0.421,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "357780",
+        "trd_dt": "2026-06-10",
+        "stock_base100": 99,
+        "market_base100": 101,
+        "frgn_net_buy_qty": null,
+        "inst_net_buy_qty": "7600",
+        "frgn_hold_rt": null,
+        "status": "미연결",
+        "reason": "합성 수급 누락 예시"
+      },
+      {
+        "stock_cd": "357780",
+        "trd_dt": "2026-06-15",
+        "stock_base100": 104,
+        "market_base100": 102,
+        "frgn_net_buy_qty": "12300",
+        "inst_net_buy_qty": "0",
+        "frgn_hold_rt": 0.423,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "357780",
+        "trd_dt": "2026-06-22",
+        "stock_base100": 106,
+        "market_base100": 102.5,
+        "frgn_net_buy_qty": "24600",
+        "inst_net_buy_qty": "-7600",
+        "frgn_hold_rt": 0.424,
+        "status": "가용",
+        "reason": null
+      },
+      {
+        "stock_cd": "357780",
+        "trd_dt": "2026-06-30",
+        "stock_base100": 108,
+        "market_base100": 103,
+        "frgn_net_buy_qty": "36900",
+        "inst_net_buy_qty": "-15200",
+        "frgn_hold_rt": 0.425,
+        "status": "가용",
+        "reason": null
+      }
+    ]
+  },
+  "financials": {
+    "000660": [
+      {
+        "stock_cd": "000660",
+        "fin_rpt_id": "SAMPLE-000660-2024",
+        "bsns_yr": "2024",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2024-01-01",
+        "prd_end_dt": "2024-12-31",
+        "dscl_dt": "2025-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "10000000000000",
+        "op_prft_ytd_amt": "1800000000000",
+        "net_incm_ytd_amt": "1300000000000",
+        "op_cf_ytd_amt": "2200000000000",
+        "reason": null
+      },
+      {
+        "stock_cd": "000660",
+        "fin_rpt_id": "SAMPLE-000660-2025",
+        "bsns_yr": "2025",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2025-01-01",
+        "prd_end_dt": "2025-12-31",
+        "dscl_dt": "2026-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "11200000000000",
+        "op_prft_ytd_amt": "2000000000000",
+        "net_incm_ytd_amt": "1500000000000",
+        "op_cf_ytd_amt": "2400000000000",
+        "reason": null
+      }
+    ],
+    "003490": [
+      {
+        "stock_cd": "003490",
+        "fin_rpt_id": "SAMPLE-003490-2024",
+        "bsns_yr": "2024",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2024-01-01",
+        "prd_end_dt": "2024-12-31",
+        "dscl_dt": "2025-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "10000000000000",
+        "op_prft_ytd_amt": "1800000000000",
+        "net_incm_ytd_amt": "1300000000000",
+        "op_cf_ytd_amt": "2200000000000",
+        "reason": null
+      },
+      {
+        "stock_cd": "003490",
+        "fin_rpt_id": "SAMPLE-003490-2025",
+        "bsns_yr": "2025",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2025-01-01",
+        "prd_end_dt": "2025-12-31",
+        "dscl_dt": "2026-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "9200000000000",
+        "op_prft_ytd_amt": "2000000000000",
+        "net_incm_ytd_amt": "1500000000000",
+        "op_cf_ytd_amt": "2400000000000",
+        "reason": null
+      }
+    ],
+    "005380": [
+      {
+        "stock_cd": "005380",
+        "fin_rpt_id": "SAMPLE-005380-2024",
+        "bsns_yr": "2024",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2024-01-01",
+        "prd_end_dt": "2024-12-31",
+        "dscl_dt": "2025-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "10000000000000",
+        "op_prft_ytd_amt": "0",
+        "net_incm_ytd_amt": "1300000000000",
+        "op_cf_ytd_amt": "2200000000000",
+        "reason": null
+      },
+      {
+        "stock_cd": "005380",
+        "fin_rpt_id": "SAMPLE-005380-2025",
+        "bsns_yr": "2025",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2025-01-01",
+        "prd_end_dt": "2025-12-31",
+        "dscl_dt": "2026-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "10000000000000",
+        "op_prft_ytd_amt": "0",
+        "net_incm_ytd_amt": "1500000000000",
+        "op_cf_ytd_amt": "2400000000000",
+        "reason": null
+      }
+    ],
+    "005490": [
+      {
+        "stock_cd": "005490",
+        "fin_rpt_id": "SAMPLE-005490-2024",
+        "bsns_yr": "2024",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2024-01-01",
+        "prd_end_dt": "2024-12-31",
+        "dscl_dt": "2025-03-20",
+        "period_status": "검토 중",
+        "rev_ytd_amt": "10000000000000",
+        "op_prft_ytd_amt": "1800000000000",
+        "net_incm_ytd_amt": "1300000000000",
+        "op_cf_ytd_amt": null,
+        "reason": "현금흐름 기간 미검증"
+      },
+      {
+        "stock_cd": "005490",
+        "fin_rpt_id": "SAMPLE-005490-2025",
+        "bsns_yr": "2025",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2025-01-01",
+        "prd_end_dt": "2025-12-31",
+        "dscl_dt": "2026-03-20",
+        "period_status": "검토 중",
+        "rev_ytd_amt": "10000000000000",
+        "op_prft_ytd_amt": "2000000000000",
+        "net_incm_ytd_amt": "1500000000000",
+        "op_cf_ytd_amt": null,
+        "reason": "현금흐름 기간 미검증"
+      }
+    ],
+    "005930": [
+      {
+        "stock_cd": "005930",
+        "fin_rpt_id": "SAMPLE-005930-2024",
+        "bsns_yr": "2024",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2024-01-01",
+        "prd_end_dt": "2024-12-31",
+        "dscl_dt": "2025-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "10000000000000",
+        "op_prft_ytd_amt": "1800000000000",
+        "net_incm_ytd_amt": "1300000000000",
+        "op_cf_ytd_amt": "2200000000000",
+        "reason": null
+      },
+      {
+        "stock_cd": "005930",
+        "fin_rpt_id": "SAMPLE-005930-2025",
+        "bsns_yr": "2025",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2025-01-01",
+        "prd_end_dt": "2025-12-31",
+        "dscl_dt": "2026-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "11200000000000",
+        "op_prft_ytd_amt": "2000000000000",
+        "net_incm_ytd_amt": "1500000000000",
+        "op_cf_ytd_amt": "2400000000000",
+        "reason": null
+      }
+    ],
+    "006400": [
+      {
+        "stock_cd": "006400",
+        "fin_rpt_id": "SAMPLE-006400-2024",
+        "bsns_yr": "2024",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2024-01-01",
+        "prd_end_dt": "2024-12-31",
+        "dscl_dt": "2025-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "10000000000000",
+        "op_prft_ytd_amt": "1800000000000",
+        "net_incm_ytd_amt": "1300000000000",
+        "op_cf_ytd_amt": "2200000000000",
+        "reason": null
+      },
+      {
+        "stock_cd": "006400",
+        "fin_rpt_id": "SAMPLE-006400-2025",
+        "bsns_yr": "2025",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2025-01-01",
+        "prd_end_dt": "2025-12-31",
+        "dscl_dt": "2026-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "9200000000000",
+        "op_prft_ytd_amt": "2000000000000",
+        "net_incm_ytd_amt": "1500000000000",
+        "op_cf_ytd_amt": "2400000000000",
+        "reason": null
+      }
+    ],
+    "017670": [
+      {
+        "stock_cd": "017670",
+        "fin_rpt_id": "SAMPLE-017670-2024",
+        "bsns_yr": "2024",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2024-01-01",
+        "prd_end_dt": "2024-12-31",
+        "dscl_dt": "2025-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "10000000000000",
+        "op_prft_ytd_amt": "1800000000000",
+        "net_incm_ytd_amt": "1300000000000",
+        "op_cf_ytd_amt": "2200000000000",
+        "reason": null
+      },
+      {
+        "stock_cd": "017670",
+        "fin_rpt_id": "SAMPLE-017670-2025",
+        "bsns_yr": "2025",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2025-01-01",
+        "prd_end_dt": "2025-12-31",
+        "dscl_dt": "2026-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "10000000000000",
+        "op_prft_ytd_amt": "2000000000000",
+        "net_incm_ytd_amt": "1500000000000",
+        "op_cf_ytd_amt": "2400000000000",
+        "reason": null
+      }
+    ],
+    "034020": [
+      {
+        "stock_cd": "034020",
+        "fin_rpt_id": "SAMPLE-034020-2024",
+        "bsns_yr": "2024",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2024-01-01",
+        "prd_end_dt": "2024-12-31",
+        "dscl_dt": "2025-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "10000000000000",
+        "op_prft_ytd_amt": "1800000000000",
+        "net_incm_ytd_amt": "1300000000000",
+        "op_cf_ytd_amt": "2200000000000",
+        "reason": null
+      },
+      {
+        "stock_cd": "034020",
+        "fin_rpt_id": "SAMPLE-034020-2025",
+        "bsns_yr": "2025",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2025-01-01",
+        "prd_end_dt": "2025-12-31",
+        "dscl_dt": "2026-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "10000000000000",
+        "op_prft_ytd_amt": "2000000000000",
+        "net_incm_ytd_amt": "1500000000000",
+        "op_cf_ytd_amt": "2400000000000",
+        "reason": null
+      }
+    ],
+    "035420": [
+      {
+        "stock_cd": "035420",
+        "fin_rpt_id": "SAMPLE-035420-2024",
+        "bsns_yr": "2024",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2024-01-01",
+        "prd_end_dt": "2024-12-31",
+        "dscl_dt": "2025-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "10000000000000",
+        "op_prft_ytd_amt": "1800000000000",
+        "net_incm_ytd_amt": "1300000000000",
+        "op_cf_ytd_amt": "2200000000000",
+        "reason": null
+      },
+      {
+        "stock_cd": "035420",
+        "fin_rpt_id": "SAMPLE-035420-2025",
+        "bsns_yr": "2025",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2025-01-01",
+        "prd_end_dt": "2025-12-31",
+        "dscl_dt": "2026-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "11200000000000",
+        "op_prft_ytd_amt": "2000000000000",
+        "net_incm_ytd_amt": "1500000000000",
+        "op_cf_ytd_amt": "2400000000000",
+        "reason": null
+      }
+    ],
+    "035900": [
+      {
+        "stock_cd": "035900",
+        "fin_rpt_id": "SAMPLE-035900-2024",
+        "bsns_yr": "2024",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2024-01-01",
+        "prd_end_dt": "2024-12-31",
+        "dscl_dt": "2025-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "10000000000000",
+        "op_prft_ytd_amt": "1800000000000",
+        "net_incm_ytd_amt": "1300000000000",
+        "op_cf_ytd_amt": "2200000000000",
+        "reason": null
+      },
+      {
+        "stock_cd": "035900",
+        "fin_rpt_id": "SAMPLE-035900-2025",
+        "bsns_yr": "2025",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2025-01-01",
+        "prd_end_dt": "2025-12-31",
+        "dscl_dt": "2026-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "9200000000000",
+        "op_prft_ytd_amt": "2000000000000",
+        "net_incm_ytd_amt": "1500000000000",
+        "op_cf_ytd_amt": "2400000000000",
+        "reason": null
+      }
+    ],
+    "051910": [
+      {
+        "stock_cd": "051910",
+        "fin_rpt_id": "SAMPLE-051910-2024",
+        "bsns_yr": "2024",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2024-01-01",
+        "prd_end_dt": "2024-12-31",
+        "dscl_dt": "2025-03-20",
+        "period_status": "검토 중",
+        "rev_ytd_amt": "10000000000000",
+        "op_prft_ytd_amt": "1800000000000",
+        "net_incm_ytd_amt": "1300000000000",
+        "op_cf_ytd_amt": null,
+        "reason": "현금흐름 기간 미검증"
+      },
+      {
+        "stock_cd": "051910",
+        "fin_rpt_id": "SAMPLE-051910-2025",
+        "bsns_yr": "2025",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2025-01-01",
+        "prd_end_dt": "2025-12-31",
+        "dscl_dt": "2026-03-20",
+        "period_status": "검토 중",
+        "rev_ytd_amt": "10000000000000",
+        "op_prft_ytd_amt": "2000000000000",
+        "net_incm_ytd_amt": "1500000000000",
+        "op_cf_ytd_amt": null,
+        "reason": "현금흐름 기간 미검증"
+      }
+    ],
+    "058470": [
+      {
+        "stock_cd": "058470",
+        "fin_rpt_id": "SAMPLE-058470-2024",
+        "bsns_yr": "2024",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2024-01-01",
+        "prd_end_dt": "2024-12-31",
+        "dscl_dt": "2025-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "10000000000000",
+        "op_prft_ytd_amt": "1800000000000",
+        "net_incm_ytd_amt": "1300000000000",
+        "op_cf_ytd_amt": "2200000000000",
+        "reason": null
+      },
+      {
+        "stock_cd": "058470",
+        "fin_rpt_id": "SAMPLE-058470-2025",
+        "bsns_yr": "2025",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2025-01-01",
+        "prd_end_dt": "2025-12-31",
+        "dscl_dt": "2026-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "10000000000000",
+        "op_prft_ytd_amt": "2000000000000",
+        "net_incm_ytd_amt": "1500000000000",
+        "op_cf_ytd_amt": "2400000000000",
+        "reason": null
+      }
+    ],
+    "066570": [
+      {
+        "stock_cd": "066570",
+        "fin_rpt_id": "SAMPLE-066570-2024",
+        "bsns_yr": "2024",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2024-01-01",
+        "prd_end_dt": "2024-12-31",
+        "dscl_dt": "2025-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "10000000000000",
+        "op_prft_ytd_amt": "1800000000000",
+        "net_incm_ytd_amt": "1300000000000",
+        "op_cf_ytd_amt": "2200000000000",
+        "reason": null
+      },
+      {
+        "stock_cd": "066570",
+        "fin_rpt_id": "SAMPLE-066570-2025",
+        "bsns_yr": "2025",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2025-01-01",
+        "prd_end_dt": "2025-12-31",
+        "dscl_dt": "2026-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "11200000000000",
+        "op_prft_ytd_amt": "2000000000000",
+        "net_incm_ytd_amt": "1500000000000",
+        "op_cf_ytd_amt": "2400000000000",
+        "reason": null
+      }
+    ],
+    "068270": [
+      {
+        "stock_cd": "068270",
+        "fin_rpt_id": "SAMPLE-068270-2024",
+        "bsns_yr": "2024",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2024-01-01",
+        "prd_end_dt": "2024-12-31",
+        "dscl_dt": "2025-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "10000000000000",
+        "op_prft_ytd_amt": "1800000000000",
+        "net_incm_ytd_amt": "1300000000000",
+        "op_cf_ytd_amt": "2200000000000",
+        "reason": null
+      },
+      {
+        "stock_cd": "068270",
+        "fin_rpt_id": "SAMPLE-068270-2025",
+        "bsns_yr": "2025",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2025-01-01",
+        "prd_end_dt": "2025-12-31",
+        "dscl_dt": "2026-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "9200000000000",
+        "op_prft_ytd_amt": "2000000000000",
+        "net_incm_ytd_amt": "1500000000000",
+        "op_cf_ytd_amt": "2400000000000",
+        "reason": null
+      }
+    ],
+    "090430": [
+      {
+        "stock_cd": "090430",
+        "fin_rpt_id": "SAMPLE-090430-2024",
+        "bsns_yr": "2024",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2024-01-01",
+        "prd_end_dt": "2024-12-31",
+        "dscl_dt": "2025-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "10000000000000",
+        "op_prft_ytd_amt": "1800000000000",
+        "net_incm_ytd_amt": "1300000000000",
+        "op_cf_ytd_amt": "2200000000000",
+        "reason": null
+      },
+      {
+        "stock_cd": "090430",
+        "fin_rpt_id": "SAMPLE-090430-2025",
+        "bsns_yr": "2025",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2025-01-01",
+        "prd_end_dt": "2025-12-31",
+        "dscl_dt": "2026-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "10000000000000",
+        "op_prft_ytd_amt": "2000000000000",
+        "net_incm_ytd_amt": "1500000000000",
+        "op_cf_ytd_amt": "2400000000000",
+        "reason": null
+      }
+    ],
+    "097950": [
+      {
+        "stock_cd": "097950",
+        "fin_rpt_id": "SAMPLE-097950-2024",
+        "bsns_yr": "2024",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2024-01-01",
+        "prd_end_dt": "2024-12-31",
+        "dscl_dt": "2025-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "10000000000000",
+        "op_prft_ytd_amt": "1800000000000",
+        "net_incm_ytd_amt": "1300000000000",
+        "op_cf_ytd_amt": "2200000000000",
+        "reason": null
+      },
+      {
+        "stock_cd": "097950",
+        "fin_rpt_id": "SAMPLE-097950-2025",
+        "bsns_yr": "2025",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2025-01-01",
+        "prd_end_dt": "2025-12-31",
+        "dscl_dt": "2026-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "10000000000000",
+        "op_prft_ytd_amt": "2000000000000",
+        "net_incm_ytd_amt": "1500000000000",
+        "op_cf_ytd_amt": "2400000000000",
+        "reason": null
+      }
+    ],
+    "196170": [
+      {
+        "stock_cd": "196170",
+        "fin_rpt_id": "SAMPLE-196170-2024",
+        "bsns_yr": "2024",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2024-01-01",
+        "prd_end_dt": "2024-12-31",
+        "dscl_dt": "2025-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "10000000000000",
+        "op_prft_ytd_amt": "1800000000000",
+        "net_incm_ytd_amt": "1300000000000",
+        "op_cf_ytd_amt": "2200000000000",
+        "reason": null
+      },
+      {
+        "stock_cd": "196170",
+        "fin_rpt_id": "SAMPLE-196170-2025",
+        "bsns_yr": "2025",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2025-01-01",
+        "prd_end_dt": "2025-12-31",
+        "dscl_dt": "2026-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "11200000000000",
+        "op_prft_ytd_amt": "2000000000000",
+        "net_incm_ytd_amt": "1500000000000",
+        "op_cf_ytd_amt": "2400000000000",
+        "reason": null
+      }
+    ],
+    "247540": [
+      {
+        "stock_cd": "247540",
+        "fin_rpt_id": "SAMPLE-247540-2024",
+        "bsns_yr": "2024",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2024-01-01",
+        "prd_end_dt": "2024-12-31",
+        "dscl_dt": "2025-03-20",
+        "period_status": "검토 중",
+        "rev_ytd_amt": "10000000000000",
+        "op_prft_ytd_amt": "1800000000000",
+        "net_incm_ytd_amt": "1300000000000",
+        "op_cf_ytd_amt": null,
+        "reason": "현금흐름 기간 미검증"
+      },
+      {
+        "stock_cd": "247540",
+        "fin_rpt_id": "SAMPLE-247540-2025",
+        "bsns_yr": "2025",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2025-01-01",
+        "prd_end_dt": "2025-12-31",
+        "dscl_dt": "2026-03-20",
+        "period_status": "검토 중",
+        "rev_ytd_amt": "9200000000000",
+        "op_prft_ytd_amt": "2000000000000",
+        "net_incm_ytd_amt": "1500000000000",
+        "op_cf_ytd_amt": null,
+        "reason": "현금흐름 기간 미검증"
+      }
+    ],
+    "263750": [
+      {
+        "stock_cd": "263750",
+        "fin_rpt_id": "SAMPLE-263750-2024",
+        "bsns_yr": "2024",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2024-01-01",
+        "prd_end_dt": "2024-12-31",
+        "dscl_dt": "2025-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "10000000000000",
+        "op_prft_ytd_amt": "1800000000000",
+        "net_incm_ytd_amt": "1300000000000",
+        "op_cf_ytd_amt": "2200000000000",
+        "reason": null
+      },
+      {
+        "stock_cd": "263750",
+        "fin_rpt_id": "SAMPLE-263750-2025",
+        "bsns_yr": "2025",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2025-01-01",
+        "prd_end_dt": "2025-12-31",
+        "dscl_dt": "2026-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "10000000000000",
+        "op_prft_ytd_amt": "2000000000000",
+        "net_incm_ytd_amt": "1500000000000",
+        "op_cf_ytd_amt": "2400000000000",
+        "reason": null
+      }
+    ],
+    "357780": [
+      {
+        "stock_cd": "357780",
+        "fin_rpt_id": "SAMPLE-357780-2024",
+        "bsns_yr": "2024",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2024-01-01",
+        "prd_end_dt": "2024-12-31",
+        "dscl_dt": "2025-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "10000000000000",
+        "op_prft_ytd_amt": "1800000000000",
+        "net_incm_ytd_amt": "1300000000000",
+        "op_cf_ytd_amt": "2200000000000",
+        "reason": null
+      },
+      {
+        "stock_cd": "357780",
+        "fin_rpt_id": "SAMPLE-357780-2025",
+        "bsns_yr": "2025",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "period_type": "YTD",
+        "prd_start_dt": "2025-01-01",
+        "prd_end_dt": "2025-12-31",
+        "dscl_dt": "2026-03-20",
+        "period_status": "검증됨 (합성)",
+        "rev_ytd_amt": "10000000000000",
+        "op_prft_ytd_amt": "2000000000000",
+        "net_incm_ytd_amt": "1500000000000",
+        "op_cf_ytd_amt": "2400000000000",
+        "reason": null
+      }
+    ]
+  },
+  "evidence": {
+    "000660": {
+      "stock_cd": "000660",
+      "as_of": "2026-06-30",
+      "classification": "개선·강세 동행",
+      "revenue_growth_rt": 0.12,
+      "excess_return_rt": 0.054,
+      "fin_rpt_id": "SAMPLE-000660-2025",
+      "dscl_dt": "2026-03-20",
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "numerator": "1200000000000",
+      "denominator": "10000000000000",
+      "formula": "(당기 YTD 매출 − 전년동기 YTD 매출) / 전년동기 YTD 매출. 공시 후 시장 대비 성과는 별도 제공값.",
+      "threshold": "0 (제안)",
+      "calc_status": "합성 계산값",
+      "review": "공시 이후 구간의 길이, 기간 적격, 기업행동 및 수급 누락을 함께 검토하세요.",
+      "lineage": [
+        {
+          "layer": "Bronze",
+          "status": "미확보",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "원천 CSV·공시 ZIP 실물 미포함"
+        },
+        {
+          "layer": "Silver",
+          "status": "검토 중",
+          "file": null,
+          "row": null,
+          "key": "000660 / SAMPLE",
+          "version": null,
+          "reason": "합성 검토 예시 · 원천 행 미제공"
+        },
+        {
+          "layer": "Silver",
+          "status": "격리",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "합성 격리 예시 · 해당 값 사용 제외"
+        },
+        {
+          "layer": "Gold",
+          "status": "합성",
+          "file": null,
+          "row": null,
+          "key": "SAMPLE-000660-2025",
+          "version": "synthetic-ui-v1",
+          "reason": "실제 Gold 계산 결과 아님"
+        }
+      ]
+    },
+    "003490": {
+      "stock_cd": "003490",
+      "as_of": "2026-06-30",
+      "classification": "둔화·강세 괴리",
+      "revenue_growth_rt": -0.08,
+      "excess_return_rt": 0.023,
+      "fin_rpt_id": "SAMPLE-003490-2025",
+      "dscl_dt": "2026-03-20",
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "numerator": "-800000000000",
+      "denominator": "10000000000000",
+      "formula": "(당기 YTD 매출 − 전년동기 YTD 매출) / 전년동기 YTD 매출. 공시 후 시장 대비 성과는 별도 제공값.",
+      "threshold": "0 (제안)",
+      "calc_status": "합성 계산값",
+      "review": "공시 이후 구간의 길이, 기간 적격, 기업행동 및 수급 누락을 함께 검토하세요.",
+      "lineage": [
+        {
+          "layer": "Bronze",
+          "status": "미확보",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "원천 CSV·공시 ZIP 실물 미포함"
+        },
+        {
+          "layer": "Silver",
+          "status": "검토 중",
+          "file": null,
+          "row": null,
+          "key": "003490 / SAMPLE",
+          "version": null,
+          "reason": "합성 검토 예시 · 원천 행 미제공"
+        },
+        {
+          "layer": "Silver",
+          "status": "격리",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "합성 격리 예시 · 해당 값 사용 제외"
+        },
+        {
+          "layer": "Gold",
+          "status": "합성",
+          "file": null,
+          "row": null,
+          "key": "SAMPLE-003490-2025",
+          "version": "synthetic-ui-v1",
+          "reason": "실제 Gold 계산 결과 아님"
+        }
+      ]
+    },
+    "005380": {
+      "stock_cd": "005380",
+      "as_of": "2026-06-30",
+      "classification": "중립",
+      "revenue_growth_rt": 0,
+      "excess_return_rt": 0,
+      "fin_rpt_id": "SAMPLE-005380-2025",
+      "dscl_dt": "2026-03-20",
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "numerator": "0",
+      "denominator": "10000000000000",
+      "formula": "(당기 YTD 매출 − 전년동기 YTD 매출) / 전년동기 YTD 매출. 공시 후 시장 대비 성과는 별도 제공값.",
+      "threshold": "0 (제안)",
+      "calc_status": "합성 계산값",
+      "review": "공시 이후 구간의 길이, 기간 적격, 기업행동 및 수급 누락을 함께 검토하세요.",
+      "lineage": [
+        {
+          "layer": "Bronze",
+          "status": "미확보",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "원천 CSV·공시 ZIP 실물 미포함"
+        },
+        {
+          "layer": "Silver",
+          "status": "검토 중",
+          "file": null,
+          "row": null,
+          "key": "005380 / SAMPLE",
+          "version": null,
+          "reason": "합성 검토 예시 · 원천 행 미제공"
+        },
+        {
+          "layer": "Silver",
+          "status": "격리",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "합성 격리 예시 · 해당 값 사용 제외"
+        },
+        {
+          "layer": "Gold",
+          "status": "합성",
+          "file": null,
+          "row": null,
+          "key": "SAMPLE-005380-2025",
+          "version": "synthetic-ui-v1",
+          "reason": "실제 Gold 계산 결과 아님"
+        }
+      ]
+    },
+    "005490": {
+      "stock_cd": "005490",
+      "as_of": "2026-06-30",
+      "classification": "판단 불가",
+      "revenue_growth_rt": null,
+      "excess_return_rt": null,
+      "fin_rpt_id": "SAMPLE-005490-2025",
+      "dscl_dt": "2026-03-20",
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "numerator": null,
+      "denominator": null,
+      "formula": "(당기 YTD 매출 − 전년동기 YTD 매출) / 전년동기 YTD 매출. 공시 후 시장 대비 성과는 별도 제공값.",
+      "threshold": "0 (제안)",
+      "calc_status": "계산 불가",
+      "review": "공시 이후 구간의 길이, 기간 적격, 기업행동 및 수급 누락을 함께 검토하세요.",
+      "lineage": [
+        {
+          "layer": "Bronze",
+          "status": "미확보",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "원천 CSV·공시 ZIP 실물 미포함"
+        },
+        {
+          "layer": "Silver",
+          "status": "검토 중",
+          "file": null,
+          "row": null,
+          "key": "005490 / SAMPLE",
+          "version": null,
+          "reason": "합성 검토 예시 · 원천 행 미제공"
+        },
+        {
+          "layer": "Silver",
+          "status": "격리",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "합성 격리 예시 · 해당 값 사용 제외"
+        },
+        {
+          "layer": "Gold",
+          "status": "계산 불가",
+          "file": null,
+          "row": null,
+          "key": "SAMPLE-005490-2025",
+          "version": "synthetic-ui-v1",
+          "reason": "실제 Gold 계산 결과 아님"
+        }
+      ]
+    },
+    "005930": {
+      "stock_cd": "005930",
+      "as_of": "2026-06-30",
+      "classification": "개선·강세 동행",
+      "revenue_growth_rt": 0.12,
+      "excess_return_rt": 0.054,
+      "fin_rpt_id": "SAMPLE-005930-2025",
+      "dscl_dt": "2026-03-20",
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "numerator": "1200000000000",
+      "denominator": "10000000000000",
+      "formula": "(당기 YTD 매출 − 전년동기 YTD 매출) / 전년동기 YTD 매출. 공시 후 시장 대비 성과는 별도 제공값.",
+      "threshold": "0 (제안)",
+      "calc_status": "합성 계산값",
+      "review": "공시 이후 구간의 길이, 기간 적격, 기업행동 및 수급 누락을 함께 검토하세요.",
+      "lineage": [
+        {
+          "layer": "Bronze",
+          "status": "미확보",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "원천 CSV·공시 ZIP 실물 미포함"
+        },
+        {
+          "layer": "Silver",
+          "status": "검토 중",
+          "file": null,
+          "row": null,
+          "key": "005930 / SAMPLE",
+          "version": null,
+          "reason": "합성 검토 예시 · 원천 행 미제공"
+        },
+        {
+          "layer": "Silver",
+          "status": "격리",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "합성 격리 예시 · 해당 값 사용 제외"
+        },
+        {
+          "layer": "Gold",
+          "status": "합성",
+          "file": null,
+          "row": null,
+          "key": "SAMPLE-005930-2025",
+          "version": "synthetic-ui-v1",
+          "reason": "실제 Gold 계산 결과 아님"
+        }
+      ]
+    },
+    "006400": {
+      "stock_cd": "006400",
+      "as_of": "2026-06-30",
+      "classification": "둔화·강세 괴리",
+      "revenue_growth_rt": -0.08,
+      "excess_return_rt": 0.023,
+      "fin_rpt_id": "SAMPLE-006400-2025",
+      "dscl_dt": "2026-03-20",
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "numerator": "-800000000000",
+      "denominator": "10000000000000",
+      "formula": "(당기 YTD 매출 − 전년동기 YTD 매출) / 전년동기 YTD 매출. 공시 후 시장 대비 성과는 별도 제공값.",
+      "threshold": "0 (제안)",
+      "calc_status": "합성 계산값",
+      "review": "공시 이후 구간의 길이, 기간 적격, 기업행동 및 수급 누락을 함께 검토하세요.",
+      "lineage": [
+        {
+          "layer": "Bronze",
+          "status": "미확보",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "원천 CSV·공시 ZIP 실물 미포함"
+        },
+        {
+          "layer": "Silver",
+          "status": "검토 중",
+          "file": null,
+          "row": null,
+          "key": "006400 / SAMPLE",
+          "version": null,
+          "reason": "합성 검토 예시 · 원천 행 미제공"
+        },
+        {
+          "layer": "Silver",
+          "status": "격리",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "합성 격리 예시 · 해당 값 사용 제외"
+        },
+        {
+          "layer": "Gold",
+          "status": "합성",
+          "file": null,
+          "row": null,
+          "key": "SAMPLE-006400-2025",
+          "version": "synthetic-ui-v1",
+          "reason": "실제 Gold 계산 결과 아님"
+        }
+      ]
+    },
+    "017670": {
+      "stock_cd": "017670",
+      "as_of": "2026-06-30",
+      "classification": "중립",
+      "revenue_growth_rt": 0,
+      "excess_return_rt": 0,
+      "fin_rpt_id": "SAMPLE-017670-2025",
+      "dscl_dt": "2026-03-20",
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "numerator": "0",
+      "denominator": "10000000000000",
+      "formula": "(당기 YTD 매출 − 전년동기 YTD 매출) / 전년동기 YTD 매출. 공시 후 시장 대비 성과는 별도 제공값.",
+      "threshold": "0 (제안)",
+      "calc_status": "합성 계산값",
+      "review": "공시 이후 구간의 길이, 기간 적격, 기업행동 및 수급 누락을 함께 검토하세요.",
+      "lineage": [
+        {
+          "layer": "Bronze",
+          "status": "미확보",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "원천 CSV·공시 ZIP 실물 미포함"
+        },
+        {
+          "layer": "Silver",
+          "status": "검토 중",
+          "file": null,
+          "row": null,
+          "key": "017670 / SAMPLE",
+          "version": null,
+          "reason": "합성 검토 예시 · 원천 행 미제공"
+        },
+        {
+          "layer": "Silver",
+          "status": "격리",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "합성 격리 예시 · 해당 값 사용 제외"
+        },
+        {
+          "layer": "Gold",
+          "status": "합성",
+          "file": null,
+          "row": null,
+          "key": "SAMPLE-017670-2025",
+          "version": "synthetic-ui-v1",
+          "reason": "실제 Gold 계산 결과 아님"
+        }
+      ]
+    },
+    "034020": {
+      "stock_cd": "034020",
+      "as_of": "2026-06-30",
+      "classification": "판단 불가",
+      "revenue_growth_rt": null,
+      "excess_return_rt": null,
+      "fin_rpt_id": "SAMPLE-034020-2025",
+      "dscl_dt": "2026-03-20",
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "numerator": null,
+      "denominator": null,
+      "formula": "(당기 YTD 매출 − 전년동기 YTD 매출) / 전년동기 YTD 매출. 공시 후 시장 대비 성과는 별도 제공값.",
+      "threshold": "0 (제안)",
+      "calc_status": "계산 불가",
+      "review": "공시 이후 구간의 길이, 기간 적격, 기업행동 및 수급 누락을 함께 검토하세요.",
+      "lineage": [
+        {
+          "layer": "Bronze",
+          "status": "미확보",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "원천 CSV·공시 ZIP 실물 미포함"
+        },
+        {
+          "layer": "Silver",
+          "status": "검토 중",
+          "file": null,
+          "row": null,
+          "key": "034020 / SAMPLE",
+          "version": null,
+          "reason": "합성 검토 예시 · 원천 행 미제공"
+        },
+        {
+          "layer": "Silver",
+          "status": "격리",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "합성 격리 예시 · 해당 값 사용 제외"
+        },
+        {
+          "layer": "Gold",
+          "status": "계산 불가",
+          "file": null,
+          "row": null,
+          "key": "SAMPLE-034020-2025",
+          "version": "synthetic-ui-v1",
+          "reason": "실제 Gold 계산 결과 아님"
+        }
+      ]
+    },
+    "035420": {
+      "stock_cd": "035420",
+      "as_of": "2026-06-30",
+      "classification": "개선·강세 동행",
+      "revenue_growth_rt": 0.12,
+      "excess_return_rt": 0.054,
+      "fin_rpt_id": "SAMPLE-035420-2025",
+      "dscl_dt": "2026-03-20",
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "numerator": "1200000000000",
+      "denominator": "10000000000000",
+      "formula": "(당기 YTD 매출 − 전년동기 YTD 매출) / 전년동기 YTD 매출. 공시 후 시장 대비 성과는 별도 제공값.",
+      "threshold": "0 (제안)",
+      "calc_status": "합성 계산값",
+      "review": "공시 이후 구간의 길이, 기간 적격, 기업행동 및 수급 누락을 함께 검토하세요.",
+      "lineage": [
+        {
+          "layer": "Bronze",
+          "status": "미확보",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "원천 CSV·공시 ZIP 실물 미포함"
+        },
+        {
+          "layer": "Silver",
+          "status": "검토 중",
+          "file": null,
+          "row": null,
+          "key": "035420 / SAMPLE",
+          "version": null,
+          "reason": "합성 검토 예시 · 원천 행 미제공"
+        },
+        {
+          "layer": "Silver",
+          "status": "격리",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "합성 격리 예시 · 해당 값 사용 제외"
+        },
+        {
+          "layer": "Gold",
+          "status": "합성",
+          "file": null,
+          "row": null,
+          "key": "SAMPLE-035420-2025",
+          "version": "synthetic-ui-v1",
+          "reason": "실제 Gold 계산 결과 아님"
+        }
+      ]
+    },
+    "035900": {
+      "stock_cd": "035900",
+      "as_of": "2026-06-30",
+      "classification": "둔화·강세 괴리",
+      "revenue_growth_rt": -0.08,
+      "excess_return_rt": 0.023,
+      "fin_rpt_id": "SAMPLE-035900-2025",
+      "dscl_dt": "2026-03-20",
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "numerator": "-800000000000",
+      "denominator": "10000000000000",
+      "formula": "(당기 YTD 매출 − 전년동기 YTD 매출) / 전년동기 YTD 매출. 공시 후 시장 대비 성과는 별도 제공값.",
+      "threshold": "0 (제안)",
+      "calc_status": "합성 계산값",
+      "review": "공시 이후 구간의 길이, 기간 적격, 기업행동 및 수급 누락을 함께 검토하세요.",
+      "lineage": [
+        {
+          "layer": "Bronze",
+          "status": "미확보",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "원천 CSV·공시 ZIP 실물 미포함"
+        },
+        {
+          "layer": "Silver",
+          "status": "검토 중",
+          "file": null,
+          "row": null,
+          "key": "035900 / SAMPLE",
+          "version": null,
+          "reason": "합성 검토 예시 · 원천 행 미제공"
+        },
+        {
+          "layer": "Silver",
+          "status": "격리",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "합성 격리 예시 · 해당 값 사용 제외"
+        },
+        {
+          "layer": "Gold",
+          "status": "합성",
+          "file": null,
+          "row": null,
+          "key": "SAMPLE-035900-2025",
+          "version": "synthetic-ui-v1",
+          "reason": "실제 Gold 계산 결과 아님"
+        }
+      ]
+    },
+    "051910": {
+      "stock_cd": "051910",
+      "as_of": "2026-06-30",
+      "classification": "중립",
+      "revenue_growth_rt": 0,
+      "excess_return_rt": 0,
+      "fin_rpt_id": "SAMPLE-051910-2025",
+      "dscl_dt": "2026-03-20",
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "numerator": "0",
+      "denominator": "10000000000000",
+      "formula": "(당기 YTD 매출 − 전년동기 YTD 매출) / 전년동기 YTD 매출. 공시 후 시장 대비 성과는 별도 제공값.",
+      "threshold": "0 (제안)",
+      "calc_status": "합성 계산값",
+      "review": "공시 이후 구간의 길이, 기간 적격, 기업행동 및 수급 누락을 함께 검토하세요.",
+      "lineage": [
+        {
+          "layer": "Bronze",
+          "status": "미확보",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "원천 CSV·공시 ZIP 실물 미포함"
+        },
+        {
+          "layer": "Silver",
+          "status": "검토 중",
+          "file": null,
+          "row": null,
+          "key": "051910 / SAMPLE",
+          "version": null,
+          "reason": "합성 검토 예시 · 원천 행 미제공"
+        },
+        {
+          "layer": "Silver",
+          "status": "격리",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "합성 격리 예시 · 해당 값 사용 제외"
+        },
+        {
+          "layer": "Gold",
+          "status": "합성",
+          "file": null,
+          "row": null,
+          "key": "SAMPLE-051910-2025",
+          "version": "synthetic-ui-v1",
+          "reason": "실제 Gold 계산 결과 아님"
+        }
+      ]
+    },
+    "058470": {
+      "stock_cd": "058470",
+      "as_of": "2026-06-30",
+      "classification": "판단 불가",
+      "revenue_growth_rt": null,
+      "excess_return_rt": null,
+      "fin_rpt_id": "SAMPLE-058470-2025",
+      "dscl_dt": "2026-03-20",
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "numerator": null,
+      "denominator": null,
+      "formula": "(당기 YTD 매출 − 전년동기 YTD 매출) / 전년동기 YTD 매출. 공시 후 시장 대비 성과는 별도 제공값.",
+      "threshold": "0 (제안)",
+      "calc_status": "계산 불가",
+      "review": "공시 이후 구간의 길이, 기간 적격, 기업행동 및 수급 누락을 함께 검토하세요.",
+      "lineage": [
+        {
+          "layer": "Bronze",
+          "status": "미확보",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "원천 CSV·공시 ZIP 실물 미포함"
+        },
+        {
+          "layer": "Silver",
+          "status": "검토 중",
+          "file": null,
+          "row": null,
+          "key": "058470 / SAMPLE",
+          "version": null,
+          "reason": "합성 검토 예시 · 원천 행 미제공"
+        },
+        {
+          "layer": "Silver",
+          "status": "격리",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "합성 격리 예시 · 해당 값 사용 제외"
+        },
+        {
+          "layer": "Gold",
+          "status": "계산 불가",
+          "file": null,
+          "row": null,
+          "key": "SAMPLE-058470-2025",
+          "version": "synthetic-ui-v1",
+          "reason": "실제 Gold 계산 결과 아님"
+        }
+      ]
+    },
+    "066570": {
+      "stock_cd": "066570",
+      "as_of": "2026-06-30",
+      "classification": "개선·강세 동행",
+      "revenue_growth_rt": 0.12,
+      "excess_return_rt": 0.054,
+      "fin_rpt_id": "SAMPLE-066570-2025",
+      "dscl_dt": "2026-03-20",
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "numerator": "1200000000000",
+      "denominator": "10000000000000",
+      "formula": "(당기 YTD 매출 − 전년동기 YTD 매출) / 전년동기 YTD 매출. 공시 후 시장 대비 성과는 별도 제공값.",
+      "threshold": "0 (제안)",
+      "calc_status": "합성 계산값",
+      "review": "공시 이후 구간의 길이, 기간 적격, 기업행동 및 수급 누락을 함께 검토하세요.",
+      "lineage": [
+        {
+          "layer": "Bronze",
+          "status": "미확보",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "원천 CSV·공시 ZIP 실물 미포함"
+        },
+        {
+          "layer": "Silver",
+          "status": "검토 중",
+          "file": null,
+          "row": null,
+          "key": "066570 / SAMPLE",
+          "version": null,
+          "reason": "합성 검토 예시 · 원천 행 미제공"
+        },
+        {
+          "layer": "Silver",
+          "status": "격리",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "합성 격리 예시 · 해당 값 사용 제외"
+        },
+        {
+          "layer": "Gold",
+          "status": "합성",
+          "file": null,
+          "row": null,
+          "key": "SAMPLE-066570-2025",
+          "version": "synthetic-ui-v1",
+          "reason": "실제 Gold 계산 결과 아님"
+        }
+      ]
+    },
+    "068270": {
+      "stock_cd": "068270",
+      "as_of": "2026-06-30",
+      "classification": "둔화·강세 괴리",
+      "revenue_growth_rt": -0.08,
+      "excess_return_rt": 0.023,
+      "fin_rpt_id": "SAMPLE-068270-2025",
+      "dscl_dt": "2026-03-20",
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "numerator": "-800000000000",
+      "denominator": "10000000000000",
+      "formula": "(당기 YTD 매출 − 전년동기 YTD 매출) / 전년동기 YTD 매출. 공시 후 시장 대비 성과는 별도 제공값.",
+      "threshold": "0 (제안)",
+      "calc_status": "합성 계산값",
+      "review": "공시 이후 구간의 길이, 기간 적격, 기업행동 및 수급 누락을 함께 검토하세요.",
+      "lineage": [
+        {
+          "layer": "Bronze",
+          "status": "미확보",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "원천 CSV·공시 ZIP 실물 미포함"
+        },
+        {
+          "layer": "Silver",
+          "status": "검토 중",
+          "file": null,
+          "row": null,
+          "key": "068270 / SAMPLE",
+          "version": null,
+          "reason": "합성 검토 예시 · 원천 행 미제공"
+        },
+        {
+          "layer": "Silver",
+          "status": "격리",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "합성 격리 예시 · 해당 값 사용 제외"
+        },
+        {
+          "layer": "Gold",
+          "status": "합성",
+          "file": null,
+          "row": null,
+          "key": "SAMPLE-068270-2025",
+          "version": "synthetic-ui-v1",
+          "reason": "실제 Gold 계산 결과 아님"
+        }
+      ]
+    },
+    "090430": {
+      "stock_cd": "090430",
+      "as_of": "2026-06-30",
+      "classification": "중립",
+      "revenue_growth_rt": 0,
+      "excess_return_rt": 0,
+      "fin_rpt_id": "SAMPLE-090430-2025",
+      "dscl_dt": "2026-03-20",
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "numerator": "0",
+      "denominator": "10000000000000",
+      "formula": "(당기 YTD 매출 − 전년동기 YTD 매출) / 전년동기 YTD 매출. 공시 후 시장 대비 성과는 별도 제공값.",
+      "threshold": "0 (제안)",
+      "calc_status": "합성 계산값",
+      "review": "공시 이후 구간의 길이, 기간 적격, 기업행동 및 수급 누락을 함께 검토하세요.",
+      "lineage": [
+        {
+          "layer": "Bronze",
+          "status": "미확보",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "원천 CSV·공시 ZIP 실물 미포함"
+        },
+        {
+          "layer": "Silver",
+          "status": "검토 중",
+          "file": null,
+          "row": null,
+          "key": "090430 / SAMPLE",
+          "version": null,
+          "reason": "합성 검토 예시 · 원천 행 미제공"
+        },
+        {
+          "layer": "Silver",
+          "status": "격리",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "합성 격리 예시 · 해당 값 사용 제외"
+        },
+        {
+          "layer": "Gold",
+          "status": "합성",
+          "file": null,
+          "row": null,
+          "key": "SAMPLE-090430-2025",
+          "version": "synthetic-ui-v1",
+          "reason": "실제 Gold 계산 결과 아님"
+        }
+      ]
+    },
+    "097950": {
+      "stock_cd": "097950",
+      "as_of": "2026-06-30",
+      "classification": "판단 불가",
+      "revenue_growth_rt": null,
+      "excess_return_rt": null,
+      "fin_rpt_id": "SAMPLE-097950-2025",
+      "dscl_dt": "2026-03-20",
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "numerator": null,
+      "denominator": null,
+      "formula": "(당기 YTD 매출 − 전년동기 YTD 매출) / 전년동기 YTD 매출. 공시 후 시장 대비 성과는 별도 제공값.",
+      "threshold": "0 (제안)",
+      "calc_status": "계산 불가",
+      "review": "공시 이후 구간의 길이, 기간 적격, 기업행동 및 수급 누락을 함께 검토하세요.",
+      "lineage": [
+        {
+          "layer": "Bronze",
+          "status": "미확보",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "원천 CSV·공시 ZIP 실물 미포함"
+        },
+        {
+          "layer": "Silver",
+          "status": "검토 중",
+          "file": null,
+          "row": null,
+          "key": "097950 / SAMPLE",
+          "version": null,
+          "reason": "합성 검토 예시 · 원천 행 미제공"
+        },
+        {
+          "layer": "Silver",
+          "status": "격리",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "합성 격리 예시 · 해당 값 사용 제외"
+        },
+        {
+          "layer": "Gold",
+          "status": "계산 불가",
+          "file": null,
+          "row": null,
+          "key": "SAMPLE-097950-2025",
+          "version": "synthetic-ui-v1",
+          "reason": "실제 Gold 계산 결과 아님"
+        }
+      ]
+    },
+    "196170": {
+      "stock_cd": "196170",
+      "as_of": "2026-06-30",
+      "classification": "개선·강세 동행",
+      "revenue_growth_rt": 0.12,
+      "excess_return_rt": 0.054,
+      "fin_rpt_id": "SAMPLE-196170-2025",
+      "dscl_dt": "2026-03-20",
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "numerator": "1200000000000",
+      "denominator": "10000000000000",
+      "formula": "(당기 YTD 매출 − 전년동기 YTD 매출) / 전년동기 YTD 매출. 공시 후 시장 대비 성과는 별도 제공값.",
+      "threshold": "0 (제안)",
+      "calc_status": "합성 계산값",
+      "review": "공시 이후 구간의 길이, 기간 적격, 기업행동 및 수급 누락을 함께 검토하세요.",
+      "lineage": [
+        {
+          "layer": "Bronze",
+          "status": "미확보",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "원천 CSV·공시 ZIP 실물 미포함"
+        },
+        {
+          "layer": "Silver",
+          "status": "검토 중",
+          "file": null,
+          "row": null,
+          "key": "196170 / SAMPLE",
+          "version": null,
+          "reason": "합성 검토 예시 · 원천 행 미제공"
+        },
+        {
+          "layer": "Silver",
+          "status": "격리",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "합성 격리 예시 · 해당 값 사용 제외"
+        },
+        {
+          "layer": "Gold",
+          "status": "합성",
+          "file": null,
+          "row": null,
+          "key": "SAMPLE-196170-2025",
+          "version": "synthetic-ui-v1",
+          "reason": "실제 Gold 계산 결과 아님"
+        }
+      ]
+    },
+    "247540": {
+      "stock_cd": "247540",
+      "as_of": "2026-06-30",
+      "classification": "둔화·강세 괴리",
+      "revenue_growth_rt": -0.08,
+      "excess_return_rt": 0.023,
+      "fin_rpt_id": "SAMPLE-247540-2025",
+      "dscl_dt": "2026-03-20",
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "numerator": "-800000000000",
+      "denominator": "10000000000000",
+      "formula": "(당기 YTD 매출 − 전년동기 YTD 매출) / 전년동기 YTD 매출. 공시 후 시장 대비 성과는 별도 제공값.",
+      "threshold": "0 (제안)",
+      "calc_status": "합성 계산값",
+      "review": "공시 이후 구간의 길이, 기간 적격, 기업행동 및 수급 누락을 함께 검토하세요.",
+      "lineage": [
+        {
+          "layer": "Bronze",
+          "status": "미확보",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "원천 CSV·공시 ZIP 실물 미포함"
+        },
+        {
+          "layer": "Silver",
+          "status": "검토 중",
+          "file": null,
+          "row": null,
+          "key": "247540 / SAMPLE",
+          "version": null,
+          "reason": "합성 검토 예시 · 원천 행 미제공"
+        },
+        {
+          "layer": "Silver",
+          "status": "격리",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "합성 격리 예시 · 해당 값 사용 제외"
+        },
+        {
+          "layer": "Gold",
+          "status": "합성",
+          "file": null,
+          "row": null,
+          "key": "SAMPLE-247540-2025",
+          "version": "synthetic-ui-v1",
+          "reason": "실제 Gold 계산 결과 아님"
+        }
+      ]
+    },
+    "263750": {
+      "stock_cd": "263750",
+      "as_of": "2026-06-30",
+      "classification": "중립",
+      "revenue_growth_rt": 0,
+      "excess_return_rt": 0,
+      "fin_rpt_id": "SAMPLE-263750-2025",
+      "dscl_dt": "2026-03-20",
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "numerator": "0",
+      "denominator": "10000000000000",
+      "formula": "(당기 YTD 매출 − 전년동기 YTD 매출) / 전년동기 YTD 매출. 공시 후 시장 대비 성과는 별도 제공값.",
+      "threshold": "0 (제안)",
+      "calc_status": "합성 계산값",
+      "review": "공시 이후 구간의 길이, 기간 적격, 기업행동 및 수급 누락을 함께 검토하세요.",
+      "lineage": [
+        {
+          "layer": "Bronze",
+          "status": "미확보",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "원천 CSV·공시 ZIP 실물 미포함"
+        },
+        {
+          "layer": "Silver",
+          "status": "검토 중",
+          "file": null,
+          "row": null,
+          "key": "263750 / SAMPLE",
+          "version": null,
+          "reason": "합성 검토 예시 · 원천 행 미제공"
+        },
+        {
+          "layer": "Silver",
+          "status": "격리",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "합성 격리 예시 · 해당 값 사용 제외"
+        },
+        {
+          "layer": "Gold",
+          "status": "합성",
+          "file": null,
+          "row": null,
+          "key": "SAMPLE-263750-2025",
+          "version": "synthetic-ui-v1",
+          "reason": "실제 Gold 계산 결과 아님"
+        }
+      ]
+    },
+    "357780": {
+      "stock_cd": "357780",
+      "as_of": "2026-06-30",
+      "classification": "판단 불가",
+      "revenue_growth_rt": null,
+      "excess_return_rt": null,
+      "fin_rpt_id": "SAMPLE-357780-2025",
+      "dscl_dt": "2026-03-20",
+      "observation_start": "2026-03-19",
+      "observation_end": "2026-06-30",
+      "numerator": null,
+      "denominator": null,
+      "formula": "(당기 YTD 매출 − 전년동기 YTD 매출) / 전년동기 YTD 매출. 공시 후 시장 대비 성과는 별도 제공값.",
+      "threshold": "0 (제안)",
+      "calc_status": "계산 불가",
+      "review": "공시 이후 구간의 길이, 기간 적격, 기업행동 및 수급 누락을 함께 검토하세요.",
+      "lineage": [
+        {
+          "layer": "Bronze",
+          "status": "미확보",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "원천 CSV·공시 ZIP 실물 미포함"
+        },
+        {
+          "layer": "Silver",
+          "status": "검토 중",
+          "file": null,
+          "row": null,
+          "key": "357780 / SAMPLE",
+          "version": null,
+          "reason": "합성 검토 예시 · 원천 행 미제공"
+        },
+        {
+          "layer": "Silver",
+          "status": "격리",
+          "file": null,
+          "row": null,
+          "key": null,
+          "version": null,
+          "reason": "합성 격리 예시 · 해당 값 사용 제외"
+        },
+        {
+          "layer": "Gold",
+          "status": "계산 불가",
+          "file": null,
+          "row": null,
+          "key": "SAMPLE-357780-2025",
+          "version": "synthetic-ui-v1",
+          "reason": "실제 Gold 계산 결과 아님"
+        }
+      ]
+    }
+  }
+}
