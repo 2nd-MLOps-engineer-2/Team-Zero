@@ -57,7 +57,7 @@ class CliExitTests(unittest.TestCase):
             "--base", f"http://127.0.0.1:{self.server.server_port}", "--out", str(output),
         ], cwd=Path(__file__).resolve().parents[2], capture_output=True, text=True, timeout=30)
         self.assertTrue(output.exists(), proc.stderr)
-        report = json.loads(output.read_text())
+        report = json.loads(output.read_text(encoding="utf-8"))
         self.assertEqual(report, json.loads(proc.stdout))
         return proc.returncode, report
 

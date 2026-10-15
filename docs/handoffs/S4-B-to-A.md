@@ -1,45 +1,9 @@
 # S4 API 전달 보완 — B → A (2026-10-15 / API 1.1.0 로컬 검증본)
 
-**현재 상태: 아래 확장은 미커밋 로컬 변경이다. 사용자 지시로 이번 작업에서 commit·push·PR 수정·merge를 하지 않았다.** 기존 원격 v1과 이번 확장을 구분한다. A의 자체 화면·C 값 대조 완료는 요청자 보고이며, B가 A 브라우저를 실행해 실제 API 연동을 확인한 것은 아니다.
+**원격 병합 완료 — 2026-10-15:** PR #10 → integration (`81731cd1fafcc9c8604a95e401538295aa3ce449`). PR #4~#9 병합 완료, GitHub 통합/프론트 CI PASS. main은 미반영. [최종 결과와 남은 범위](S5-integration.md). 아래 준비/미반영 기록은 이전 이력이다.
 
-## 전달 파일과 읽는 순서
+**최신 통합 갱신:** B 1.1 고정 SHA와 C 검증 수정 3건을 A 작업 위에 병합하고 회귀검사를 통과했다. 이전 ZIP·미커밋·SHA 대기 기록은 역사 기록이다. 현재 판정·실행법·제한은 [S5 통합 기록](S5-integration.md)을 따른다.
 
-1. 이 문서 `S4-B-to-A.md`: 현재 지원·실행·계약·기대값·미지원 범위.
-2. `S4_A_AGENT_PROMPT.txt`: A 에이전트에 파일 내용을 사용자 요청으로 전달할 실행 프롬프트.
-3. `B_S4_API_Handoff_v2.zip`: 기존 v1.1 검증 소스와 최신 문서·프롬프트·샘플을 함께 전달하는 묶음. 전체 C CSV·DB덤프·비밀값은 미포함.
-
-경로는 모두 받는 사람의 프로젝트 루트를 기준으로 해석한다. B PC의 절대경로를 복사해 실행하지 않는다. ZIP은 우선 별도 임시폴더에 풀어 delivery_manifest.json의 SHA와 파일별 diff를 확인한다. 기존 A 작업 위로 일괄 압축해제하지 않는다. 로컬 확장에 새 Git SHA는 없으므로 파일 해시와 API 버전으로 식별한다.
-
-기존 원격 v1 SHA/PR은 기반 코드 확인용이다. 최신 ZIP과 문서를 받기 전에는 기준100/C 묶음 보완까지 반영됐다고 간주하지 않는다. 이번 수신·검증 요청은 commit·push·PR 변경·merge를 허용하지 않는다. 상대에게 메시지를 보내는 작업도 포함하지 않는다.
-
-Python 설치: 이미 backend/service/.venv에 Python3.12 환경이 있으면 재사용한다. 새 설치 시 setup.ps1의 -Python에는 실제 Python3.12 실행파일을 지정한다. 기본 python이3.13이면 그대로 넘기지 않는다. C 재계산 환경3.13과 B 서비스 환경3.12를 분리한다.
-
-## 1. 브랜치·정확한 SHA·PR·이번 변경 전달
-
-| 대상 | 실제 값·범위 |
-|---|---|
-| 기존 원격 B 전달 브랜치 | `handoff/s4-b-to-a-v1` |
-| 기존 검증 구현 전체 SHA | `ba2aaf1008d52dc96d983f61cae40d8a628366a2` — API1.0.0, 이번 기준100/새 C 묶음 연결 보완은 미포함 |
-| 현재 B 작업 브랜치·기준 HEAD | `feature/b-pipeline-api` / `3bd7a2583305ee38a9755faa5660ab463b9896ca` |
-| 기존 PR | [Draft PR #6](https://github.com/2nd-MLOps-engineer-2/Team-Zero/pull/6), base integration. 이번 로컬 보완은 아직 PR에 없음 |
-| 이번 보완의 신규 커밋 SHA | **없음: 미커밋**. 기존 SHA로 이번 차트 지원까지 전달됐다고 표시하지 말 것 |
-| 커밋 없이 보완 전달 | `B_S4_API_Handoff_v2.zip`(소스·계약·최신 S4 문서·A 에이전트 프롬프트·작은 샘플만), `delivery_manifest.json`의 파일별 SHA로 확인. 전체 C CSV·DB덤프·비밀번호·venv는 제외 |
-| 실제 검사한 C 코드 | `handoff/s3-c-to-b-v1` 읽기 조회 SHA `6a61b132f54bf6a2553ad323e57e73b1cda09e65`; C 문서의 계산 검증 SHA `fb1f802c88e2d5b275c737200aa392deac0e628b`; [C PR #4](https://github.com/2nd-MLOps-engineer-2/Team-Zero/pull/4) |
-| A 요청 범위 확인 기준 | `handoff/s5-a-to-team-v1` 조회 SHA `2f215546aafb19ab1626109816bbaaae9b13d8eb`의 api.js·c-contract.js·A-to-B.md 읽기 확인 |
-
-기존 작업·Git index를 보존했고 다른 역할 코드로 checkout/merge하지 않았다. C는 해당 SHA의 읽기 전용 별도 스냅샷에서 실행했다. 정식 review/s3 병합·A 수신 완료·integration/main 반영은 별도다. 로컬 ZIP을 수신할 때도 A 본인의 작업을 보존한 검토 환경에서 파일별 diff를 확인한다. 이 파일은 전달 자료 등록이며 상대에게 메시지를 발송했다는 뜻이 아니다.
-
-## 2. 설치·설정·실행·종료
-
-프로젝트 루트 PowerShell, B API는 Python3.12. 로컬 주소 `http://127.0.0.1:8000`, 문서 `/docs`, 전체 기계 명세 `/openapi.json`. 저장소 고정 인계본75파일은 읽기만 한다.
-
-```powershell
-& .\backend\service\setup.ps1 -Python python
-# 기존 Gold만 확인할 때
-& .\backend\service\.venv\Scripts\python.exe -X utf8 .\backend\service\run.py --backend csv
-```
-
-C 계산은 C의 Python3.13.15 / pandas3.0.6 / numpy2.5.4 / matplotlib3.11.2 별도 환경에서 실행했다. A가 이미 재현한 C `build/analysis`가 있다면 그 결과를 아래처럼 B 묶음으로 바꾼다. 출력 폴더가 이미 있으면 덮어쓰지 않고 새 이름을 사용한다.
 
 ```powershell
 & .\backend\service\.venv\Scripts\python.exe -X utf8 .\backend\service\pack_c_analysis.py --source .\build\analysis --output .\build\c_api_artifact
@@ -47,6 +11,7 @@ C 계산은 C의 Python3.13.15 / pandas3.0.6 / numpy2.5.4 / matplotlib3.11.2 별
 ```
 
 현재 B PC에는 검증한 묶음이 `build/s4_api_20261015/c_api_artifact`에 있다. 해당 PC에서는 위 analysis-dir만 이 경로로 바꾼다. 한 번에 서버 하나를 시작하고 종료는 실행 창 Ctrl+C. C CSV의 빈칸만 JSON null로 바꾸며 계산값·상태코드는 바꾸지 않는다. C 묶음을 생략하면 기존 Gold는 조회 가능하고 analysis=null/PENDING_C_DELIVERY로 명확히 남는다.
+
 
 환경 예시(비밀값 없음):
 
