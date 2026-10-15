@@ -3,9 +3,9 @@
 **표준화된 데이터에서, 근거를 확인할 수 있는 분석 서비스까지.**
 TEAM ZERO는 교환받은 금융 레거시 데이터의 AS-IS 품질을 진단하고, 표준 사전·TO-BE 모델·Delta Lake Medallion 구조·MySQL·SQL/Pandas 검증을 연결하는 프로젝트입니다. Gold 활용 결과로 **ZERO — 기업 실적·현금흐름·투자자 수급·주가의 동행과 괴리를 탐색하는 대시보드**를 제공합니다.
 
-[화면 둘러보기](https://github.com/2nd-MLOps-engineer-2/Team-Zero/blob/5f9993b95559c0335147a2f89641e4dcffec1e3b/docs/dashboard-gallery.md) · [로컬 실행](#로컬-실행) · [데이터와-레이어](#bronze--silver--gold) · [검증 결과](#검증-결과) · [팀 개발 안내](START_HERE.md)
+[화면 둘러보기](docs/live-screen-review.md) · [로컬 실행](#로컬-실행) · [데이터와-레이어](#bronze--silver--gold) · [검증 결과](#검증-결과) · [팀 개발 안내](START_HERE.md)
 
-![ZERO 기업 리포트 — 실제 API 연결 화면](docs/media/dashboard/01-overview.jpg)
+![ZERO 기업 리포트 — 실제 API 연결 화면](docs/media/live-review-20261015/01-overview.png)
 
 > **분석 범위:** 20종목 · 가격 872거래일 · 재무 보고서 320건 · 데이터 최종일 2026-06-30
 > 고정 데이터 기반의 분석 서비스입니다. 동행·괴리는 관측 결과이며 인과관계나 매매 추천을 뜻하지 않습니다.
@@ -182,11 +182,11 @@ ZERO는 이 데이터를 **시점과 기간의 의미를 보존해 연결하고,
 차트의 관측점 탐색·범례 선택·기간 필터를 지원합니다. 큰 금액은 조·억 단위로 읽고, 원값 보기와 CSV에서 정확한 값을 확인할 수 있습니다.
 
 <details>
-<summary><strong>화면 투어 보기</strong></summary>
+<summary><strong>직접 실행한 화면 7장과 캡처 근거 보기</strong></summary>
 
-![실제 대시보드 7개 장면 투어](docs/media/dashboard/dashboard-tour.gif)
+2026-10-15에 실제 CSV API와 C Gold를 연결해 Chromium에서 직접 캡처했습니다. 삼성전자(005930), 주가 2026-06-01~2026-06-30, 전체 사업연도·사업보고서·연결 조건입니다. 제품 차트를 별도로 다시 그리거나 숫자를 합성하지 않았습니다.
 
-실제 API 연결 화면 7장을 순환하는 GIF입니다. [원본 화면과 설명](https://github.com/2nd-MLOps-engineer-2/Team-Zero/blob/5f9993b95559c0335147a2f89641e4dcffec1e3b/docs/dashboard-gallery.md)에서 확대해 볼 수 있습니다.
+[전체 캡처·재검토 기록](docs/live-screen-review.md) · [이미지 해시·API 버전·검증 메타](docs/media/live-review-20261015/capture-manifest.json)
 
 </details>
 
@@ -507,29 +507,29 @@ VITE_DATA_MODE=api VITE_API_BASE_URL=http://127.0.0.1:8000 \
 
 ### 1. 주가와 시장
 
-![조회 구간의 주가와 시장 비교](docs/media/dashboard/02-price.jpg)
+![조회 구간의 주가와 시장 비교](docs/media/live-review-20261015/02-price.png)
 
 기업과 시장의 출발점을 100으로 맞춰 상대 흐름을 확인합니다. 공통 유효 기준일을 사용하고, 여러 페이지를 조회해도 기준값이 페이지마다 다시 시작하지 않게 검사했습니다.
 
 ### 2. 실적과 현금흐름
 
-![실적과 현금흐름 막대 비교](docs/media/dashboard/03-financial-bars.jpg)
+![실적과 현금흐름 막대 비교](docs/media/live-review-20261015/03-financial-bars.png)
 
-![동일 지표의 추이 보기](docs/media/dashboard/04-financial-trend.jpg)
+![동일 지표의 추이 보기](docs/media/live-review-20261015/04-financial-trend.png)
 
 보고서 유형·연결구분을 맞춰 비교하고 막대/추이를 전환합니다. 카드의 조·억 단위 표시와 정확한 원값을 분리하며, NULL 구간을 연결된 정상 추이처럼 그리지 않습니다.
 
 ### 3. 투자자 수급
 
-![외국인·기관 투자자 수급](docs/media/dashboard/05-investor-flow.jpg)
+![외국인·기관 투자자 수급](docs/media/live-review-20261015/05-investor-flow.png)
 
 순매수 수량의 양수·음수를 비교합니다. 기관 합계에 기관 세부 유형을 다시 더하지 않습니다. 외국인 보유율과 일별 순매수, 관측 창 순매수 비율은 서로 다른 지표입니다.
 
 ### 4. 종목 비교와 판단 근거
 
-![종목별 실적과 시장 대비 성과 비교](docs/media/dashboard/06-comparison.jpg)
+![종목별 실적과 시장 대비 성과 비교](docs/media/live-review-20261015/06-comparison.png)
 
-![계산 조건과 원천 근거](docs/media/dashboard/07-evidence.jpg)
+![계산 조건과 원천 근거](docs/media/live-review-20261015/07-evidence.png)
 
 비교표·산점도에서 종목을 선택해 상세로 이동하고, 실적·시장 성과·현금·수급을 함께 확인합니다. 분류 색이나 Y/N만 보지 않고 계산값·기간·보고서·품질 사유까지 따라갈 수 있게 구성했습니다.
 
@@ -578,6 +578,23 @@ npm --prefix apps/web run build
 Delta/MySQL 신규 DB 대사는 [Gold 수용 기록](https://github.com/2nd-MLOps-engineer-2/Team-Zero/blob/5f9993b95559c0335147a2f89641e4dcffec1e3b/docs/handoffs/Gold-final-acceptance.md)을 따릅니다. 실제 API·브라우저까지 포함하는 재현 절차는 [통합 CI](https://github.com/2nd-MLOps-engineer-2/Team-Zero/blob/5f9993b95559c0335147a2f89641e4dcffec1e3b/.github/workflows/integration.yml)에 있습니다.
 
 </details>
+
+### 첨부 A 수신 검토본과 이번 직접 실행의 구분
+
+첨부 `S4-A-review.zip`과 `S4-B-to-A.md`는 API 1.1.0 수신 당시의 기록입니다. ZIP CRC 검사와 내부 검증 JSON을 확인했습니다. **원래 B 전달 ZIP이 이번 첨부에 없으므로, 내부의 32파일 해시 PASS 기록을 이번 직접 재검증으로 바꾸어 적지 않습니다.**
+
+| 구분 | 첨부 A 검토 당시 | 이번 직접 실행·현재 확인 |
+|---|---|---|
+| 소스 상태 | A/B 보완 미커밋·PR 대기 | 이후 원격 integration `db98102`에 통합된 코드 실행 |
+| A 단위 검사 | 16개 PASS 기록 | 최신 17개 직접 실행·전부 PASS |
+| 브라우저 | 16개 PASS 기록 | 실제 Chromium에서 삼성전자 조회·7화면 캡처·페이지 오류 0. 전체 18개 회귀는 앞선 통합 검증 기록과 구분 |
+| API/C 대조 | 재무 320·일별 17,440행 일치 기록 | 같은 전량·20종목·다운로드 값 대조 직접 재실행 PASS |
+| 이미지 | 전달 당시 화면 보고 | API 1.1.0·analysis AVAILABLE·synthetic=false 확인 후 직접 캡처 |
+| DB/Delta | 별도 검증 필요 | 이번 캡처 작업은 CSV API. 앞선 Gold 저장 수용 검증과 구분 |
+
+이번 캡처의 실제 종가는 **333,000원**, 화면 표시 매출 성장률 **10.88%**, 공시 후 시장 대비 성과 **32.77%p**, 복합 동반 개선은 **조건 미충족**입니다. 2026-06-30 스냅샷 기준 표시값이며 실시간 시세나 투자 판단이 아닙니다. 정확한 원래 숫자는 Gold·API 계약을 따릅니다.
+
+[상세 수신 검토·실행 환경·캡처 기록](docs/live-screen-review.md)
 
 ### 데이터 제약과 남은 범위
 
