@@ -1,7 +1,8 @@
 """S4 C 수치 확인: 실행 중인 B API의 C 분석 값을 C Gold CSV와 독립적으로 대조한다.
 
 B의 verify_s4.py와 별개로 C 쪽에서 직접 요청·비교한다. 값은 문자열 그대로 비교하고, 문자열이 다를 때
-두 값이 모두 순수 숫자 형식(-?\\d+(\\.\\d+)?)이고 Decimal이 같으면 '표기 차이', 나머지는 '값 차이'로 본다.
+C 스키마의 숫자형 컬럼에 한해 두 값이 순수 숫자이고 Decimal이 같으면 '표기 차이'로 본다.
+코드·식별자·날짜·버전·알 수 없는 컬럼은 문자열로 정확히 비교한다.
 CSV 빈칸은 API null과 같다고 본다. 행 단위 검사는 Gold와 API 양쪽의 키·컬럼 집합을 대조해
 누락·추가·중복(API·Gold 양쪽)이 모두 0이고 값 차이가 없을 때만 PASS다.
 종목 조회 404는 '그 종목 API 행 없음'으로 보고 Gold 행을 누락으로 센다. 그 밖의 HTTP 오류·연결 실패·응답 형식
@@ -64,6 +65,18 @@ def same_number(a: str, b: str) -> bool:
     return Decimal(a) == Decimal(b)
 
 
+def numeric_columns() -> set[str]:
+    """Fail closed: use the committed C contract, never infer type from values."""
+    path = Path(__file__).resolve().parent / "evidence/schema.json"
+    schemas = json.loads(path.read_text(encoding="utf-8"))
+    types: dict[str, set[str]] = {}
+    for table in schemas.values():
+        for column in table["columns"]:
+            types.setdefault(column["name"], set()).add(column["type"].upper())
+    numeric = re.compile(r"^(?:DECIMAL|NUMERIC|BIGINT|SMALLINT|TINYINT|INT|INTEGER|FLOAT|DOUBLE|REAL)(?:\(|$)")
+    return {name for name, declared in types.items() if all(numeric.match(t) for t in declared)}
+
+
 class Tally:
     """Gold 행과 API 행을 키 단위로 모아 양방향으로 대조한다."""
 
@@ -98,6 +111,7 @@ class Tally:
         missing_rows = sorted(set(gold) - set(self.api))
         extra_rows = sorted(set(self.api) - set(gold))
         gold_cols = set(columns)
+        numeric_cols = numeric_columns()
         for key, a_row in self.api.items():
             for col in a_row:
                 if col not in gold_cols:
@@ -113,7 +127,7 @@ class Tally:
                 cells += 1
                 if g == a:
                     continue
-                if g is not None and a is not None and same_number(g, a):
+                if col in numeric_cols and g is not None and a is not None and same_number(g, a):
                     fmt += 1
                 else:
                     value_diff.append({"key": key, "column": col, "gold": g, "api": a})
