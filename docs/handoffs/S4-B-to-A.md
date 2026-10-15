@@ -8,7 +8,7 @@
 | 고정 구현 전체 SHA | `ba2aaf1008d52dc96d983f61cae40d8a628366a2` |
 | 선행 integration SHA | `b9b73a49bf169b17e3c324fcc9e51564d350b1ea` |
 | 작업·문서 브랜치 | `feature/b-pipeline-api`; 고정 구현 이후 인계 문서 커밋만 추가 |
-| integration 대상 PR | PR_PENDING |
+| integration 대상 PR | [Draft PR #6](https://github.com/2nd-MLOps-engineer-2/Team-Zero/pull/6) |
 | API / 데이터 / 기존 C 계산 | 1.0.0 / delta-run:20261015_101647_d567 또는 handoff SHA / c-integration-1.0.0 |
 | A 수신 브랜치·SHA·결과 | 미등록; A 자신의 작업 HEAD에서 review/s4-a-v1 생성 후 고정 구현SHA merge |
 
