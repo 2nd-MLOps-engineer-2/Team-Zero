@@ -1,6 +1,47 @@
 # S4 — B API를 A 화면 작업에 전달
 
-**상태: 미착수. API 구현·전달 브랜치·PR·실행 환경은 아직 없다.** 아래를 B가 채우면 A가 바로 확인한다. [전체 절차](../integration-workflow.md) · [진행표](../integration-status.md).
+## S4 수신 검증 — 2026-10-15 최신
+
+**판정: 전달 ZIP의 API 1.1.0 + C 산출물로 A 실제 화면 연결·수치 검증 완료. Git 고정 전달본 수신 완료 및 integration/main 반영은 미완료.** 아래 이전 기록의 API 미확인 상태는 이 범위에서 갱신한다.
+
+- A 기준 HEAD: `2f215546aafb19ab1626109816bbaaae9b13d8eb`, 로컬 `review/s4-a-v1`. A 기존 변경 보존. 이번 연결 변경은 미커밋이며 PR #5에 아직 반영하지 않음.
+- B 원격 API 1.0.0 기능 SHA: `ba2aaf1008d52dc96d983f61cae40d8a628366a2`, ZIP 기준 HEAD: `3bd7a2583305ee38a9755faa5660ab463b9896ca`. **ZIP의 1.1.0 추가 변경은 커밋 SHA가 없음**. 원격 PR #6의 코드와 동일하다고 간주하지 않음.
+- 수신 파일 `S4-B-to-A.zip` SHA256: `8954983748c028af92ebfe037a39edaa4addbc7a02aebcb5a431b11c6f437309`. 내부 실제 이름은 `B_S4_API_local_bundle.zip`이며 안내문의 `B_S4_API_Handoff_v2.zip`과 다름.
+- manifest 32파일의 크기·SHA256 전부 일치. 변경 전 해시는 26개 Git blob 기준, 문서 6개는 Windows CRLF 체크아웃 기준으로 일치. `build/s4-received-20261015/receipt-verification.json`, `bundle.diff`에 기록.
+- 미커밋 B 코드를 A 저장소의 소유 경로에 덮어쓰거나 병합하지 않음. baseline의 backend/service 및 medallion 의존 코드를 `build/s4-received-20261015/runtime`에 추출하고 전달 서비스 변경만 겹쳐 실행. runtime/data는 기존 data의 읽기 참조 junction. Git merge 검증은 B의 1.1 고정 SHA 전달 후 별도 수행해야 함.
+- Python **3.12.15** 격리 환경(전달자의 3.12.14와 패치 버전 차이), B lockfile 39패키지 사용. Node 24.21.0, npm 11.19.0, Vite 8.3.4, Playwright 1.64.1.
+- C 고정 코드 `fb1f802c88e2d5b275c737200aa392deac0e628b`에서 앞서 재현한 출력을 그대로 패키징. 계산 `c-gold-0.1.0`, 입력 `handoff-sha256:4d0ed112f2cc1418`, C 산출물 `c-artifact-sha256:b55ee9b1d38c84977dd39a29c9c8e9066fe3cbc43cdadc7fe1286e9de05e4d25`.
+
+### 실제 수행 결과
+
+| 검사 | 결과 |
+|---|---|
+| 고정 인계본 무결성 | 75파일 PASS, 원본 변경 없음 |
+| B pytest | 49 PASS / 2 SKIP (로컬 Delta·MySQL 실행 카탈로그 없음) |
+| B 실HTTP 검사 | C 연결 16 PASS, C 미연결 16 PASS (409 포함) |
+| C→API 전체 값 | 재무 320행·17,280값 + 일별 17,440행·1,587,040값 PASS |
+| A 단위 검사 | 16 PASS |
+| A 빌드 | PASS |
+| A Chromium 브라우저 | 16 PASS: 기존 11 + 실제 C 응답 1 + 실제 B/C 2 + C 미연결 실제 서버 중계 1 + 실제 API 소페이지 조립 1 (마지막 1개 별도 실행) |
+
+처음 실행 중 baseline 문서 해시의 CRLF 차이로 준비 스크립트가 중단되어 runtime 의존 파일이 빠졌고 B 검사가 실패했다. 문서 해시를 CRLF 기준으로 확인하고 고정 baseline 의존 파일을 확보한 뒤 위 결과로 재검사했다. 또 비JSON HTTP 500 응답에서 상태코드가 보이지 않던 A 오류 처리를 수정해 기존 오류·재시도 검사를 통과했다. 성공 결과만 남기기 위해 실패를 생략하지 않는다.
+
+검증 사례: 삼성전자 2026-06-30 매출 `333605938000000`, 영업이익 `43601051000000`, 순이익 `45206805000000`, 영업CF `85315148000000` 원. 매출 YoY `0.10880093`, 공시 후 초과성과 `0.32769823`, 동반 개선 `N`. 6월 가격 기준일 6/1, 마지막 종목/시장 기준값 `93.80281690`/`96.45099552`. API·화면·차트 CSV 일치. 6/6 요청은 실제 관측 6/5, 6/6 시작 차트는 6/8 기준. 공시 당일 제외, 247540의 4/16 수급 NULL·가격 유지, OFS 빈 결과, 404/422/409, 로딩/취소/재시도/500, 모바일 가로 넘침 없음 확인.
+
+### A 변경과 남은 범위
+
+- `apps/web/src/b-contract.js`: B 1.1 응답 및 중첩 C 분석을 표현용으로 매핑. 금액 문자열 보존, YTD만 선택, 업무 계산 없음. C 미연결은 판단 불가.
+- `api.js`: 실제 query 이름·페이지 전체 수신·데이터/계산/산출물 버전 일치·시점 검증·오류 처리. `main.js`: 실제 관측일, 2022~2025, 품질 범위 구분, 서버 CSV 선택.
+- 화면 CSV와 서버 CSV를 구분. 기존 Gold 일별/정규화 차트/재무 metric/C 전체 산출물 다운로드. 서버 CSV 전후 health로 C 산출물까지 버전 대조. 전체 C CSV는 종목·기간 필터 미적용을 명시.
+- Bronze 원본 확보 완료로 표시하지 않음. 가격 출처 메타의 파일/행/버전만 표시하고 미확보 상태 유지. 성장률 분자는 API가 제공하지 않아 NULL, 분모는 제공된 PRIOR_YTD 원값.
+- 품질 availability는 선택 날짜, 직접 이슈는 기업·보고서 전체, 전역 이슈는 별도 표시. 발견 시각이 없어 이슈를 날짜 필터된 것으로 설명하지 않음.
+- A01~A10 중 실제 API 연결 및 M08/M09/M12/M13 표시·대사 보완. G05는 제공 CSV→C→B API→A 화면/CSV 구간 검증. M14/S5 전체의 Bronze·실제 DB/Delta 저장 대사나 팀 통합 완료를 주장하지 않음.
+- 남은 B 요청: **이번 API 1.1.0 변경을 담은 브랜치·전체 SHA·PR**. 전달 후 A review에 실제 merge하여 재검사하고 A PR #5에 연결 변경을 반영할 수 있음. 새로운 Silver/Gold 파일은 요청할 필요 없음.
+
+실행 방법은 `apps/web/README.md`의 S4 절을 따른다. 상세 증빙은 `build/s4-a-value-verification/s4_validation.json`, runtime/build/api_http의 두 검사 결과, `apps/web/test-results/s4-actual-desktop.png`·`s4-actual-mobile.png`에 있다.
+
+
+**현재 상태: ZIP 기반 실제 API 연결 검증 완료 / API 1.1.0 고정 SHA 및 Git 통합 대기.** 상세 최신 결과를 먼저 확인한다. [전체 절차](../integration-workflow.md) · [진행표](../integration-status.md).
 
 | 항목 | 현재 값 |
 |---|---|

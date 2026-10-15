@@ -1,5 +1,17 @@
 # A 화면·응답 계약 제안 v1
 
+## B API 1.1.0 실제 연결 추가 계약
+
+2026-10-15 수신 ZIP으로 검증. `a-proposal-1`은 내부 화면/샘플 표현이며 B wire version은 `1.1.0`이다. B 메타를 보존하며 `data_final_date → data_end`, `calculation_version → calc_version`만 내부 이름으로 매핑한다. 중첩 analysis를 펼치되 원본도 유지한다. 지원하지 않는 API 버전은 오류 처리한다.
+
+- 일별 query: start/end, 재무: year(전체는 생략)/report_code/fs_div/as_of, 비교: market/as_of, 근거: as_of. 품질은 start/end. 페이지가 있는 목록은 끝까지 수신한다.
+- 요청일과 실제 관측일을 구분한다. B의 직전 관측 선택을 허용하며 미래 관측은 거부한다. 재무는 PIT 필터 적용과 공시일 < 요청일을 검증한다.
+- metrics에서 REVENUE/OPERATING_PROFIT/NET_INCOME/OPERATING_CASH_FLOW의 YTD 원값을 선택한다. 누락은 NULL. Q3M/ASOF를 YTD로 바꾸거나 연간화하지 않는다.
+- API/데이터/입력/계산/C 산출물 버전을 응답 간 검사한다. 서버 CSV는 전후 health와 X-* 헤더도 비교한다. 스냅샷 변경 시 재조회 오류를 표시한다.
+- 품질은 날짜별 availability, 기업·보고서 issues, global_statement_issues의 세 범위를 구분한다. C 미연결은 PENDING_C_DELIVERY, 원본 출처 메타는 원본 확보 증거로 사용하지 않는다.
+- 화면 표시값 CSV와 B 서버 원값 CSV를 구분한다. C 전체 CSV는 필터 미적용이며 NULL은 B 계약대로 빈칸이다. 가격 기준일은 B 제공값을 그대로 쓴다.
+
+
 작성: A 이어진 / 2026-10-15 / **제안·합성 구현 검증, B/C 합의 전**. G02·G03 / M08·M09·M12·M13.
 
 ## G03 수신 검토 후 추가 사항

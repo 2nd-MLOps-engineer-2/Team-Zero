@@ -6,6 +6,30 @@ import { validate, dashboard } from '../src/api.js';
 import { exportRows } from '../src/export.js';
 import { chart } from '../src/charts.js';
 import { normalizeCRow, stateLabel, jointLabel } from '../src/c-contract.js';
+import { adaptB, bParams, snapshot } from '../src/b-contract.js';
+
+const bMeta={api_version:'1.1.0',synthetic:false,data_version:'test-only',input_version:'test-only',calculation_version:'test-only',analysis_status:'PENDING_C_DELIVERY',data_final_date:'2026-06-30'};
+test('B queries omit all-year and use endpoint-specific names',()=>{
+ assert.equal(bParams('financials',{year:'all',report:'11011',basis:'CFS',as_of:'2026-06-30'}).toString(),'report_code=11011&fs_div=CFS&as_of=2026-06-30');
+ assert.equal(bParams('daily',{start:'2026-06-06',as_of:'2026-06-30'}).get('end'),'2026-06-30');
+ assert.equal(bParams('compare',{as_of:'2026-06-06',market:''}).has('market'),false);
+});
+test('B absent C analysis keeps source NULL, zero and actual observation date',()=>{
+ const p=adaptB({meta:bMeta,data:[{stock_cd:'005930',trd_dt:'2026-06-05',analysis:null,frgn_net_buy_qty:null,inst_net_buy_qty:'0'}]},'compare');
+ assert.equal(p.data[0].as_of,'2026-06-05');assert.equal(p.data[0].classification,'C 분석 미연결');
+ assert.equal(p.data[0].revenue_growth_rt,null);assert.equal(p.data[0].frgn_net_buy_qty,null);assert.equal(p.data[0].inst_net_buy_qty,'0');
+ assert.throws(()=>adaptB({meta:{...bMeta,api_version:'2.0'},data:[]},'stocks'));
+ assert.notEqual(snapshot(bMeta),snapshot({...bMeta,analysis_data_version:'different'}));
+});
+test('B monetary metrics select exact YTD values, never Q3M or floating numbers',()=>{
+ const row={fin_rpt_id:'test',metrics:[{mtrc_cd:'REVENUE',prd_type_cd:'Q3M',mtrc_amt:'1'},{mtrc_cd:'REVENUE',prd_type_cd:'YTD',mtrc_amt:'99999999999999999999'},{mtrc_cd:'OPERATING_PROFIT',prd_type_cd:'YTD',mtrc_amt:'0'}]};
+ const p=adaptB({meta:bMeta,data:[row]},'financials',{stock_cd:'005930'});
+ assert.equal(p.data[0].rev_ytd_amt,'99999999999999999999');assert.equal(p.data[0].op_prft_ytd_amt,'0');assert.equal(p.data[0].op_cf_ytd_amt,null);
+});
+test('B rejects mismatched C identity and malformed quality envelopes',()=>{
+ assert.throws(()=>adaptB({meta:bMeta,data:[{stock_cd:'005930',trd_dt:'2026-06-30',analysis:{stock_cd:'000660',trd_dt:'2026-06-30'}}]},'daily'));
+ assert.throws(()=>adaptB({meta:bMeta,data:[]},'quality'));
+});
 
 const query={stock_cd:'000660',market:'',start:'2026-06-01',as_of:'2026-06-30',year:'all',report:'11011',basis:'CFS',scenario:'normal'};
 test('large integer precision, NULL and zero stay distinct',()=>{

@@ -50,10 +50,48 @@ E2E는 4173/4174 두 포트를 사용하고 서버를 자동 종료한다. trace
 
 .env.example을 참고해 .env.local에 VITE_DATA_MODE=api, VITE_API_BASE_URL을 설정하고 서버를 재시작한다. 주소는 공개 설정이므로 비밀키를 넣지 않는다. src/api.js 한 곳에서 endpoint/응답 검증/취소/timeout을 관리한다. API 오류 시 합성 fallback 없음.
 
-[A 제안 계약](../../contracts/A-screen.md)의 a-proposal-1 스키마는 B와 아직 미합의다. B의 실제 endpoint가 같다고 즉시 호환된다고 가정하지 않는다. C가 계산한 지표를 전달받아 표시하며 A가 업무 계산을 대체하지 않는다.
+[A 화면 계약](../../contracts/A-screen.md)의 a-proposal-1은 내부/샘플 표현이다. 실제 B API 1.1.0은 별도 어댑터로 연결 검증했다. API 1.0.0 등 다른 버전을 동일하게 취급하지 않는다. C가 계산한 지표를 전달받아 표시하며 A가 업무 계산을 대체하지 않는다.
 
 ## 재사용·검증 범위
 
-입력 스냅샷 03_C_integration_20261014의 s_stock 식별자만 샘플 생성에 재사용. 고정 75파일은 수정하지 않음. 신규 기능 검사는 기존 203 PASS와 별개다. 실제 DB/Delta·B API·새 Gold·원본 대사는 이번 화면 검증 범위 밖이다.
+입력 스냅샷 03_C_integration_20261014의 s_stock 식별자만 샘플 생성에 재사용. 고정 75파일은 수정하지 않음. 신규 기능 검사는 기존 203 PASS와 별개다. S4에서 제공 CSV·C Gold·B 실제 API·화면/CSV 대사를 수행했다. 실제 DB/Delta 저장·Bronze 원본 대사는 별도 범위다.
 
 금액은 정수 문자열/BigInt로 표시하고 CSV 원문을 유지한다. 차트 좌표만 Number로 스케일링하며 정확한 값은 표에서 확인한다. 출처가 없는 값은 미제공으로 표시. CSV를 Excel로 가져올 때 식별자와 value 열을 텍스트로 지정하면 자동 정밀도 손실을 피할 수 있다.
+
+## S4 실제 API 재실행 (현재 로컬 수신 환경)
+
+작업 디렉터리는 저장소 루트 `C:\Users\Playdata\Desktop\Team-Zero`다. ZIP은 `build/s4-received-20261015`에 분리했고, B baseline과 ZIP 서비스 수정본을 runtime에 준비했다. runtime/data는 고정 data를 참조하는 junction이며 수정 대상이 아니다. 기존 A/B/C 소유 경로에 ZIP을 덮어쓰지 않는다. `build/s4-c-api-artifact`는 기존 C 출력 두 CSV를 변경하지 않고 B 패키징 도구로 검증한 결과다. 이 경로들은 로컬 준비물로 Git에 포함되지 않는다. 새 PC에서는 S4 기록의 ZIP·baseline·C 출력부터 확보하고 별도 runtime을 준비해야 한다.
+
+API 터미널:
+
+```powershell
+$env:TZ_CORS_ORIGINS='http://127.0.0.1:5173,http://127.0.0.1:4175'
+& build/s4-api-venv/Scripts/python.exe -X utf8 build/s4-received-20261015/runtime/backend/service/run.py --backend csv --project-root build/s4-received-20261015/runtime --analysis-dir build/s4-c-api-artifact --port 8000
+```
+
+프론트엔드 별도 터미널:
+
+```powershell
+$env:VITE_DATA_MODE='api'
+$env:VITE_API_BASE_URL='http://127.0.0.1:8000'
+npm --prefix apps/web run dev -- --port 5173 --strictPort
+```
+
+각 실행 터미널에서 Ctrl+C로 해당 서버만 종료한다. 화면 http://127.0.0.1:5173, API 문서 http://127.0.0.1:8000/docs. 설정 파일을 강제로 바꾸지 않았으므로 위 환경 설정 없이 실행하면 기본 합성 샘플 모드다.
+
+검사 터미널:
+
+```powershell
+python scripts/check_handoff.py
+$env:TZ_TEST_PROJECT_ROOT=(Resolve-Path build/s4-received-20261015/runtime).Path
+& build/s4-api-venv/Scripts/python.exe -m pytest build/s4-received-20261015/runtime/backend/service/tests -q
+npm --prefix apps/web test
+npm --prefix apps/web run build
+$env:S4_API_BASE_URL='http://127.0.0.1:8000'
+$env:C_REVIEW_BUNDLE=(Resolve-Path build/a-c-review-bundle.json).Path
+npm --prefix apps/web run test:e2e
+```
+
+실제 API 브라우저 검사는 4175를 추가 사용한다. C 미연결 검사도 실행하려면 별도 터미널에서 위 API 명령의 `--analysis-dir` 인자만 제외하고 `--port 8001`로 시작한 후 검사 터미널에 `$env:S4_NO_C_API_URL='http://127.0.0.1:8001'`을 설정한다. 이 검사는 브라우저 요청을 실제 미연결 서버로 중계해 카드 유지·분류 미연결·CSV 409를 확인한다. 세 입력 환경변수가 모두 있으면 16개 검사, 기본 환경은 11개 실행·5개 명시적 skip이다. 실제 API 8000/8001은 검사 도구가 종료하지 않으며 시작한 터미널에서 정리한다.
+
+서버 CSV는 B가 제공한 원값 그대로 다운로드한다. C 전체 산출물은 선택 기업·기간과 관계없이 전체 범위다. Excel에서 종목코드·큰 금액을 가져올 때 텍스트로 지정한다. 브라우저 CSV 전후 버전 확인은 서버의 읽기 전용 스냅샷을 전제로 하며 배포 중 버전이 바뀌면 재조회한다.
