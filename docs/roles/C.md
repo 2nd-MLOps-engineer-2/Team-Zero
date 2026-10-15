@@ -128,4 +128,55 @@
 |---|---|---|---|---|
 | 기준 반영·분류 | `docs/roles/C.md` | 위 §2 | `8af915f` / `03_C_integration_20261014`, pipln `c-integration-1.0.0` | R1·R2·R3 |
 | 원천 자료 수령·계보 확인 | `docs/roles/C.md` §3a | 읽기 전용 Pandas 대조(위 표) | 정화 패키지 `87de2ab7…` | R1 잔여(오염 ZIP 실물, 선택)·R2 잔여 61건 |
-| C01~C12 | 미구현(분류만 완료) | 미실행 | — | 위 §3·§4 |
+| C01~C12 | `analysis/`(다른 세션 구현 `gold.py` 기준) — 아래 §7 | 아래 §7 | 미커밋, `05a7b3b` 위 작업 트리 | B 실행·SQL 대조, A 화면 확인 |
+| M07 SF04·SF06, C06 SS02 | `analysis/rules.py`, `analysis/tests/test_rules.py`, `contracts/analysis.md` | 아래 §7 | c-gold-0.1.0 | REVIEW 11개 보고서 원문 대조 |
+
+## 7. 구현 정리와 Silver 규칙 검사 (2026-10-15)
+
+같은 작업 트리에서 다른 세션이 C 구현(`analysis/gold.py`·`audit.py`·`standards.py`·`sql/reconcile.sql`·`tests/test_gold.py`·`test_source.py`, `contracts/analysis.md`·`visualization.md`)을 먼저 만들었다. 사용자 결정에 따라 **`gold.py` 구현을 기준**으로 하고 이 세션의 중복 구현은 사용자 승인 후 삭제했다.
+
+| 항목 | 처리 |
+|---|---|
+| 중복 삭제 | `analysis/common.py`·`fin_report.py`·`stock_daily.py`·`checks.py`·`tests/test_metrics.py`·`tests/__init__.py`, 이 세션 실행 결과(`build/analysis`의 혼합 Gold CSV 등) |
+| `analysis/run.py` 복원 | 이 세션이 덮어쓴 원본을 남아 있던 `__pycache__/run.cpython-313.pyc`(원본 7,771 bytes, 10:39:42)로 재구성. 원본 바이트코드와 명령 1,128개·이름·변수 **0건 차이** 확인 후 규칙 호출 3줄만 추가 |
+| `analysis/rules.py` 추가 | SS02(통과/실패), SF04·SF06(발견 사항). `run.py`가 `validation.json`의 `silver_rules`와 상세 CSV 2개를 쓴다. 플래그·Gold 값은 변경하지 않음 |
+| 문서 | `contracts/analysis.md` 규칙 표·전년동기 기준 정책, `analysis/README.md` 출력 표 |
+
+실행·결과(로컬, 실제 공개 인계본):
+
+| 명령 | 결과 |
+|---|---|
+| `.venv/bin/python -m unittest discover -s analysis/tests -v` | 14 tests OK (기존 8 + 규칙 6: 합성 4·실제 2) |
+| `.venv/bin/python -m analysis.run --cleanup-zip <로컬 안쪽 Bronze_Cleanup_20261014.zip>` | Silver PK/FK·Gold 원천·PIT 검사 PASS, 320/17,440행 |
+| 재생성 결과 ↔ 다른 세션 10:39 결과 | Gold CSV 2개 SHA-256·`schema.json`·`samples.json`·`silver-profile.csv`·`analysis-preview.png` 바이트 동일. `validation.json`은 `silver_rules` 추가, `cleanup_aggregate`에 다른 세션이 10:40에 `audit.py`에 넣은 `spec_checks`(6항목 PASS)·`toss_repair_or_quarantine_rows` 키만 추가 |
+
+Silver 규칙 결과(c-gold-0.1.0):
+
+- **SS02:** 기관 합계 = 기관 세부 7유형 합 17,439/17,439 → 투자자 간 합계는 TOP_LEVEL만 사용.
+- **SF04 (M07):** 비교 480건 중 MATCH 453, UNIT_ROUNDING 7(±1원·±1,000,000원), REVIEW 20행·보고서 11건(기간 검증 11행, 가정 기간 9행). 예: `00413046` 2022 3분기 매출 −18,972,026,021원. MVP 지표는 YTD 기준이라 Q3M을 쓰지 않음.
+- **SF06 (M07):** PRIOR_YTD ≠ 전년 보고서 YTD — 매출 32(8개 기업)·영업이익 38·순이익 13 / 각 240. 성장률은 같은 보고서의 재작성된 비교 기준을 유지.
+
+남은 일: REVIEW 11개 보고서 원문 대조(259건은 로컬 원문 ZIP 있음), `standards.py`의 Gold 용어 제안 생성은 복원된 `run.py`에 연결되어 있지 않음(다른 세션 원본에도 호출 없음, 연결 여부 결정 필요), B의 SQL 실행 대조(G04), 커밋·전달 브랜치·PR 미실행.
+
+## 8. 체크북 마무리 (2026-10-15, C 단독 범위)
+
+기준: `feature/c-gold-analysis`를 origin/main `1971dcb`(B 백엔드·C 문서 PR #1·#2 반영)로 fast-forward. B 코드는 읽기만 하고 변경하지 않음.
+
+| ID | 상태 | 이번 추가·증빙 |
+|---|---|---|
+| C01 | 미체크 — 측정 완료, 실물 ZIP 대기 | `analysis/asis.py`, [asis-original.md](../../analysis/asis-original.md): 결함 5유형 × 원천별 셀·비율·규칙, 명명 스타일, 이음동의 4쌍. 오염 ZIP 실물 직접 진단(인코딩 등)은 미실시 |
+| C02 | **체크** | 정상 결측 6항목(정화 README 수치와 일치)·검출 기준·분모 |
+| C03 | 미체크 — 용어 제안 생성 | `standards.py`를 `run.py`에 연결, Gold 용어 145·신규 단어 23 제안(미번역 0). 신규 상태 코드의 코드 그룹·허용값 등록은 남음 |
+| C04 | 미체크 | 계약에 상태·격리 정책 기재. B 실행 코드 반영 확인 필요 |
+| C05 | 미체크 — 입력 대기 | SF04 REVIEW 11행 원문 일치(보고서 간 재작성). 원문 없는 61건(R2) |
+| C06·C07·C09·C11 | **체크** | 기존 구현·테스트·계약·`ai-input.md` |
+| C08 | **체크** | 공시 후 반응 + `g_fin_rpt_mkt_smry` 1:1 연결 검사(`c08_report_period_join`) |
+| C10 | 미체크 | 시각화 계약·시안 있음, A 확인 필요 |
+| C12 | 미체크 | Pandas 측 기대값·`sql/reconcile.sql` 준비, B SQL 결과 필요 |
+
+실행: `.venv/bin/python -m unittest discover -s analysis/tests -v` → 18 OK. `.venv/bin/python -m analysis.run --cleanup-zip <로컬 안쪽 ZIP>` → PASS(320/17,440). 작은 출력 사본 `analysis/evidence/`(개인 경로 없음 확인). 전달 기록 [S3-C-to-B](../handoffs/S3-C-to-B.md). 개발 커밋 `feature/c-gold-analysis` `b5d2028`(main 기준, 미push). 전달: `handoff/s3-c-to-b-v1` 검사 대상 `fb1f802c88e2d5b275c737200aa392deac0e628b`(integration `b9b73a4` 위에 C 커밋만 재적용, 내용 동일) → [PR #4](https://github.com/2nd-MLOps-engineer-2/Team-Zero/pull/4), 상태 수신 확인 대기.
+
+
+## 9. S4 C 수치 확인 (2026-10-15)
+
+B [PR #6](https://github.com/2nd-MLOps-engineer-2/Team-Zero/pull/6) head `9f78ccc`를 C HEAD `81a5705`에서 만든 `review/s4-c-v1`에 merge해 확인했다. C 테스트 18 OK·Gold 해시 S3와 동일, B 테스트 49 passed·2 skipped, `analysis/verify_api.py`로 API 전량 대조 — 값 차이 0. 원천 통과 컬럼 자릿수 표기·`input_version` 표기 차이는 합의 필요. 상세 [S4-C-check](../handoffs/S4-C-check.md), 증빙 `analysis/evidence/s4_api_check.json`. MySQL·Delta 경로와 C12/G04 SQL 대조는 B 실행 결과 대기. push·PR 코멘트는 미실행.

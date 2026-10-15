@@ -1,0 +1,82 @@
+{
+  "fixture_source": "actual_provided_handoff_or_matching_Delta; not synthetic",
+  "request": "/stocks/005930/daily?start=2026-06-30&end=2026-06-30",
+  "response": {
+    "data": [
+      {
+        "stock_cd": "005930",
+        "stock_nm": "삼성전자",
+        "trd_dt": "2026-06-30",
+        "corp_cd": "00126380",
+        "mkt_cd": "KOSPI",
+        "open_prc": "325500.0000",
+        "high_prc": "343000.0000",
+        "low_prc": "321000.0000",
+        "close_prc": "333000.0000",
+        "trd_qty": "45534703",
+        "close_rtn_rt": "0.02461538",
+        "idx_close_prc": "8476.4800",
+        "idx_rtn_rt": "0.00974788",
+        "indv_net_buy_qty": "-933341",
+        "frgn_net_buy_qty": "-2129985",
+        "inst_net_buy_qty": "3141266",
+        "other_corp_net_buy_qty": "-82613",
+        "frgn_hold_rt": "0.46960000",
+        "cfd_buy_bal_rt": "0.00020000",
+        "invstr_exist_yn": "Y",
+        "fin_avail_yn": "Y",
+        "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+        "fin_bsns_yr": "2025",
+        "fin_rpt_cd": "11011",
+        "fin_fs_div_cd": "CFS",
+        "dscl_dt": "2026-03-10",
+        "dscl_elps_day_cnt": "112",
+        "rev_ytd_amt": "333605938000000",
+        "op_prft_ytd_amt": "43601051000000",
+        "net_incm_ytd_amt": "45206805000000",
+        "op_cf_ytd_amt": "85315148000000",
+        "tot_asst_amt": "566942110000000",
+        "tot_liab_amt": "130621773000000",
+        "tot_eqty_amt": "436320337000000",
+        "pipln_ver": "c-integration-1.0.0",
+        "connection": {
+          "stock_cd": "005930",
+          "trd_dt": "2026-06-30",
+          "corp_cd": "00126380",
+          "map_stts_cd": "MATCHED",
+          "prc_exist_yn": "Y",
+          "invstr_exist_yn": "Y",
+          "frgn_hold_exist_yn": "Y",
+          "cfd_exist_yn": "Y",
+          "fin_avail_yn": "Y",
+          "conn_stts_cd": "BOTH",
+          "miss_rsn_cd": null,
+          "miss_rsn_txt": null,
+          "pipln_ver": "c-integration-1.0.0"
+        },
+        "analysis": null
+      }
+    ],
+    "meta": {
+      "api_version": "1.0.0",
+      "data_version": "delta-run:20261015_101647_d567",
+      "source_backend": "delta",
+      "data_min_date": "2022-12-01",
+      "data_final_date": "2026-06-30",
+      "stock_count": 20,
+      "calculation_version": "c-integration-1.0.0",
+      "analysis_status": "PENDING_C_DELIVERY",
+      "units": {
+        "amount": "KRW",
+        "quantity": "shares",
+        "ratio": "decimal_fraction"
+      },
+      "numeric_encoding": "decimal_string",
+      "start": "2026-06-30",
+      "end": "2026-06-30",
+      "total": 1,
+      "limit": 1000,
+      "offset": 0
+    }
+  }
+}
