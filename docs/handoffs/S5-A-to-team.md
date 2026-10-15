@@ -2,6 +2,11 @@
 
 ## PR 준비 갱신
 
+- A 원본 기능 커밋: `ab2264a29bc788214d611042e45ad923315b6978` (feature/a-dashboard).
+- integration 기반 검사한 전달 기능 커밋: `8061fce53fc4cc4076e226f9419380c24e8ea9f9` (handoff/s5-a-to-team-v1). 해당 커밋에서 단위 10/10·build·브라우저 9/9 재검증 PASS.
+- 팀 저장소 쓰기 권한이 없는 jobless-fish 계정의 origin push는 HTTP 403으로 실패. 공개 저장소의 개인 포크 `jobless-fish/Team-Zero`에 전달 브랜치를 게시하고 upstream integration 대상 초안 PR을 만든다. origin 권한·보호 설정 변경 없음.
+- 이 갱신은 전달 메타데이터만 변경하며 최종 PR head는 위 기능 커밋을 포함한다. 실제 API/C 확인·수신 검증·병합은 대기.
+
 사용자의 PR 요청에 따라 A 변경을 커밋하고 integration 대상 초안 PR로 전달한다. 기존 feature/a-dashboard는 main 기준 작업으로 보존하고, integration에서 handoff/s5-a-to-team-v1을 만들어 A 커밋만 적용한다. 따라서 main에만 있는 B 백엔드 커밋은 이 PR에 섞이지 않는다. 최종 전달 SHA와 PR URL은 실제 GitHub PR의 head를 기준으로 확인한다. 아래 미커밋/원격 미전달 설명은 PR 요청 전 검사 시점의 기록이며, 실제 API·수신 확인·통합 완료 대기 상태는 유지한다.
 
 2026-10-15 / A 이어진 → B 설호현·C 김형준 / **합성 화면 검증 완료, 실제 통합·원격 전달 전**.

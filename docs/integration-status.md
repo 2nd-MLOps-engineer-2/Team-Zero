@@ -15,6 +15,8 @@
 
 ## A 최신 기능 기록 — 준비 이후 재개
 
+PR 요청 후 갱신: A 코드 커밋 `ab2264a29bc788214d611042e45ad923315b6978`을 보존하고, integration에서 A 변경만 적용한 전달 커밋 `8061fce53fc4cc4076e226f9419380c24e8ea9f9`를 재검증(단위 10·브라우저 9·build PASS)했다. 전달 브랜치는 handoff/s5-a-to-team-v1. jobless-fish 계정은 팀 저장소 push 권한이 없어 개인 포크에서 integration 대상 초안 PR을 준비한다. 최종 게시 상태·head는 PR에서 확인하며 실제 API·수신 확인·통합 완료 상태는 변경하지 않는다.
+
 feature/a-dashboard에 main `1971dcbdfae2e2d29d1bc77ef712e40256014b34`를 fast-forward 반영. 선행 integration `b9b73a49bf169b17e3c324fcc9e51564d350b1ea` 포함 확인. A 미커밋 작업 보존·충돌 없음.
 
 - S0: [A 화면 계약 제안](../contracts/A-screen.md) 및 합성 예제 구현·검증. B/C 합의 대기.
