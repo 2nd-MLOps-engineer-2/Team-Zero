@@ -128,6 +128,10 @@ python3 scripts/check_handoff.py
 
 ## 체크북과 인수인계
 
+- **[단계별 통합 진행표](docs/integration-status.md)**: S0 계약 → S1 Bronze → S2 Silver → S3 Gold → **S4 B API→A 화면** → S5 전체. 단계별 전달 브랜치·고정 SHA·PR·실행법·수신 확인 결과를 모은다.
+- **[브랜치·합치기·보고 절차](docs/integration-workflow.md)**: 각자 feature → 검사한 handoff → 받는 사람의 review → `integration` → S5 확인 후 `main`. B 결과를 받을 때 A는 자기 작업에서 review 브랜치를 만들어 B의 고정 SHA를 합친 뒤 확인한다.
+- **[B→A 바로 확인할 전달 기록](docs/handoffs/S4-B-to-A.md)**: B가 실제 실행법·API·샘플·검사를 채우고 A가 확인 결과를 남긴다. 현재 기능 전달은 미착수다.
+
 - **[Bronze·Silver·Gold 누락·미구현 보완 업무](docs/missing-work.md)**: M01~M14에 확보할 자료, 추가할 문서·코드·검사, 역할별 책임과 완료 증빙을 지정했다. 각 역할 프롬프트가 이 업무를 함께 수행하도록 연결했다.
 
 - [전체 작업 체크리스트](docs/workbook.md): A 10개, B 12개, C 12개, 공통 전달 5개, 최종 제출 8개. 모두 증빙 확인 전 상태로 시작한다.

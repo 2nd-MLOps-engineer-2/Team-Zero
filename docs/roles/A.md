@@ -2,6 +2,8 @@
 
 상태: 시작 전. [프롬프트](../../prompts/A_frontend.md) · [체크북](../workbook.md).
 
+단계 책임: S0 계약 확인, S3 차트 의미 확인, **S4 B의 API를 A 작업의 review 브랜치에 합쳐 확인·보고**, S5 화면 전달·통합 검사. [진행표](../integration-status.md)와 [S4 기록](../handoffs/S4-B-to-A.md)에 전달 SHA·A review HEAD·실행 결과를 기록한다.
+
 필수 보완: [M08·M09·M12·M13·M14 및 A 역할](../missing-work.md). Bronze 출처/미확보, Silver 검토/NULL, Gold 계산/근거 상태의 화면·계약·예제·검사를 추가한다. 항목별 상태·증빙·의존성을 아래 기록에 추가한다. 현재 모두 미완료다.
 
 구현 예정 경로: `apps/web/`. 아직 실행 명령·화면 구현은 없다.

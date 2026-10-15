@@ -2,6 +2,8 @@
 
 상태: 시작 전. [프롬프트](../../prompts/B_backend.md) · [체크북](../workbook.md).
 
+단계 책임: S0 API/환경, S1 Bronze, S2 Silver, S3 C 계산을 B review에서 실행 확인, **S4 handoff 브랜치·고정 SHA·PR·실행법을 A에 전달**, S5 저장/API 통합. [진행표](../integration-status.md)와 [S4 기록](../handoffs/S4-B-to-A.md)을 갱신한다.
+
 필수 보완: [M01·M03~M06·M08·M09·M11·M12·M14 및 B 역할](../missing-work.md). 원천 확보 명세와 실제 3레이어 Delta·MySQL·API·재실행·덤프/복원 증빙을 추가한다. 항목별 상태·증빙·의존성을 아래 기록에 추가한다. 현재 모두 미완료다.
 
 구현 예정 경로: `apps/api/`, `pipelines/`, `infra/`. 아직 환경 고정·Delta·DB·API 실행 구현은 없다.

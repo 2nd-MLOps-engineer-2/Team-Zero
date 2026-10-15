@@ -44,6 +44,8 @@ Bronze 입력 원본 18개·별도 MySQL 덤프·공시 원문 ZIP·실제 Delta
 
 ## 병렬 진행 순서
 
+**합쳐질 때 볼 곳:** [단계별 통합 진행표](docs/integration-status.md). [브랜치 절차](docs/integration-workflow.md)에 따라 B/C는 검사한 handoff 브랜치·고정 SHA·실행법·PR을 등록하고 받는 역할은 자신의 작업에서 review 브랜치를 만들어 합친 결과를 확인한다. B→A는 [S4 기록](docs/handoffs/S4-B-to-A.md)을 바로 열어 진행한다.
+
 1. B가 API·실행 계약 초안을, C가 지표·입출력·예외 계약 초안을 제시한다.
 2. A는 합성 응답으로 화면을 개발하고, B는 Delta·MySQL·API, C는 검증·Gold 계산을 진행한다.
 3. G01~G04의 계약을 맞춘 뒤 실제 데이터를 연결한다.
@@ -56,6 +58,8 @@ API·계산 규칙이 아직 없다는 이유로 다른 역할의 작업 전체�
 현재 실제 인계 데이터·기존 처리 코드·문서·역할 프롬프트·읽기 전용 무결성 검사 명령이 있다. 신규 서비스 실행 명령·lockfile·Docker 환경은 아직 없다. B01에서 실제 환경과 명령을 만들고 검증한 뒤 여기와 README에 등록한다. 고정 인계본의 기존 파이프라인은 외부 입력·DB를 요구하고 출력도 덮어쓰므로 그대로 실행하지 않는다.
 
 ## 문서 지도
+
+- [단계별 통합 진행표](docs/integration-status.md) · [브랜치·전달·보고](docs/integration-workflow.md)
 
 - [Bronze·Silver·Gold 보완 업무 M01~M14](docs/missing-work.md)
 

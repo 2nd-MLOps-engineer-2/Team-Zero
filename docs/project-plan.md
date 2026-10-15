@@ -195,6 +195,8 @@ DB·API의 수익률·비율은 소수 비율로 통일하고 화면에서 100�
 
 ## 8. 개발 순서와 완료 기준
 
+개발·전달·합치기는 [S0~S5 통합 진행표](integration-status.md)와 [브랜치 절차](integration-workflow.md)를 따른다. B API→A 화면은 S4의 고정 handoff와 A review 브랜치에서 확인하고, 각 단계 결과는 integration에 모아 S5 전체 확인 후 main 반영을 준비한다.
+
 각 단계는 [누락·미구현 보완 업무 M01~M14](missing-work.md)와 함께 진행한다. Bronze의 입력 확보·Delta 증빙, Silver의 실제 저장·잔여 규칙, Gold의 계약·계산·API·화면·AI 입력 규격을 각 역할이 추가하고 증빙으로 확인한다.
 
 1. **정의 확정:** 지표·시점·분류·단위와 샘플 API 응답 확정. 체크북 C01~C06의 기존 원본 진단·표준 사전·기간 검증 증빙을 재사용하고 부족한 부분만 보완.

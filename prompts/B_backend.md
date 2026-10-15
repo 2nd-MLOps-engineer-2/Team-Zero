@@ -24,6 +24,8 @@
 
 ## 검증과 전달
 
+`docs/integration-workflow.md`와 `docs/integration-status.md`를 따른다. S1 Bronze·S2 Silver·S3 C 계산 실행 결과를 각각 확인하고, **S4 API 준비 시 검사한 커밋을 `handoff/s4-b-to-a-v1` 같은 전달 브랜치로 고정**한다. 실제 브랜치·전체 SHA·integration 대상 PR·실행/종료법·API 계약·샘플·검사를 `docs/handoffs/S4-B-to-A.md`와 진행표에 남긴다. A가 본인 화면과 합칠 때 필요한 정보까지 준비하며 빈 브랜치·문서만으로 API 완료라고 하지 않는다. A 수정 요청 후 SHA가 바뀌면 변경점과 재검사 결과를 갱신한다. S3 C 전달본을 받을 때도 B 작업 HEAD에서 review 브랜치를 만들어 합친 뒤 실행 확인한다. 원격 변경은 해당 사용자 작업 지시 범위를 따른다.
+
 건수·PK/FK·NULL·코드·도메인·금액 보존·기간·재실행을 SQL로 검사하고 C의 Pandas와 동일 입력·버전으로 대조한다. API 필터·오류·빈 결과·NULL·큰 정수 표현, Delta 왕복과 MySQL 일치를 확인한다. 환경·DB가 없으면 미실행 항목을 명시한다.
 
 `docs/roles/B.md`에 설치·실행·종료·복원 방법, 버전, 검증 결과와 증거 경로를 기록한다. 실제 동작을 확인한 명령만 README·START_HERE에 추가한다. G02의 API 샘플과 G04 대사 입력을 `docs/handoffs/`로 전달한다. 마지막에 변경 파일·작업 ID·실제 검사·남은 의존성을 보고한다.
