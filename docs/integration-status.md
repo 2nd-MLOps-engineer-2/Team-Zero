@@ -1,64 +1,17 @@
 # 단계별 통합 진행표
 
-## 최신 상태 — S4 API 1.1.0 ZIP 수신 검증
 
-2026-10-15: 실제 B API + C 산출물 연결 완료. A 단위 16·브라우저 16·빌드 PASS, B 49 PASS/2 SKIP, 실HTTP 16×2 PASS, C 전체 17,760행 값 대조 PASS. 로컬 `review/s4-a-v1`, 기준 HEAD `2f215546aafb19ab1626109816bbaaae9b13d8eb` 위 미커밋 변경. PR #5는 이번 변경 미반영. B 1.1.0 자체가 미커밋 ZIP이므로 Git merge/공동 통합 완료는 대기. **이하 과거의 실제 API 미확인 기록보다 이 절이 우선한다.** [상세 수신 결과](handoffs/S4-B-to-A.md).
-
+2026-10-15 추가: B의 S4 1.1.0은 **미커밋 로컬 보완**이다. C계산해시 재현/2Delta/C값API대조·기준100차트PASS. 신규C MySQL/A실제API연결/새전달SHA·원격반영은대기. 최신요청별자료는 [S4](handoffs/S4-B-to-A.md) 상단을따른다. 아래기존SHA는v1코드로새확장미포함이다.
 
 **다른 역할의 결과를 받으면 이 문서에서 단계 → 전달 기록 → 고정 SHA → 실행법 → 검사 결과 순으로 확인한다.** [절차·브랜치 규칙](integration-workflow.md) · [전달 양식](handoffs/TEMPLATE.md).
 
-2026-10-15 A 합성 샘플 화면 구현·단위 10개·브라우저 9개·빌드 검증 완료. B 실제 API 및 C 시각화 계약의 수신 검증은 대기다. 아래 공통 단계는 A의 합성 검사만으로 완료 처리하지 않는다. 원격 main에는 B 파이프라인 및 C 준비 기록이 추가됐지만 A가 해당 DB/Delta 실행을 검증한 것은 아니다.
+2026-10-15 B 실제 Delta·MySQL·기존 Gold API·덤프 복원 로컬 검증 완료. 고정 구현 전달은 `handoff/s4-b-to-a-v1` / `ba2aaf1008d52dc96d983f61cae40d8a628366a2`. 문서 후속 커밋은 feature/b-pipeline-api의 [Draft PR #6](https://github.com/2nd-MLOps-engineer-2/Team-Zero/pull/6). A·C 수신 검증과 integration/main 병합은 별도다.
 
 | 단계 | 합칠 내용 | 전달 → 확인 | 전달 브랜치·고정 SHA·PR | 수신 확인 브랜치·결과 | 상태·열린 의존성 |
 |---|---|---|---|---|---|
-| **S0 계약** | 지표·API·시각화·환경 계약, 정상/NULL/오류 예시 | B·C → A·B·C | 미등록 | 미등록 | 미착수 / 계약 작성·합의 |
-| **S1 Bronze** | 원본·명세·해시·AS-IS 근거, Bronze Delta | B 저장·C 진단 → C·B | 미등록 | 미등록 | 입력 미확보 / M01~M05 |
-| **S2 Silver** | Silver Delta·MySQL, 사전·키·기간·미해결 상태 | B 저장·C 검증 → C·B | 미등록 | 미등록 | 미착수 / M06~M08 |
-| **S3 Gold** | C 계산과 B 실행·저장, 분석·차트 데이터 | C → B 실행·A 해석 확인 | 미등록 | 미등록 | 미착수 / M09~M11 |
-| **S4 API→화면** | B의 실제 조회·품질·근거·다운로드 API | **B → A 연결 확인 / C 수치 확인** | [S4 전달 기록](handoffs/S4-B-to-A.md) / 1.1.0 ZIP, 고정 SHA 없음 | review/s4-a-v1 로컬 실제 연결 PASS | ZIP 검증 완료 / 고정 SHA·Git 통합 대기 |
-| **S5 전체** | A 화면·B 서버/저장·C 계산·출처/검증·재현 | A·B·C → 공동 확인 | 미등록 | 미등록 | 미착수 / M14·G05·F01~F08 |
-
-## A 최신 기능 기록 — 준비 이후 재개
-
-**C→A 수신 갱신:** [수신 기록](handoffs/S3-C-to-A.md). A HEAD에서 review/s3-a-v1을 만들어 C 고정 SHA fb1f802c88e2d5b275c737200aa392deac0e628b를 병합(HEAD 0b3cb61dc4e6842247423dda3bf1303e1621a142), C 18개 검사 및 두 Gold 출력 해시 재현. A 차트 의미/실제 값 표시·CSV 검증 완료(단위 12, 브라우저 12, 빌드 PASS). C 코드 자체는 A PR에 포함하지 않음. B 실행/저장·SQL 확인 및 실제 S4 API는 계속 대기. S3 전체를 A 확인만으로 완료 처리하지 않는다.
-
-**현재 A 검토 PR: [#5](https://github.com/2nd-MLOps-engineer-2/Team-Zero/pull/5)** — `joblessking00`이 팀 저장소 `handoff/s5-a-to-team-v1`에서 `integration`으로 제출한 초안. 계정 전환 전 PR #3과 같은 기능이므로 중복 병합하지 않는다. 기능 변경/재검사 추가 없음, 기존 검사 증빙 유지. 실제 API 연결·수신 확인·병합 미실행.
-
-**A 전달 게시:** [초안 PR #3](https://github.com/2nd-MLOps-engineer-2/Team-Zero/pull/3), 개인 포크 `jobless-fish:handoff/s5-a-to-team-v1` → integration. 생성 시 게시 SHA `7d49452ca4ba6e2f0521cf8365b91baca12b8579`, 검사한 기능 SHA `8061fce53fc4cc4076e226f9419380c24e8ea9f9`. PR 링크를 기록하는 문서 커밋 외 기능 변경 없음. 상태: 합성 화면 전달 / 실제 API·수신 확인 대기 / 미병합.
-
-PR 요청 후 갱신: A 코드 커밋 `ab2264a29bc788214d611042e45ad923315b6978`을 보존하고, integration에서 A 변경만 적용한 전달 커밋 `8061fce53fc4cc4076e226f9419380c24e8ea9f9`를 재검증(단위 10·브라우저 9·build PASS)했다. 전달 브랜치는 handoff/s5-a-to-team-v1. jobless-fish 계정은 팀 저장소 push 권한이 없어 개인 포크에서 integration 대상 초안 PR을 준비한다. 최종 게시 상태·head는 PR에서 확인하며 실제 API·수신 확인·통합 완료 상태는 변경하지 않는다.
-
-feature/a-dashboard에 main `1971dcbdfae2e2d29d1bc77ef712e40256014b34`를 fast-forward 반영. 선행 integration `b9b73a49bf169b17e3c324fcc9e51564d350b1ea` 포함 확인. A 미커밋 작업 보존·충돌 없음.
-
-- S0: [A 화면 계약 제안](../contracts/A-screen.md) 및 합성 예제 구현·검증. B/C 합의 대기.
-- S3: C 실제 지표/차트 전달 미등록, A는 합성 의미 검사만 수행.
-- S4: 단일 어댑터와 네트워크 모의 응답 검증 완료. 실제 B handoff/review/수신 확인 미실행.
-- S5: [A 로컬 전달 준비](handoffs/S5-A-to-team.md). 실행 화면·CSV·desktop/mobile 캡처·단위/E2E 검증 있음. A 기능 커밋·원격 전달 SHA·PR은 아직 없음.
-- 준비 단계의 빌드/테스트 실패는 해소. 최신 npm test 10/10, build PASS, E2E 9/9. 전체 원본→DB→API 대사/최종 기능 완료는 미확인.
-
-아래 준비 기록은 재개 전의 역사 기록이다.
-
-## A 기준 점검 및 다음 전달 준비 — 2026-10-15
-
-- 역할 A 이어진, 실제 브랜치 feature/a-dashboard. HEAD·조회한 origin/main·origin/integration 및 선행 integration: `8af915fba1c40849b4cb80d7d8c2bd1768f674b7`.
-- fetch 및 양쪽 기준 포함 검사 후 실제 feature에서 main/integration 반영 확인: 모두 Already up to date. 충돌 없음. 로컬 초안 보존, 원격 변경 없음.
-- 위 SHA는 기준 커밋이며 기능 전달 SHA가 아니다. 기능 코드/문서는 미커밋, 전달 브랜치·PR·수신 확인은 미등록.
-- S0: [A→B API/환경 요청](handoffs/A-to-B.md), [A→C 지표/시각화 요청](handoffs/A-to-C.md) 준비. 합의 대기.
-- S1: B 원본/Delta·C 진단 상호 검증 대기. A는 원본 미확보 표시 요구사항만 준비.
-- S2: B 저장/모델·C 규칙/수치 대조 대기. A는 부재·검토 상태 필드 요청.
-- S3: C 고정 전달본·계산/차트 의미 검토 대기. B 실행/저장과 A 해석 확인 필요.
-- S4: 실제 B 전달본 없음. review 브랜치/merge/실제 API 검사 미실행. [S4 기록](handoffs/S4-B-to-A.md) 참조.
-- S5: A 화면·B 저장/API·C 계산의 동일 사례 대사 후에만 통합 판단. 현재 미착수.
-- 검사: 데이터 75파일 무결성 PASS, 검사 도구 2/2 PASS, JS 구문 PASS. A 빌드는 main.js 부재, 테스트는 검사 파일 부재로 실패. 실제 브라우저/API/DB/Delta 미실행. [상세 A 기록](roles/A.md).
-- 사용자 후속 안내에 따라 기준 반영·준비에서 종료. 새 기능 추가·push·PR·병합은 후속 범위.
-
-## 갱신 시점과 책임
-
-- **전달자:** 본인 검사 후 전달 기록과 이 표에 실제 브랜치·SHA·PR·실행법을 등록한다. 상태를 `수신 확인 대기`로 변경한다.
-- **수신자:** 별도 확인 브랜치에서 재현하고 결과·환경·제한·수신자 커밋을 등록한다. `수정 필요` 또는 `수신 확인 완료`로 변경한다.
-- **해당 PR을 병합하는 팀원:** PR 결과·병합 커밋을 확인해 `integration 병합 완료`로 갱신한다. 테스트하지 않고 자동 승인하지 않는다.
-- **최종 통합 확인자:** S5 검증 후에만 최종 기능을 `main 반영 완료`로 표시한다.
-
-상태: `미착수 → 작업 중 → 수신 확인 대기 → 수정 필요/수신 확인 완료 → integration 병합 완료 → main 반영 완료`. 입력 미확보·부분 완료·합성 검증은 별도로 명시한다. Bronze 입력이 없어도 제공 Silver·Gold의 독립 개발은 계속한다. S4 샘플 연동 성공을 실제 API 검증으로 표시하지 않는다.
-
-전달 기록이나 PR을 등록하는 것만으로 상대에게 별도 알림이 전송됐다고 주장하지 않는다. 보고 위치는 이 표·전달 기록·해당 PR이며, 외부 메시지는 팀원이 별도로 공유한다.
+| **S0 계약** | B API·환경 계약·샘플 | B → A·C | [API](../contracts/api.md)·[S4](handoffs/S4-B-to-A.md) | 미확인 | B 구현·검증 / C 분석·시각화 합의대기 |
+| **S1 Bronze** | 실제오염91CSV/인계18입력/28Delta | B → C | [G04](handoffs/G04-validation.md)·S4고정SHA | C 독립확인대기 | B 저장·복구재현 / 최초원본과정제인계구분 |
+| **S2 Silver** | 17Delta/MySQL·371437행 | B → C | [G04](handoffs/G04-validation.md)·S4고정SHA | C 독립확인대기 | B 전량대사PASS / 기간61·수급1검토유지 |
+| **S3 Gold** | 기존Gold2저장·API / 신규분석대기 | C → B·A | C전달6a61b132f54bf6a2553ad323e57e73b1cda09e65 | 별도스냅샷계산/Delta/API대사PASS | 정식reviewmerge·신규C MySQL대사대기 |
+| **S4 API→화면** | 실제조회·품질·근거·다운로드 | B → A·C | [S4](handoffs/S4-B-to-A.md) / `ba2aaf1008d52dc96d983f61cae40d8a628366a2` / [Draft PR #6](https://github.com/2nd-MLOps-engineer-2/Team-Zero/pull/6) | A미확인 | B45자동·13HTTP·9MySQL API PASS / 수신확인대기 |
+| **S5 전체** | 화면·계산·API·재현 공동검수 | A·B·C | 미등록 | 미확인 | 미완료 / C신규분석·A화면·G05필요 |

@@ -1,0 +1,1048 @@
+{
+  "request": "/analysis/005930/evidence?as_of=2026-06-30",
+  "response": {
+    "data": {
+      "observation": {
+        "stock_cd": "005930",
+        "stock_nm": "삼성전자",
+        "trd_dt": "2026-06-30",
+        "corp_cd": "00126380",
+        "mkt_cd": "KOSPI",
+        "open_prc": "325500.0000",
+        "high_prc": "343000.0000",
+        "low_prc": "321000.0000",
+        "close_prc": "333000.0000",
+        "trd_qty": "45534703",
+        "close_rtn_rt": "0.02461538",
+        "idx_close_prc": "8476.4800",
+        "idx_rtn_rt": "0.00974788",
+        "indv_net_buy_qty": "-933341",
+        "frgn_net_buy_qty": "-2129985",
+        "inst_net_buy_qty": "3141266",
+        "other_corp_net_buy_qty": "-82613",
+        "frgn_hold_rt": "0.46960000",
+        "cfd_buy_bal_rt": "0.00020000",
+        "invstr_exist_yn": "Y",
+        "fin_avail_yn": "Y",
+        "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+        "fin_bsns_yr": "2025",
+        "fin_rpt_cd": "11011",
+        "fin_fs_div_cd": "CFS",
+        "dscl_dt": "2026-03-10",
+        "dscl_elps_day_cnt": "112",
+        "rev_ytd_amt": "333605938000000",
+        "op_prft_ytd_amt": "43601051000000",
+        "net_incm_ytd_amt": "45206805000000",
+        "op_cf_ytd_amt": "85315148000000",
+        "tot_asst_amt": "566942110000000",
+        "tot_liab_amt": "130621773000000",
+        "tot_eqty_amt": "436320337000000",
+        "pipln_ver": "c-integration-1.0.0",
+        "connection": {
+          "stock_cd": "005930",
+          "trd_dt": "2026-06-30",
+          "corp_cd": "00126380",
+          "map_stts_cd": "MATCHED",
+          "prc_exist_yn": "Y",
+          "invstr_exist_yn": "Y",
+          "frgn_hold_exist_yn": "Y",
+          "cfd_exist_yn": "Y",
+          "fin_avail_yn": "Y",
+          "conn_stts_cd": "BOTH",
+          "miss_rsn_cd": null,
+          "miss_rsn_txt": null,
+          "pipln_ver": "c-integration-1.0.0"
+        },
+        "analysis": {
+          "stock_cd": "005930",
+          "trd_dt": "2026-06-30",
+          "corp_cd": "00126380",
+          "mkt_cd": "KOSPI",
+          "open_prc": "325500.0000",
+          "high_prc": "343000.0000",
+          "low_prc": "321000.0000",
+          "close_prc": "333000.0000",
+          "trd_qty": "45534703",
+          "close_rtn_rt": "0.02461538",
+          "idx_close_prc": "8476.4800",
+          "idx_rtn_rt": "0.00974788",
+          "indv_net_buy_qty": "-933341",
+          "frgn_net_buy_qty": "-2129985",
+          "inst_net_buy_qty": "3141266",
+          "other_corp_net_buy_qty": "-82613",
+          "frgn_hold_rt": "0.46960000",
+          "cfd_buy_bal_rt": "0.00020000",
+          "invstr_exist_yn": "Y",
+          "fin_avail_yn": "Y",
+          "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+          "fin_bsns_yr": "2025",
+          "fin_rpt_cd": "11011",
+          "fin_fs_div_cd": "CFS",
+          "dscl_dt": "2026-03-10",
+          "dscl_elps_day_cnt": "112",
+          "rev_ytd_amt": "333605938000000",
+          "op_prft_ytd_amt": "43601051000000",
+          "net_incm_ytd_amt": "45206805000000",
+          "op_cf_ytd_amt": "85315148000000",
+          "tot_asst_amt": "566942110000000",
+          "tot_liab_amt": "130621773000000",
+          "tot_eqty_amt": "436320337000000",
+          "pipln_ver": "c-integration-1.0.0",
+          "rev_yoy_rt": "0.10880093",
+          "rev_yoy_rt_stts_cd": "OK",
+          "op_margin_rt": "0.13069627",
+          "op_cf_delta_amt": "12332527000000",
+          "op_cf_sales_rt": "0.25573630",
+          "op_prft_transition_cd": "PROFIT_CONTINUES",
+          "review_required_yn": "N",
+          "cal_prd_stts_cd": "VERIFIED_XML",
+          "cf_prd_stts_cd": "VERIFIED_XML_YTD",
+          "same_prd_cmpr_elig_yn": "Y",
+          "rtn_1d_rt": "0.02461538",
+          "rtn_1d_stts_cd": "OK",
+          "idx_rtn_1d_rt": "0.00974788",
+          "excess_1d_rt": "0.01486750",
+          "excess_1d_stts_cd": "OK",
+          "rtn_5d_rt": "0.07246377",
+          "rtn_5d_stts_cd": "OK",
+          "idx_rtn_5d_rt": "0.03323322",
+          "excess_5d_rt": "0.03923055",
+          "excess_5d_stts_cd": "OK",
+          "rtn_20d_rt": "-0.06197183",
+          "rtn_20d_stts_cd": "OK",
+          "idx_rtn_20d_rt": "-0.03549004",
+          "excess_20d_rt": "-0.02648179",
+          "excess_20d_stts_cd": "OK",
+          "frgn_net_5d_qty": "-25976196",
+          "frgn_flow_5d_rt": "-0.08242061",
+          "frgn_flow_5d_stts_cd": "OK",
+          "inst_net_5d_qty": "9532418",
+          "inst_flow_5d_rt": "0.03024568",
+          "inst_flow_5d_stts_cd": "OK",
+          "indv_net_5d_qty": "15590127",
+          "indv_flow_5d_rt": "0.04946636",
+          "indv_flow_5d_stts_cd": "OK",
+          "frgn_net_20d_qty": "-76545220",
+          "frgn_flow_20d_rt": "-0.06459243",
+          "frgn_flow_20d_stts_cd": "OK",
+          "inst_net_20d_qty": "1411195",
+          "inst_flow_20d_rt": "0.00119083",
+          "inst_flow_20d_stts_cd": "OK",
+          "indv_net_20d_qty": "72241798",
+          "indv_flow_20d_rt": "0.06096100",
+          "indv_flow_20d_stts_cd": "OK",
+          "frgn_hold_change_20d_rt": "-0.01340000",
+          "frgn_hold_change_20d_stts_cd": "OK",
+          "volatility_20d_rt": "0.06177044",
+          "volatility_20d_stts_cd": "OK",
+          "event_base_dt": "2026-03-09",
+          "event_rtn_rt": "0.94169096",
+          "event_idx_rtn_rt": "0.61399273",
+          "event_excess_rt": "0.32769823",
+          "event_stts_cd": "OK",
+          "co_move_cd": "IMPROVE_STRONG",
+          "co_move_stts_cd": "OK",
+          "joint_improve_yn": "N",
+          "joint_improve_stts_cd": "OK",
+          "calc_ver": "c-gold-0.1.0"
+        }
+      },
+      "financial_report": {
+        "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+        "corp_cd": "00126380",
+        "bsns_yr": "2025",
+        "rpt_cd": "11011",
+        "fs_div_cd": "CFS",
+        "dscl_dt": "2026-03-10",
+        "pit_join_elig_yn": "Y",
+        "same_prd_cmpr_elig_yn": "Y",
+        "metrics": [
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "CASH_AND_EQUIVALENTS",
+            "prd_type_cd": "ASOF",
+            "mtrc_amt": "57856378000000",
+            "src_col_nm": "cash_and_equivalents_asof",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "CASH_AND_EQUIVALENTS",
+            "prd_type_cd": "PRIOR_YE",
+            "mtrc_amt": "53705579000000",
+            "src_col_nm": "cash_and_equivalents_prior_year_end",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "COST_OF_SALES",
+            "prd_type_cd": "PRIOR_Q3M",
+            "mtrc_amt": null,
+            "src_col_nm": "cost_of_sales_prior_3m",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "COST_OF_SALES",
+            "prd_type_cd": "PRIOR_YTD",
+            "mtrc_amt": "186562268000000",
+            "src_col_nm": "cost_of_sales_prior_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "COST_OF_SALES",
+            "prd_type_cd": "Q3M",
+            "mtrc_amt": null,
+            "src_col_nm": "cost_of_sales_3m",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "COST_OF_SALES",
+            "prd_type_cd": "YTD",
+            "mtrc_amt": "202235513000000",
+            "src_col_nm": "cost_of_sales_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "CURRENT_ASSETS",
+            "prd_type_cd": "ASOF",
+            "mtrc_amt": "247684612000000",
+            "src_col_nm": "current_assets_asof",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "CURRENT_ASSETS",
+            "prd_type_cd": "PRIOR_YE",
+            "mtrc_amt": "227062266000000",
+            "src_col_nm": "current_assets_prior_year_end",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "CURRENT_LEASE_LIABILITIES",
+            "prd_type_cd": "ASOF",
+            "mtrc_amt": null,
+            "src_col_nm": "current_lease_liabilities_asof",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "CURRENT_LEASE_LIABILITIES",
+            "prd_type_cd": "PRIOR_YE",
+            "mtrc_amt": null,
+            "src_col_nm": "current_lease_liabilities_prior_year_end",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "CURRENT_LIABILITIES",
+            "prd_type_cd": "ASOF",
+            "mtrc_amt": "106411348000000",
+            "src_col_nm": "current_liabilities_asof",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "CURRENT_LIABILITIES",
+            "prd_type_cd": "PRIOR_YE",
+            "mtrc_amt": "93326299000000",
+            "src_col_nm": "current_liabilities_prior_year_end",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "CURRENT_PORTION_LONG_TERM_DEBT_REPORTED",
+            "prd_type_cd": "ASOF",
+            "mtrc_amt": "1177508000000",
+            "src_col_nm": "current_portion_long_term_debt_reported_asof",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "CURRENT_PORTION_LONG_TERM_DEBT_REPORTED",
+            "prd_type_cd": "PRIOR_YE",
+            "mtrc_amt": "2207290000000",
+            "src_col_nm": "current_portion_long_term_debt_reported_prior_year_end",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "FINANCE_COST",
+            "prd_type_cd": "PRIOR_Q3M",
+            "mtrc_amt": null,
+            "src_col_nm": "finance_cost_prior_3m",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "FINANCE_COST",
+            "prd_type_cd": "PRIOR_YTD",
+            "mtrc_amt": "12985684000000",
+            "src_col_nm": "finance_cost_prior_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "FINANCE_COST",
+            "prd_type_cd": "Q3M",
+            "mtrc_amt": null,
+            "src_col_nm": "finance_cost_3m",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "FINANCE_COST",
+            "prd_type_cd": "YTD",
+            "mtrc_amt": "11733764000000",
+            "src_col_nm": "finance_cost_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "FINANCE_INCOME",
+            "prd_type_cd": "PRIOR_Q3M",
+            "mtrc_amt": null,
+            "src_col_nm": "finance_income_prior_3m",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "FINANCE_INCOME",
+            "prd_type_cd": "PRIOR_YTD",
+            "mtrc_amt": "16703304000000",
+            "src_col_nm": "finance_income_prior_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "FINANCE_INCOME",
+            "prd_type_cd": "Q3M",
+            "mtrc_amt": null,
+            "src_col_nm": "finance_income_3m",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "FINANCE_INCOME",
+            "prd_type_cd": "YTD",
+            "mtrc_amt": "16240302000000",
+            "src_col_nm": "finance_income_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "FINANCING_CASH_FLOW",
+            "prd_type_cd": "PRIOR_YTD",
+            "mtrc_amt": "-7797243000000",
+            "src_col_nm": "financing_cash_flow_prior_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "FINANCING_CASH_FLOW",
+            "prd_type_cd": "YTD",
+            "mtrc_amt": "-13478040000000",
+            "src_col_nm": "financing_cash_flow_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "GROSS_PROFIT",
+            "prd_type_cd": "PRIOR_Q3M",
+            "mtrc_amt": null,
+            "src_col_nm": "gross_profit_prior_3m",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "GROSS_PROFIT",
+            "prd_type_cd": "PRIOR_YTD",
+            "mtrc_amt": "114308635000000",
+            "src_col_nm": "gross_profit_prior_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "GROSS_PROFIT",
+            "prd_type_cd": "Q3M",
+            "mtrc_amt": null,
+            "src_col_nm": "gross_profit_3m",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "GROSS_PROFIT",
+            "prd_type_cd": "YTD",
+            "mtrc_amt": "131370425000000",
+            "src_col_nm": "gross_profit_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "INCOME_TAX",
+            "prd_type_cd": "PRIOR_Q3M",
+            "mtrc_amt": null,
+            "src_col_nm": "income_tax_prior_3m",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "INCOME_TAX",
+            "prd_type_cd": "PRIOR_YTD",
+            "mtrc_amt": "3078383000000",
+            "src_col_nm": "income_tax_prior_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "INCOME_TAX",
+            "prd_type_cd": "Q3M",
+            "mtrc_amt": null,
+            "src_col_nm": "income_tax_3m",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "INCOME_TAX",
+            "prd_type_cd": "YTD",
+            "mtrc_amt": "4274666000000",
+            "src_col_nm": "income_tax_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "INTANGIBLE_ASSETS",
+            "prd_type_cd": "ASOF",
+            "mtrc_amt": null,
+            "src_col_nm": "intangible_assets_asof",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "INTANGIBLE_ASSETS",
+            "prd_type_cd": "PRIOR_YE",
+            "mtrc_amt": null,
+            "src_col_nm": "intangible_assets_prior_year_end",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "INTANGIBLE_PURCHASE_REPORTED",
+            "prd_type_cd": "PRIOR_YTD",
+            "mtrc_amt": "2335284000000",
+            "src_col_nm": "intangible_purchase_reported_prior_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "INTANGIBLE_PURCHASE_REPORTED",
+            "prd_type_cd": "YTD",
+            "mtrc_amt": "4630970000000",
+            "src_col_nm": "intangible_purchase_reported_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "INVENTORIES",
+            "prd_type_cd": "ASOF",
+            "mtrc_amt": "52636828000000",
+            "src_col_nm": "inventories_asof",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "INVENTORIES",
+            "prd_type_cd": "PRIOR_YE",
+            "mtrc_amt": "51754865000000",
+            "src_col_nm": "inventories_prior_year_end",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "INVESTING_CASH_FLOW",
+            "prd_type_cd": "PRIOR_YTD",
+            "mtrc_amt": "-85381702000000",
+            "src_col_nm": "investing_cash_flow_prior_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "INVESTING_CASH_FLOW",
+            "prd_type_cd": "YTD",
+            "mtrc_amt": "-68512206000000",
+            "src_col_nm": "investing_cash_flow_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "LONG_TERM_BORROWINGS_REPORTED",
+            "prd_type_cd": "ASOF",
+            "mtrc_amt": "6479517000000",
+            "src_col_nm": "long_term_borrowings_reported_asof",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "LONG_TERM_BORROWINGS_REPORTED",
+            "prd_type_cd": "PRIOR_YE",
+            "mtrc_amt": "3935860000000",
+            "src_col_nm": "long_term_borrowings_reported_prior_year_end",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "NET_INCOME",
+            "prd_type_cd": "PRIOR_Q3M",
+            "mtrc_amt": null,
+            "src_col_nm": "net_income_prior_3m",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "NET_INCOME",
+            "prd_type_cd": "PRIOR_YTD",
+            "mtrc_amt": "34451351000000",
+            "src_col_nm": "net_income_prior_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "NET_INCOME",
+            "prd_type_cd": "Q3M",
+            "mtrc_amt": null,
+            "src_col_nm": "net_income_3m",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "NET_INCOME",
+            "prd_type_cd": "YTD",
+            "mtrc_amt": "45206805000000",
+            "src_col_nm": "net_income_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "NET_INCOME_PARENT",
+            "prd_type_cd": "PRIOR_Q3M",
+            "mtrc_amt": null,
+            "src_col_nm": "net_income_parent_prior_3m",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "NET_INCOME_PARENT",
+            "prd_type_cd": "PRIOR_YTD",
+            "mtrc_amt": "33621363000000",
+            "src_col_nm": "net_income_parent_prior_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "NET_INCOME_PARENT",
+            "prd_type_cd": "Q3M",
+            "mtrc_amt": null,
+            "src_col_nm": "net_income_parent_3m",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "NET_INCOME_PARENT",
+            "prd_type_cd": "YTD",
+            "mtrc_amt": "44260956000000",
+            "src_col_nm": "net_income_parent_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "NONCURRENT_ASSETS",
+            "prd_type_cd": "ASOF",
+            "mtrc_amt": "319257498000000",
+            "src_col_nm": "noncurrent_assets_asof",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "NONCURRENT_ASSETS",
+            "prd_type_cd": "PRIOR_YE",
+            "mtrc_amt": "287469682000000",
+            "src_col_nm": "noncurrent_assets_prior_year_end",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "NONCURRENT_LEASE_LIABILITIES",
+            "prd_type_cd": "ASOF",
+            "mtrc_amt": null,
+            "src_col_nm": "noncurrent_lease_liabilities_asof",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "NONCURRENT_LEASE_LIABILITIES",
+            "prd_type_cd": "PRIOR_YE",
+            "mtrc_amt": null,
+            "src_col_nm": "noncurrent_lease_liabilities_prior_year_end",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "NONCURRENT_LIABILITIES",
+            "prd_type_cd": "ASOF",
+            "mtrc_amt": "24210425000000",
+            "src_col_nm": "noncurrent_liabilities_asof",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "NONCURRENT_LIABILITIES",
+            "prd_type_cd": "PRIOR_YE",
+            "mtrc_amt": "19013579000000",
+            "src_col_nm": "noncurrent_liabilities_prior_year_end",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "OPERATING_CASH_FLOW",
+            "prd_type_cd": "PRIOR_YTD",
+            "mtrc_amt": "72982621000000",
+            "src_col_nm": "operating_cash_flow_prior_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "OPERATING_CASH_FLOW",
+            "prd_type_cd": "YTD",
+            "mtrc_amt": "85315148000000",
+            "src_col_nm": "operating_cash_flow_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "OPERATING_PROFIT",
+            "prd_type_cd": "PRIOR_Q3M",
+            "mtrc_amt": null,
+            "src_col_nm": "operating_profit_prior_3m",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "OPERATING_PROFIT",
+            "prd_type_cd": "PRIOR_YTD",
+            "mtrc_amt": "32725961000000",
+            "src_col_nm": "operating_profit_prior_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "OPERATING_PROFIT",
+            "prd_type_cd": "Q3M",
+            "mtrc_amt": null,
+            "src_col_nm": "operating_profit_3m",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "OPERATING_PROFIT",
+            "prd_type_cd": "YTD",
+            "mtrc_amt": "43601051000000",
+            "src_col_nm": "operating_profit_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "PPE_PURCHASE_REPORTED",
+            "prd_type_cd": "PRIOR_YTD",
+            "mtrc_amt": "51406355000000",
+            "src_col_nm": "ppe_purchase_reported_prior_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "PPE_PURCHASE_REPORTED",
+            "prd_type_cd": "YTD",
+            "mtrc_amt": "47522179000000",
+            "src_col_nm": "ppe_purchase_reported_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "PRETAX_PROFIT",
+            "prd_type_cd": "PRIOR_Q3M",
+            "mtrc_amt": null,
+            "src_col_nm": "pretax_profit_prior_3m",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "PRETAX_PROFIT",
+            "prd_type_cd": "PRIOR_YTD",
+            "mtrc_amt": "37529734000000",
+            "src_col_nm": "pretax_profit_prior_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "PRETAX_PROFIT",
+            "prd_type_cd": "Q3M",
+            "mtrc_amt": null,
+            "src_col_nm": "pretax_profit_3m",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "PRETAX_PROFIT",
+            "prd_type_cd": "YTD",
+            "mtrc_amt": "49481471000000",
+            "src_col_nm": "pretax_profit_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "PROPERTY_PLANT_EQUIPMENT",
+            "prd_type_cd": "ASOF",
+            "mtrc_amt": "215304784000000",
+            "src_col_nm": "property_plant_equipment_asof",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "PROPERTY_PLANT_EQUIPMENT",
+            "prd_type_cd": "PRIOR_YE",
+            "mtrc_amt": "205945209000000",
+            "src_col_nm": "property_plant_equipment_prior_year_end",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "REVENUE",
+            "prd_type_cd": "PRIOR_Q3M",
+            "mtrc_amt": null,
+            "src_col_nm": "revenue_prior_3m",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "REVENUE",
+            "prd_type_cd": "PRIOR_YTD",
+            "mtrc_amt": "300870903000000",
+            "src_col_nm": "revenue_prior_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "REVENUE",
+            "prd_type_cd": "Q3M",
+            "mtrc_amt": null,
+            "src_col_nm": "revenue_3m",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "REVENUE",
+            "prd_type_cd": "YTD",
+            "mtrc_amt": "333605938000000",
+            "src_col_nm": "revenue_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "SGA",
+            "prd_type_cd": "PRIOR_Q3M",
+            "mtrc_amt": null,
+            "src_col_nm": "sga_prior_3m",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "SGA",
+            "prd_type_cd": "PRIOR_YTD",
+            "mtrc_amt": "81582674000000",
+            "src_col_nm": "sga_prior_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "SGA",
+            "prd_type_cd": "Q3M",
+            "mtrc_amt": null,
+            "src_col_nm": "sga_3m",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "SGA",
+            "prd_type_cd": "YTD",
+            "mtrc_amt": "87769374000000",
+            "src_col_nm": "sga_ytd",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "SHORT_TERM_BORROWINGS_REPORTED",
+            "prd_type_cd": "ASOF",
+            "mtrc_amt": "17574980000000",
+            "src_col_nm": "short_term_borrowings_reported_asof",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "SHORT_TERM_BORROWINGS_REPORTED",
+            "prd_type_cd": "PRIOR_YE",
+            "mtrc_amt": "13172504000000",
+            "src_col_nm": "short_term_borrowings_reported_prior_year_end",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "TOTAL_ASSETS",
+            "prd_type_cd": "ASOF",
+            "mtrc_amt": "566942110000000",
+            "src_col_nm": "total_assets_asof",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "TOTAL_ASSETS",
+            "prd_type_cd": "PRIOR_YE",
+            "mtrc_amt": "514531948000000",
+            "src_col_nm": "total_assets_prior_year_end",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "TOTAL_EQUITY",
+            "prd_type_cd": "ASOF",
+            "mtrc_amt": "436320337000000",
+            "src_col_nm": "total_equity_asof",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "TOTAL_EQUITY",
+            "prd_type_cd": "PRIOR_YE",
+            "mtrc_amt": "402192070000000",
+            "src_col_nm": "total_equity_prior_year_end",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "TOTAL_LIABILITIES",
+            "prd_type_cd": "ASOF",
+            "mtrc_amt": "130621773000000",
+            "src_col_nm": "total_liabilities_asof",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "TOTAL_LIABILITIES",
+            "prd_type_cd": "PRIOR_YE",
+            "mtrc_amt": "112339878000000",
+            "src_col_nm": "total_liabilities_prior_year_end",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "TRADE_AND_OTHER_PAYABLES",
+            "prd_type_cd": "ASOF",
+            "mtrc_amt": null,
+            "src_col_nm": "trade_and_other_payables_asof",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "TRADE_AND_OTHER_PAYABLES",
+            "prd_type_cd": "PRIOR_YE",
+            "mtrc_amt": null,
+            "src_col_nm": "trade_and_other_payables_prior_year_end",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "TRADE_AND_OTHER_RECEIVABLES",
+            "prd_type_cd": "ASOF",
+            "mtrc_amt": null,
+            "src_col_nm": "trade_and_other_receivables_asof",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "TRADE_AND_OTHER_RECEIVABLES",
+            "prd_type_cd": "PRIOR_YE",
+            "mtrc_amt": null,
+            "src_col_nm": "trade_and_other_receivables_prior_year_end",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "TRADE_PAYABLES",
+            "prd_type_cd": "ASOF",
+            "mtrc_amt": "13039380000000",
+            "src_col_nm": "trade_payables_asof",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "TRADE_PAYABLES",
+            "prd_type_cd": "PRIOR_YE",
+            "mtrc_amt": "12370177000000",
+            "src_col_nm": "trade_payables_prior_year_end",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "TRADE_RECEIVABLES",
+            "prd_type_cd": "ASOF",
+            "mtrc_amt": "51127642000000",
+            "src_col_nm": "trade_receivables_asof",
+            "pipln_ver": "c-integration-1.0.0"
+          },
+          {
+            "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+            "mtrc_cd": "TRADE_RECEIVABLES",
+            "prd_type_cd": "PRIOR_YE",
+            "mtrc_amt": "43623073000000",
+            "src_col_nm": "trade_receivables_prior_year_end",
+            "pipln_ver": "c-integration-1.0.0"
+          }
+        ],
+        "period_market_summary": {
+          "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+          "corp_cd": "00126380",
+          "stock_cd": "005930",
+          "bsns_yr": "2025",
+          "rpt_cd": "11011",
+          "fs_div_cd": "CFS",
+          "prd_start_dt": "2025-01-01",
+          "prd_end_dt": "2025-12-31",
+          "same_prd_cmpr_elig_yn": "Y",
+          "trd_day_cnt": "242",
+          "full_cvrg_yn": "Y",
+          "first_close_prc": "53400.0000",
+          "last_close_prc": "120400.0000",
+          "prd_rtn_rt": "1.25468165",
+          "frgn_net_buy_qty": "84073936",
+          "inst_net_buy_qty": "27762475",
+          "indv_net_buy_qty": "-227129323",
+          "rev_ytd_amt": "333605938000000",
+          "op_prft_ytd_amt": "43601051000000",
+          "op_cf_ytd_amt": "85315148000000",
+          "pipln_ver": "c-integration-1.0.0"
+        },
+        "analysis": {
+          "fin_rpt_id": "report_76a18cf53ffa7baf9975a0d8",
+          "corp_cd": "00126380",
+          "bsns_yr": "2025",
+          "rpt_cd": "11011",
+          "fs_div_cd": "CFS",
+          "rcept_no": "20260310002820",
+          "crncy_cd": "KRW",
+          "flow_prd_mm_cnt": "12",
+          "prd_start_dt": "2025-01-01",
+          "prd_end_dt": "2025-12-31",
+          "dscl_join_stts_cd": "MATCHED",
+          "cal_prd_stts_cd": "VERIFIED_XML",
+          "cf_prd_stts_cd": "VERIFIED_XML_YTD",
+          "pit_join_elig_yn": "Y",
+          "same_prd_cmpr_elig_yn": "Y",
+          "mtrc_review_cnt": "5",
+          "custom_map_cnt": "1",
+          "mtrc_conflict_cnt": "0",
+          "core_mtrc_miss_txt": null,
+          "src_team_cd": "A",
+          "src_file_path": "opendart_financial_summary_20_companies.csv",
+          "src_row_no": "80",
+          "src_ver": "Bronze_Cleanup_20261014",
+          "pipln_ver": "c-integration-1.0.0",
+          "stock_cd": "005930",
+          "dscl_dt": "2026-03-10",
+          "rev_ytd_amt": "333605938000000",
+          "rev_prior_ytd_amt": "300870903000000",
+          "op_prft_ytd_amt": "43601051000000",
+          "op_prft_prior_ytd_amt": "32725961000000",
+          "net_incm_ytd_amt": "45206805000000",
+          "net_incm_prior_ytd_amt": "34451351000000",
+          "op_cf_ytd_amt": "85315148000000",
+          "op_cf_prior_ytd_amt": "72982621000000",
+          "tot_asst_asof_amt": "566942110000000",
+          "tot_liab_asof_amt": "130621773000000",
+          "tot_eqty_asof_amt": "436320337000000",
+          "rev_yoy_rt": "0.10880093",
+          "rev_yoy_rt_stts_cd": "OK",
+          "op_margin_rt": "0.13069627",
+          "op_margin_rt_stts_cd": "OK",
+          "debt_equity_rt": "0.29937127",
+          "debt_equity_rt_stts_cd": "OK",
+          "op_cf_sales_rt": "0.25573630",
+          "op_cf_sales_rt_stts_cd": "OK",
+          "op_cf_yoy_rt": "0.16897895",
+          "op_cf_yoy_rt_stts_cd": "OK",
+          "op_prft_delta_amt": "10875090000000",
+          "op_prft_delta_stts_cd": "OK",
+          "op_prft_transition_cd": "PROFIT_CONTINUES",
+          "op_cf_delta_amt": "12332527000000",
+          "op_cf_delta_stts_cd": "OK",
+          "review_required_yn": "N",
+          "calc_ver": "c-gold-0.1.0"
+        },
+        "rcept_no": "20260310002820",
+        "crncy_cd": "KRW",
+        "flow_prd_mm_cnt": "12",
+        "prd_start_dt": "2025-01-01",
+        "prd_end_dt": "2025-12-31",
+        "dscl_join_stts_cd": "MATCHED",
+        "cal_prd_stts_cd": "VERIFIED_XML",
+        "cf_prd_stts_cd": "VERIFIED_XML_YTD",
+        "mtrc_review_cnt": "5",
+        "custom_map_cnt": "1",
+        "mtrc_conflict_cnt": "0",
+        "core_mtrc_miss_txt": null,
+        "src_team_cd": "A",
+        "src_file_path": "opendart_financial_summary_20_companies.csv",
+        "src_row_no": "80",
+        "src_ver": "Bronze_Cleanup_20261014",
+        "pipln_ver": "c-integration-1.0.0"
+      },
+      "price_source": {
+        "src_team_cd": "B",
+        "src_kind_cd": "BRONZE",
+        "src_file_path": "005930_candles.csv",
+        "src_row_no": "872",
+        "bronze_row_no": "855",
+        "src_ver": "sha256:71da8b28153eadf513ea24a36fa5019fea3e4ca9db67c385060edb711c4a6928",
+        "fetch_dttm": null,
+        "api_raw_file_path": null,
+        "api_rcrd_path": null,
+        "pipln_ver": "c-integration-1.0.0"
+      },
+      "pit_rule": "disclosure_date < trade_date; latest eligible business period; same-day excluded",
+      "analysis_status": "AVAILABLE"
+    },
+    "meta": {
+      "api_version": "1.1.0",
+      "data_version": "handoff-sha256:4d0ed112f2cc1418",
+      "source_backend": "csv",
+      "data_min_date": "2022-12-01",
+      "data_final_date": "2026-06-30",
+      "stock_count": 20,
+      "calculation_version": "c-gold-0.1.0",
+      "analysis_status": "AVAILABLE",
+      "units": {
+        "amount": "KRW",
+        "quantity": "shares",
+        "ratio": "decimal_fraction"
+      },
+      "numeric_encoding": "decimal_string",
+      "synthetic": false,
+      "input_version": "handoff-sha256:4d0ed112f2cc1418",
+      "analysis_data_version": "c-artifact-sha256:b55ee9b1d38c84977dd39a29c9c8e9066fe3cbc43cdadc7fe1286e9de05e4d25",
+      "requested_as_of": "2026-06-30",
+      "effective_as_of": "2026-06-30"
+    }
+  },
+  "fixture_source": "actual verified C calculation and immutable handoff"
+}
