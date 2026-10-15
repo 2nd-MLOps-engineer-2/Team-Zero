@@ -12,7 +12,7 @@
 | **S1 Bronze** | 실제오염91CSV/인계18입력/28Delta | B → C | [G04](handoffs/G04-validation.md)·S4고정SHA | C 독립확인대기 | B 저장·복구재현 / 최초원본과정제인계구분 |
 | **S2 Silver** | 17Delta/MySQL·371437행 | B → C | [G04](handoffs/G04-validation.md)·S4고정SHA | C 독립확인대기 | B 전량대사PASS / 기간61·수급1검토유지 |
 | **S3 Gold** | C 계산과 B 실행·저장, 기존Gold2저장·API / 신규분석 | C → B·A | [S3 전달 기록](handoffs/S3-C-to-B.md) / `handoff/s3-c-to-b-v1` / 검사 `fb1f802c88e2d5b275c737200aa392deac0e628b`(기록 커밋 `6a61b132f54bf6a2553ad323e57e73b1cda09e65`) / [PR #4](https://github.com/2nd-MLOps-engineer-2/Team-Zero/pull/4) | B: 별도스냅샷계산/Delta/API대사PASS(정식 review/s3-b-v1 미등록) · A: review/s3-a-v1 재현 PASS | 수신 확인 대기 / 정식 review merge·신규C MySQL 대사(G04) 대기 |
-| **S4 API→화면** | 실제조회·품질·근거·다운로드 | B → A·C | [S4](handoffs/S4-B-to-A.md) / `ba2aaf1008d52dc96d983f61cae40d8a628366a2` / [Draft PR #6](https://github.com/2nd-MLOps-engineer-2/Team-Zero/pull/6) | A미확인 | B45자동·13HTTP·9MySQL API PASS / 수신확인대기 |
+| **S4 API→화면** | 실제조회·품질·근거·다운로드 | B → A·C | [S4](handoffs/S4-B-to-A.md) / `ba2aaf1008d52dc96d983f61cae40d8a628366a2` / [Draft PR #6](https://github.com/2nd-MLOps-engineer-2/Team-Zero/pull/6) | A미확인 · C: `review/s4-c-v1` 값 일치(표기 2건 합의 필요) [S4-C-check](handoffs/S4-C-check.md) | B45자동·13HTTP·9MySQL API PASS / 수신확인대기 |
 | **S5 전체** | 화면·계산·API·재현 공동검수 | A·B·C | 미등록 | 미확인 | 미완료 / C신규분석·A화면·G05필요 |
 
 ## 갱신 시점과 책임

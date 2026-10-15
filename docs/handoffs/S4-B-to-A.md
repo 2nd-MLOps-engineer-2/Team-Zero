@@ -139,6 +139,14 @@ C 필드 별칭은 A의 normalizeCRow 규칙(rev_yoy_rt→revenue_growth_rt,even
 - 최신 실행증빙은 build/s4_api_20261015/{verified_csv,verified_delta,c_replay,c_delta,source_manifest,pytest.xml}. 실제 Delta+C묶음 HTTP16검사PASS, 증빙 build/api_http/20261015_115955_d807/http_validation.json 및 같은폴더 http_evidence.json에 등록했다.
 - A별도검토브랜치·화면실제API연동·화면/CSV수치대조·새전달SHA/PR반영·공동G05는 미확인. 사용자보고A/C검사와 B실행검사를 구분한다.
 
+## C 수치 확인 기록 (C가 실제 실행 후 작성)
+
+상세: [S4-C-check.md](S4-C-check.md). 확인 브랜치 `review/s4-c-v1`(C HEAD `81a5705` + B `9f78ccc` merge), macOS·B Python 3.12.14·`--backend csv`.
+
+- 판정: **값 일치** — 일별 17,440행·보고서 320행·기준일 비교 20종목, 값 차이 0. G05 005930/2026-06-30 기대값 일치.
+- 합의 필요(값 오류 아님): ① 원천 통과 8개 컬럼 소수 자릿수 정규화로 `/exports/analysis/g_stock_daily_analysis.csv` 바이트 해시가 C 원본과 다름 ② `input_version` 표기가 PC마다 다름(Windows 줄바꿈 추정).
+- 미실행: MySQL·Delta 경로, 신규 C MySQL SQL 대조(C12/G04), A 화면.
+
 ## A 수신 검증 기록 (A가 실제 실행 후 작성)
 
 - A의 원래 브랜치·HEAD / 미커밋 작업 보존 방법:

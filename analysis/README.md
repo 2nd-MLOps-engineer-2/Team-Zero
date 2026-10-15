@@ -22,6 +22,12 @@ python -m analysis.run --output build/analysis-run2
 python -m analysis.run --cleanup-zip /local/path/Bronze_Cleanup_20261014.zip
 ```
 
+B API가 실행 중이면 C Gold와 API 값을 독립 대조할 수 있다(S4 C 수치 확인, [기록](../docs/handoffs/S4-C-check.md)). 외부 통신은 지정한 API 주소로만 한다.
+
+```bash
+python -m analysis.verify_api --gold build/analysis --base http://127.0.0.1:8000 --out build/s4-c-review/api_check.json
+```
+
 `--cleanup-zip`은 선택이다. 개인 로컬의 **안쪽 정화 패키지 ZIP**을 읽고 원천 값·평가자 manifest·문서 내용을 내보내지 않는 집계 검사만 추가한다. 없는 경우에도 Silver/Gold 계산·차트·검사는 완료된다. 정화 코드를 재실행하거나 원본을 압축 해제하지 않는다.
 
 ## 생성 파일

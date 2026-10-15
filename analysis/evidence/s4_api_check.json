@@ -1,0 +1,68 @@
+{
+  "api_meta": {
+    "api_version": "1.1.0",
+    "source_backend": "csv",
+    "calculation_version": "c-gold-0.1.0",
+    "analysis_status": "AVAILABLE",
+    "data_version": "handoff-sha256:89e81d3d549f6ea0",
+    "analysis_data_version": "c-artifact-sha256:5e85c1ad8d7cc011643b1fb57f4b7e17c09b9d389308647e957338109d399d0f"
+  },
+  "gold_dir": "build/s4-c-review/analysis (analysis.run 재생성, 해시는 S3 전달본과 동일)",
+  "results": [
+    {
+      "check": "daily analysis (all stocks, all dates)",
+      "status": "PASS",
+      "rows_compared": 17440,
+      "rows_expected": 17440,
+      "cells_compared": 1587040,
+      "format_only_diff": 135396,
+      "value_diff_count": 0,
+      "value_diff_sample": [],
+      "missing_rows": [],
+      "missing_columns": {}
+    },
+    {
+      "check": "financial report analysis (all reports)",
+      "status": "PASS",
+      "rows_compared": 320,
+      "rows_expected": 320,
+      "cells_compared": 17280,
+      "format_only_diff": 0,
+      "value_diff_count": 0,
+      "value_diff_sample": [],
+      "missing_rows": [],
+      "missing_columns": {}
+    },
+    {
+      "check": "compare as_of=2026-06-30",
+      "status": "PASS",
+      "rows_compared": 20,
+      "rows_expected": 20,
+      "cells_compared": 1820,
+      "format_only_diff": 160,
+      "value_diff_count": 0,
+      "value_diff_sample": [],
+      "missing_rows": [],
+      "missing_columns": {}
+    },
+    {
+      "check": "export g_fin_rpt_analysis.csv",
+      "status": "PASS",
+      "api_sha256": "4514982c57d1de11ba0cee6899e114d229d730d96c12ea0e17703255a6fcd22b",
+      "gold_sha256": "4514982c57d1de11ba0cee6899e114d229d730d96c12ea0e17703255a6fcd22b"
+    },
+    {
+      "check": "export g_stock_daily_analysis.csv",
+      "status": "FAIL",
+      "api_sha256": "e5dc502201dea90d1a9ce48d8eaf03007a5a40dd5b86b695cede429b96f159c2",
+      "gold_sha256": "a094a995d44fd8b8fe73045e8a51ce4e4b6eadff6e9d42feba9cb897b0470707"
+    }
+  ],
+  "overall": "FAIL",
+  "review": {
+    "branch": "review/s4-c-v1",
+    "b_head": "9f78cccd208d750cf2726ab11e85a0a6218b3bba",
+    "c_head": "81a5705",
+    "checked_on": "2026-10-15"
+  }
+}
