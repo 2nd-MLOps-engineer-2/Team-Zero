@@ -1,0 +1,4 @@
+# Verified C environment: Python 3.13.15. B owns the shared runtime lockfile.
+pandas==3.0.6
+numpy==2.5.4
+matplotlib==3.11.2

@@ -1,0 +1,792 @@
+{
+  "calc_ver": "c-gold-0.1.0",
+  "scope": "C local calculation verified; B DB/Delta/SQL and A browser acceptance pending",
+  "silver_integrity": [
+    {
+      "name": "s_cmn_cd.PK",
+      "violations": 0
+    },
+    {
+      "name": "s_corp.PK",
+      "violations": 0
+    },
+    {
+      "name": "s_stock.PK",
+      "violations": 0
+    },
+    {
+      "name": "s_dscl.PK",
+      "violations": 0
+    },
+    {
+      "name": "s_dscl.corp_cd->s_corp",
+      "violations": 0
+    },
+    {
+      "name": "s_dscl_doc.PK",
+      "violations": 0
+    },
+    {
+      "name": "s_dscl_doc.rcept_no->s_dscl",
+      "violations": 0
+    },
+    {
+      "name": "s_dscl_doc.corp_cd->s_corp",
+      "violations": 0
+    },
+    {
+      "name": "s_fin_rpt.PK",
+      "violations": 0
+    },
+    {
+      "name": "s_fin_rpt.corp_cd->s_corp",
+      "violations": 0
+    },
+    {
+      "name": "s_fin_mtrc_def.PK",
+      "violations": 0
+    },
+    {
+      "name": "s_fin_mtrc.PK",
+      "violations": 0
+    },
+    {
+      "name": "s_fin_mtrc.fin_rpt_id->s_fin_rpt",
+      "violations": 0
+    },
+    {
+      "name": "s_fin_mtrc.mtrc_cd->s_fin_mtrc_def",
+      "violations": 0
+    },
+    {
+      "name": "s_fin_item.PK",
+      "violations": 0
+    },
+    {
+      "name": "s_fin_item.fin_rpt_id->s_fin_rpt",
+      "violations": 0
+    },
+    {
+      "name": "s_fin_item.corp_cd->s_corp",
+      "violations": 0
+    },
+    {
+      "name": "s_stock_daily_prc.PK",
+      "violations": 0
+    },
+    {
+      "name": "s_stock_daily_prc.stock_cd->s_stock",
+      "violations": 0
+    },
+    {
+      "name": "s_idx_daily_prc.PK",
+      "violations": 0
+    },
+    {
+      "name": "s_invstr_trd_daily.PK",
+      "violations": 0
+    },
+    {
+      "name": "s_invstr_trd_daily.stock_cd->s_stock",
+      "violations": 0
+    },
+    {
+      "name": "s_frgn_hold_daily.PK",
+      "violations": 0
+    },
+    {
+      "name": "s_frgn_hold_daily.stock_cd->s_stock",
+      "violations": 0
+    },
+    {
+      "name": "s_cfd_bal_daily.PK",
+      "violations": 0
+    },
+    {
+      "name": "s_cfd_bal_daily.stock_cd->s_stock",
+      "violations": 0
+    },
+    {
+      "name": "s_corp_stock_map.PK",
+      "violations": 0
+    },
+    {
+      "name": "s_corp_stock_map.corp_cd->s_corp",
+      "violations": 0
+    },
+    {
+      "name": "s_corp_stock_map.stock_cd->s_stock",
+      "violations": 0
+    },
+    {
+      "name": "s_conn_stts.PK",
+      "violations": 0
+    },
+    {
+      "name": "s_conn_stts.stock_cd->s_stock",
+      "violations": 0
+    },
+    {
+      "name": "s_dq_issue.PK",
+      "violations": 0
+    }
+  ],
+  "gold_checks": {
+    "financial_rows": {
+      "actual": 320,
+      "expected": 320,
+      "pass": true
+    },
+    "daily_rows": {
+      "actual": 17440,
+      "expected": 17440,
+      "pass": true
+    },
+    "financial_duplicate_keys": {
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    "daily_duplicate_keys": {
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    "pit_date_violations": {
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    "source_close_mismatches": {
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    "top_level_flow_mismatches": {
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    "missing_financial_rows": {
+      "actual": 1607,
+      "expected": 1607,
+      "pass": true
+    }
+  },
+  "rows": {
+    "financial": 320,
+    "daily": 17440
+  },
+  "revenue_growth_status": {
+    "OK": 259,
+    "PRD_UNVERIFIED": 61
+  },
+  "co_move_counts": {
+    "IMPROVE_WEAK": 5567,
+    "IMPROVE_STRONG": 4354,
+    "SLOW_WEAK": 3328,
+    "SLOW_STRONG": 2584,
+    "UNAVAILABLE": 1607
+  },
+  "joint_improve_status": {
+    "OK": 15813,
+    "UNAVAILABLE": 1627
+  },
+  "source_issues": {
+    "RETAINED": 1795,
+    "EXCLUDED_FROM_PIT": 122,
+    "EXPLAINED": 41,
+    "OPEN": 8,
+    "QUARANTINED": 1
+  },
+  "output_sha256": {
+    "g_fin_rpt_analysis.csv": "4514982c57d1de11ba0cee6899e114d229d730d96c12ea0e17703255a6fcd22b",
+    "g_stock_daily_analysis.csv": "a094a995d44fd8b8fe73045e8a51ce4e4b6eadff6e9d42feba9cb897b0470707"
+  },
+  "input_sha256": {
+    "04_output/silver/s_cfd_bal_daily.csv": "f526707c01537b67d71a8570718d0da0aa5fedb9303ebaa5cd6c051b3f4920b2",
+    "04_output/silver/s_cmn_cd.csv": "7004afcca22db43af4a9d8bccf04a352f67fb9a2abe4ddd6389f77fdd208c1a6",
+    "04_output/silver/s_conn_stts.csv": "72fd6e906a0cea48dfdbae65f4bc515c169828e708427e880b9cd983d07aa4eb",
+    "04_output/silver/s_corp.csv": "5ea82bd832c8340164a048bf72a45ad11cf5dab3fdc525039c75cadc3ed03ad6",
+    "04_output/silver/s_corp_stock_map.csv": "5f581f25343c1c5a1cc33204b12b24230200a0befa9cb47b7416556bbdfd26de",
+    "04_output/silver/s_dq_issue.csv": "5996a0d9b9acfdb4cefbe9b5b208b3533b8dc5dab53d72afe8d4c71aba71e240",
+    "04_output/silver/s_dscl.csv": "db5bb347d9ce5f4a847c7a01a91e3c675a7debef51061858b5c694182d06293c",
+    "04_output/silver/s_dscl_doc.csv": "61cef4748f91b0e11426271642786a2b27268b356f4508307de079b4c52ab46f",
+    "04_output/silver/s_fin_item.csv": "21887c033eca5cdc0bd1f61f3f763dc89496357b3c77ef1ed48079720a864e55",
+    "04_output/silver/s_fin_mtrc.csv": "512842b31686ed13662e10ce3d5373e57b951654d2d6cc2409be8d4589ec38d9",
+    "04_output/silver/s_fin_mtrc_def.csv": "5df36dc3439d69c36678f9f48724634824453798a04a3ec702b24a236b6610b2",
+    "04_output/silver/s_fin_rpt.csv": "59e7ce5db24bd85266fcd860d7c73c58ce1521e4fd2e185997ed15d9ef115350",
+    "04_output/silver/s_frgn_hold_daily.csv": "6b067c3db5e6baf279ef83ee5048c2d36d71cbcfd2a9499da26773f55cd0a695",
+    "04_output/silver/s_idx_daily_prc.csv": "8d864d4c493ffad32a0b9835f7c9a3ef9c4fe9b295e682fb869ed21d05c6cbce",
+    "04_output/silver/s_invstr_trd_daily.csv": "d6f01d4fece3075b9d6a90e4eaae7d9a0a72cd2d8daf22a1a3048b657a90ca02",
+    "04_output/silver/s_stock.csv": "a75eadabfb13f12cf3697066305ac2842755a907734b088d750f9f671e0b342d",
+    "04_output/silver/s_stock_daily_prc.csv": "1979277510c6b839f0831b5b79e5c249b841e31aa1994ced1f56c84ce60bd97c",
+    "04_output/gold/g_ai_stock_daily.csv": "5156e4259c906b443e883330e883828ac4ccadf9733e4c72ed3497f046384869",
+    "02_standard_dictionary/std_term.csv": "73b2bdd39f9bf89c3e75b752410d6dab6eb20c186678622379aed7aab9b5d51f"
+  },
+  "silver_rules": {
+    "checks": [
+      {
+        "name": "SS02.institution_equals_detail_sum",
+        "actual": 17439,
+        "expected": 17439,
+        "pass": true
+      }
+    ],
+    "findings": [
+      {
+        "name": "SF04.ytd_q3m_continuity",
+        "compared": 480,
+        "by_class": {
+          "MATCH": 453,
+          "REVIEW": 20,
+          "UNIT_ROUNDING": 7
+        },
+        "by_period_status": {
+          "ASSUMED_DECEMBER_FISCAL_YEAR/MATCH": 108,
+          "ASSUMED_DECEMBER_FISCAL_YEAR/REVIEW": 9,
+          "ASSUMED_DECEMBER_FISCAL_YEAR/UNIT_ROUNDING": 3,
+          "VERIFIED_XML/MATCH": 345,
+          "VERIFIED_XML/REVIEW": 11,
+          "VERIFIED_XML/UNIT_ROUNDING": 4
+        },
+        "review_reports": [
+          "report_049337f7f9672ac397005dd4",
+          "report_30c869889755fcde5c1daf52",
+          "report_37b70fa3cc00ed7617634638",
+          "report_3d7ee3f2a603b65ac0c4bdc5",
+          "report_55326455cdc07f15b0d0f1ad",
+          "report_62df66e7210b2a7666c5acb0",
+          "report_957dca9bd9531c62318e474a",
+          "report_bf36bc0b5ae849a9a6fe5b94",
+          "report_c4ea935e46c15b227c0e99bc",
+          "report_d24470c3012aac9ac9daf0f0",
+          "report_e03039397392254b418a554d"
+        ],
+        "policy": "finding only; flags and Gold values unchanged; REVIEW goes to the M07 source-document list"
+      },
+      {
+        "name": "SF06.prior_ytd_vs_prior_report",
+        "compared": {
+          "NET_INCOME": 240,
+          "OPERATING_PROFIT": 240,
+          "REVENUE": 240
+        },
+        "differs": {
+          "NET_INCOME": 13,
+          "OPERATING_PROFIT": 38,
+          "REVENUE": 32
+        },
+        "revenue_corps": 8,
+        "policy": "finding only; growth rates keep the same-report PRIOR_YTD (restated comparative basis)"
+      }
+    ]
+  },
+  "c08_report_period_join": {
+    "name": "C08.report_period_join",
+    "pass": true,
+    "rows": 320,
+    "full_coverage": 240,
+    "partial_coverage_values_present": 0,
+    "usage": "join g_fin_rpt_mkt_smry on fin_rpt_id for report-period return and TOP_LEVEL net buying"
+  },
+  "cleanup_aggregate": {
+    "OpenDART": {
+      "changed_cells": 107846,
+      "changed_rows": 107846,
+      "by_resolution": {
+        "EXACT_MANIFEST_RESTORE": 107846
+      },
+      "by_rule_overlapping": {
+        "amount_blank_literal": 1281,
+        "amount_sign_flip": 1089,
+        "amount_x1000": 1729,
+        "corp_code_swap": 20020,
+        "date_format": 16052,
+        "date_offset": 16316,
+        "duplicate_receipt": 16080,
+        "invisible_space": 16813,
+        "mojibake": 14629,
+        "nfd_hangul": 1893,
+        "prior_current_swap": 549,
+        "sha256_swap": 12,
+        "stock_leading_zero": 38,
+        "year_shift": 1333,
+        "zip_path_swap": 12
+      },
+      "by_file": {
+        "dataset/corp_codes.csv": 9568,
+        "dataset/disclosure_documents.csv": 60,
+        "dataset/disclosures/disclosures_202301.csv": 1177,
+        "dataset/disclosures/disclosures_202302.csv": 1914,
+        "dataset/disclosures/disclosures_202303.csv": 3800,
+        "dataset/disclosures/disclosures_202304.csv": 4243,
+        "dataset/disclosures/disclosures_202305.csv": 1890,
+        "dataset/disclosures/disclosures_202306.csv": 1362,
+        "dataset/disclosures/disclosures_202307.csv": 1276,
+        "dataset/disclosures/disclosures_202308.csv": 2122,
+        "dataset/disclosures/disclosures_202309.csv": 1125,
+        "dataset/disclosures/disclosures_202310.csv": 1167,
+        "dataset/disclosures/disclosures_202311.csv": 1920,
+        "dataset/disclosures/disclosures_202312.csv": 1551,
+        "dataset/disclosures/disclosures_202401.csv": 1348,
+        "dataset/disclosures/disclosures_202402.csv": 2326,
+        "dataset/disclosures/disclosures_202403.csv": 3492,
+        "dataset/disclosures/disclosures_202404.csv": 4781,
+        "dataset/disclosures/disclosures_202405.csv": 1951,
+        "dataset/disclosures/disclosures_202406.csv": 1309,
+        "dataset/disclosures/disclosures_202407.csv": 1376,
+        "dataset/disclosures/disclosures_202408.csv": 2194,
+        "dataset/disclosures/disclosures_202409.csv": 1235,
+        "dataset/disclosures/disclosures_202410.csv": 1226,
+        "dataset/disclosures/disclosures_202411.csv": 1791,
+        "dataset/disclosures/disclosures_202412.csv": 1722,
+        "dataset/disclosures/disclosures_202501.csv": 1147,
+        "dataset/disclosures/disclosures_202502.csv": 2529,
+        "dataset/disclosures/disclosures_202503.csv": 3772,
+        "dataset/disclosures/disclosures_202504.csv": 4744,
+        "dataset/disclosures/disclosures_202505.csv": 1781,
+        "dataset/disclosures/disclosures_202506.csv": 1375,
+        "dataset/disclosures/disclosures_202507.csv": 1344,
+        "dataset/disclosures/disclosures_202508.csv": 2104,
+        "dataset/disclosures/disclosures_202509.csv": 1307,
+        "dataset/disclosures/disclosures_202510.csv": 1123,
+        "dataset/disclosures/disclosures_202511.csv": 1789,
+        "dataset/disclosures/disclosures_202512.csv": 1842,
+        "dataset/disclosures/disclosures_202601.csv": 1456,
+        "dataset/disclosures/disclosures_202602.csv": 2536,
+        "dataset/disclosures/disclosures_202603.csv": 4212,
+        "dataset/disclosures/disclosures_202604.csv": 5107,
+        "dataset/disclosures/disclosures_202605.csv": 1937,
+        "dataset/disclosures/disclosures_202606.csv": 1808,
+        "dataset/financials/financial_2022.csv": 1863,
+        "dataset/financials/financial_2023.csv": 1830,
+        "dataset/financials/financial_2024.csv": 2104,
+        "dataset/financials/financial_2025.csv": 2210
+      },
+      "by_column": {
+        "bsns_year": 1333,
+        "corp_code": 20020,
+        "corp_name": 33335,
+        "rcept_dt": 32368,
+        "rcept_no": 16080,
+        "sha256": 12,
+        "stock_code": 38,
+        "thstrm_amount": 4648,
+        "zip_path": 12
+      }
+    },
+    "Toss": {
+      "changed_cells": 37408,
+      "changed_rows": 35034,
+      "by_resolution": {
+        "DERIVED_IDENTITY_REPAIR": 480,
+        "EVIDENCE_BASED_REPAIR": 36823,
+        "NULL_NORMALIZED_STILL_UNRESOLVED": 105
+      },
+      "by_rule_overlapping": {
+        "CURRENCY_FROM_MASTER": 177,
+        "DATE_CANONICAL": 294,
+        "ENUM_UPPERCASE": 285,
+        "MISSING_DATE_FROM_ALIGNED_FILES": 39,
+        "MOJIBAKE_REVERSE": 96,
+        "NET_BUY_FROM_BUY_MINUS_SELL": 480,
+        "NULL_REPRESENTATION": 126,
+        "SYMBOL_FROM_FILENAME": 34938,
+        "SYMBOL_FROM_ISIN": 20,
+        "TIME_CANONICAL_KST": 613,
+        "TRIM_OUTER_WHITESPACE": 703
+      },
+      "by_file": {
+        "000660_candles.csv": 925,
+        "000660_investor_trading.csv": 932,
+        "003490_candles.csv": 925,
+        "003490_investor_trading.csv": 936,
+        "005380_candles.csv": 923,
+        "005380_investor_trading.csv": 934,
+        "005490_candles.csv": 926,
+        "005490_investor_trading.csv": 931,
+        "005930_candles.csv": 931,
+        "005930_investor_trading.csv": 938,
+        "006400_candles.csv": 927,
+        "006400_investor_trading.csv": 929,
+        "017670_candles.csv": 929,
+        "017670_investor_trading.csv": 931,
+        "034020_candles.csv": 921,
+        "034020_investor_trading.csv": 932,
+        "035420_candles.csv": 926,
+        "035420_investor_trading.csv": 934,
+        "035900_candles.csv": 929,
+        "035900_investor_trading.csv": 940,
+        "051910_candles.csv": 924,
+        "051910_investor_trading.csv": 937,
+        "058470_candles.csv": 930,
+        "058470_investor_trading.csv": 935,
+        "066570_candles.csv": 929,
+        "066570_investor_trading.csv": 937,
+        "068270_candles.csv": 930,
+        "068270_investor_trading.csv": 932,
+        "090430_candles.csv": 931,
+        "090430_investor_trading.csv": 932,
+        "097950_candles.csv": 925,
+        "097950_investor_trading.csv": 935,
+        "196170_candles.csv": 926,
+        "196170_investor_trading.csv": 936,
+        "247540_candles.csv": 924,
+        "247540_investor_trading.csv": 934,
+        "263750_candles.csv": 927,
+        "263750_investor_trading.csv": 938,
+        "357780_candles.csv": 935,
+        "357780_investor_trading.csv": 932,
+        "KOSDAQ_index.csv": 72,
+        "KOSPI_index.csv": 69,
+        "stocks.csv": 39
+      },
+      "by_column": {
+        "closePrice": 66,
+        "currency": 461,
+        "date": 529,
+        "foreigner": 121,
+        "foreignerHolding": 7,
+        "highPrice": 59,
+        "individual": 144,
+        "institution": 120,
+        "isinCode": 1,
+        "lowPrice": 61,
+        "name": 18,
+        "openPrice": 53,
+        "otherCorporation": 133,
+        "symbol": 34969,
+        "timestamp": 449,
+        "updatedAt": 191,
+        "volume": 26
+      },
+      "restored_cells": 37303
+    },
+    "quarantined_rows": 741,
+    "unresolved_issues": 747,
+    "spec_checks": {
+      "opendart_repair_cells": {
+        "actual": 107846,
+        "expected": 107846,
+        "pass": true
+      },
+      "toss_changed_rows": {
+        "actual": 35074,
+        "expected": 35074,
+        "pass": true
+      },
+      "toss_restored_cells": {
+        "actual": 37303,
+        "expected": 37303,
+        "pass": true
+      },
+      "toss_null_normalized_unresolved": {
+        "actual": 105,
+        "expected": 105,
+        "pass": true
+      },
+      "quarantined_rows": {
+        "actual": 741,
+        "expected": 741,
+        "pass": true
+      },
+      "unresolved_issue_entries": {
+        "actual": 747,
+        "expected": 747,
+        "pass": true
+      }
+    },
+    "toss_repair_or_quarantine_rows": 35074,
+    "document_zip_count": 752,
+    "reports_with_document": 259,
+    "reports_without_document": 61,
+    "conflict_report_document_present": true,
+    "conflict_document_xml_files_parsed": 2,
+    "conflict_document_xml_errors": [
+      {
+        "file": "20240313001650.xml",
+        "error": "not well-formed (invalid token): line 5982, column 69"
+      }
+    ],
+    "api_requery_rows": {
+      "s_stock_daily_prc": 443,
+      "s_idx_daily_prc": 55,
+      "s_invstr_trd_daily": 2662
+    },
+    "cleanup_zip_sha256": "87de2ab73d7ee98a906b09660df5de4349caeabe88566b0f664668723e5a730b",
+    "scope": "Aggregate audit evidence; original corrupted ZIP absent. No raw values, evaluator manifest or document content exported. Not a full raw reprocessing."
+  },
+  "original_asis": {
+    "scope": "Original contaminated inputs measured through the cleanup repair log (before values) and Toss quarantine issues. Aggregate only. Naming uses the preserved original headers.",
+    "denominator_cells": {
+      "OpenDART": 10192471,
+      "Toss": 308968
+    },
+    "defect_axes": {
+      "OpenDART": {
+        "CODE_MIX": {
+          "cells": 20058,
+          "rows": 20058,
+          "rules": {
+            "corp_code_swap": 20020,
+            "stock_leading_zero": 38
+          },
+          "cell_rate": 0.001968
+        },
+        "DUPLICATE": {
+          "cells": 16080,
+          "rows": 16080,
+          "rules": {
+            "duplicate_receipt": 16080
+          },
+          "cell_rate": 0.001578
+        },
+        "FORMAT": {
+          "cells": 49387,
+          "rows": 49387,
+          "rules": {
+            "date_format": 16052,
+            "invisible_space": 16813,
+            "mojibake": 14629,
+            "nfd_hangul": 1893
+          },
+          "cell_rate": 0.004845
+        },
+        "MISSING": {
+          "cells": 1281,
+          "rows": 1281,
+          "rules": {
+            "amount_blank_literal": 1281
+          },
+          "cell_rate": 0.000126
+        },
+        "VALUE_CONSISTENCY": {
+          "cells": 21040,
+          "rows": 21040,
+          "rules": {
+            "amount_sign_flip": 1089,
+            "amount_x1000": 1729,
+            "date_offset": 16316,
+            "prior_current_swap": 549,
+            "sha256_swap": 12,
+            "year_shift": 1333,
+            "zip_path_swap": 12
+          },
+          "cell_rate": 0.002064
+        }
+      },
+      "Toss": {
+        "CODE_MIX": {
+          "cells": 35243,
+          "rows": 34958,
+          "rules": {
+            "ENUM_UPPERCASE": 285,
+            "SYMBOL_FROM_FILENAME": 34938,
+            "SYMBOL_FROM_ISIN": 20
+          },
+          "cell_rate": 0.114067
+        },
+        "FORMAT": {
+          "cells": 1628,
+          "rows": 1596,
+          "rules": {
+            "DATE_CANONICAL": 294,
+            "MOJIBAKE_REVERSE": 96,
+            "TIME_CANONICAL_KST": 613,
+            "TRIM_OUTER_WHITESPACE": 703
+          },
+          "cell_rate": 0.005269
+        },
+        "MISSING": {
+          "cells": 556,
+          "rows": 556,
+          "rules": {
+            "MISSING_DATE_FROM_ALIGNED_FILES": 39,
+            "MISSING_REQUIRED_VALUE": 503,
+            "NULL_REPRESENTATION": 21
+          },
+          "cell_rate": 0.0018
+        },
+        "VALUE_CONSISTENCY": {
+          "cells": 901,
+          "rows": 899,
+          "rules": {
+            "CURRENCY_FROM_MASTER": 177,
+            "NET_BUY_FROM_BUY_MINUS_SELL": 480,
+            "OHLC_INCONSISTENT": 244
+          },
+          "cell_rate": 0.002916
+        }
+      }
+    },
+    "unmapped_rules": {},
+    "naming": {
+      "OpenDART": {
+        "distinct_columns": 35,
+        "styles": {
+          "snake_case": 29,
+          "single_lower": 6
+        }
+      },
+      "Toss": {
+        "distinct_columns": 28,
+        "styles": {
+          "single_lower": 12,
+          "camelCase": 16
+        }
+      },
+      "synonym_pairs": [
+        "OpenDART.stock_code ≠ Toss.symbol",
+        "OpenDART.corp_name ≠ Toss.name",
+        "OpenDART.corp_eng_name ≠ Toss.englishName",
+        "OpenDART.rcept_dt ≠ Toss.date"
+      ]
+    },
+    "normal_missing_not_defect": {
+      "OpenDART.disclosure_documents.status_unavailable": 1,
+      "OpenDART.financials.thstrm_amount_blank": 2202,
+      "Toss.candles.volume_zero_rows": 11,
+      "Toss.investor_trading.cfd_blank": 3720,
+      "Toss.stocks.delistDate_blank": 20,
+      "Toss.stocks.leverageFactor_blank": 20
+    }
+  },
+  "sf04_review_documents": {
+    "review_rows": 20,
+    "rows_with_document": 11,
+    "silver_matches_document": 11,
+    "reports_without_document": [
+      "report_049337f7f9672ac397005dd4",
+      "report_3d7ee3f2a603b65ac0c4bdc5",
+      "report_957dca9bd9531c62318e474a",
+      "report_c4ea935e46c15b227c0e99bc",
+      "report_d24470c3012aac9ac9daf0f0"
+    ],
+    "interpretation": "When both amounts match the report's own document, the gap is between reports (later restatement of an earlier period), not a Silver extraction error.",
+    "rows": [
+      {
+        "fin_rpt_id": "report_62df66e7210b2a7666c5acb0",
+        "mtrc_cd": "OPERATING_PROFIT",
+        "document": true,
+        "ytd_in_document": true,
+        "q3m_in_document": true
+      },
+      {
+        "fin_rpt_id": "report_62df66e7210b2a7666c5acb0",
+        "mtrc_cd": "REVENUE",
+        "document": true,
+        "ytd_in_document": true,
+        "q3m_in_document": true
+      },
+      {
+        "fin_rpt_id": "report_d24470c3012aac9ac9daf0f0",
+        "mtrc_cd": "OPERATING_PROFIT",
+        "document": false
+      },
+      {
+        "fin_rpt_id": "report_d24470c3012aac9ac9daf0f0",
+        "mtrc_cd": "REVENUE",
+        "document": false
+      },
+      {
+        "fin_rpt_id": "report_957dca9bd9531c62318e474a",
+        "mtrc_cd": "OPERATING_PROFIT",
+        "document": false
+      },
+      {
+        "fin_rpt_id": "report_957dca9bd9531c62318e474a",
+        "mtrc_cd": "REVENUE",
+        "document": false
+      },
+      {
+        "fin_rpt_id": "report_37b70fa3cc00ed7617634638",
+        "mtrc_cd": "OPERATING_PROFIT",
+        "document": true,
+        "ytd_in_document": true,
+        "q3m_in_document": true
+      },
+      {
+        "fin_rpt_id": "report_30c869889755fcde5c1daf52",
+        "mtrc_cd": "OPERATING_PROFIT",
+        "document": true,
+        "ytd_in_document": true,
+        "q3m_in_document": true
+      },
+      {
+        "fin_rpt_id": "report_30c869889755fcde5c1daf52",
+        "mtrc_cd": "REVENUE",
+        "document": true,
+        "ytd_in_document": true,
+        "q3m_in_document": true
+      },
+      {
+        "fin_rpt_id": "report_bf36bc0b5ae849a9a6fe5b94",
+        "mtrc_cd": "OPERATING_PROFIT",
+        "document": true,
+        "ytd_in_document": true,
+        "q3m_in_document": true
+      },
+      {
+        "fin_rpt_id": "report_bf36bc0b5ae849a9a6fe5b94",
+        "mtrc_cd": "REVENUE",
+        "document": true,
+        "ytd_in_document": true,
+        "q3m_in_document": true
+      },
+      {
+        "fin_rpt_id": "report_3d7ee3f2a603b65ac0c4bdc5",
+        "mtrc_cd": "OPERATING_PROFIT",
+        "document": false
+      },
+      {
+        "fin_rpt_id": "report_c4ea935e46c15b227c0e99bc",
+        "mtrc_cd": "OPERATING_PROFIT",
+        "document": false
+      },
+      {
+        "fin_rpt_id": "report_c4ea935e46c15b227c0e99bc",
+        "mtrc_cd": "REVENUE",
+        "document": false
+      },
+      {
+        "fin_rpt_id": "report_55326455cdc07f15b0d0f1ad",
+        "mtrc_cd": "OPERATING_PROFIT",
+        "document": true,
+        "ytd_in_document": true,
+        "q3m_in_document": true
+      },
+      {
+        "fin_rpt_id": "report_55326455cdc07f15b0d0f1ad",
+        "mtrc_cd": "REVENUE",
+        "document": true,
+        "ytd_in_document": true,
+        "q3m_in_document": true
+      },
+      {
+        "fin_rpt_id": "report_049337f7f9672ac397005dd4",
+        "mtrc_cd": "OPERATING_PROFIT",
+        "document": false
+      },
+      {
+        "fin_rpt_id": "report_049337f7f9672ac397005dd4",
+        "mtrc_cd": "REVENUE",
+        "document": false
+      },
+      {
+        "fin_rpt_id": "report_e03039397392254b418a554d",
+        "mtrc_cd": "NET_INCOME",
+        "document": true,
+        "ytd_in_document": true,
+        "q3m_in_document": true
+      },
+      {
+        "fin_rpt_id": "report_e03039397392254b418a554d",
+        "mtrc_cd": "OPERATING_PROFIT",
+        "document": true,
+        "ytd_in_document": true,
+        "q3m_in_document": true
+      }
+    ]
+  }
+}
