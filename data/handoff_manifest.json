@@ -1,0 +1,906 @@
+{
+  "package": "03_C_integration_20261014",
+  "captured_date": "2026-10-15",
+  "file_count": 75,
+  "total_bytes": 104528932,
+  "files": [
+    {
+      "path": ".DS_Store",
+      "bytes": 10244,
+      "sha256": "3eb8ef2964c6972fb12153345f5a4329f3f959658702565bd5181fb07a9b7fe5"
+    },
+    {
+      "path": "01_profiling/asis_column_profile.csv",
+      "bytes": 67687,
+      "sha256": "c5dea354f835550e79de7425829f548fe59725574751f3fd28f4b6a52af6ae1c",
+      "columns": [
+        "src_team",
+        "table",
+        "column",
+        "rows",
+        "null_cnt",
+        "null_rate",
+        "placeholder_cnt",
+        "distinct_cnt",
+        "max_len",
+        "pattern_mix_cnt",
+        "patterns",
+        "top_values",
+        "naming_style",
+        "std_name_ok",
+        "std_name_violation"
+      ],
+      "rows": 337
+    },
+    {
+      "path": "01_profiling/asis_issue_summary.csv",
+      "bytes": 3881,
+      "sha256": "89dc69933df75c51ece8770b623c4560a292f94fb1baad51e4d77dc342e4e015",
+      "columns": [
+        "axis",
+        "item",
+        "count",
+        "base",
+        "rate",
+        "evidence"
+      ],
+      "rows": 23
+    },
+    {
+      "path": "01_profiling/asis_summary.json",
+      "bytes": 296,
+      "sha256": "f018e50864403385091cc62649d9e19bc6cab22a6de9286c58edfaa8885d082a"
+    },
+    {
+      "path": "01_profiling/asis_table_profile.csv",
+      "bytes": 969,
+      "sha256": "77e6205f0e6a69b46384c0c291756c68aea28e3c602d031ce6c5c5d62a81a4f7",
+      "columns": [
+        "src_team",
+        "table",
+        "rows",
+        "cols",
+        "declared_key",
+        "key_dup_rows",
+        "full_row_dup_rows",
+        "null_cells",
+        "null_cell_rate"
+      ],
+      "rows": 14
+    },
+    {
+      "path": "02_standard_dictionary/AI_데이터_표준사전.xlsx",
+      "bytes": 63262,
+      "sha256": "5a551e088cce654c9b787290945e9e3c874e735cbd05671bdd8dd7d1b47fa0c5"
+    },
+    {
+      "path": "02_standard_dictionary/asis_tobe_column_map.csv",
+      "bytes": 16278,
+      "sha256": "e5387a17502f5ab2cbb43a1d01cb0915811f6586f805ad16feb157830c9a75d7",
+      "columns": [
+        "tbl_nm",
+        "col_nm",
+        "term_kor_nm",
+        "asis_src_txt"
+      ],
+      "rows": 260
+    },
+    {
+      "path": "02_standard_dictionary/std_code.csv",
+      "bytes": 9043,
+      "sha256": "332e5f351dca6513e2e5579f71579094e8b16b0df5f223c870e6b06263d3d039",
+      "columns": [
+        "cd_grp_id",
+        "cd_grp_nm",
+        "cd_val",
+        "cd_nm",
+        "sort_ord_no",
+        "asis_val_txt"
+      ],
+      "rows": 133
+    },
+    {
+      "path": "02_standard_dictionary/std_domain.csv",
+      "bytes": 2008,
+      "sha256": "b6256c4be8b2f3528b77865d5a7f18058ce071d8285b2bbbddeb6530e27e17fe",
+      "columns": [
+        "dmn_nm",
+        "cls_word_nm",
+        "data_type_nm",
+        "data_len_txt",
+        "allow_ptrn_txt",
+        "dmn_desc_txt"
+      ],
+      "rows": 26
+    },
+    {
+      "path": "02_standard_dictionary/std_naming_rule.csv",
+      "bytes": 1285,
+      "sha256": "68a71dc884ea56fc416ffdcd10f03098014fce87929ffb5f2f42cf6b4c590d51",
+      "columns": [
+        "rule_id",
+        "rule_txt",
+        "detail_txt"
+      ],
+      "rows": 12
+    },
+    {
+      "path": "02_standard_dictionary/std_table.csv",
+      "bytes": 4158,
+      "sha256": "8eeb0fad24f1e063bb220e01cc8e15650213abe5041f033af1e45ade78283527",
+      "columns": [
+        "layer_cd",
+        "db_nm",
+        "tbl_nm",
+        "tbl_kor_nm",
+        "grain_txt",
+        "pk_txt",
+        "fk_txt",
+        "logical_fk_txt",
+        "col_cnt",
+        "src_txt"
+      ],
+      "rows": 23
+    },
+    {
+      "path": "02_standard_dictionary/std_term.csv",
+      "bytes": 52422,
+      "sha256": "73b2bdd39f9bf89c3e75b752410d6dab6eb20c186678622379aed7aab9b5d51f",
+      "columns": [
+        "layer_cd",
+        "tbl_nm",
+        "tbl_kor_nm",
+        "col_nm",
+        "term_kor_nm",
+        "dmn_nm",
+        "data_type_nm",
+        "null_allow_yn",
+        "pk_yn",
+        "cd_grp_id",
+        "asis_src_txt",
+        "word_combination",
+        "std_check"
+      ],
+      "rows": 345
+    },
+    {
+      "path": "02_standard_dictionary/std_word.csv",
+      "bytes": 4601,
+      "sha256": "9b36d3bca762f20aebf5d97fc2667c82a333d9ca1074f4ca859f2dca8a51d277",
+      "columns": [
+        "word_nm",
+        "word_kor_nm",
+        "word_eng_nm",
+        "word_cls_cd",
+        "used_col_cnt"
+      ],
+      "rows": 168
+    },
+    {
+      "path": "03_model/ddl/00_databases.sql",
+      "bytes": 485,
+      "sha256": "ca9f3e05a5275feee2c2e35c8ba05e6a613a372bcfb74e484c25f02a29ad9f4e"
+    },
+    {
+      "path": "03_model/ddl/01_bronze.sql",
+      "bytes": 42100,
+      "sha256": "fb59c1323607b7498ae0394373bb033359e152ea8fb36600d88e5e43c8c89018"
+    },
+    {
+      "path": "03_model/ddl/02_silver.sql",
+      "bytes": 31427,
+      "sha256": "66ef5e9a456637a3f818876c922008389aa1ce390d792b87752b16a350bfda5b"
+    },
+    {
+      "path": "03_model/ddl/03_gold.sql",
+      "bytes": 6644,
+      "sha256": "5fbf548faae46fec83c10ee7ad8482f0b9257e0ce599580dd55a8d89e02b6238"
+    },
+    {
+      "path": "03_model/ddl/04_meta.sql",
+      "bytes": 3798,
+      "sha256": "b7dd011fe00f8a5d09b2be5f5ff4ef292d596d8f9a59fe94ed77ad6666925954"
+    },
+    {
+      "path": "03_model/erd/00_medallion_flow.dot",
+      "bytes": 6629,
+      "sha256": "23582eac821eff551c8bf6ec4f2c8713dc59591cd51bb142947249cc51f3867e"
+    },
+    {
+      "path": "03_model/erd/00_medallion_flow.png",
+      "bytes": 499134,
+      "sha256": "bd14c46c89b1bed2fa366b92e3604095b2f83c9f50a0690840f2785ea242434d"
+    },
+    {
+      "path": "03_model/erd/00_medallion_flow.svg",
+      "bytes": 45323,
+      "sha256": "37dfbb6380664b06811766638df240201a62fba1e12335d389eddd4919c01625"
+    },
+    {
+      "path": "03_model/erd/01_conceptual_erd.dot",
+      "bytes": 3582,
+      "sha256": "22aace361956081a023635cd15703d7e7e4220095000589bac720f7d20aef06a"
+    },
+    {
+      "path": "03_model/erd/01_conceptual_erd.png",
+      "bytes": 295185,
+      "sha256": "dec70ee45aaeed65209d16578ac4c65312963dfc597765b38be68cd097c28405"
+    },
+    {
+      "path": "03_model/erd/01_conceptual_erd.svg",
+      "bytes": 22633,
+      "sha256": "69224ce0b6b54def3bb55a398821132829664801a151f44f1f156866ca4a43de"
+    },
+    {
+      "path": "03_model/erd/02_logical_erd.dot",
+      "bytes": 33597,
+      "sha256": "34010134b28f25880fcb9cadaa973201459de8d8fc2c5156187b7c6511763a9e"
+    },
+    {
+      "path": "03_model/erd/02_logical_erd.png",
+      "bytes": 1117977,
+      "sha256": "1b9d29bd18301af50439b814d07d0be7c8b1c7aee2034302f68a1555735f144e"
+    },
+    {
+      "path": "03_model/erd/02_logical_erd.svg",
+      "bytes": 145321,
+      "sha256": "bff1ad945f77fe3398117edfb929dbe62543ecb291f800630a3300edae2e8a35"
+    },
+    {
+      "path": "03_model/erd/03_physical_erd.dot",
+      "bytes": 55680,
+      "sha256": "336b1d920c3f3abc0d4e73d8231862432d465c82a89dc68aa06fe0249f0323fb"
+    },
+    {
+      "path": "03_model/erd/03_physical_erd.png",
+      "bytes": 1884073,
+      "sha256": "d910b77b6102f19abfdd6829ae61b18dc21227752fd30ecda215831913af182c"
+    },
+    {
+      "path": "03_model/erd/03_physical_erd.svg",
+      "bytes": 262030,
+      "sha256": "73f2be8aba9efceaf025fb3ec291866757c1b3a93d33b5b4e0f3a143d5ead9bf"
+    },
+    {
+      "path": "04_output/gold/g_ai_stock_daily.csv",
+      "bytes": 5261654,
+      "sha256": "5156e4259c906b443e883330e883828ac4ccadf9733e4c72ed3497f046384869",
+      "columns": [
+        "stock_cd",
+        "trd_dt",
+        "corp_cd",
+        "mkt_cd",
+        "open_prc",
+        "high_prc",
+        "low_prc",
+        "close_prc",
+        "trd_qty",
+        "close_rtn_rt",
+        "idx_close_prc",
+        "idx_rtn_rt",
+        "indv_net_buy_qty",
+        "frgn_net_buy_qty",
+        "inst_net_buy_qty",
+        "other_corp_net_buy_qty",
+        "frgn_hold_rt",
+        "cfd_buy_bal_rt",
+        "invstr_exist_yn",
+        "fin_avail_yn",
+        "fin_rpt_id",
+        "fin_bsns_yr",
+        "fin_rpt_cd",
+        "fin_fs_div_cd",
+        "dscl_dt",
+        "dscl_elps_day_cnt",
+        "rev_ytd_amt",
+        "op_prft_ytd_amt",
+        "net_incm_ytd_amt",
+        "op_cf_ytd_amt",
+        "tot_asst_amt",
+        "tot_liab_amt",
+        "tot_eqty_amt",
+        "pipln_ver"
+      ],
+      "rows": 17440
+    },
+    {
+      "path": "04_output/gold/g_fin_rpt_mkt_smry.csv",
+      "bytes": 61791,
+      "sha256": "fff00fa61966f4994674b6c0de68fc896cf7b54a49a57869c0b65c271c1e6d14",
+      "columns": [
+        "fin_rpt_id",
+        "corp_cd",
+        "stock_cd",
+        "bsns_yr",
+        "rpt_cd",
+        "fs_div_cd",
+        "prd_start_dt",
+        "prd_end_dt",
+        "same_prd_cmpr_elig_yn",
+        "trd_day_cnt",
+        "full_cvrg_yn",
+        "first_close_prc",
+        "last_close_prc",
+        "prd_rtn_rt",
+        "frgn_net_buy_qty",
+        "inst_net_buy_qty",
+        "indv_net_buy_qty",
+        "rev_ytd_amt",
+        "op_prft_ytd_amt",
+        "op_cf_ytd_amt",
+        "pipln_ver"
+      ],
+      "rows": 320
+    },
+    {
+      "path": "04_output/meta/input_manifest.csv",
+      "bytes": 2303,
+      "sha256": "fec47be2185687b5ac97a4ef0cfc76c25359c058bb3f363c4e876e8a7e14b065",
+      "columns": [
+        "src_team_cd",
+        "logical_nm",
+        "rel_path",
+        "size_bytes",
+        "sha256"
+      ],
+      "rows": 18
+    },
+    {
+      "path": "04_output/meta/m_exec_log.csv",
+      "bytes": 7039,
+      "sha256": "a45d2949ee88b1b9858cbeeca174886e50ef28afc1583f67411fb48eca9a93db",
+      "columns": [
+        "run_id",
+        "step_nm",
+        "tbl_nm",
+        "layer_cd",
+        "input_ver",
+        "rcrd_cnt",
+        "start_dttm",
+        "end_dttm",
+        "run_stts_cd",
+        "pipln_ver"
+      ],
+      "rows": 42
+    },
+    {
+      "path": "04_output/output_sha256.json",
+      "bytes": 2543,
+      "sha256": "97381f4328f5c4696a36b457729e7ece6c44280cc95d704036b2ef988082103d"
+    },
+    {
+      "path": "04_output/silver/s_cfd_bal_daily.csv",
+      "bytes": 2444844,
+      "sha256": "f526707c01537b67d71a8570718d0da0aa5fedb9303ebaa5cd6c051b3f4920b2",
+      "columns": [
+        "stock_cd",
+        "trd_dt",
+        "buy_bal_qty",
+        "buy_bal_rt",
+        "sell_bal_qty",
+        "sell_bal_rt",
+        "src_col_nm",
+        "src_json_path",
+        "src_team_cd",
+        "src_kind_cd",
+        "src_file_path",
+        "src_row_no",
+        "bronze_row_no",
+        "src_ver",
+        "fetch_dttm",
+        "api_raw_file_path",
+        "api_rcrd_path",
+        "pipln_ver"
+      ],
+      "rows": 13719
+    },
+    {
+      "path": "04_output/silver/s_cmn_cd.csv",
+      "bytes": 9045,
+      "sha256": "7004afcca22db43af4a9d8bccf04a352f67fb9a2abe4ddd6389f77fdd208c1a6",
+      "columns": [
+        "cd_grp_id",
+        "cd_val",
+        "cd_nm",
+        "cd_desc_txt",
+        "sort_ord_no",
+        "asis_val_txt"
+      ],
+      "rows": 133
+    },
+    {
+      "path": "04_output/silver/s_conn_stts.csv",
+      "bytes": 1255980,
+      "sha256": "72fd6e906a0cea48dfdbae65f4bc515c169828e708427e880b9cd983d07aa4eb",
+      "columns": [
+        "stock_cd",
+        "trd_dt",
+        "corp_cd",
+        "map_stts_cd",
+        "prc_exist_yn",
+        "invstr_exist_yn",
+        "frgn_hold_exist_yn",
+        "cfd_exist_yn",
+        "fin_avail_yn",
+        "conn_stts_cd",
+        "miss_rsn_cd",
+        "miss_rsn_txt",
+        "pipln_ver"
+      ],
+      "rows": 17440
+    },
+    {
+      "path": "04_output/silver/s_corp.csv",
+      "bytes": 2676,
+      "sha256": "5ea82bd832c8340164a048bf72a45ad11cf5dab3fdc525039c75cadc3ed03ad6",
+      "columns": [
+        "corp_cd",
+        "corp_nm",
+        "corp_eng_nm",
+        "stock_cd",
+        "chg_dt",
+        "src_team_cd",
+        "src_file_path",
+        "src_row_no",
+        "src_ver",
+        "pipln_ver"
+      ],
+      "rows": 20
+    },
+    {
+      "path": "04_output/silver/s_corp_stock_map.csv",
+      "bytes": 3182,
+      "sha256": "5f581f25343c1c5a1cc33204b12b24230200a0befa9cb47b7416556bbdfd26de",
+      "columns": [
+        "map_id",
+        "corp_cd",
+        "stock_cd",
+        "map_stts_cd",
+        "map_mthd_cd",
+        "cand_cnt",
+        "corp_nm",
+        "stock_nm",
+        "nm_match_yn",
+        "map_rsn_txt",
+        "pipln_ver"
+      ],
+      "rows": 20
+    },
+    {
+      "path": "04_output/silver/s_dq_issue.csv",
+      "bytes": 579987,
+      "sha256": "5996a0d9b9acfdb4cefbe9b5b208b3533b8dc5dab53d72afe8d4c71aba71e240",
+      "columns": [
+        "issue_id",
+        "detect_stage_cd",
+        "src_team_cd",
+        "tbl_nm",
+        "col_nm",
+        "rcrd_key_txt",
+        "src_file_path",
+        "src_row_no",
+        "issue_type_cd",
+        "sev_cd",
+        "issue_rsn_txt",
+        "resolve_stts_cd",
+        "pipln_ver"
+      ],
+      "rows": 1967
+    },
+    {
+      "path": "04_output/silver/s_dscl.csv",
+      "bytes": 2511466,
+      "sha256": "db5bb347d9ce5f4a847c7a01a91e3c675a7debef51061858b5c694182d06293c",
+      "columns": [
+        "rcept_no",
+        "corp_cd",
+        "corp_nm",
+        "corp_cls_cd",
+        "stock_cd",
+        "rpt_nm",
+        "flr_nm",
+        "rcept_dt",
+        "rmk_txt",
+        "src_team_cd",
+        "src_file_path",
+        "src_row_no",
+        "src_ver",
+        "pipln_ver"
+      ],
+      "rows": 11748
+    },
+    {
+      "path": "04_output/silver/s_dscl_doc.csv",
+      "bytes": 154344,
+      "sha256": "61cef4748f91b0e11426271642786a2b27268b356f4508307de079b4c52ab46f",
+      "columns": [
+        "rcept_no",
+        "corp_cd",
+        "doc_stts_cd",
+        "doc_zip_path",
+        "doc_hash",
+        "err_msg_txt",
+        "src_team_cd",
+        "src_file_path",
+        "src_row_no",
+        "src_ver",
+        "pipln_ver"
+      ],
+      "rows": 753
+    },
+    {
+      "path": "04_output/silver/s_fin_item.csv",
+      "bytes": 24257293,
+      "sha256": "21887c033eca5cdc0bd1f61f3f763dc89496357b3c77ef1ed48079720a864e55",
+      "columns": [
+        "fin_item_id",
+        "fin_rpt_id",
+        "corp_cd",
+        "rcept_no",
+        "bsns_yr",
+        "rpt_cd",
+        "fs_div_cd",
+        "stmt_div_cd",
+        "acnt_id",
+        "acnt_nm",
+        "acnt_dtl_nm",
+        "cur_prd_nm",
+        "cur_amt",
+        "cur_cum_amt",
+        "prev_prd_nm",
+        "prev_amt",
+        "prev_qtr_prd_nm",
+        "prev_qtr_amt",
+        "prev_cum_amt",
+        "bfr_prev_prd_nm",
+        "bfr_prev_amt",
+        "sort_ord_no",
+        "crncy_cd",
+        "src_team_cd",
+        "src_file_path",
+        "src_row_no",
+        "src_ver",
+        "pipln_ver"
+      ],
+      "rows": 66729
+    },
+    {
+      "path": "04_output/silver/s_fin_mtrc.csv",
+      "bytes": 3405405,
+      "sha256": "512842b31686ed13662e10ce3d5373e57b951654d2d6cc2409be8d4589ec38d9",
+      "columns": [
+        "fin_rpt_id",
+        "mtrc_cd",
+        "prd_type_cd",
+        "mtrc_amt",
+        "src_col_nm",
+        "pipln_ver"
+      ],
+      "rows": 30080
+    },
+    {
+      "path": "04_output/silver/s_fin_mtrc_def.csv",
+      "bytes": 7073,
+      "sha256": "5df36dc3439d69c36678f9f48724634824453798a04a3ec702b24a236b6610b2",
+      "columns": [
+        "mtrc_cd",
+        "mtrc_nm",
+        "stmt_div_txt",
+        "acnt_id_txt",
+        "select_rsn_txt",
+        "custom_nm_txt",
+        "guard_txt",
+        "pipln_ver"
+      ],
+      "rows": 36
+    },
+    {
+      "path": "04_output/silver/s_fin_rpt.csv",
+      "bytes": 79930,
+      "sha256": "59e7ce5db24bd85266fcd860d7c73c58ce1521e4fd2e185997ed15d9ef115350",
+      "columns": [
+        "fin_rpt_id",
+        "corp_cd",
+        "bsns_yr",
+        "rpt_cd",
+        "fs_div_cd",
+        "rcept_no",
+        "crncy_cd",
+        "flow_prd_mm_cnt",
+        "prd_start_dt",
+        "prd_end_dt",
+        "dscl_join_stts_cd",
+        "cal_prd_stts_cd",
+        "cf_prd_stts_cd",
+        "pit_join_elig_yn",
+        "same_prd_cmpr_elig_yn",
+        "mtrc_review_cnt",
+        "custom_map_cnt",
+        "mtrc_conflict_cnt",
+        "core_mtrc_miss_txt",
+        "src_team_cd",
+        "src_file_path",
+        "src_row_no",
+        "src_ver",
+        "pipln_ver"
+      ],
+      "rows": 320
+    },
+    {
+      "path": "04_output/silver/s_frgn_hold_daily.csv",
+      "bytes": 3541913,
+      "sha256": "6b067c3db5e6baf279ef83ee5048c2d36d71cbcfd2a9499da26773f55cd0a695",
+      "columns": [
+        "stock_cd",
+        "trd_dt",
+        "hold_qty",
+        "limit_qty",
+        "hold_rt",
+        "src_col_nm",
+        "src_json_path",
+        "src_team_cd",
+        "src_kind_cd",
+        "src_file_path",
+        "src_row_no",
+        "bronze_row_no",
+        "src_ver",
+        "fetch_dttm",
+        "api_raw_file_path",
+        "api_rcrd_path",
+        "pipln_ver"
+      ],
+      "rows": 17439
+    },
+    {
+      "path": "04_output/silver/s_idx_daily_prc.csv",
+      "bytes": 362722,
+      "sha256": "8d864d4c493ffad32a0b9835f7c9a3ef9c4fe9b295e682fb869ed21d05c6cbce",
+      "columns": [
+        "idx_cd",
+        "trd_dt",
+        "candle_dttm",
+        "open_prc",
+        "high_prc",
+        "low_prc",
+        "close_prc",
+        "trd_qty",
+        "src_team_cd",
+        "src_kind_cd",
+        "src_file_path",
+        "src_row_no",
+        "bronze_row_no",
+        "src_ver",
+        "fetch_dttm",
+        "api_raw_file_path",
+        "api_rcrd_path",
+        "pipln_ver"
+      ],
+      "rows": 1744
+    },
+    {
+      "path": "04_output/silver/s_invstr_trd_daily.csv",
+      "bytes": 44786485,
+      "sha256": "d6f01d4fece3075b9d6a90e4eaae7d9a0a72cd2d8daf22a1a3048b657a90ca02",
+      "columns": [
+        "stock_cd",
+        "trd_dt",
+        "invstr_type_cd",
+        "upper_invstr_type_cd",
+        "aggr_lvl_cd",
+        "buy_qty",
+        "sell_qty",
+        "net_buy_qty",
+        "src_col_nm",
+        "src_json_path",
+        "src_team_cd",
+        "src_kind_cd",
+        "src_file_path",
+        "src_row_no",
+        "bronze_row_no",
+        "src_ver",
+        "fetch_dttm",
+        "api_raw_file_path",
+        "api_rcrd_path",
+        "pipln_ver"
+      ],
+      "rows": 191829
+    },
+    {
+      "path": "04_output/silver/s_stock.csv",
+      "bytes": 6953,
+      "sha256": "a75eadabfb13f12cf3697066305ac2842755a907734b088d750f9f671e0b342d",
+      "columns": [
+        "stock_cd",
+        "stock_nm",
+        "stock_eng_nm",
+        "isin_cd",
+        "mkt_cd",
+        "sec_type_cd",
+        "cmn_shr_yn",
+        "stock_stts_cd",
+        "crncy_cd",
+        "list_dt",
+        "delist_dt",
+        "outstd_shr_qty",
+        "lvrg_val",
+        "mkt_dtl_txt",
+        "src_team_cd",
+        "src_kind_cd",
+        "src_file_path",
+        "src_row_no",
+        "bronze_row_no",
+        "src_ver",
+        "fetch_dttm",
+        "api_raw_file_path",
+        "api_rcrd_path",
+        "pipln_ver"
+      ],
+      "rows": 20
+    },
+    {
+      "path": "04_output/silver/s_stock_daily_prc.csv",
+      "bytes": 3633771,
+      "sha256": "1979277510c6b839f0831b5b79e5c249b841e31aa1994ced1f56c84ce60bd97c",
+      "columns": [
+        "stock_cd",
+        "trd_dt",
+        "candle_dttm",
+        "open_prc",
+        "high_prc",
+        "low_prc",
+        "close_prc",
+        "trd_qty",
+        "crncy_cd",
+        "src_team_cd",
+        "src_kind_cd",
+        "src_file_path",
+        "src_row_no",
+        "bronze_row_no",
+        "src_ver",
+        "fetch_dttm",
+        "api_raw_file_path",
+        "api_rcrd_path",
+        "pipln_ver"
+      ],
+      "rows": 17440
+    },
+    {
+      "path": "05_validation/std_compliance_detail.csv",
+      "bytes": 63494,
+      "sha256": "dca4c4322dd7ed99367067e89c07efe90ffadb9f448a3ec34cc078a7c9ae0e2b",
+      "columns": [
+        "schema",
+        "table",
+        "column",
+        "column_type",
+        "in_dictionary",
+        "name_ok",
+        "type_ok",
+        "null_ok",
+        "violation"
+      ],
+      "rows": 722
+    },
+    {
+      "path": "05_validation/validation_queries.sql",
+      "bytes": 31423,
+      "sha256": "778e86e3aa45fd4769430193d8018eefec7768e0e64965b31122f7a29b9e878e"
+    },
+    {
+      "path": "05_validation/validation_results.csv",
+      "bytes": 19321,
+      "sha256": "f5a05c579029047ff197e5afc854c292227210e72042c14edfde48d2faff6b66",
+      "columns": [
+        "check_id",
+        "category",
+        "item",
+        "expected",
+        "sql_result",
+        "pandas_result",
+        "status",
+        "note"
+      ],
+      "rows": 203
+    },
+    {
+      "path": "05_validation/validation_summary.json",
+      "bytes": 737,
+      "sha256": "8f5016c9924a7581ac5d578e837f62b8ae81fff6187e2722b625ed4b1e8bf4cd"
+    },
+    {
+      "path": "06_report/C_통합품질_보고서.docx",
+      "bytes": 1824670,
+      "sha256": "ddd65393983559732f2ff83d4a28a44b72715c490501b3eac4df81ff8747da13"
+    },
+    {
+      "path": "06_report/C_통합품질_보고서.md",
+      "bytes": 24546,
+      "sha256": "69c11127666db87af1238d87b6efb9ec03c6a624e795f8b4accbeab30270525c"
+    },
+    {
+      "path": "06_report/C_통합품질_보고서.pdf",
+      "bytes": 1456734,
+      "sha256": "3718bb1ca3b5fc1492295675f1243dcc5cbb1e2b749bbf69d1ef75ea2b6cc31c"
+    },
+    {
+      "path": "06_report/img/00_medallion_flow.png",
+      "bytes": 499134,
+      "sha256": "bd14c46c89b1bed2fa366b92e3604095b2f83c9f50a0690840f2785ea242434d"
+    },
+    {
+      "path": "06_report/img/01_conceptual_erd.png",
+      "bytes": 295185,
+      "sha256": "dec70ee45aaeed65209d16578ac4c65312963dfc597765b38be68cd097c28405"
+    },
+    {
+      "path": "06_report/img/02_logical_erd.png",
+      "bytes": 1117977,
+      "sha256": "1b9d29bd18301af50439b814d07d0be7c8b1c7aee2034302f68a1555735f144e"
+    },
+    {
+      "path": "06_report/img/03_physical_erd.png",
+      "bytes": 1884073,
+      "sha256": "d910b77b6102f19abfdd6829ae61b18dc21227752fd30ecda215831913af182c"
+    },
+    {
+      "path": "06_report/img/asis_tobe_violations.png",
+      "bytes": 67676,
+      "sha256": "65db1af6afed81de5a49320ffe0bdb062d8561e381dd605060f0f22f27a0fa3a"
+    },
+    {
+      "path": "A·B에게_전달할_메시지.txt",
+      "bytes": 2017,
+      "sha256": "23aff730d09b10819d1f1e717dcb9271c22a4d78f6834c8420b408b971392300"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4367,
+      "sha256": "9342b570b61dd6326978d2a94e47ed3cc55542fe99fc00fc8e4a12cc33e3ff3b"
+    },
+    {
+      "path": "SHA256SUMS",
+      "bytes": 7472,
+      "sha256": "feb1fdb1edfd660cb58963cd7ab4df6009d15d4cde1b5c288203dae9f927facd"
+    },
+    {
+      "path": "code/_report_docx_style.py",
+      "bytes": 2258,
+      "sha256": "b4aecd53332c6c80ab4390e8b03ef2362659b8dd9dad30f94fbfbc0cfb8e020a"
+    },
+    {
+      "path": "code/build_model.py",
+      "bytes": 22442,
+      "sha256": "958ec31c2bf217ee3f3fc2ac73a4f11e583dcfcbf56ebf31ac50e181f9d773eb"
+    },
+    {
+      "path": "code/common.py",
+      "bytes": 3595,
+      "sha256": "68c59763fe15be38954c29c8fd983a896bf581ae6425e918ab00b4ed45ed94a7"
+    },
+    {
+      "path": "code/load_mysql.py",
+      "bytes": 5730,
+      "sha256": "0940cbcf854e1c6dd732f70c49c52efb40d73a06d318af1adec9520eef46be6e"
+    },
+    {
+      "path": "code/profile_asis.py",
+      "bytes": 12861,
+      "sha256": "48b820fb3a87f819b6c8bbbfa5dcf94b781e039c23ee2c0046ac20252b5ece50"
+    },
+    {
+      "path": "code/run_pipeline.py",
+      "bytes": 35385,
+      "sha256": "a3995760ae6c8252170efb2ac196f19d0ffc64daf90ea64a1dd9fd645ccb94eb"
+    },
+    {
+      "path": "code/std_dictionary.py",
+      "bytes": 47974,
+      "sha256": "b21ed28b21cfab9ab574bfa09481e9bbebb613372e675359b1cc6156d4c1a9f1"
+    },
+    {
+      "path": "code/validate.py",
+      "bytes": 29710,
+      "sha256": "f1518bef361e1c99f56971b4236ae6821a7fd6f93bf17fc060172d0308534f0d"
+    }
+  ]
+}

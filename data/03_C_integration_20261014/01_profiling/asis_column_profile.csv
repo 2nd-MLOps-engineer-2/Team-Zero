@@ -1,0 +1,338 @@
+﻿src_team,table,column,rows,null_cnt,null_rate,placeholder_cnt,distinct_cnt,max_len,pattern_mix_cnt,patterns,top_values,naming_style,std_name_ok,std_name_violation
+A,company_master,corp_code,20,0,0.0,0,20,8,1,ZERO_PAD_DIGITS:20,00258689(1); 00369657(1); 00583424(1),snake_case,N,미등록 단어:code; 분류어로 끝나지 않음
+A,company_master,corp_name,20,0,0.0,0,20,8,2,TEXT:19|UPPER_CODE:1,JYP Ent.(1); 리노공업(1); 아모레퍼시픽(1),snake_case,N,미등록 단어:name; 분류어로 끝나지 않음
+A,company_master,corp_eng_name,20,0,0.0,0,20,29,1,TEXT:20,JYP Entertainment Corporation(1); LEENO Industrial Inc(1); AMOREPACIFIC CORP.(1),snake_case,N,미등록 단어:name; 분류어로 끝나지 않음
+A,company_master,stock_code,20,0,0.0,0,20,6,2,ZERO_PAD_DIGITS:16|INTEGER:4,035900(1); 058470(1); 090430(1),snake_case,N,미등록 단어:code; 분류어로 끝나지 않음
+A,company_master,modify_date,20,0,0.0,0,19,8,1,DATE_YYYYMMDD:20,20260325(2); 20221206(1); 20230216(1),snake_case,N,"미등록 단어:modify,date; 분류어로 끝나지 않음"
+A,company_master,_source_file,20,0,0.0,0,1,14,1,TEXT:20,corp_codes.csv(20),leading_underscore,N,"소문자 snake_case 아님; 미등록 단어:,source; 분류어로 끝나지 않음"
+A,company_master,_source_row,20,0,0.0,0,20,6,1,INTEGER:20,68877(1); 78280(1); 83879(1),leading_underscore,N,"소문자 snake_case 아님; 미등록 단어:,source; 분류어로 끝나지 않음"
+A,company_master,_source_version,20,0,0.0,0,1,23,1,TEXT:20,Bronze_Cleanup_20261014(20),leading_underscore,N,"소문자 snake_case 아님; 미등록 단어:,source,version; 분류어로 끝나지 않음"
+A,disclosures,corp_code,11748,0,0.0,0,20,8,1,ZERO_PAD_DIGITS:11748,00126380(3187); 00164779(1239); 00164742(1158),snake_case,N,미등록 단어:code; 분류어로 끝나지 않음
+A,disclosures,corp_name,11748,0,0.0,0,20,8,2,TEXT:10864|UPPER_CODE:884,삼성전자(3187); SK하이닉스(1239); 현대자동차(1158),snake_case,N,미등록 단어:name; 분류어로 끝나지 않음
+A,disclosures,corp_cls,11748,0,0.0,0,2,1,1,UPPER_CODE:11748,Y(10732); K(1016),snake_case,N,분류어로 끝나지 않음
+A,disclosures,stock_code,11748,0,0.0,0,20,6,2,ZERO_PAD_DIGITS:10920|INTEGER:828,005930(3187); 000660(1239); 005380(1158),snake_case,N,미등록 단어:code; 분류어로 끝나지 않음
+A,disclosures,report_nm,11748,0,0.0,0,560,106,2,TEXT:11728|JSON:20,임원ㆍ주요주주특정증권등소유상황보고서(6151); 주식등의대량보유상황보고서(일반)(319); 기업설명회(IR)개최(안내공시)              (286),snake_case,N,미등록 단어:report
+A,disclosures,rcept_no,11748,0,0.0,0,11748,14,1,INTEGER:11748,20230116000261(1); 20230116800668(1); 20230113000583(1),snake_case,Y,
+A,disclosures,flr_nm,11748,0,0.0,0,2503,37,2,TEXT:11446|UPPER_CODE:302,현대자동차(474); 삼성전자(375); SK하이닉스(368),snake_case,Y,
+A,disclosures,rcept_dt,11748,0,0.0,0,835,8,1,DATE_YYYYMMDD:11748,20260206(1126); 20260202(828); 20250801(546),snake_case,Y,
+A,disclosures,rm,11748,7461,0.635087,0,9,2,1,TEXT:4287,유(2209); 공(906); 코(413),snake_case,N,미등록 단어:rm; 분류어로 끝나지 않음
+A,disclosures,_source_file,11748,0,0.0,0,42,34,1,TEXT:11748,disclosures/disclosures_202602.csv(2193); disclosures/disclosures_202508.csv(738); disclosures/disclosures_202604.csv(617),leading_underscore,N,"소문자 snake_case 아님; 미등록 단어:,source; 분류어로 끝나지 않음"
+A,disclosures,_source_row,11748,0,0.0,0,9380,5,1,INTEGER:11748,3693(5); 3323(5); 4783(5),leading_underscore,N,"소문자 snake_case 아님; 미등록 단어:,source; 분류어로 끝나지 않음"
+A,disclosures,_source_version,11748,0,0.0,0,1,23,1,TEXT:11748,Bronze_Cleanup_20261014(11748),leading_underscore,N,"소문자 snake_case 아님; 미등록 단어:,source,version; 분류어로 끝나지 않음"
+A,disclosures,document_status,11748,0,0.0,0,3,12,2,UPPER_CODE:10995|LOWER_CODE:753,NOT_IN_INPUT(10995); downloaded(752); unavailable(1),snake_case,N,"미등록 단어:document,status; 분류어로 끝나지 않음"
+A,disclosures,document_zip_path,11748,10996,0.935989,0,752,28,1,TEXT:752,documents/20230106800394.zip(1); documents/20230106800058.zip(1); documents/20230103800439.zip(1),snake_case,N,미등록 단어:document
+A,disclosures,document_sha256,11748,10996,0.935989,0,752,64,1,SHA256:752,048c88133a67cec068197e2c029cd1353851a9b8(1); 41d6aad411b95abb635963055d8b90e6406312d7(1); f68112a35229ed209765a140a8064a7875803b1f(1),snake_case,N,"미등록 단어:document,sha256; 분류어로 끝나지 않음"
+A,disclosure_documents,rcept_no,753,0,0.0,0,753,14,1,INTEGER:753,20230103800439(1); 20230106800058(1); 20230106800394(1),snake_case,Y,
+A,disclosure_documents,corp_code,753,0,0.0,0,20,8,1,ZERO_PAD_DIGITS:753,00164742(75); 00126380(60); 00155319(55),snake_case,N,미등록 단어:code; 분류어로 끝나지 않음
+A,disclosure_documents,stock_code,753,0,0.0,0,20,6,2,ZERO_PAD_DIGITS:645|INTEGER:108,005380(75); 005930(60); 005490(55),snake_case,N,미등록 단어:code; 분류어로 끝나지 않음
+A,disclosure_documents,corp_name,753,0,0.0,0,20,8,2,TEXT:708|UPPER_CODE:45,현대자동차(75); 삼성전자(60); POSCO홀딩스(55),snake_case,N,미등록 단어:name; 분류어로 끝나지 않음
+A,disclosure_documents,report_nm,753,0,0.0,0,44,54,1,TEXT:753,연결재무제표기준영업(잠정)실적(공정공시)              (150); 연결재무제표기준영업(잠정)실적(공정공시)(74); 영업(잠정)실적(공정공시)              (64),snake_case,N,미등록 단어:report
+A,disclosure_documents,rcept_dt,753,0,0.0,0,270,8,1,DATE_YYYYMMDD:753,20240814(19); 20231114(18); 20250814(18),snake_case,Y,
+A,disclosure_documents,zip_path,753,1,0.001328,0,752,28,1,TEXT:752,documents/20230103800439.zip(1); documents/20230106800058.zip(1); documents/20230106800394.zip(1),snake_case,Y,
+A,disclosure_documents,sha256,753,1,0.001328,0,752,64,1,SHA256:752,f68112a35229ed209765a140a8064a7875803b1f(1); 41d6aad411b95abb635963055d8b90e6406312d7(1); 048c88133a67cec068197e2c029cd1353851a9b8(1),snake_case,N,미등록 단어:sha256; 분류어로 끝나지 않음
+A,disclosure_documents,status,753,0,0.0,0,2,11,1,LOWER_CODE:753,downloaded(752); unavailable(1),snake_case,N,미등록 단어:status; 분류어로 끝나지 않음
+A,disclosure_documents,error,753,752,0.998672,0,1,35,1,TEXT:1,OpenDART status=014: 파일이 존재하지 않습니다.(1),snake_case,N,미등록 단어:error; 분류어로 끝나지 않음
+A,disclosure_documents,_source_file,753,0,0.0,0,1,24,1,TEXT:753,disclosure_documents.csv(753),leading_underscore,N,"소문자 snake_case 아님; 미등록 단어:,source; 분류어로 끝나지 않음"
+A,disclosure_documents,_source_row,753,0,0.0,0,753,3,1,INTEGER:753,1(1); 2(1); 3(1),leading_underscore,N,"소문자 snake_case 아님; 미등록 단어:,source; 분류어로 끝나지 않음"
+A,disclosure_documents,_source_version,753,0,0.0,0,1,23,1,TEXT:753,Bronze_Cleanup_20261014(753),leading_underscore,N,"소문자 snake_case 아님; 미등록 단어:,source,version; 분류어로 끝나지 않음"
+A,financial_summary,financial_report_id,320,0,0.0,0,320,31,1,LOWER_CODE:320,report_fb4a0ee00610a2dfe71f7d1e(1); report_ca536609ae113dcaf53f9369(1); report_2e12a4e30b5eeee2dec7f61f(1),snake_case,N,"미등록 단어:financial,report"
+A,financial_summary,corp_code,320,0,0.0,0,20,8,1,ZERO_PAD_DIGITS:320,00164779(16); 00113526(16); 00164742(16),snake_case,N,미등록 단어:code; 분류어로 끝나지 않음
+A,financial_summary,stock_code,320,0,0.0,0,20,6,2,ZERO_PAD_DIGITS:256|INTEGER:64,000660(16); 003490(16); 005380(16),snake_case,N,미등록 단어:code; 분류어로 끝나지 않음
+A,financial_summary,corp_name,320,0,0.0,0,20,8,2,TEXT:304|UPPER_CODE:16,SK하이닉스(16); 대한항공(16); 현대자동차(16),snake_case,N,미등록 단어:name; 분류어로 끝나지 않음
+A,financial_summary,bsns_year,320,0,0.0,0,4,4,1,INTEGER:320,2022(80); 2023(80); 2024(80),snake_case,N,미등록 단어:year; 분류어로 끝나지 않음
+A,financial_summary,reprt_code,320,0,0.0,0,4,5,1,INTEGER:320,11013(80); 11012(80); 11014(80),snake_case,N,"미등록 단어:reprt,code; 분류어로 끝나지 않음"
+A,financial_summary,report_label,320,0,0.0,0,4,5,1,TEXT:320,1분기(80); 반기(80); 3분기(80),snake_case,N,"미등록 단어:report,label; 분류어로 끝나지 않음"
+A,financial_summary,report_quarter,320,0,0.0,0,4,1,1,INTEGER:320,1(80); 2(80); 3(80),snake_case,N,"미등록 단어:report,quarter; 분류어로 끝나지 않음"
+A,financial_summary,fs_div,320,0,0.0,0,2,3,1,UPPER_CODE:320,CFS(304); OFS(16),snake_case,N,분류어로 끝나지 않음
+A,financial_summary,rcept_no,320,0,0.0,0,320,14,1,INTEGER:320,20220516001502(1); 20220816001536(1); 20221114001566(1),snake_case,Y,
+A,financial_summary,report_nm,320,61,0.190625,0,17,21,1,TEXT:259,분기보고서 (2023.03)(20); 반기보고서 (2023.06)(20); 분기보고서 (2023.09)(20),snake_case,N,미등록 단어:report
+A,financial_summary,disclosure_date,320,61,0.190625,0,63,10,1,DATE_ISO:259,2023-11-14(18); 2025-08-14(18); 2023-08-14(17),snake_case,N,"미등록 단어:disclosure,date; 분류어로 끝나지 않음"
+A,financial_summary,disclosure_join_status,320,0,0.0,0,2,21,1,UPPER_CODE:320,MATCHED(259); NOT_IN_INPUT_COVERAGE(61),snake_case,N,"미등록 단어:disclosure,status; 분류어로 끝나지 않음"
+A,financial_summary,document_status,320,0,0.0,0,2,12,2,LOWER_CODE:259|UPPER_CODE:61,downloaded(259); NOT_IN_INPUT(61),snake_case,N,"미등록 단어:document,status; 분류어로 끝나지 않음"
+A,financial_summary,document_zip_path,320,61,0.190625,0,259,28,1,TEXT:259,documents/20230321001209.zip(1); documents/20230515001677.zip(1); documents/20230814002376.zip(1),snake_case,N,미등록 단어:document
+A,financial_summary,currency,320,0,0.0,0,1,3,1,UPPER_CODE:320,KRW(320),snake_case,N,미등록 단어:currency; 분류어로 끝나지 않음
+A,financial_summary,flow_period_months,320,0,0.0,0,4,2,1,INTEGER:320,3(80); 6(80); 9(80),snake_case,N,"미등록 단어:period,months; 분류어로 끝나지 않음"
+A,financial_summary,period_start_nominal,320,0,0.0,0,4,10,1,DATE_ISO:320,2022-01-01(80); 2023-01-01(80); 2024-01-01(80),snake_case,N,"미등록 단어:period,nominal; 분류어로 끝나지 않음"
+A,financial_summary,period_end_nominal,320,0,0.0,0,16,10,1,DATE_ISO:320,2022-03-31(20); 2022-06-30(20); 2022-09-30(20),snake_case,N,"미등록 단어:period,nominal; 분류어로 끝나지 않음"
+A,financial_summary,calendar_period_status,320,0,0.0,0,2,28,1,UPPER_CODE:320,VERIFIED_XML(259); ASSUMED_DECEMBER_FISCAL_YEAR(61),snake_case,N,"미등록 단어:calendar,period,status; 분류어로 끝나지 않음"
+A,financial_summary,cf_period_status,320,0,0.0,0,2,22,1,UPPER_CODE:320,VERIFIED_XML_YTD(259); UNVERIFIED_NO_DOCUMENT(61),snake_case,N,"미등록 단어:period,status; 분류어로 끝나지 않음"
+A,financial_summary,point_in_time_join_eligible,320,0,0.0,0,2,1,1,INTEGER:320,1(259); 0(61),snake_case,N,"미등록 단어:point,in,time,eligible; 분류어로 끝나지 않음"
+A,financial_summary,same_period_comparison_eligible,320,0,0.0,0,2,1,1,INTEGER:320,1(259); 0(61),snake_case,N,"미등록 단어:period,comparison,eligible; 분류어로 끝나지 않음"
+A,financial_summary,source_version,320,0,0.0,0,1,23,1,TEXT:320,Bronze_Cleanup_20261014(320),snake_case,N,"미등록 단어:source,version; 분류어로 끝나지 않음"
+A,financial_summary,revenue_ytd,320,0,0.0,0,320,15,1,INTEGER:320,12155653000000(1); 25966654000000(1); 36949537000000(1),snake_case,N,미등록 단어:revenue; 분류어로 끝나지 않음
+A,financial_summary,revenue_prior_ytd,320,0,0.0,0,320,15,1,INTEGER:320,8494188000000(1); 18815859000000(1); 30621183000000(1),snake_case,N,"미등록 단어:revenue,prior; 분류어로 끝나지 않음"
+A,financial_summary,revenue_3m,320,80,0.25,0,240,14,1,INTEGER:240,12155653000000(1); 13811001000000(1); 10982883000000(1),snake_case,N,"미등록 단어:revenue,3m; 분류어로 끝나지 않음"
+A,financial_summary,revenue_prior_3m,320,80,0.25,0,240,14,1,INTEGER:240,8494188000000(1); 10321671000000(1); 11805324000000(1),snake_case,N,"미등록 단어:revenue,prior,3m; 분류어로 끝나지 않음"
+A,financial_summary,cost_of_sales_ytd,320,48,0.15,0,272,15,1,INTEGER:272,6747914000000(1); 14214536000000(1); 21324758000000(1),snake_case,N,"미등록 단어:cost,of,sales; 분류어로 끝나지 않음"
+A,financial_summary,cost_of_sales_prior_ytd,320,48,0.15,0,272,15,1,INTEGER:272,5765640000000(1); 11747867000000(1); 17722137000000(1),snake_case,N,"미등록 단어:cost,of,sales,prior; 분류어로 끝나지 않음"
+A,financial_summary,cost_of_sales_3m,320,116,0.3625,0,204,14,1,INTEGER:204,6747914000000(1); 7466622000000(1); 7110221000000(1),snake_case,N,"미등록 단어:cost,of,sales,3m; 분류어로 끝나지 않음"
+A,financial_summary,cost_of_sales_prior_3m,320,116,0.3625,0,204,14,1,INTEGER:204,5765640000000(1); 5982227000000(1); 5974270000000(1),snake_case,N,"미등록 단어:cost,of,sales,prior,3m; 분류어로 끝나지 않음"
+A,financial_summary,gross_profit_ytd,320,48,0.15,0,272,15,1,INTEGER:272,5407739000000(1); 11752118000000(1); 15624779000000(1),snake_case,N,"미등록 단어:gross,profit; 분류어로 끝나지 않음"
+A,financial_summary,gross_profit_prior_ytd,320,48,0.15,0,272,15,1,INTEGER:272,2728548000000(1); 7067992000000(1); 12899046000000(1),snake_case,N,"미등록 단어:gross,profit,prior; 분류어로 끝나지 않음"
+A,financial_summary,gross_profit_3m,320,116,0.3625,0,204,14,1,INTEGER:204,5407739000000(1); 6344379000000(1); 3872662000000(1),snake_case,N,"미등록 단어:gross,profit,3m; 분류어로 끝나지 않음"
+A,financial_summary,gross_profit_prior_3m,320,116,0.3625,0,204,14,1,INTEGER:204,2728548000000(1); 4339444000000(1); 5831054000000(1),snake_case,N,"미등록 단어:gross,profit,prior,3m; 분류어로 끝나지 않음"
+A,financial_summary,sga_ytd,320,67,0.209375,0,253,14,1,INTEGER:253,2548124000000(1); 4699886000000(1); 6916988000000(1),snake_case,N,미등록 단어:sga; 분류어로 끝나지 않음
+A,financial_summary,sga_prior_ytd,320,67,0.209375,0,253,14,1,INTEGER:253,1404127000000(1); 3048997000000(1); 4708230000000(1),snake_case,N,"미등록 단어:sga,prior; 분류어로 끝나지 않음"
+A,financial_summary,sga_3m,320,128,0.4,0,192,14,1,INTEGER:192,2548124000000(1); 2151762000000(1); 2217102000000(1),snake_case,N,"미등록 단어:sga,3m; 분류어로 끝나지 않음"
+A,financial_summary,sga_prior_3m,320,128,0.4,0,192,14,1,INTEGER:192,1404127000000(1); 1644870000000(1); 1659233000000(1),snake_case,N,"미등록 단어:sga,prior,3m; 분류어로 끝나지 않음"
+A,financial_summary,operating_profit_ytd,320,0,0.0,0,320,14,1,INTEGER:320,2859615000000(1); 7052232000000(1); 8707791000000(1),snake_case,N,"미등록 단어:operating,profit; 분류어로 끝나지 않음"
+A,financial_summary,operating_profit_prior_ytd,320,0,0.0,0,320,14,1,INTEGER:320,1324421000000(1); 4018995000000(1); 8190816000000(1),snake_case,N,"미등록 단어:operating,profit,prior; 분류어로 끝나지 않음"
+A,financial_summary,operating_profit_3m,320,80,0.25,0,240,14,1,INTEGER:240,2859615000000(1); 4192617000000(1); 1655560000000(1),snake_case,N,"미등록 단어:operating,profit,3m; 분류어로 끝나지 않음"
+A,financial_summary,operating_profit_prior_3m,320,80,0.25,0,240,14,1,INTEGER:240,1324421000000(1); 2694574000000(1); 4171821000000(1),snake_case,N,"미등록 단어:operating,profit,prior,3m; 분류어로 끝나지 않음"
+A,financial_summary,finance_income_ytd,320,0,0.0,0,320,14,1,INTEGER:320,657956000000(1); 2083259000000(1); 4178889000000(1),snake_case,N,"미등록 단어:finance,income; 분류어로 끝나지 않음"
+A,financial_summary,finance_income_prior_ytd,320,0,0.0,0,320,14,1,INTEGER:320,597565000000(1); 813938000000(1); 1463758000000(1),snake_case,N,"미등록 단어:finance,income,prior; 분류어로 끝나지 않음"
+A,financial_summary,finance_income_3m,320,80,0.25,0,240,13,1,INTEGER:240,657956000000(1); 1425304000000(1); 2095629000000(1),snake_case,N,"미등록 단어:finance,income,3m; 분류어로 끝나지 않음"
+A,financial_summary,finance_income_prior_3m,320,80,0.25,0,240,13,1,INTEGER:240,597565000000(1); 216373000000(1); 649820000000(1),snake_case,N,"미등록 단어:finance,income,prior,3m; 분류어로 끝나지 않음"
+A,financial_summary,finance_cost_ytd,320,4,0.0125,0,316,14,2,INTEGER:315|DATE_YYYYMMDD:1,737321000000(1); 2551723000000(1); 4615888000000(1),snake_case,N,"미등록 단어:finance,cost; 분류어로 끝나지 않음"
+A,financial_summary,finance_cost_prior_ytd,320,4,0.0125,0,316,14,2,INTEGER:315|DATE_YYYYMMDD:1,589521000000(1); 806207000000(1); 1080315000000(1),snake_case,N,"미등록 단어:finance,cost,prior; 분류어로 끝나지 않음"
+A,financial_summary,finance_cost_3m,320,83,0.259375,0,237,13,2,INTEGER:236|DATE_YYYYMMDD:1,737321000000(1); 1814401000000(1); 2064165000000(1),snake_case,N,"미등록 단어:finance,cost,3m; 분류어로 끝나지 않음"
+A,financial_summary,finance_cost_prior_3m,320,83,0.259375,0,237,13,2,INTEGER:236|DATE_YYYYMMDD:1,589521000000(1); 216686000000(1); 274108000000(1),snake_case,N,"미등록 단어:finance,cost,prior,3m; 분류어로 끝나지 않음"
+A,financial_summary,pretax_profit_ytd,320,0,0.0,0,320,15,1,INTEGER:320,2774250000000(1); 6740975000000(1); 8424221000000(1),snake_case,N,"미등록 단어:pretax,profit; 분류어로 끝나지 않음"
+A,financial_summary,pretax_profit_prior_ytd,320,0,0.0,0,320,15,1,INTEGER:320,1350592000000(1); 4151700000000(1); 8750334000000(1),snake_case,N,"미등록 단어:pretax,profit,prior; 분류어로 끝나지 않음"
+A,financial_summary,pretax_profit_3m,320,80,0.25,0,240,14,1,INTEGER:240,2774250000000(1); 3966727000000(1); 1683246000000(1),snake_case,N,"미등록 단어:pretax,profit,3m; 분류어로 끝나지 않음"
+A,financial_summary,pretax_profit_prior_3m,320,80,0.25,0,240,14,1,INTEGER:240,1350592000000(1); 2801108000000(1); 4598635000000(1),snake_case,N,"미등록 단어:pretax,profit,prior,3m; 분류어로 끝나지 않음"
+A,financial_summary,income_tax_ytd,320,0,0.0,0,318,14,1,INTEGER:320,12604494(3); 791322000000(1); 1881226000000(1),snake_case,N,"미등록 단어:income,tax; 분류어로 끝나지 않음"
+A,financial_summary,income_tax_prior_ytd,320,0,0.0,0,318,14,1,INTEGER:320,12604494(3); 357952000000(1); 1170636000000(1),snake_case,N,"미등록 단어:income,tax,prior; 분류어로 끝나지 않음"
+A,financial_summary,income_tax_3m,320,80,0.25,0,239,14,1,INTEGER:240,0(2); 791322000000(1); 1089906000000(1),snake_case,N,"미등록 단어:income,tax,3m; 분류어로 끝나지 않음"
+A,financial_summary,income_tax_prior_3m,320,80,0.25,0,239,14,1,INTEGER:240,0(2); 357952000000(1); 812684000000(1),snake_case,N,"미등록 단어:income,tax,prior,3m; 분류어로 끝나지 않음"
+A,financial_summary,net_income_ytd,320,0,0.0,0,320,14,1,INTEGER:320,1982928000000(1); 4859749000000(1); 5962401000000(1),snake_case,N,미등록 단어:income; 분류어로 끝나지 않음
+A,financial_summary,net_income_prior_ytd,320,0,0.0,0,320,14,1,INTEGER:320,992640000000(1); 2981064000000(1); 6296315000000(1),snake_case,N,"미등록 단어:income,prior; 분류어로 끝나지 않음"
+A,financial_summary,net_income_3m,320,80,0.25,0,240,14,1,INTEGER:240,1982928000000(1); 2876821000000(1); 1102653000000(1),snake_case,N,"미등록 단어:income,3m; 분류어로 끝나지 않음"
+A,financial_summary,net_income_prior_3m,320,80,0.25,0,240,14,1,INTEGER:240,992640000000(1); 1988424000000(1); 3315252000000(1),snake_case,N,"미등록 단어:income,prior,3m; 분류어로 끝나지 않음"
+A,financial_summary,net_income_parent_ytd,320,49,0.153125,0,271,14,1,INTEGER:271,1978844000000(1); 4850383000000(1); 5957124000000(1),snake_case,N,"미등록 단어:income,parent; 분류어로 끝나지 않음"
+A,financial_summary,net_income_parent_prior_ytd,320,49,0.153125,0,271,14,1,INTEGER:271,1266663000000(1); 2974962000000(1); 6285784000000(1),snake_case,N,"미등록 단어:income,parent,prior; 분류어로 끝나지 않음"
+A,financial_summary,net_income_parent_3m,320,120,0.375,0,200,14,1,INTEGER:200,1978844000000(1); 2871539000000(1); 1106741000000(1),snake_case,N,"미등록 단어:income,parent,3m; 분류어로 끝나지 않음"
+A,financial_summary,net_income_parent_prior_3m,320,120,0.375,0,200,14,1,INTEGER:200,1266663000000(1); 1984515000000(1); 3310823000000(1),snake_case,N,"미등록 단어:income,parent,prior,3m; 분류어로 끝나지 않음"
+A,financial_summary,total_assets_asof,320,0,0.0,0,320,15,1,INTEGER:320,99466056000000(1); 104147622000000(1); 109545800000000(1),snake_case,N,"미등록 단어:total,assets,asof; 분류어로 끝나지 않음"
+A,financial_summary,total_assets_prior_year_end,320,0,0.0,0,85,15,1,INTEGER:320,103871512000000(4); 100330165000000(4); 119855209000000(4),snake_case,N,"미등록 단어:total,assets,prior,year; 분류어로 끝나지 않음"
+A,financial_summary,total_liabilities_asof,320,0,0.0,0,320,15,1,INTEGER:320,36067417000000(1); 37387462000000(1); 40822614000000(1),snake_case,N,"미등록 단어:total,liabilities,asof; 분류어로 끝나지 않음"
+A,financial_summary,total_liabilities_prior_year_end,320,0,0.0,0,85,15,1,INTEGER:320,40580970000000(4); 46826413000000(4); 45939505000000(4),snake_case,N,"미등록 단어:total,liabilities,prior,year; 분류어로 끝나지 않음"
+A,financial_summary,total_equity_asof,320,0,0.0,0,320,15,1,INTEGER:320,63398639000000(1); 66760160000000(1); 68723186000000(1),snake_case,N,"미등록 단어:total,equity,asof; 분류어로 끝나지 않음"
+A,financial_summary,total_equity_prior_year_end,320,0,0.0,0,83,15,1,INTEGER:320,62191058000000(4); 63290542000000(4); 53503752000000(4),snake_case,N,"미등록 단어:total,equity,prior,year; 분류어로 끝나지 않음"
+A,financial_summary,current_assets_asof,320,0,0.0,0,320,15,1,INTEGER:320,27767761000000(1); 29719276000000(1); 31896913000000(1),snake_case,N,"미등록 단어:current,assets,asof; 분류어로 끝나지 않음"
+A,financial_summary,current_assets_prior_year_end,320,0,0.0,0,85,15,1,INTEGER:320,28733332000000(4); 30468100000000(4); 42278887000000(4),snake_case,N,"미등록 단어:current,assets,prior,year; 분류어로 끝나지 않음"
+A,financial_summary,noncurrent_assets_asof,320,0,0.0,0,320,15,1,INTEGER:320,71698295000000(1); 74428346000000(1); 77648887000000(1),snake_case,N,"미등록 단어:noncurrent,assets,asof; 분류어로 끝나지 않음"
+A,financial_summary,noncurrent_assets_prior_year_end,320,0,0.0,0,85,15,1,INTEGER:320,75138180000000(4); 69862065000000(4); 77576322000000(4),snake_case,N,"미등록 단어:noncurrent,assets,prior,year; 분류어로 끝나지 않음"
+A,financial_summary,current_liabilities_asof,320,0,0.0,0,320,15,1,INTEGER:320,16659247000000(1); 16869305000000(1); 18383115000000(1),snake_case,N,"미등록 단어:current,liabilities,asof; 분류어로 끝나지 않음"
+A,financial_summary,current_liabilities_prior_year_end,320,0,0.0,0,85,14,1,INTEGER:320,19843696000000(4); 21007810000000(4); 24965444000000(4),snake_case,N,"미등록 단어:current,liabilities,prior,year; 분류어로 끝나지 않음"
+A,financial_summary,noncurrent_liabilities_asof,320,0,0.0,0,320,15,1,INTEGER:320,19408170000000(1); 20518157000000(1); 22439499000000(1),snake_case,N,"미등록 단어:noncurrent,liabilities,asof; 분류어로 끝나지 않음"
+A,financial_summary,noncurrent_liabilities_prior_year_end,320,0,0.0,0,85,15,1,INTEGER:320,20737274000000(4); 25818603000000(4); 20974061000000(4),snake_case,N,"미등록 단어:noncurrent,liabilities,prior,year; 분류어로 끝나지 않음"
+A,financial_summary,cash_and_equivalents_asof,320,0,0.0,0,320,14,1,INTEGER:320,4982764000000(1); 4546312000000(1); 4719217000000(1),snake_case,N,"미등록 단어:cash,and,equivalents,asof; 분류어로 끝나지 않음"
+A,financial_summary,cash_and_equivalents_prior_year_end,320,0,0.0,0,82,14,1,INTEGER:320,5057982000000(4); 4977007000000(4); 7587329000000(4),snake_case,N,"미등록 단어:cash,and,equivalents,prior,year; 분류어로 끝나지 않음"
+A,financial_summary,trade_receivables_asof,320,96,0.3,0,224,14,1,INTEGER:224,8146418000000(1); 9040032000000(1); 8519642000000(1),snake_case,N,"미등록 단어:trade,receivables,asof; 분류어로 끝나지 않음"
+A,financial_summary,trade_receivables_prior_year_end,320,96,0.3,0,58,14,1,INTEGER:224,8267111000000(4); 5186054000000(4); 6600273000000(4),snake_case,N,"미등록 단어:trade,receivables,prior,year; 분류어로 끝나지 않음"
+A,financial_summary,trade_and_other_receivables_asof,320,218,0.68125,0,102,13,1,INTEGER:102,1177050874470(1); 1267997769084(1); 1272716872039(1),snake_case,N,"미등록 단어:trade,and,receivables,asof; 분류어로 끝나지 않음"
+A,financial_summary,trade_and_other_receivables_prior_year_end,320,218,0.68125,0,27,13,1,INTEGER:102,1095074377840(4); 1128171764516(4); 1135016410294(4),snake_case,N,"40자 초과; 미등록 단어:trade,and,receivables,prior,year; 분류어로 끝나지 않음"
+A,financial_summary,inventories_asof,320,8,0.025,0,312,14,1,INTEGER:312,10392670000000(1); 11878738000000(1); 14664974000000(1),snake_case,N,"미등록 단어:inventories,asof; 분류어로 끝나지 않음"
+A,financial_summary,inventories_prior_year_end,320,8,0.025,0,82,14,1,INTEGER:312,15664707000000(4); 13480659000000(4); 13313937000000(4),snake_case,N,"미등록 단어:inventories,prior,year; 분류어로 끝나지 않음"
+A,financial_summary,trade_payables_asof,320,94,0.29375,0,226,14,1,INTEGER:226,2292070000000(1); 2926222000000(1); 2476315000000(1),snake_case,N,"미등록 단어:trade,payables,asof; 분류어로 끝나지 않음"
+A,financial_summary,trade_payables_prior_year_end,320,94,0.29375,0,60,14,1,INTEGER:226,1359247000000(4); 2186230000000(4); 1845537000000(4),snake_case,N,"미등록 단어:trade,payables,prior,year; 분류어로 끝나지 않음"
+A,financial_summary,trade_and_other_payables_asof,320,235,0.734375,0,85,13,1,INTEGER:85,902781009914(1); 1103153997260(1); 1132515517320(1),snake_case,N,"미등록 단어:trade,and,payables,asof; 분류어로 끝나지 않음"
+A,financial_summary,trade_and_other_payables_prior_year_end,320,235,0.734375,0,24,13,1,INTEGER:85,874396026013(4); 1216652442566(4); 1527982986825(4),snake_case,N,"미등록 단어:trade,and,payables,prior,year; 분류어로 끝나지 않음"
+A,financial_summary,short_term_borrowings_reported_asof,320,127,0.396875,0,173,14,1,INTEGER:193,0(10); 12998000000(5); 100000000000(3),snake_case,N,"미등록 단어:short,borrowings,reported,asof; 분류어로 끝나지 않음"
+A,financial_summary,short_term_borrowings_reported_prior_year_end,320,124,0.3875,0,54,14,1,INTEGER:196,0(9); 2880763000000(4); 985568229520(4),snake_case,N,"40자 초과; 미등록 단어:short,borrowings,reported,prior,year; 분류어로 끝나지 않음"
+A,financial_summary,long_term_borrowings_reported_asof,320,92,0.2875,0,218,14,1,INTEGER:228,5000000000(5); 70000000000(4); 200000000000(2),snake_case,N,"미등록 단어:long,borrowings,reported,asof; 분류어로 끝나지 않음"
+A,financial_summary,long_term_borrowings_reported_prior_year_end,320,92,0.2875,0,62,14,1,INTEGER:228,0(6); 14743046000000(4); 19611443000000(4),snake_case,N,"40자 초과; 미등록 단어:long,borrowings,reported,prior,year; 분류어로 끝나지 않음"
+A,financial_summary,current_portion_long_term_debt_reported_asof,320,201,0.628125,0,108,14,1,INTEGER:119,250000000(7); 0(4); 200000000000(3),snake_case,N,"40자 초과; 미등록 단어:current,portion,long,debt,reported,asof; 분류어로 끝나지 않음"
+A,financial_summary,current_portion_long_term_debt_reported_prior_year_end,320,201,0.628125,0,36,14,1,INTEGER:119,250000000(8); 2989029629286(4); 20578902000000(4),snake_case,N,"40자 초과; 미등록 단어:current,portion,long,debt,reported,prior,year; 분류어로 끝나지 않음"
+A,financial_summary,current_lease_liabilities_asof,320,118,0.36875,0,202,13,1,INTEGER:202,311566000000(1); 333993000000(1); 312329000000(1),snake_case,N,"미등록 단어:current,lease,liabilities,asof; 분류어로 끝나지 않음"
+A,financial_summary,current_lease_liabilities_prior_year_end,320,118,0.36875,0,55,13,1,INTEGER:202,302059000000(4); 280873000000(4); 631497000000(4),snake_case,N,"미등록 단어:current,lease,liabilities,prior,year; 분류어로 끝나지 않음"
+A,financial_summary,noncurrent_lease_liabilities_asof,320,117,0.365625,0,203,14,1,INTEGER:203,1285763000000(1); 1443321000000(1); 1492477000000(1),snake_case,N,"미등록 단어:noncurrent,lease,liabilities,asof; 분류어로 끝나지 않음"
+A,financial_summary,noncurrent_lease_liabilities_prior_year_end,320,117,0.365625,0,55,13,1,INTEGER:203,1223703000000(4); 1516208000000(4); 2398377000000(4),snake_case,N,"40자 초과; 미등록 단어:noncurrent,lease,liabilities,prior,year; 분류어로 끝나지 않음"
+A,financial_summary,property_plant_equipment_asof,320,0,0.0,0,320,15,1,INTEGER:320,55320713000000(1); 58113861000000(1); 60404219000000(1),snake_case,N,"미등록 단어:property,plant,equipment,asof; 분류어로 끝나지 않음"
+A,financial_summary,property_plant_equipment_prior_year_end,320,0,0.0,0,83,15,1,INTEGER:320,60228528000000(4); 52704853000000(4); 60157474000000(4),snake_case,N,"미등록 단어:property,plant,equipment,prior,year; 분류어로 끝나지 않음"
+A,financial_summary,intangible_assets_asof,320,181,0.565625,0,139,14,1,INTEGER:139,4988923000000(1); 5048484000000(1); 5508385000000(1),snake_case,N,"미등록 단어:intangible,assets,asof; 분류어로 끝나지 않음"
+A,financial_summary,intangible_assets_prior_year_end,320,181,0.565625,0,41,14,1,INTEGER:139,275984266641(4); 5846986000000(4); 20236244000000(4),snake_case,N,"미등록 단어:intangible,assets,prior,year; 분류어로 끝나지 않음"
+A,financial_summary,operating_cash_flow_ytd,320,0,0.0,0,320,14,1,INTEGER:320,5141228000000(1); 9714893000000(1); 13595720000000(1),snake_case,N,"미등록 단어:operating,cash; 분류어로 끝나지 않음"
+A,financial_summary,operating_cash_flow_prior_ytd,320,0,0.0,0,320,14,1,INTEGER:320,3206762000000(1); 7756735000000(1); 14023424000000(1),snake_case,N,"미등록 단어:operating,cash,prior; 분류어로 끝나지 않음"
+A,financial_summary,investing_cash_flow_ytd,320,0,0.0,0,320,15,1,INTEGER:320,-5455618000000(1); -9928894000000(1); -14575625000000(1),snake_case,N,"미등록 단어:investing,cash; 분류어로 끝나지 않음"
+A,financial_summary,investing_cash_flow_prior_ytd,320,0,0.0,0,320,15,1,INTEGER:320,-5885210000000(1); -9369519000000(1); -15720484000000(1),snake_case,N,"미등록 단어:investing,cash,prior; 분류어로 끝나지 않음"
+A,financial_summary,financing_cash_flow_ytd,320,0,0.0,0,320,15,1,INTEGER:320,175316000000(1); -743924000000(1); 102806000000(1),snake_case,N,"미등록 단어:financing,cash; 분류어로 끝나지 않음"
+A,financial_summary,financing_cash_flow_prior_ytd,320,0,0.0,0,320,15,1,INTEGER:320,1900472000000(1); 1269270000000(1); 1318312000000(1),snake_case,N,"미등록 단어:financing,cash,prior; 분류어로 끝나지 않음"
+A,financial_summary,ppe_purchase_reported_ytd,320,11,0.034375,0,309,15,1,INTEGER:309,5236776000000(1); 10069382000000(1); 14873038000000(1),snake_case,N,"미등록 단어:ppe,purchase,reported; 분류어로 끝나지 않음"
+A,financial_summary,ppe_purchase_reported_prior_ytd,320,11,0.034375,0,309,15,1,INTEGER:309,4105305000000(1); 6919550000000(1); 9732259000000(1),snake_case,N,"미등록 단어:ppe,purchase,reported,prior; 분류어로 끝나지 않음"
+A,financial_summary,intangible_purchase_reported_ytd,320,19,0.059375,0,297,13,2,INTEGER:299|DATE_YYYYMMDD:2,-169000000(2); -619637500(2); -210455640(2),snake_case,N,"미등록 단어:intangible,purchase,reported; 분류어로 끝나지 않음"
+A,financial_summary,intangible_purchase_reported_prior_ytd,320,14,0.04375,0,296,13,2,INTEGER:302|DATE_YYYYMMDD:4,0(6); -169000000(2); 210455640(2),snake_case,N,"미등록 단어:intangible,purchase,reported,prior; 분류어로 끝나지 않음"
+A,financial_summary,metric_review_count,320,0,0.0,0,9,2,1,INTEGER:320,7(55); 6(53); 5(51),snake_case,N,"미등록 단어:metric,count; 분류어로 끝나지 않음"
+A,financial_summary,custom_mapped_count,320,0,0.0,0,8,1,1,INTEGER:320,0(195); 1(45); 2(43),snake_case,N,"미등록 단어:mapped,count; 분류어로 끝나지 않음"
+A,financial_summary,metric_conflict_count,320,0,0.0,0,2,1,1,INTEGER:320,0(319); 1(1),snake_case,N,"미등록 단어:metric,count; 분류어로 끝나지 않음"
+A,financial_summary,missing_core_metrics,320,320,1.0,0,0,0,0,,,snake_case,N,"미등록 단어:missing,metrics; 분류어로 끝나지 않음"
+A,financial_items,corp_name,66729,0,0.0,0,20,8,2,TEXT:63557|UPPER_CODE:3172,두산에너빌리티(4464); 대한항공(4353); 현대자동차(4045),snake_case,N,미등록 단어:name; 분류어로 끝나지 않음
+A,financial_items,stock_code,66729,0,0.0,0,20,6,2,ZERO_PAD_DIGITS:55082|INTEGER:11647,034020(4464); 003490(4353); 005380(4045),snake_case,N,미등록 단어:code; 분류어로 끝나지 않음
+A,financial_items,rcept_no,66729,0,0.0,0,320,14,1,INTEGER:66729,20260318001125(364); 20250320001103(353); 20250318001334(335),snake_case,Y,
+A,financial_items,reprt_code,66729,0,0.0,0,4,5,1,INTEGER:66729,11011(18388); 11014(16693); 11012(16268),snake_case,N,"미등록 단어:reprt,code; 분류어로 끝나지 않음"
+A,financial_items,bsns_year,66729,0,0.0,0,4,4,1,INTEGER:66729,2025(18418); 2024(17534); 2022(15524),snake_case,N,미등록 단어:year; 분류어로 끝나지 않음
+A,financial_items,corp_code,66729,0,0.0,0,20,8,1,ZERO_PAD_DIGITS:66729,00159616(4464); 00113526(4353); 00164742(4045),snake_case,N,미등록 단어:code; 분류어로 끝나지 않음
+A,financial_items,fs_div,66729,0,0.0,0,2,3,1,UPPER_CODE:66729,CFS(65231); OFS(1498),snake_case,N,분류어로 끝나지 않음
+A,financial_items,sj_div,66729,0,0.0,0,5,3,1,UPPER_CODE:66729,SCE(25894); BS(16204); CF(14981),snake_case,N,미등록 단어:sj; 분류어로 끝나지 않음
+A,financial_items,sj_nm,66729,0,0.0,0,5,7,1,TEXT:66729,자본변동표(25894); 재무상태표(16204); 현금흐름표(14981),snake_case,N,미등록 단어:sj
+A,financial_items,account_id,66729,0,0.0,11639,699,180,2,TEXT:55090|PLACEHOLDER:11639,-표준계정코드 미사용-(11639); ifrs-full_Equity(2807); dart_EquityAtBeginningOfPeriod(2465),snake_case,N,미등록 단어:account
+A,financial_items,account_nm,66729,0,0.0,0,2028,58,1,TEXT:66729,기초자본(2450); 자본총계(1849); 해외사업환산손익(1132),snake_case,N,미등록 단어:account
+A,financial_items,account_detail,66729,0,0.0,40835,90,101,2,PLACEHOLDER:40835|TEXT:25894,-(40835); 연결재무제표 [member](4098); 자본 [구성요소]|지배기업의 소유주에게 귀속되는 지분 [구성요소](2577),snake_case,N,"미등록 단어:account,detail; 분류어로 끝나지 않음"
+A,financial_items,thstrm_nm,66729,0,0.0,0,343,11,1,TEXT:66729,제 17 기(907); 제 56 기(895); 제 57 기(876),snake_case,N,미등록 단어:thstrm
+A,financial_items,thstrm_amount,66729,2202,0.032999,0,40204,15,2,INTEGER:64468|DATE_YYYYMMDD:59,0(9634); 1540987319000(54); 7621185000(48),snake_case,N,"미등록 단어:thstrm,amount; 분류어로 끝나지 않음"
+A,financial_items,thstrm_add_amount,66729,59648,0.893884,0,6369,15,2,INTEGER:7078|DATE_YYYYMMDD:3,0(107); 209(6); -68(4),snake_case,N,"미등록 단어:thstrm,add,amount; 분류어로 끝나지 않음"
+A,financial_items,frmtrm_nm,66729,36256,0.543332,0,98,7,1,TEXT:30473,제 16 기(907); 제 55 기(895); 제 56 기(876),snake_case,N,미등록 단어:frmtrm
+A,financial_items,frmtrm_amount,66729,37011,0.554646,0,11202,15,2,INTEGER:29711|DATE_YYYYMMDD:7,0(3251); 1540987319000(30); 7621185000(24),snake_case,N,"미등록 단어:frmtrm,amount; 분류어로 끝나지 않음"
+A,financial_items,frmtrm_q_nm,66729,30473,0.456668,0,147,10,1,TEXT:36256,제 55 기 3분기(663); 제 55 기 반기(645); 제 56 기 3분기(639),snake_case,N,"미등록 단어:frmtrm,q"
+A,financial_items,frmtrm_q_amount,66729,31866,0.477543,0,21241,15,2,INTEGER:34831|DATE_YYYYMMDD:32,0(6243); -15143965200(30); 66944609800(26),snake_case,N,"미등록 단어:frmtrm,q,amount; 분류어로 끝나지 않음"
+A,financial_items,frmtrm_add_amount,66729,59616,0.893405,0,6460,15,2,INTEGER:7112|DATE_YYYYMMDD:1,0(85); -68(4); 23442(4),snake_case,N,"미등록 단어:frmtrm,add,amount; 분류어로 끝나지 않음"
+A,financial_items,bfefrmtrm_nm,66729,48151,0.72159,0,49,6,1,TEXT:18578,제 15 기(916); 제 54 기(904); 제 55 기(885),snake_case,N,미등록 단어:bfefrmtrm
+A,financial_items,bfefrmtrm_amount,66729,49018,0.734583,0,11082,15,2,INTEGER:17700|DATE_YYYYMMDD:11,0(3150); 391406000000(18); 5601810444(15),snake_case,N,"미등록 단어:bfefrmtrm,amount; 분류어로 끝나지 않음"
+A,financial_items,ord,66729,0,0.0,0,124,3,1,INTEGER:66729,8(2811); 9(2810); 10(2712),snake_case,N,분류어로 끝나지 않음
+A,financial_items,currency,66729,0,0.0,0,1,3,1,UPPER_CODE:66729,KRW(66729),snake_case,N,미등록 단어:currency; 분류어로 끝나지 않음
+A,financial_items,_source_file,66729,0,0.0,0,4,29,1,TEXT:66729,financials/financial_2025.csv(18418); financials/financial_2024.csv(17534); financials/financial_2022.csv(15524),leading_underscore,N,"소문자 snake_case 아님; 미등록 단어:,source; 분류어로 끝나지 않음"
+A,financial_items,_source_row,66729,0,0.0,0,18418,5,1,INTEGER:66729,13495(4); 13496(4); 13497(4),leading_underscore,N,"소문자 snake_case 아님; 미등록 단어:,source; 분류어로 끝나지 않음"
+A,financial_items,_source_version,66729,0,0.0,0,1,23,1,TEXT:66729,Bronze_Cleanup_20261014(66729),leading_underscore,N,"소문자 snake_case 아님; 미등록 단어:,source,version; 분류어로 끝나지 않음"
+A,financial_items,financial_report_id,66729,0,0.0,0,320,31,1,LOWER_CODE:66729,report_7720ec27e8cb5640ce53560b(364); report_5532340f31892952f36cb6af(353); report_0cde3953cd7a4e5d5a059066(335),snake_case,N,"미등록 단어:financial,report"
+A,financial_items,financial_item_id,66729,0,0.0,0,66729,29,1,LOWER_CODE:66729,item_c675aee893697e256652b132(1); item_ddea1eab169d7d7034595d4c(1); item_5527f4e6223ea30ebd8fd57b(1),snake_case,N,미등록 단어:financial
+A,metric_definitions,metric,36,0,0.0,0,36,39,1,LOWER_CODE:36,revenue(1); cost_of_sales(1); gross_profit(1),snake_case,N,미등록 단어:metric; 분류어로 끝나지 않음
+A,metric_definitions,label_ko,36,0,0.0,0,36,17,1,TEXT:36,매출액·영업수익(1); 매출원가(1); 매출총이익(1),snake_case,N,"미등록 단어:label,ko; 분류어로 끝나지 않음"
+A,metric_definitions,statement,36,0,0.0,0,3,6,2,UPPER_CODE:25|TEXT:11,BS(20); IS|CIS(11); CF(5),snake_case,N,미등록 단어:statement; 분류어로 끝나지 않음
+A,metric_definitions,account_ids,36,0,0.0,0,36,110,1,TEXT:36,ifrs-full_Revenue(1); ifrs-full_CostOfSales(1); ifrs-full_GrossProfit(1),snake_case,N,"미등록 단어:account,ids; 분류어로 끝나지 않음"
+A,metric_definitions,reason_ko,36,0,0.0,0,36,39,1,TEXT:36,주가와 매출 규모의 변화가 함께 나타나는지 비교(1); 매출 증가가 원가 증가로 상쇄되는지 검토(1); 매출에서 원가를 차감한 수익성 변화 확인(1),snake_case,N,"미등록 단어:reason,ko; 분류어로 끝나지 않음"
+A,metric_definitions,custom_names,36,14,0.388889,0,22,71,1,TEXT:22,매출액|영업수익(1); 매출원가(1); 판매비와관리비(1),snake_case,N,미등록 단어:names; 분류어로 끝나지 않음
+A,metric_definitions,name_guard,36,32,0.888889,0,4,8,1,TEXT:4,판매|판관(1); 금융수익(1); 매출채권(1),snake_case,N,미등록 단어:name; 분류어로 끝나지 않음
+B,security_master,symbol,20,0,0.0,0,20,6,2,ZERO_PAD_DIGITS:16|INTEGER:4,000660(1); 003490(1); 005380(1),snake_case,N,미등록 단어:symbol; 분류어로 끝나지 않음
+B,security_master,name,20,0,0.0,0,20,8,2,TEXT:19|UPPER_CODE:1,SK하이닉스(1); 대한항공(1); 현대차(1),snake_case,N,미등록 단어:name; 분류어로 끝나지 않음
+B,security_master,englishName,20,0,0.0,0,20,20,2,TEXT:13|UPPER_CODE:7,SK hynix(1); KAL(1); HyundaiMtr(1),camelCase,N,소문자 snake_case 아님; 미등록 단어:englishName; 분류어로 끝나지 않음
+B,security_master,isinCode,20,0,0.0,0,20,12,1,UPPER_CODE:20,KR7000660001(1); KR7003490000(1); KR7005380001(1),camelCase,N,소문자 snake_case 아님; 미등록 단어:isinCode; 분류어로 끝나지 않음
+B,security_master,market,20,0,0.0,0,2,6,1,UPPER_CODE:20,KOSPI(14); KOSDAQ(6),snake_case,N,미등록 단어:market; 분류어로 끝나지 않음
+B,security_master,securityType,20,0,0.0,0,1,5,1,UPPER_CODE:20,STOCK(20),camelCase,N,소문자 snake_case 아님; 미등록 단어:securityType; 분류어로 끝나지 않음
+B,security_master,isCommonShare,20,0,0.0,0,1,4,1,BOOL_TF:20,True(20),camelCase,N,소문자 snake_case 아님; 미등록 단어:isCommonShare; 분류어로 끝나지 않음
+B,security_master,status,20,0,0.0,0,1,6,1,UPPER_CODE:20,ACTIVE(20),snake_case,N,미등록 단어:status; 분류어로 끝나지 않음
+B,security_master,currency,20,0,0.0,0,1,3,1,UPPER_CODE:20,KRW(20),snake_case,N,미등록 단어:currency; 분류어로 끝나지 않음
+B,security_master,listDate,20,0,0.0,0,20,10,1,DATE_ISO:20,1996-12-26(1); 1966-03-18(1); 1974-06-28(1),camelCase,N,소문자 snake_case 아님; 미등록 단어:listDate; 분류어로 끝나지 않음
+B,security_master,delistDate,20,20,1.0,0,0,0,0,,,camelCase,N,소문자 snake_case 아님; 미등록 단어:delistDate; 분류어로 끝나지 않음
+B,security_master,sharesOutstanding,20,0,0.0,0,20,10,1,INTEGER:20,730492365(1); 368220609(1); 203466492(1),camelCase,N,소문자 snake_case 아님; 미등록 단어:sharesOutstanding; 분류어로 끝나지 않음
+B,security_master,leverageFactor,20,20,1.0,0,0,0,0,,,camelCase,N,소문자 snake_case 아님; 미등록 단어:leverageFactor; 분류어로 끝나지 않음
+B,security_master,koreanMarketDetail,20,0,0.0,0,2,112,1,JSON:20,"{""liquidationTrading"": false, ""nxtSuppor(19); {""liquidationTrading"": false, ""nxtSuppor(1)",camelCase,N,소문자 snake_case 아님; 미등록 단어:koreanMarketDetail; 분류어로 끝나지 않음
+B,security_master,source_file,20,0,0.0,0,1,10,1,TEXT:20,stocks.csv(20),snake_case,N,미등록 단어:source; 분류어로 끝나지 않음
+B,security_master,source_row,20,0,0.0,0,20,2,1,INTEGER:20,3(1); 20(1); 14(1),snake_case,N,미등록 단어:source; 분류어로 끝나지 않음
+B,security_master,bronze_row,20,0,0.0,0,20,2,1,INTEGER:20,3(1); 20(1); 14(1),snake_case,N,분류어로 끝나지 않음
+B,security_master,source_version,20,0,0.0,0,1,71,1,SHA256:20,sha256:71da8b28153eadf513ea24a36fa5019fe(20),snake_case,N,"미등록 단어:source,version; 분류어로 끝나지 않음"
+B,security_master,pipeline_version,20,0,0.0,0,1,17,1,TEXT:20,toss-silver-1.1.0(20),snake_case,N,"미등록 단어:pipeline,version; 분류어로 끝나지 않음"
+B,security_master,source_kind,20,0,0.0,0,1,6,1,LOWER_CODE:20,bronze(20),snake_case,N,미등록 단어:source; 분류어로 끝나지 않음
+B,security_master,fetched_at,20,20,1.0,0,0,0,0,,,snake_case,N,"미등록 단어:fetched,at; 분류어로 끝나지 않음"
+B,security_master,api_raw_file,20,20,1.0,0,0,0,0,,,snake_case,N,분류어로 끝나지 않음
+B,security_master,api_record_path,20,20,1.0,0,0,0,0,,,snake_case,N,미등록 단어:record
+B,stock_daily_price,symbol,17440,0,0.0,0,20,6,2,ZERO_PAD_DIGITS:13952|INTEGER:3488,000660(872); 003490(872); 005380(872),snake_case,N,미등록 단어:symbol; 분류어로 끝나지 않음
+B,stock_daily_price,trade_date,17440,0,0.0,0,872,10,1,DATE_ISO:17440,2022-12-01(20); 2022-12-02(20); 2022-12-05(20),snake_case,N,"미등록 단어:trade,date; 분류어로 끝나지 않음"
+B,stock_daily_price,timestamp,17440,0,0.0,0,872,29,1,DATETIME_OFFSET:17440,2022-12-01T00:00:00.000+09:00(20); 2022-12-02T00:00:00.000+09:00(20); 2022-12-05T00:00:00.000+09:00(20),snake_case,N,미등록 단어:timestamp; 분류어로 끝나지 않음
+B,stock_daily_price,open_price,17440,0,0.0,0,5652,7,1,INTEGER:17440,202500(32); 204500(31); 208500(29),snake_case,N,미등록 단어:price; 분류어로 끝나지 않음
+B,stock_daily_price,high_price,17440,0,0.0,0,5649,7,1,INTEGER:17440,205000(29); 210000(28); 209500(28),snake_case,N,미등록 단어:price; 분류어로 끝나지 않음
+B,stock_daily_price,low_price,17440,0,0.0,0,5709,7,1,INTEGER:17440,215000(37); 200000(35); 200500(33),snake_case,N,미등록 단어:price; 분류어로 끝나지 않음
+B,stock_daily_price,close_price,17440,0,0.0,0,5727,7,1,INTEGER:17440,200500(31); 202500(29); 56000(28),snake_case,N,미등록 단어:price; 분류어로 끝나지 않음
+B,stock_daily_price,volume,17440,0,0.0,0,17327,9,2,INTEGER:17371|DATE_YYYYMMDD:69,0(11); 569458(3); 327195(3),snake_case,N,미등록 단어:volume; 분류어로 끝나지 않음
+B,stock_daily_price,currency,17440,0,0.0,0,1,3,1,UPPER_CODE:17440,KRW(17440),snake_case,N,미등록 단어:currency; 분류어로 끝나지 않음
+B,stock_daily_price,source_file,17440,0,0.0,0,20,18,1,TEXT:17440,000660_candles.csv(872); 003490_candles.csv(872); 005380_candles.csv(872),snake_case,N,미등록 단어:source; 분류어로 끝나지 않음
+B,stock_daily_price,source_row,17440,0,0.0,0,872,3,1,INTEGER:17440,1(20); 2(20); 3(20),snake_case,N,미등록 단어:source; 분류어로 끝나지 않음
+B,stock_daily_price,bronze_row,17440,443,0.025401,0,856,3,1,INTEGER:16997,1(20); 2(20); 3(20),snake_case,N,분류어로 끝나지 않음
+B,stock_daily_price,source_version,17440,0,0.0,0,91,71,1,SHA256:17440,sha256:71da8b28153eadf513ea24a36fa5019fe(16997); sha256:401dae04c504bbcdb4dd7acf2b2607c25(9); sha256:678e29c8d407de25d1759c813e3c98ca5(9),snake_case,N,"미등록 단어:source,version; 분류어로 끝나지 않음"
+B,stock_daily_price,pipeline_version,17440,0,0.0,0,1,17,1,TEXT:17440,toss-silver-1.1.0(17440),snake_case,N,"미등록 단어:pipeline,version; 분류어로 끝나지 않음"
+B,stock_daily_price,source_kind,17440,0,0.0,0,2,16,1,LOWER_CODE:17440,bronze(16997); toss_api_requery(443),snake_case,N,미등록 단어:source; 분류어로 끝나지 않음
+B,stock_daily_price,fetched_at,17440,16997,0.974599,0,66,25,1,DATETIME_OFFSET:443,2026-10-14T12:43:55+09:00(16); 2026-10-14T12:43:44+09:00(15); 2026-10-14T12:44:47+09:00(15),snake_case,N,"미등록 단어:fetched,at; 분류어로 끝나지 않음"
+B,stock_daily_price,api_raw_file,17440,16997,0.974599,0,90,30,1,TEXT:443,raw/000660_candles_page04.json(9); raw/003490_candles_page04.json(9); raw/005490_candles_page01.json(9),snake_case,N,분류어로 끝나지 않음
+B,stock_daily_price,api_record_path,17440,16997,0.974599,0,177,21,1,TEXT:443,$.result.candles[0](20); $.result.candles[20](10); $.result.candles[136](6),snake_case,N,미등록 단어:record
+B,market_index_daily,index_code,1744,0,0.0,0,2,6,1,UPPER_CODE:1744,KOSDAQ(872); KOSPI(872),snake_case,N,"미등록 단어:index,code; 분류어로 끝나지 않음"
+B,market_index_daily,trade_date,1744,0,0.0,0,872,10,1,DATE_ISO:1744,2022-12-01(2); 2022-12-02(2); 2022-12-05(2),snake_case,N,"미등록 단어:trade,date; 분류어로 끝나지 않음"
+B,market_index_daily,timestamp,1744,0,0.0,0,872,29,1,DATETIME_OFFSET:1744,2022-12-01T00:00:00.000+09:00(2); 2022-12-02T00:00:00.000+09:00(2); 2022-12-05T00:00:00.000+09:00(2),snake_case,N,미등록 단어:timestamp; 분류어로 끝나지 않음
+B,market_index_daily,open_price,1744,0,0.0,0,1734,7,2,DECIMAL:1724|INTEGER:20,857.54(2); 779.28(2); 840.62(2),snake_case,N,미등록 단어:price; 분류어로 끝나지 않음
+B,market_index_daily,high_price,1744,0,0.0,0,1721,7,2,DECIMAL:1719|INTEGER:25,849.32(3); 769.69(3); 779.98(2),snake_case,N,미등록 단어:price; 분류어로 끝나지 않음
+B,market_index_daily,low_price,1744,0,0.0,0,1725,7,2,DECIMAL:1724|INTEGER:20,719.29(2); 763.81(2); 884.33(2),snake_case,N,미등록 단어:price; 분류어로 끝나지 않음
+B,market_index_daily,close_price,1744,0,0.0,0,1726,7,2,DECIMAL:1720|INTEGER:24,711.75(2); 766.79(2); 772.79(2),snake_case,N,미등록 단어:price; 분류어로 끝나지 않음
+B,market_index_daily,volume,1744,0,0.0,0,1744,10,1,INTEGER:1744,825110500(1); 856591400(1); 1058482700(1),snake_case,N,미등록 단어:volume; 분류어로 끝나지 않음
+B,market_index_daily,source_file,1744,0,0.0,0,2,16,1,TEXT:1744,KOSDAQ_index.csv(872); KOSPI_index.csv(872),snake_case,N,미등록 단어:source; 분류어로 끝나지 않음
+B,market_index_daily,source_row,1744,0,0.0,0,872,3,1,INTEGER:1744,1(2); 2(2); 3(2),snake_case,N,미등록 단어:source; 분류어로 끝나지 않음
+B,market_index_daily,bronze_row,1744,55,0.031537,0,847,3,1,INTEGER:1689,1(2); 2(2); 3(2),snake_case,N,분류어로 끝나지 않음
+B,market_index_daily,source_version,1744,0,0.0,0,11,71,1,SHA256:1744,sha256:71da8b28153eadf513ea24a36fa5019fe(1689); sha256:7b61219437876062929fa8eb0b50b8155(9); sha256:fc9b039918fab83c8857e28bbc9777aaf(9),snake_case,N,"미등록 단어:source,version; 분류어로 끝나지 않음"
+B,market_index_daily,pipeline_version,1744,0,0.0,0,1,17,1,TEXT:1744,toss-silver-1.1.0(1744),snake_case,N,"미등록 단어:pipeline,version; 분류어로 끝나지 않음"
+B,market_index_daily,source_kind,1744,0,0.0,0,2,16,1,LOWER_CODE:1744,bronze(1689); toss_api_requery(55),snake_case,N,미등록 단어:source; 분류어로 끝나지 않음
+B,market_index_daily,fetched_at,1744,1689,0.968463,0,8,25,1,DATETIME_OFFSET:55,2026-10-14T12:45:48+09:00(15); 2026-10-14T12:45:45+09:00(9); 2026-10-14T12:45:44+09:00(7),snake_case,N,"미등록 단어:fetched,at; 분류어로 끝나지 않음"
+B,market_index_daily,api_raw_file,1744,1689,0.968463,0,10,28,1,TEXT:55,raw/KOSDAQ_index_page03.json(9); raw/KOSPI_index_page02.json(9); raw/KOSDAQ_index_page02.json(7),snake_case,N,분류어로 끝나지 않음
+B,market_index_daily,api_record_path,1744,1689,0.968463,0,50,21,1,TEXT:55,$.result.candles[16](2); $.result.candles[9](2); $.result.candles[37](2),snake_case,N,미등록 단어:record
+B,investor_trading_daily,symbol,191829,0,0.0,0,20,6,2,ZERO_PAD_DIGITS:153472|INTEGER:38357,000660(9592); 003490(9592); 005380(9592),snake_case,N,미등록 단어:symbol; 분류어로 끝나지 않음
+B,investor_trading_daily,trade_date,191829,0,0.0,0,872,10,1,DATE_ISO:191829,2022-12-01(220); 2022-12-02(220); 2022-12-05(220),snake_case,N,"미등록 단어:trade,date; 분류어로 끝나지 않음"
+B,investor_trading_daily,investor_type,191829,0,0.0,0,11,25,2,LOWER_CODE:104634|CAMEL_CODE:87195,bank(17439); financialInvestment(17439); foreigner(17439),snake_case,N,미등록 단어:investor; 분류어로 끝나지 않음
+B,investor_trading_daily,parent_type,191829,69756,0.363636,0,1,11,1,LOWER_CODE:122073,institution(122073),snake_case,N,미등록 단어:parent; 분류어로 끝나지 않음
+B,investor_trading_daily,aggregation_level,191829,0,0.0,0,2,18,1,LOWER_CODE:191829,institution_detail(122073); top_level(69756),snake_case,N,"미등록 단어:aggregation,level; 분류어로 끝나지 않음"
+B,investor_trading_daily,buy_volume,191829,0,0.0,0,89853,9,2,INTEGER:191787|DATE_YYYYMMDD:42,0(15198); 1(1583); 2(1409),snake_case,N,미등록 단어:volume; 분류어로 끝나지 않음
+B,investor_trading_daily,sell_volume,191829,0,0.0,0,90698,9,2,INTEGER:191773|DATE_YYYYMMDD:56,0(14978); 1(1653); 2(1334),snake_case,N,미등록 단어:volume; 분류어로 끝나지 않음
+B,investor_trading_daily,net_buy_volume,191829,0,0.0,0,90551,9,2,INTEGER:191827|DATE_YYYYMMDD:2,0(13557); 1(1521); -1(623),snake_case,N,미등록 단어:volume; 분류어로 끝나지 않음
+B,investor_trading_daily,source_column,191829,0,0.0,0,4,16,2,LOWER_CODE:174390|CAMEL_CODE:17439,institution(139512); foreigner(17439); individual(17439),snake_case,N,"미등록 단어:source,column; 분류어로 끝나지 않음"
+B,investor_trading_daily,json_path,191829,0,0.0,0,8,37,1,TEXT:191829,$(69756); $.breakdown.bank(17439); $.breakdown.financialInvestment(17439),snake_case,Y,
+B,investor_trading_daily,source_file,191829,0,0.0,0,20,27,1,TEXT:191829,000660_investor_trading.csv(9592); 003490_investor_trading.csv(9592); 005380_investor_trading.csv(9592),snake_case,N,미등록 단어:source; 분류어로 끝나지 않음
+B,investor_trading_daily,source_row,191829,0,0.0,0,872,3,1,INTEGER:191829,1(220); 2(220); 3(220),snake_case,N,미등록 단어:source; 분류어로 끝나지 않음
+B,investor_trading_daily,bronze_row,191829,2662,0.013877,0,863,3,1,INTEGER:189167,1(220); 2(220); 3(220),snake_case,N,분류어로 끝나지 않음
+B,investor_trading_daily,source_version,191829,0,0.0,0,136,71,1,SHA256:191829,sha256:71da8b28153eadf513ea24a36fa5019fe(189167); sha256:1cfc942e2958e38a3a881ae9df6b8f378(66); sha256:465ea7a1cf1261b6cb072f0de9240467c(55),snake_case,N,"미등록 단어:source,version; 분류어로 끝나지 않음"
+B,investor_trading_daily,pipeline_version,191829,0,0.0,0,1,17,1,TEXT:191829,toss-silver-1.1.0(191829),snake_case,N,"미등록 단어:pipeline,version; 분류어로 끝나지 않음"
+B,investor_trading_daily,source_kind,191829,0,0.0,0,2,16,1,LOWER_CODE:191829,bronze(189167); toss_api_requery(2662),snake_case,N,미등록 단어:source; 분류어로 끝나지 않음
+B,investor_trading_daily,fetched_at,191829,189167,0.986123,0,115,25,1,DATETIME_OFFSET:2662,2026-10-14T12:44:09+09:00(77); 2026-10-14T12:42:30+09:00(66); 2026-10-14T12:42:36+09:00(66),snake_case,N,"미등록 단어:fetched,at; 분류어로 끝나지 않음"
+B,investor_trading_daily,api_raw_file,191829,189167,0.986123,0,135,39,1,TEXT:2662,raw/005380_investor_trading_page03.json(66); raw/058470_investor_trading_page03.json(55); raw/097950_investor_trading_page01.json(55),snake_case,N,분류어로 끝나지 않음
+B,investor_trading_daily,api_record_path,191829,189167,0.986123,0,90,20,1,TEXT:2662,$.result.records[0](231); $.result.records[39](77); $.result.records[17](77),snake_case,N,미등록 단어:record
+B,foreign_holding_daily,symbol,17439,0,0.0,0,20,6,2,ZERO_PAD_DIGITS:13952|INTEGER:3487,000660(872); 003490(872); 005380(872),snake_case,N,미등록 단어:symbol; 분류어로 끝나지 않음
+B,foreign_holding_daily,trade_date,17439,0,0.0,0,872,10,1,DATE_ISO:17439,2022-12-01(20); 2022-12-02(20); 2022-12-05(20),snake_case,N,"미등록 단어:trade,date; 분류어로 끝나지 않음"
+B,foreign_holding_daily,holding_quantity,17439,0,0.0,0,17418,10,2,INTEGER:17247|DATE_YYYYMMDD:192,5567557(11); 59764718(2); 69687115(2),snake_case,N,"미등록 단어:holding,quantity; 분류어로 끝나지 않음"
+B,foreign_holding_daily,limit_quantity,17439,0,0.0,0,88,10,1,INTEGER:17439,184073508(872); 70592343(872); 58492759(872),snake_case,N,미등록 단어:quantity; 분류어로 끝나지 않음
+B,foreign_holding_daily,holding_rate,17439,0,0.0,0,4670,6,2,DECIMAL:17438|INTEGER:1,0.2286(17); 0.1652(16); 0.2921(16),snake_case,N,"미등록 단어:holding,rate; 분류어로 끝나지 않음"
+B,foreign_holding_daily,source_column,17439,0,0.0,0,1,16,1,CAMEL_CODE:17439,foreignerHolding(17439),snake_case,N,"미등록 단어:source,column; 분류어로 끝나지 않음"
+B,foreign_holding_daily,json_path,17439,0,0.0,0,1,1,1,TEXT:17439,$(17439),snake_case,Y,
+B,foreign_holding_daily,source_file,17439,0,0.0,0,20,27,1,TEXT:17439,000660_investor_trading.csv(872); 003490_investor_trading.csv(872); 005380_investor_trading.csv(872),snake_case,N,미등록 단어:source; 분류어로 끝나지 않음
+B,foreign_holding_daily,source_row,17439,0,0.0,0,872,3,1,INTEGER:17439,1(20); 2(20); 3(20),snake_case,N,미등록 단어:source; 분류어로 끝나지 않음
+B,foreign_holding_daily,bronze_row,17439,242,0.013877,0,863,3,1,INTEGER:17197,1(20); 2(20); 3(20),snake_case,N,분류어로 끝나지 않음
+B,foreign_holding_daily,source_version,17439,0,0.0,0,136,71,1,SHA256:17439,sha256:71da8b28153eadf513ea24a36fa5019fe(17197); sha256:1cfc942e2958e38a3a881ae9df6b8f378(6); sha256:465ea7a1cf1261b6cb072f0de9240467c(5),snake_case,N,"미등록 단어:source,version; 분류어로 끝나지 않음"
+B,foreign_holding_daily,pipeline_version,17439,0,0.0,0,1,17,1,TEXT:17439,toss-silver-1.1.0(17439),snake_case,N,"미등록 단어:pipeline,version; 분류어로 끝나지 않음"
+B,foreign_holding_daily,source_kind,17439,0,0.0,0,2,16,1,LOWER_CODE:17439,bronze(17197); toss_api_requery(242),snake_case,N,미등록 단어:source; 분류어로 끝나지 않음
+B,foreign_holding_daily,fetched_at,17439,17197,0.986123,0,115,25,1,DATETIME_OFFSET:242,2026-10-14T12:44:09+09:00(7); 2026-10-14T12:42:30+09:00(6); 2026-10-14T12:42:36+09:00(6),snake_case,N,"미등록 단어:fetched,at; 분류어로 끝나지 않음"
+B,foreign_holding_daily,api_raw_file,17439,17197,0.986123,0,135,39,1,TEXT:242,raw/005380_investor_trading_page03.json(6); raw/058470_investor_trading_page03.json(5); raw/097950_investor_trading_page01.json(5),snake_case,N,분류어로 끝나지 않음
+B,foreign_holding_daily,api_record_path,17439,17197,0.986123,0,90,20,1,TEXT:242,$.result.records[0](21); $.result.records[39](7); $.result.records[17](7),snake_case,N,미등록 단어:record
+B,cfd_daily,symbol,13719,0,0.0,0,20,6,2,ZERO_PAD_DIGITS:10976|INTEGER:2743,000660(686); 003490(686); 005380(686),snake_case,N,미등록 단어:symbol; 분류어로 끝나지 않음
+B,cfd_daily,trade_date,13719,0,0.0,0,686,10,1,DATE_ISO:13719,2023-08-31(20); 2023-09-01(20); 2023-09-04(20),snake_case,N,"미등록 단어:trade,date; 분류어로 끝나지 않음"
+B,cfd_daily,buy_balance_quantity,13719,0,0.0,0,4721,7,1,INTEGER:13719,61(247); 22(235); 340(219),snake_case,N,"미등록 단어:balance,quantity; 분류어로 끝나지 않음"
+B,cfd_daily,buy_balance_rate,13719,0,0.0,0,99,6,2,INTEGER:10015|DECIMAL:3704,0(10015); 0.0001(1711); 0.0002(606),snake_case,N,"미등록 단어:balance,rate; 분류어로 끝나지 않음"
+B,cfd_daily,sell_balance_quantity,13719,0,0.0,0,226,4,1,INTEGER:13719,0(8721); 1(952); 2(489),snake_case,N,"미등록 단어:balance,quantity; 분류어로 끝나지 않음"
+B,cfd_daily,sell_balance_rate,13719,0,0.0,0,1,1,1,INTEGER:13719,0(13719),snake_case,N,"미등록 단어:balance,rate; 분류어로 끝나지 않음"
+B,cfd_daily,source_column,13719,0,0.0,0,1,3,1,LOWER_CODE:13719,cfd(13719),snake_case,N,"미등록 단어:source,column; 분류어로 끝나지 않음"
+B,cfd_daily,json_path,13719,0,0.0,0,1,1,1,TEXT:13719,$(13719),snake_case,Y,
+B,cfd_daily,source_file,13719,0,0.0,0,20,27,1,TEXT:13719,000660_investor_trading.csv(686); 003490_investor_trading.csv(686); 005380_investor_trading.csv(686),snake_case,N,미등록 단어:source; 분류어로 끝나지 않음
+B,cfd_daily,source_row,13719,0,0.0,0,686,3,1,INTEGER:13719,187(20); 188(20); 189(20),snake_case,N,미등록 단어:source; 분류어로 끝나지 않음
+B,cfd_daily,bronze_row,13719,191,0.013922,0,682,3,1,INTEGER:13528,186(20); 187(20); 188(20),snake_case,N,분류어로 끝나지 않음
+B,cfd_daily,source_version,13719,0,0.0,0,104,71,1,SHA256:13719,sha256:71da8b28153eadf513ea24a36fa5019fe(13528); sha256:1cfc942e2958e38a3a881ae9df6b8f378(6); sha256:465ea7a1cf1261b6cb072f0de9240467c(5),snake_case,N,"미등록 단어:source,version; 분류어로 끝나지 않음"
+B,cfd_daily,pipeline_version,13719,0,0.0,0,1,17,1,TEXT:13719,toss-silver-1.1.0(13719),snake_case,N,"미등록 단어:pipeline,version; 분류어로 끝나지 않음"
+B,cfd_daily,source_kind,13719,0,0.0,0,2,16,1,LOWER_CODE:13719,bronze(13528); toss_api_requery(191),snake_case,N,미등록 단어:source; 분류어로 끝나지 않음
+B,cfd_daily,fetched_at,13719,13528,0.986078,0,89,25,1,DATETIME_OFFSET:191,2026-10-14T12:44:09+09:00(7); 2026-10-14T12:42:36+09:00(6); 2026-10-14T12:45:05+09:00(6),snake_case,N,"미등록 단어:fetched,at; 분류어로 끝나지 않음"
+B,cfd_daily,api_raw_file,13719,13528,0.986078,0,103,39,1,TEXT:191,raw/005380_investor_trading_page03.json(6); raw/058470_investor_trading_page03.json(5); raw/097950_investor_trading_page01.json(5),snake_case,N,분류어로 끝나지 않음
+B,cfd_daily,api_record_path,13719,13528,0.986078,0,80,20,1,TEXT:191,$.result.records[0](21); $.result.records[29](7); $.result.records[88](5),snake_case,N,미등록 단어:record
+B,price_investor_availability,symbol,17440,0,0.0,0,20,6,2,ZERO_PAD_DIGITS:13952|INTEGER:3488,000660(872); 003490(872); 005380(872),snake_case,N,미등록 단어:symbol; 분류어로 끝나지 않음
+B,price_investor_availability,trade_date,17440,0,0.0,0,872,10,1,DATE_ISO:17440,2022-12-01(20); 2022-12-02(20); 2022-12-05(20),snake_case,N,"미등록 단어:trade,date; 분류어로 끝나지 않음"
+B,price_investor_availability,has_price,17440,0,0.0,0,1,4,1,BOOL_tf:17440,true(17440),snake_case,N,"미등록 단어:has,price; 분류어로 끝나지 않음"
+B,price_investor_availability,has_investor_data,17440,0,0.0,0,2,5,1,BOOL_tf:17440,true(17439); false(1),snake_case,N,"미등록 단어:has,investor; 분류어로 끝나지 않음"
+B,price_investor_availability,missing_reason,17440,17439,0.999943,0,1,38,1,LOWER_CODE:1,investor_api_candidate_requires_review(1),snake_case,N,"미등록 단어:missing,reason; 분류어로 끝나지 않음"
+B,price_investor_availability,missing_issue_codes,17440,17439,0.999943,0,1,26,1,UPPER_CODE:1,UPDATED_AT_MISMATCH_REVIEW(1),snake_case,N,"미등록 단어:missing,codes; 분류어로 끝나지 않음"
+B,price_investor_availability,source_file,17440,0,0.0,0,20,18,1,TEXT:17440,000660_candles.csv(872); 003490_candles.csv(872); 005380_candles.csv(872),snake_case,N,미등록 단어:source; 분류어로 끝나지 않음
+B,price_investor_availability,source_row,17440,0,0.0,0,872,3,1,INTEGER:17440,1(20); 2(20); 3(20),snake_case,N,미등록 단어:source; 분류어로 끝나지 않음
+B,price_investor_availability,bronze_row,17440,443,0.025401,0,856,3,1,INTEGER:16997,1(20); 2(20); 3(20),snake_case,N,분류어로 끝나지 않음
+B,price_investor_availability,source_version,17440,0,0.0,0,91,71,1,SHA256:17440,sha256:71da8b28153eadf513ea24a36fa5019fe(16997); sha256:401dae04c504bbcdb4dd7acf2b2607c25(9); sha256:678e29c8d407de25d1759c813e3c98ca5(9),snake_case,N,"미등록 단어:source,version; 분류어로 끝나지 않음"
+B,price_investor_availability,pipeline_version,17440,0,0.0,0,1,17,1,TEXT:17440,toss-silver-1.1.0(17440),snake_case,N,"미등록 단어:pipeline,version; 분류어로 끝나지 않음"
+B,price_investor_availability,source_kind,17440,0,0.0,0,2,16,1,LOWER_CODE:17440,bronze(16997); toss_api_requery(443),snake_case,N,미등록 단어:source; 분류어로 끝나지 않음
+B,price_investor_availability,fetched_at,17440,16997,0.974599,0,66,25,1,DATETIME_OFFSET:443,2026-10-14T12:43:55+09:00(16); 2026-10-14T12:43:44+09:00(15); 2026-10-14T12:44:47+09:00(15),snake_case,N,"미등록 단어:fetched,at; 분류어로 끝나지 않음"
+B,price_investor_availability,api_raw_file,17440,16997,0.974599,0,90,30,1,TEXT:443,raw/000660_candles_page04.json(9); raw/003490_candles_page04.json(9); raw/005490_candles_page01.json(9),snake_case,N,분류어로 끝나지 않음
+B,price_investor_availability,api_record_path,17440,16997,0.974599,0,177,21,1,TEXT:443,$.result.candles[0](20); $.result.candles[20](10); $.result.candles[136](6),snake_case,N,미등록 단어:record
+B,investor_source_daily,symbol,17439,0,0.0,0,20,6,2,ZERO_PAD_DIGITS:13952|INTEGER:3487,000660(872); 003490(872); 005380(872),snake_case,N,미등록 단어:symbol; 분류어로 끝나지 않음
+B,investor_source_daily,trade_date,17439,0,0.0,0,872,10,1,DATE_ISO:17439,2022-12-01(20); 2022-12-02(20); 2022-12-05(20),snake_case,N,"미등록 단어:trade,date; 분류어로 끝나지 않음"
+B,investor_source_daily,updated_at,17439,0,0.0,0,11397,29,1,DATETIME_OFFSET:17439,2023-06-13T20:32:56.000+09:00(28); 2023-10-05T19:32:20.000+09:00(20); 2023-10-05T19:32:24.000+09:00(20),snake_case,N,"미등록 단어:updated,at; 분류어로 끝나지 않음"
+B,investor_source_daily,individual,17439,0,0.0,0,17429,81,1,JSON:17439,"{""buyVolume"": ""0"", ""sellVolume"": ""0"", ""n(11); {""buyVolume"": ""991830"", ""sellVolume"": ""8(1); {""buyVolume"": ""2898691"", ""sellVolume"": ""(1)",snake_case,N,미등록 단어:individual; 분류어로 끝나지 않음
+B,investor_source_daily,foreigner,17439,0,0.0,0,17429,80,1,JSON:17439,"{""buyVolume"": ""0"", ""sellVolume"": ""0"", ""n(11); {""buyVolume"": ""1006334"", ""sellVolume"": ""(1); {""buyVolume"": ""1314760"", ""sellVolume"": ""(1)",snake_case,N,미등록 단어:foreigner; 분류어로 끝나지 않음
+B,investor_source_daily,institution,17439,0,0.0,0,17429,742,1,JSON:17439,"{""buyVolume"": ""0"", ""sellVolume"": ""0"", ""n(11); {""buyVolume"": ""862153"", ""sellVolume"": ""6(1); {""buyVolume"": ""351968"", ""sellVolume"": ""1(1)",snake_case,N,미등록 단어:institution; 분류어로 끝나지 않음
+B,investor_source_daily,otherCorporation,17439,0,0.0,0,17161,76,1,JSON:17439,"{""buyVolume"": ""0"", ""sellVolume"": ""0"", ""n(49); {""buyVolume"": ""1"", ""sellVolume"": ""0"", ""n(15); {""buyVolume"": ""4"", ""sellVolume"": ""0"", ""n(13)",camelCase,N,소문자 snake_case 아님; 미등록 단어:otherCorporation; 분류어로 끝나지 않음
+B,investor_source_daily,foreignerHolding,17439,0,0.0,0,17420,89,1,JSON:17439,"{""holdingQuantity"": ""5567557"", ""limitQua(11); {""holdingQuantity"": ""59764718"", ""limitQu(2); {""holdingQuantity"": ""69687115"", ""limitQu(2)",camelCase,N,소문자 snake_case 아님; 미등록 단어:foreignerHolding; 분류어로 끝나지 않음
+B,investor_source_daily,cfd,17439,3720,0.213315,0,4914,115,1,JSON:13719,"{""buyBalanceQuantity"": ""22"", ""buyBalance(235); {""buyBalanceQuantity"": ""340"", ""buyBalanc(218); {""buyBalanceQuantity"": ""61"", ""buyBalance(199)",snake_case,N,분류어로 끝나지 않음
+B,investor_source_daily,source_file,17439,0,0.0,0,20,27,1,TEXT:17439,000660_investor_trading.csv(872); 003490_investor_trading.csv(872); 005380_investor_trading.csv(872),snake_case,N,미등록 단어:source; 분류어로 끝나지 않음
+B,investor_source_daily,source_row,17439,0,0.0,0,872,3,1,INTEGER:17439,1(20); 2(20); 3(20),snake_case,N,미등록 단어:source; 분류어로 끝나지 않음
+B,investor_source_daily,bronze_row,17439,242,0.013877,0,863,3,1,INTEGER:17197,1(20); 2(20); 3(20),snake_case,N,분류어로 끝나지 않음
+B,investor_source_daily,source_version,17439,0,0.0,0,136,71,1,SHA256:17439,sha256:71da8b28153eadf513ea24a36fa5019fe(17197); sha256:1cfc942e2958e38a3a881ae9df6b8f378(6); sha256:465ea7a1cf1261b6cb072f0de9240467c(5),snake_case,N,"미등록 단어:source,version; 분류어로 끝나지 않음"
+B,investor_source_daily,pipeline_version,17439,0,0.0,0,1,17,1,TEXT:17439,toss-silver-1.1.0(17439),snake_case,N,"미등록 단어:pipeline,version; 분류어로 끝나지 않음"
+B,investor_source_daily,source_kind,17439,0,0.0,0,2,16,1,LOWER_CODE:17439,bronze(17197); toss_api_requery(242),snake_case,N,미등록 단어:source; 분류어로 끝나지 않음
+B,investor_source_daily,fetched_at,17439,17197,0.986123,0,115,25,1,DATETIME_OFFSET:242,2026-10-14T12:44:09+09:00(7); 2026-10-14T12:42:30+09:00(6); 2026-10-14T12:42:36+09:00(6),snake_case,N,"미등록 단어:fetched,at; 분류어로 끝나지 않음"
+B,investor_source_daily,api_raw_file,17439,17197,0.986123,0,135,39,1,TEXT:242,raw/005380_investor_trading_page03.json(6); raw/058470_investor_trading_page03.json(5); raw/097950_investor_trading_page01.json(5),snake_case,N,분류어로 끝나지 않음
+B,investor_source_daily,api_record_path,17439,17197,0.986123,0,90,20,1,TEXT:242,$.result.records[0](21); $.result.records[39](7); $.result.records[17](7),snake_case,N,미등록 단어:record

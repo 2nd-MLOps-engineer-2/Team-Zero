@@ -10,6 +10,8 @@
 
 ## 구현할 작업
 
+먼저 `docs/data-guide.md`, `docs/data-catalog.md`와 `data/README.md`를 읽고 `python3 scripts/check_handoff.py`를 실행한다. `data/03_C_integration_20261014/`에 Silver·Gold·Meta CSV와 DDL·적재·검증 코드가 이미 있다. 이를 재사용 검토하며 같은 Silver 파일을 다시 요청하지 않는다. Bronze 원본 18개·별도 덤프·원문 ZIP·Delta 로그는 미포함이다. Bronze 재현에 필요한 입력만 요청하고 제공 CSV의 저장·조회 작업은 진행한다. 고정 패키지의 코드를 그 위치에서 재실행하지 말고 활성 경로로 재사용하며 출처를 남긴다.
+
 체크북 B01~B12를 따른다. Python·Pandas·PySpark·Delta Lake·MySQL의 호환 버전과 재현 명령을 고정한다. 교환 원본·명세서와 Silver 인계본 경로를 설정으로 받는다. 파일이 없으면 필요한 경로를 한 번에 요청하고 환경·합성 데이터·계약 작업을 진행한다.
 
 기존 Bronze·Silver·사전·DDL·검증 코드를 우선 재사용한다. Bronze·Silver·Gold를 실제 Delta로 저장·조회하고 `_delta_log`·테이블 버전·건수·해시 증거를 남긴다. MySQL `tz_bronze`, `tz_silver`, `tz_gold`, `tz_meta`의 모델·적재·재실행과 Delta 대사를 구성한다. 기존 DB를 덮는 복원·삭제는 자동 실행하지 않는다.

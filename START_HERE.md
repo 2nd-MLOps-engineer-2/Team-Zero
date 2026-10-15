@@ -23,17 +23,23 @@ cd Team-Zero
 4. 필요한 입력만 구체적으로 묻고, 다른 역할을 기다리는 동안 계약·fixture·샘플·검증을 진행한다.
 5. 실제 실행한 검사와 결과를 기록하고 handoff를 남긴다.
 
-## 실제 데이터가 필요한 경우
+## 실제 데이터로 시작하기
 
-원본·Silver 인계 파일은 이 저장소 문서와 별개다. 개발 에이전트는 없는 파일을 이미 가진 것처럼 다루지 않는다.
+**인계 패키지 75파일은 이미 저장소에 포함되어 있다.** `data/03_C_integration_20261014/04_output/silver/`에 Silver 17개, `gold/`에 기존 Gold 2개가 있다. [데이터 상세](docs/data-guide.md)와 [전체 사전](docs/data-catalog.md)을 먼저 읽는다.
+
+```bash
+python3 scripts/check_handoff.py
+```
+
+Python 표준 기능만으로 파일·해시·CSV 건수를 확인한다. 원본을 수정하거나 DB·파이프라인을 실행하지 않는다.
 
 | 역할 | 시작 입력 | 없어도 진행할 수 있는 일 |
 |---|---|---|
-| A | B의 API 명세·샘플, C의 지표·차트 가이드 | 합성 fixture 기반 화면·필터·오류/빈 결과·NULL 표시 |
-| B | 교환 원본·명세서, Silver 인계본, C의 모듈 계약 | 환경 고정, 저장·조회 틀, API 계약·샘플, 합성 데이터 왕복 검증 |
-| C | 오염 원본·명세서, Silver CSV·사전·검증 결과 | 지표 명세, 기간·예외 정책, 합성 사례 검증·그래프 예시 |
+| A | 저장소 `s_stock`·Gold 2개, B API·C 가이드 | 실제 컬럼·단위·결측을 반영한 화면과 합성 API fixture |
+| B | 저장소 DDL·Silver·Gold·Meta·적재 코드, C 계약 | 제공 CSV 저장·조회·API, Silver/Gold Delta 준비 |
+| C | 저장소 Silver·Gold·사전·프로파일·검증·계산 코드 | 실제 전량 분석·신규 Gold 계산·차트 예시 |
 
-필요하면 팀원이 해당 로컬 폴더 경로를 한 번 전달한다. 전체 원본 파일을 채팅으로 다시 올릴 필요는 없다. 합성 결과와 실제 데이터 결과는 명확히 구분한다.
+Bronze 입력 원본 18개·별도 MySQL 덤프·공시 원문 ZIP·실제 Delta는 포함되지 않았다. 최초 오염 원본 진단·Bronze 재현·전체 원본 대사에 필요한 자료만 구체적으로 요청한다. Silver 전체를 다시 요청하지 않는다. 합성 결과와 실제 데이터 결과를 구분한다.
 
 ## 병렬 진행 순서
 
@@ -46,11 +52,12 @@ API·계산 규칙이 아직 없다는 이유로 다른 역할의 작업 전체�
 
 ## 실행 상태
 
-현재 이 안내를 도입한 시점에는 문서·역할 프롬프트만 제공한다. 서비스 실행 명령·lockfile·Docker 환경은 아직 없다. B01에서 실제 환경과 명령을 만들고 검증한 뒤 여기와 README에 등록한다. 다른 프로젝트의 `make demo` 등을 그대로 실행하지 않는다.
+현재 실제 인계 데이터·기존 처리 코드·문서·역할 프롬프트·읽기 전용 무결성 검사 명령이 있다. 신규 서비스 실행 명령·lockfile·Docker 환경은 아직 없다. B01에서 실제 환경과 명령을 만들고 검증한 뒤 여기와 README에 등록한다. 고정 인계본의 기존 파이프라인은 외부 입력·DB를 요구하고 출력도 덮어쓰므로 그대로 실행하지 않는다.
 
 ## 문서 지도
 
 - [최종 목표·레이어·Gold 설계](docs/project-plan.md)
+- [실제 데이터·Bronze/Silver 사용 안내](docs/data-guide.md) · [전체 컬럼 사전](docs/data-catalog.md)
 - [A01~C12 / G01~G05 / F01~F08 체크리스트](docs/workbook.md)
 - [공유 계약과 인수인계 양식](contracts/README.md)
 - [A 프롬프트](prompts/A_frontend.md) · [B 프롬프트](prompts/B_backend.md) · [C 프롬프트](prompts/C_analysis.md)

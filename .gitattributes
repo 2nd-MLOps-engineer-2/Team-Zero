@@ -1,0 +1,2 @@
+# Preserve the imported handoff bytes, including BOM and line endings.
+data/03_C_integration_20261014/** -text

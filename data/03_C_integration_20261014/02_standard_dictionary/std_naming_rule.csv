@@ -1,0 +1,13 @@
+﻿rule_id,rule_txt,detail_txt
+R01,"물리명은 소문자 snake_case, 영문 시작",정규식 ^[a-z][a-z0-9_]*$
+R02,물리명 = 표준 단어 토큰의 조합,모든 토큰이 std_word 에 등록돼야 함
+R03,마지막 토큰은 분류어(class word),id·cd·nm·no·dt·dttm·yr·amt·prc·qty·rt·val·yn·cnt·txt·path·hash·ver
+R04,분류어가 도메인을 결정,"예) *_dt→DATE, *_yn→YN(CHAR1 Y/N), *_amt→AMT_KRW(DECIMAL(20,0))"
+R05,같은 물리명 = 같은 의미·같은 도메인,동음이의 금지: stock_cd 는 모든 테이블에서 CHAR(6) 종목코드
+R06,같은 의미 = 같은 물리명,"이음동의 금지: symbol·stock_code → stock_cd, _source_file·source_file → src_file_path"
+R07,"물리명 길이 ≤ 40자, SQL 예약어 단독 사용 금지",type·date·year·key 등 단독 사용 불가
+R08,테이블 접두사 = 계층,b_(Bronze) s_(Silver) g_(Gold) m_(Meta)
+R09,코드 컬럼(*_cd)은 공통코드 허용값만,"s_cmn_cd 코드그룹, 코드값은 대문자 snake(UPPER_CODE)"
+R10,여부 컬럼(*_yn)은 Y/N 두 값만,True/true/1 혼용 금지
+R11,"일자는 DATE(YYYY-MM-DD, KST), 일시는 KST DATETIME",YYYYMMDD·오프셋 문자열은 변환 후 적재
+R12,"빈값은 NULL, 0 대체 금지",금액·수량의 결측과 0을 구분

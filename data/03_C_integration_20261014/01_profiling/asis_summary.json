@@ -1,0 +1,15 @@
+{
+  "tables": 14,
+  "columns": 337,
+  "rows_total": 356676,
+  "null_cells": 1321589,
+  "cells": 7237130,
+  "key_dup_rows": 0,
+  "columns_with_pattern_mix": 51,
+  "naming_style": {
+    "snake_case": 314,
+    "leading_underscore": 12,
+    "camelCase": 11
+  },
+  "std_name_compliance_asis": 0.0326
+}

@@ -1,0 +1,21 @@
+﻿corp_cd,corp_nm,corp_eng_nm,stock_cd,chg_dt,src_team_cd,src_file_path,src_row_no,src_ver,pipln_ver
+00258689,JYP Ent.,JYP Entertainment Corporation,035900,2022-12-06,A,corp_codes.csv,68877,Bronze_Cleanup_20261014,c-integration-1.0.0
+00369657,리노공업,LEENO Industrial Inc,058470,2023-02-16,A,corp_codes.csv,78280,Bronze_Cleanup_20261014,c-integration-1.0.0
+00583424,아모레퍼시픽,AMOREPACIFIC CORP.,090430,2024-01-02,A,corp_codes.csv,83879,Bronze_Cleanup_20261014,c-integration-1.0.0
+00266961,NAVER,NAVER Corporation,035420,2024-03-11,A,corp_codes.csv,87461,Bronze_Cleanup_20261014,c-integration-1.0.0
+00164779,SK하이닉스,SK hynix Inc.,000660,2024-03-28,A,corp_codes.csv,94224,Bronze_Cleanup_20261014,c-integration-1.0.0
+00155319,POSCO홀딩스,POSCO Holdings Inc.,005490,2025-03-21,A,corp_codes.csv,98135,Bronze_Cleanup_20261014,c-integration-1.0.0
+01152470,펄어비스,PearlAbyss Corp.,263750,2024-07-01,A,corp_codes.csv,99255,Bronze_Cleanup_20261014,c-integration-1.0.0
+00159616,두산에너빌리티,"DOOSAN ENERBILITY CO., LTD.",034020,2026-03-20,A,corp_codes.csv,104345,Bronze_Cleanup_20261014,c-integration-1.0.0
+00164742,현대자동차,HYUNDAI MOTOR CO,005380,2026-03-31,A,corp_codes.csv,104351,Bronze_Cleanup_20261014,c-integration-1.0.0
+00635134,CJ제일제당,CJ CHEILJEDANG CORP.,097950,2026-03-25,A,corp_codes.csv,105801,Bronze_Cleanup_20261014,c-integration-1.0.0
+00401731,LG전자,LG ELECTRONICS INC.,066570,2026-03-24,A,corp_codes.csv,106204,Bronze_Cleanup_20261014,c-integration-1.0.0
+00413046,셀트리온,"Celltrion, Inc.",068270,2026-03-25,A,corp_codes.csv,107149,Bronze_Cleanup_20261014,c-integration-1.0.0
+00126362,삼성SDI,"SAMSUNG SDI CO.,LTD",006400,2026-03-06,A,corp_codes.csv,108852,Bronze_Cleanup_20261014,c-integration-1.0.0
+01489648,솔브레인,"Soulbrain Co., Ltd.",357780,2025-09-05,A,corp_codes.csv,109856,Bronze_Cleanup_20261014,c-integration-1.0.0
+00356361,LG화학,LG CHEM LTD,051910,2026-04-01,A,corp_codes.csv,110845,Bronze_Cleanup_20261014,c-integration-1.0.0
+00126380,삼성전자,"SAMSUNG ELECTRONICS CO,.LTD",005930,2025-12-01,A,corp_codes.csv,111802,Bronze_Cleanup_20261014,c-integration-1.0.0
+00113526,대한항공,"KOREAN AIR LINES CO.,LTD",003490,2026-03-16,A,corp_codes.csv,113258,Bronze_Cleanup_20261014,c-integration-1.0.0
+00159023,SK텔레콤,"SK TELECOM CO.,LTD",017670,2026-03-27,A,corp_codes.csv,113580,Bronze_Cleanup_20261014,c-integration-1.0.0
+00989619,알테오젠,Alteogen Inc.,196170,2025-12-29,A,corp_codes.csv,113939,Bronze_Cleanup_20261014,c-integration-1.0.0
+01160363,에코프로비엠,"ECOPRO BM CO.,LTD.",247540,2025-07-14,A,corp_codes.csv,114783,Bronze_Cleanup_20261014,c-integration-1.0.0

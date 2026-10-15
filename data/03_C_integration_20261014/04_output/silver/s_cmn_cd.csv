@@ -1,0 +1,134 @@
+﻿cd_grp_id,cd_val,cd_nm,cd_desc_txt,sort_ord_no,asis_val_txt
+YN,Y,예,여부,1,True|true|1|Y
+YN,N,아니오,여부,2,False|false|0|N
+TEAM,A,A 담당(OpenDART),담당 팀,1,
+TEAM,B,B 담당(토스증권),담당 팀,2,
+TEAM,C,C 담당(통합·품질),담당 팀,3,
+MKT,KOSPI,유가증권시장,시장,1,KOSPI|Y
+MKT,KOSDAQ,코스닥시장,시장,2,KOSDAQ|K
+IDX,KOSPI,코스피 지수,지수,1,KOSPI
+IDX,KOSDAQ,코스닥 지수,지수,2,KOSDAQ
+CORP_CLS,Y,유가,법인구분(OpenDART),1,Y
+CORP_CLS,K,코스닥,법인구분(OpenDART),2,K
+CORP_CLS,N,코넥스,법인구분(OpenDART),3,N
+CORP_CLS,E,기타,법인구분(OpenDART),4,E
+SEC_TYPE,STOCK,주식,증권 유형,1,STOCK
+STOCK_STTS,ACTIVE,거래중,종목 상태,1,ACTIVE
+CRNCY,KRW,원화,통화,1,KRW
+RPT,11013,1분기보고서,보고서 코드,1,11013|1분기
+RPT,11012,반기보고서,보고서 코드,2,11012|반기
+RPT,11014,3분기보고서,보고서 코드,3,11014|3분기
+RPT,11011,사업보고서,보고서 코드,4,11011|사업보고서
+FS_DIV,CFS,연결재무제표,재무제표 구분,1,CFS
+FS_DIV,OFS,별도·개별재무제표,재무제표 구분,2,OFS
+STMT_DIV,BS,재무상태표,재무제표 양식,1,BS
+STMT_DIV,IS,손익계산서,재무제표 양식,2,IS
+STMT_DIV,CIS,포괄손익계산서,재무제표 양식,3,CIS
+STMT_DIV,CF,현금흐름표,재무제표 양식,4,CF
+STMT_DIV,SCE,자본변동표,재무제표 양식,5,SCE
+DOC_STTS,DOWNLOADED,원문 수집 완료,원문 문서 상태,1,downloaded
+DOC_STTS,UNAVAILABLE,원문 없음(OpenDART 014),원문 문서 상태,2,unavailable
+DOC_STTS,NOT_IN_INPUT,원문 수집 대상 아님,원문 문서 상태,3,NOT_IN_INPUT
+DSCL_JOIN_STTS,MATCHED,공시목록과 연결,공시 연결 상태,1,MATCHED
+DSCL_JOIN_STTS,NOT_IN_INPUT_COVERAGE,공시목록 수집 범위 밖,공시 연결 상태,2,NOT_IN_INPUT_COVERAGE
+CAL_PRD_STTS,VERIFIED_XML,원문 XML 검증,달력 기간 검증 상태,1,VERIFIED_XML
+CAL_PRD_STTS,ASSUMED_DECEMBER_FISCAL_YEAR,12월 결산 가정,달력 기간 검증 상태,2,ASSUMED_DECEMBER_FISCAL_YEAR
+CF_PRD_STTS,VERIFIED_XML_YTD,원문 XML 누적기간 검증,현금흐름 기간 검증 상태,1,VERIFIED_XML_YTD
+CF_PRD_STTS,UNVERIFIED_NO_DOCUMENT,원문 없음·미검증,현금흐름 기간 검증 상태,2,UNVERIFIED_NO_DOCUMENT
+PRD_TYPE,YTD,당기 누적,지표 기간 유형,1,_ytd
+PRD_TYPE,PRIOR_YTD,전년 동기 누적,지표 기간 유형,2,_prior_ytd
+PRD_TYPE,Q3M,당기 3개월,지표 기간 유형,3,_3m
+PRD_TYPE,PRIOR_Q3M,전년 동기 3개월,지표 기간 유형,4,_prior_3m
+PRD_TYPE,ASOF,당기말 잔액,지표 기간 유형,5,_asof
+PRD_TYPE,PRIOR_YE,전년도말 잔액,지표 기간 유형,6,_prior_year_end
+INVSTR_TYPE,INDIVIDUAL,개인,투자자 유형,1,individual
+INVSTR_TYPE,FOREIGNER,외국인,투자자 유형,2,foreigner
+INVSTR_TYPE,INSTITUTION,기관 합계,투자자 유형,3,institution
+INVSTR_TYPE,OTHER_CORP,기타법인,투자자 유형,4,otherCorporation
+INVSTR_TYPE,FIN_INVEST,금융투자,투자자 유형,11,financialInvestment
+INVSTR_TYPE,INSURANCE,보험,투자자 유형,12,insurance
+INVSTR_TYPE,TRUST,투신,투자자 유형,13,trust
+INVSTR_TYPE,PRIVATE_EQUITY,사모펀드,투자자 유형,14,privateEquityFund
+INVSTR_TYPE,BANK,은행,투자자 유형,15,bank
+INVSTR_TYPE,OTHER_FIN,기타금융,투자자 유형,16,otherFinancialInstitution
+INVSTR_TYPE,PENSION,연기금,투자자 유형,17,pensionFund
+AGGR_LVL,TOP_LEVEL,상위 4유형,수급 집계 수준,1,top_level
+AGGR_LVL,INST_DETAIL,기관 세부 7유형,수급 집계 수준,2,institution_detail
+SRC_KIND,BRONZE,브론즈 정화본,원천 종류,1,bronze|Bronze_Cleanup_20261014
+SRC_KIND,API_REQUERY,토스 API 재조회,원천 종류,2,toss_api_requery
+MAP_STTS,MATCHED,1:1 매핑,기업-종목 매핑 상태,1,
+MAP_STTS,UNMAPPED,미연결,기업-종목 매핑 상태,2,
+MAP_STTS,MULTIPLE_CANDIDATES,다중 후보,기업-종목 매핑 상태,3,
+MAP_MTHD,STOCK_CD_EXACT,종목코드 완전일치,매핑 방법,1,
+MAP_MTHD,NONE,매핑 불가,매핑 방법,9,
+CONN_STTS,BOTH,가격·수급 모두 있음,가격·수급 연결 상태,1,both
+CONN_STTS,PRICE_ONLY,가격만 있음,가격·수급 연결 상태,2,price_only
+CONN_STTS,INVESTOR_ONLY,수급만 있음,가격·수급 연결 상태,3,investor_only
+MISS_RSN,INVESTOR_PENDING_REVIEW,수급 API 재조회값 검토 대기(updatedAt 불일치),부재 사유,1,investor_api_candidate_requires_review
+MISS_RSN,INVESTOR_NOT_SUPPLIED,수급 원천 없음,부재 사유,2,
+MISS_RSN,PRICE_NOT_SUPPLIED,가격 원천 없음,부재 사유,3,
+ISSUE_TYPE,MISSING_VALUE,결측,품질 이슈 유형,1,
+ISSUE_TYPE,DUPLICATE_KEY,키 중복,품질 이슈 유형,2,
+ISSUE_TYPE,FORMAT,형식 불일치,품질 이슈 유형,3,
+ISSUE_TYPE,CODE_VALUE,코드값 위반,품질 이슈 유형,4,
+ISSUE_TYPE,REFERENCE,참조 무결성,품질 이슈 유형,5,
+ISSUE_TYPE,NAMING,명명 규칙,품질 이슈 유형,6,
+ISSUE_TYPE,COVERAGE,수집 범위·부재,품질 이슈 유형,7,
+ISSUE_TYPE,PERIOD,기간 검증,품질 이슈 유형,8,
+ISSUE_TYPE,MAPPING,계정·기업 매핑,품질 이슈 유형,9,
+ISSUE_TYPE,NAME_MISMATCH,명칭 불일치,품질 이슈 유형,10,
+ISSUE_TYPE,RANGE,값 범위,품질 이슈 유형,11,
+ISSUE_TYPE,REVIEW,검토 대기,품질 이슈 유형,12,
+SEV,ERROR,오류(적재 차단),심각도,1,
+SEV,WARN,경고(사용 시 주의),심각도,2,REVIEW
+SEV,INFO,정보(설명 가능),심각도,3,
+DETECT_STAGE,A_SELF,A 자체 검증,탐지 단계,1,
+DETECT_STAGE,B_SELF,B 자체 검증,탐지 단계,2,
+DETECT_STAGE,C_INTEGRATION,C 통합 검증,탐지 단계,3,
+RESOLVE_STTS,OPEN,미해결,조치 상태,1,
+RESOLVE_STTS,RETAINED,행 보존·플래그,조치 상태,2,
+RESOLVE_STTS,EXCLUDED_FROM_PIT,시점 조인 제외,조치 상태,3,
+RESOLVE_STTS,QUARANTINED,격리,조치 상태,4,
+RESOLVE_STTS,EXPLAINED,설명 완료,조치 상태,5,
+MTRC,REVENUE,매출액·영업수익,재무 지표,1,revenue
+MTRC,COST_OF_SALES,매출원가,재무 지표,2,cost_of_sales
+MTRC,GROSS_PROFIT,매출총이익,재무 지표,3,gross_profit
+MTRC,SGA,판매비와관리비,재무 지표,4,sga
+MTRC,OPERATING_PROFIT,영업이익,재무 지표,5,operating_profit
+MTRC,FINANCE_INCOME,금융수익,재무 지표,6,finance_income
+MTRC,FINANCE_COST,금융비용,재무 지표,7,finance_cost
+MTRC,PRETAX_PROFIT,법인세비용차감전순이익,재무 지표,8,pretax_profit
+MTRC,INCOME_TAX,법인세비용(수익),재무 지표,9,income_tax
+MTRC,NET_INCOME,당기순이익,재무 지표,10,net_income
+MTRC,NET_INCOME_PARENT,지배기업 소유주 귀속 순이익,재무 지표,11,net_income_parent
+MTRC,TOTAL_ASSETS,자산총계,재무 지표,12,total_assets
+MTRC,TOTAL_LIABILITIES,부채총계,재무 지표,13,total_liabilities
+MTRC,TOTAL_EQUITY,자본총계,재무 지표,14,total_equity
+MTRC,CURRENT_ASSETS,유동자산,재무 지표,15,current_assets
+MTRC,NONCURRENT_ASSETS,비유동자산,재무 지표,16,noncurrent_assets
+MTRC,CURRENT_LIABILITIES,유동부채,재무 지표,17,current_liabilities
+MTRC,NONCURRENT_LIABILITIES,비유동부채,재무 지표,18,noncurrent_liabilities
+MTRC,CASH_AND_EQUIVALENTS,현금및현금성자산,재무 지표,19,cash_and_equivalents
+MTRC,TRADE_RECEIVABLES,유동 매출채권,재무 지표,20,trade_receivables
+MTRC,TRADE_AND_OTHER_RECEIVABLES,유동 매출채권 및 기타채권,재무 지표,21,trade_and_other_receivables
+MTRC,INVENTORIES,재고자산,재무 지표,22,inventories
+MTRC,TRADE_PAYABLES,유동 매입채무,재무 지표,23,trade_payables
+MTRC,TRADE_AND_OTHER_PAYABLES,유동 매입채무 및 기타채무,재무 지표,24,trade_and_other_payables
+MTRC,SHORT_TERM_BORROWINGS_REPORTED,단기차입금 공시금액,재무 지표,25,short_term_borrowings_reported
+MTRC,LONG_TERM_BORROWINGS_REPORTED,장기차입금 공시금액,재무 지표,26,long_term_borrowings_reported
+MTRC,CURRENT_PORTION_LONG_TERM_DEBT_REPORTED,유동성 장기차입금·부채 공시금액,재무 지표,27,current_portion_long_term_debt_reported
+MTRC,CURRENT_LEASE_LIABILITIES,유동 리스부채,재무 지표,28,current_lease_liabilities
+MTRC,NONCURRENT_LEASE_LIABILITIES,비유동 리스부채,재무 지표,29,noncurrent_lease_liabilities
+MTRC,PROPERTY_PLANT_EQUIPMENT,유형자산,재무 지표,30,property_plant_equipment
+MTRC,INTANGIBLE_ASSETS,무형자산,재무 지표,31,intangible_assets
+MTRC,OPERATING_CASH_FLOW,영업활동현금흐름,재무 지표,32,operating_cash_flow
+MTRC,INVESTING_CASH_FLOW,투자활동현금흐름,재무 지표,33,investing_cash_flow
+MTRC,FINANCING_CASH_FLOW,재무활동현금흐름,재무 지표,34,financing_cash_flow
+MTRC,PPE_PURCHASE_REPORTED,유형자산 취득 현금흐름 공시금액,재무 지표,35,ppe_purchase_reported
+MTRC,INTANGIBLE_PURCHASE_REPORTED,무형자산 취득 현금흐름 공시금액,재무 지표,36,intangible_purchase_reported
+LAYER,BRONZE,브론즈,데이터 계층,1,
+LAYER,SILVER,실버,데이터 계층,2,
+LAYER,GOLD,골드,데이터 계층,3,
+LAYER,META,메타,데이터 계층,4,
+RUN_STTS,SUCCESS,성공,실행 상태,1,
+RUN_STTS,FAILED,실패,실행 상태,2,
