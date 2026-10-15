@@ -2,6 +2,8 @@
 
 상태: 시작 전. [프롬프트](../../prompts/A_frontend.md) · [체크북](../workbook.md).
 
+필수 보완: [M08·M09·M12·M13·M14 및 A 역할](../missing-work.md). Bronze 출처/미확보, Silver 검토/NULL, Gold 계산/근거 상태의 화면·계약·예제·검사를 추가한다. 항목별 상태·증빙·의존성을 아래 기록에 추가한다. 현재 모두 미완료다.
+
 구현 예정 경로: `apps/web/`. 아직 실행 명령·화면 구현은 없다.
 
 데이터 준비: `data/03_C_integration_20261014/`에 실제 `s_stock`·Gold·사전이 포함되어 있다. [데이터 안내](../data-guide.md)에서 단위·NULL·기간을 확인한다. 데이터 업로드와 A01~A10의 완료는 별개다.

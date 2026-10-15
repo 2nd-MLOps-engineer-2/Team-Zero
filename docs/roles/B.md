@@ -2,6 +2,8 @@
 
 상태: 시작 전. [프롬프트](../../prompts/B_backend.md) · [체크북](../workbook.md).
 
+필수 보완: [M01·M03~M06·M08·M09·M11·M12·M14 및 B 역할](../missing-work.md). 원천 확보 명세와 실제 3레이어 Delta·MySQL·API·재실행·덤프/복원 증빙을 추가한다. 항목별 상태·증빙·의존성을 아래 기록에 추가한다. 현재 모두 미완료다.
+
 구현 예정 경로: `apps/api/`, `pipelines/`, `infra/`. 아직 환경 고정·Delta·DB·API 실행 구현은 없다.
 
 데이터 준비: `data/03_C_integration_20261014/`에 실제 Silver·Gold·Meta와 DDL·기존 코드가 포함되어 있다. [데이터 안내](../data-guide.md) 참조. Bronze 입력 원본 18개·별도 덤프·원문 ZIP은 미포함이다.

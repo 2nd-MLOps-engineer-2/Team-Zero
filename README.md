@@ -128,6 +128,8 @@ python3 scripts/check_handoff.py
 
 ## 체크북과 인수인계
 
+- **[Bronze·Silver·Gold 누락·미구현 보완 업무](docs/missing-work.md)**: M01~M14에 확보할 자료, 추가할 문서·코드·검사, 역할별 책임과 완료 증빙을 지정했다. 각 역할 프롬프트가 이 업무를 함께 수행하도록 연결했다.
+
 - [전체 작업 체크리스트](docs/workbook.md): A 10개, B 12개, C 12개, 공통 전달 5개, 최종 제출 8개. 모두 증빙 확인 전 상태로 시작한다.
 - [공유 계약](contracts/README.md): C→B 계산, B→A API, C→A 시각화, B↔C 검증, A·B·C 화면 통합.
 - [공통 에이전트 지침](AGENTS.md): 역할별 담당 경로·데이터 원칙·완료 보고 규칙.
