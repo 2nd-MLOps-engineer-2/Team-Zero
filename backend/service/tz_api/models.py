@@ -82,6 +82,12 @@ class Daily(Record):
  connection:dict[str,str|None]|None
  analysis:dict[str,str|None]|None
 
+class ChartDaily(Daily):
+ stock_base100:StrictStr|None
+ market_base100:StrictStr|None
+ price_base_date:StrictStr|None
+ price_chart_stts_cd:StrictStr
+
 class Financial(Record):
  fin_rpt_id:StrictStr
  corp_cd:StrictStr

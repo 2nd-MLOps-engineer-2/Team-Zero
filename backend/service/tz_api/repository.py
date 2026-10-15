@@ -5,6 +5,7 @@ from pathlib import Path
 from datetime import date,datetime
 from decimal import Decimal
 from .settings import Settings,identifier
+from . import __version__
 
 BASE_TABLES={'s_stock','s_corp','s_corp_stock_map','s_fin_rpt','s_fin_mtrc','s_fin_mtrc_def','s_fin_item','s_dscl','s_dscl_doc',
  's_stock_daily_prc','s_idx_daily_prc','s_invstr_trd_daily','s_frgn_hold_daily','s_cfd_bal_daily','s_conn_stts','s_dq_issue','s_cmn_cd',
@@ -116,9 +117,11 @@ class Repository:
   return self
 
  def metadata(self,**extra):
-  return dict(api_version='1.0.0',data_version=self.data_version,source_backend=self.backend,
+  return dict(api_version=__version__,data_version=self.data_version,source_backend=self.backend,
    data_min_date=self.min_date,data_final_date=self.max_date,stock_count=len(self.stocks),
    calculation_version=self.calculation_version,analysis_status='AVAILABLE' if self.analysis else 'PENDING_C_DELIVERY',
+   synthetic=False,input_version=self.handoff_version,
+   analysis_data_version=self.analysis['artifact_version'] if self.analysis else None,
    units=dict(amount='KRW',quantity='shares',ratio='decimal_fraction'),
    numeric_encoding='decimal_string',**extra)
 

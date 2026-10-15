@@ -1,3 +1,7 @@
+# C 전달 보완 (2026-10-15)
+
+C의 c-gold-0.1.0(schema.json/validation.json/두CSV)을 재현·검증했다. pack_c_analysis.py --source <C출력> --output <새묶음>으로 아래 저장어댑터 형식에 연결한다. 기존 C 입력19파일 해시·Gold8검사·타입·PK·모든CSV값을 검증하고 계산값은 변경하지 않는다. API/CSV 전량대사 및 신규2Delta 실제쓰기·조회는PASS, 신규C MySQL적재는미실행이다. sourceC계약의 계산규칙을 B저장형식 제안이 대체하지 않는다. 이번 소스는 로컬미커밋. 아래는 최초제안시기록이다.
+
 # G01 보조 — C 결과 저장·제공 형식 제안
 
 상태: B 어댑터 구현·합성 경계 검사 완료 / C 합의·실제 신규 결과 미전달. 지표 정의·계산식·시각화 계약은 C의 `analysis.md`/`visualization.md`에서 별도로 정한다. 사용자 지시에 따라 현재 API는 기존 Gold로 제공한다.

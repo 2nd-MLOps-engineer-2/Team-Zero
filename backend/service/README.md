@@ -1,3 +1,9 @@
+# API 1.1.0 S4 로컬 보완
+
+커밋·push 없이 수정·검증한 상태다. 차트 기준100/기준일,chart.csv,pack_c_analysis.py(검증된 C 계산묶음),verify_s4.py(전량C API대조)를 추가했다. [최신 S4 요청별 답변](../../docs/handoffs/S4-B-to-A.md)을 먼저 따른다. 현재PC는 run.py --backend csv --analysis-dir build/s4_api_20261015/c_api_artifact로 C값을 제공한다. C가 본인환경에서 만든 build/analysis는 pack_c_analysis.py --source build/analysis --output build/c_api_artifact로 검증후연결한다.
+
+아래는 기존실행안내이며 C미전달 설명은 v1시점이다. 실제 C모듈/자료를 고정SHA에서 재현했다. 새C MySQL테이블적재 및 A브라우저통합은미실행이다.
+
 # TEAM ZERO B 서비스
 
 상태: 기존 C Gold 기반 조회 API 구현·로컬 검증 완료. A의 화면 수신 검증, C의 신규 분석 Gold, integration/main 반영은 별도다.

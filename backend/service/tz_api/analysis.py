@@ -15,7 +15,8 @@ def load_bundle(folder,repo):
  if not mf.get('calculation_version') or not mf.get('input_version'):raise ValueError('C artifact versions required')
  if mf['input_version']!=repo.handoff_version:raise ValueError('C input version differs from verified handoff')
  if set(mf.get('tables',{}))!=set(TABLES):raise ValueError('Both proposed C Gold tables are required')
- result=dict(calculation_version=mf['calculation_version'],input_version=mf['input_version'],entries={},root=root)
+ result=dict(calculation_version=mf['calculation_version'],input_version=mf['input_version'],entries={},root=root,
+  artifact_version='c-artifact-sha256:'+file_hash(root/'manifest.json'))
  for name,pk in TABLES.items():
   item=mf['tables'][name];path=(root/item['file']).resolve()
   if not path.is_relative_to(root):raise ValueError('C artifact path escapes bundle')

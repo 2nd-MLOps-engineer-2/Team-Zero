@@ -7,7 +7,9 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse,Response
 from fastapi.middleware.cors import CORSMiddleware
 from starlette.exceptions import HTTPException as StarletteHTTPException
-from .models import Envelope,Stock,Daily,Financial,Evidence,ErrorEnvelope
+from .models import Envelope,Stock,Daily,ChartDaily,Financial,Evidence,ErrorEnvelope
+from .charts import normalize_prices
+from . import __version__
 from .repository import Repository
 from .settings import Settings
 
@@ -29,16 +31,16 @@ class AnalysisTable(str,Enum):
 def create_app(settings=None,repository=None):
  settings=settings or Settings.from_env()
  repo=repository or Repository(settings).warm()
- api=FastAPI(title='TEAM ZERO API',version='1.0.0',description='기업 실적·현금흐름·수급·주가 조회. 금액·수량·비율은 정밀도 보존 문자열.',
+ api=FastAPI(title='TEAM ZERO API',version=__version__,description='기업 실적·현금흐름·수급·주가 조회. 금액·수량·비율은 정밀도 보존 문자열.',
   responses={code:{'model':ErrorEnvelope} for code in (404,409,422,503)})
  api.state.repo=repo
  api.add_middleware(CORSMiddleware,allow_origins=list(repo.settings.cors_origins),allow_credentials=False,
-  allow_methods=['GET'],allow_headers=['Accept','Content-Type'],expose_headers=['Content-Disposition','X-Data-Version','X-API-Version','X-Analysis-Status'])
+  allow_methods=['GET'],allow_headers=['Accept','Content-Type'],expose_headers=['Content-Disposition','X-Data-Version','X-API-Version','X-Analysis-Status','X-Price-Base-Date'])
 
  @api.middleware('http')
  async def version_headers(request,call_next):
   response=await call_next(request)
-  response.headers['X-API-Version']='1.0.0';response.headers['X-Data-Version']=repo.data_version
+  response.headers['X-API-Version']=__version__;response.headers['X-Data-Version']=repo.data_version
   response.headers['X-Analysis-Status']='AVAILABLE' if repo.analysis else 'PENDING_C_DELIVERY'
   response.headers['Cache-Control']='no-store'
   return response
@@ -115,11 +117,12 @@ def create_app(settings=None,repository=None):
  def stock_detail(code:str=ApiPath(pattern=r'^\d{6}$')):
   return envelope(dict(stock=stock(code),corporation_mapping=repo.mapping.get(code)))
 
- @api.get('/stocks/{code}/daily',tags=['daily'],response_model=Envelope[list[Daily]])
+ @api.get('/stocks/{code}/daily',tags=['daily'],response_model=Envelope[list[ChartDaily]])
  def daily(code:str=ApiPath(pattern=r'^\d{6}$'),start:date|None=None,end:date|None=None,
   limit:int=Query(1000,ge=1,le=5000),offset:int=Query(0,ge=0)):
   rows,lo,hi=daily_rows(code,start,end)
-  return envelope([repo.annotated_daily(r) for r in rows[offset:offset+limit]],start=lo,end=hi,total=len(rows),limit=limit,offset=offset)
+  rows,chart_meta=normalize_prices(rows)
+  return envelope([repo.annotated_daily(r) for r in rows[offset:offset+limit]],start=lo,end=hi,total=len(rows),limit=limit,offset=offset,**chart_meta)
 
  @api.get('/stocks/{code}/financials',tags=['financials'],response_model=Envelope[list[Financial]])
  def financials(code:str=ApiPath(pattern=r'^\d{6}$'),year:int|None=Query(None,ge=1900,le=2100),
@@ -158,6 +161,14 @@ def create_app(settings=None,repository=None):
   rows,_,_=daily_rows(code,start,end)
   fields=list(next(iter(repo.daily.values()))[0])
   return csv_response(rows,code+'_daily.csv',fields)
+
+ @api.get('/exports/stocks/{code}/chart.csv',tags=['exports'],response_class=Response,responses={200:{'content':{'text/csv':{'schema':{'type':'string'}}}}})
+ def export_chart(code:str=ApiPath(pattern=r'^\d{6}$'),start:date|None=None,end:date|None=None):
+  rows,_,_=daily_rows(code,start,end);rows,chart_meta=normalize_prices(rows)
+  fields=['stock_cd','trd_dt','close_prc','idx_close_prc','stock_base100','market_base100','price_base_date','price_chart_stts_cd']
+  result=csv_response([{k:r[k] for k in fields} for r in rows],code+'_price_chart.csv',fields)
+  result.headers['X-Price-Base-Date']=chart_meta['price_base_date'] or ''
+  return result
 
  @api.get('/exports/stocks/{code}/financials.csv',tags=['exports'],response_class=Response,responses={200:{'content':{'text/csv':{'schema':{'type':'string'}}}}})
  def export_financials(code:str=ApiPath(pattern=r'^\d{6}$'),year:int|None=Query(None,ge=1900,le=2100),

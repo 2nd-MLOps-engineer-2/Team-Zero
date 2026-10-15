@@ -1,6 +1,6 @@
-# G02 — B 조회 API 1.0.0
+# G02 — B 조회 API 1.1.0 (로컬 미커밋 확장)
 
-작성 B / 구현·로컬 검증 완료 / A·C 수신 합의 대기. 기존 C 통합본 1.0.0을 제공한다. C 신규 분석 계약의 대체물이 아니다. 정확한 전체 컬럼·필수값은 실행 서버 `/openapi.json`과 `fixtures/api/openapi.json`을 따른다.
+작성 B / 구현·로컬 검증 완료 / A·C 수신 합의 대기. 기존 C 통합본 1.0.0을 제공한다. C 신규 분석 계약의 대체물이 아니다. 이번 확장은 미커밋이며 원격 v1 SHA/PR에는 없다. 상세 전달·A 어댑터 차이는 docs/handoffs/S4-B-to-A.md를 따른다. 정확한 전체 컬럼·필수값은 실행 서버 `/openapi.json`과 `fixtures/api/openapi.json`을 따른다.
 
 기본 주소 `http://127.0.0.1:8000`. 인증 없는 로컬 GET 서비스다. 20종목, 거래일 2022-12-01~2026-06-30(872일), 재무 사업연도 2022~2025. 새로운 주가·공시를 실시간 수집하지 않는다.
 
@@ -17,6 +17,7 @@
 | `/stocks/{code}/quality` | start,end,limit=1~500(기본100),offset | availability·직접 issue·전체 statement 이슈 분리 |
 | `/analysis/{code}/evidence` | as_of | Gold 관측값·연결 보고서·94개 기간별 지표·가격 원천 |
 | `/exports/stocks/{code}/daily.csv` | start,end | 기존 Gold 전체 컬럼, 종목×거래일 |
+| `/exports/stocks/{code}/chart.csv` | start,end | 원종가/지수·동일 기준100·기준일·상태 |
 | `/exports/stocks/{code}/financials.csv` | financials와 동일 | 보고서×지표×기간 유형, 보고서당94행 |
 | `/exports/analysis/{table}.csv` | g_fin_rpt_analysis 또는 g_stock_daily_analysis | C 신규 전달 전409 |
 
@@ -38,10 +39,17 @@ quality의 날짜 필터는 availability에 적용한다. 직접 이슈는 종�
 
 ## 상태·예외·예제
 
-현재 `analysis_status=PENDING_C_DELIVERY`, 각 `analysis=null`. 기존 Gold 값은 조회 가능하다. 동반 개선·괴리 분류·전년동기 증감 등 C 신규 계산은 만들어 제공하지 않는다.
+C 검증 묶음을 --analysis-dir로 연결하면 c-gold-0.1.0의 계산값을 analysis 중첩과 신규 Gold CSV로 그대로 제공한다. 미연결 시 analysis_status=PENDING_C_DELIVERY와 analysis=null을 유지한다. B가 C 계산식을 변경하지 않는다. 현재 C 묶음과 신규 Delta는 검증했고 신규 C MySQL 적재는 미실행이다.
 
 404 STOCK_NOT_FOUND(보유 외 코드), 422 VALIDATION_ERROR(형식·enum·상한), INVALID_DATE_RANGE(역순), AS_OF_OUT_OF_RANGE(기준일), 409 ANALYSIS_NOT_AVAILABLE(C 미전달), 읽기 오류503 DATA_SOURCE_UNAVAILABLE. 시작 단계 원본 무결성·DB 접속 오류는 서버 시작을 중단한다.
 
 실제 저장소 자료 기반 샘플은 `fixtures/api/`에 request/response wrapper로 저장했다. `missing_investor.json`: 247540/2026-04-16 가격은 있고 수급은 null, invstr_exist_yn=N. `invalid_date.json`: 존재하지 않는 날짜422. `unknown_stock.json`: 미제공 종목404. 합성 C 어댑터 검사 자료는 테스트 안에만 있고 실제 분석 성과가 아니다.
 
 A는 `/stocks`, `/stocks/compare?as_of=2026-06-30`, `/stocks/005930/financials?year=2025&report_code=11011`, `/analysis/005930/evidence?as_of=2026-06-30`부터 연결한다. API/화면/CSV 수치는 G05에서 별도 대조한다.
+
+
+## 1.1 추가: 조회 차트
+
+daily 응답에 stock_base100/market_base100/price_base_date/price_chart_stts_cd, meta.price_base_date/price_normalization을 추가했다. 조회구간 전체에서 두 원값이 동시에 양수·유한한 첫 거래일을 공통 기준으로 삼고 페이지 분리 전 계산한다. HALF_UP 소수8자리 문자열이며 원자료는 수정하지 않는다. 기준 전/기준 없음/이후 일부 결측은 각각 BEFORE_BASE_DATE/NO_COMMON_BASE/PARTIAL,정상OK. 빈결과의 기준일은null. 차트CSV는 /exports/stocks/{code}/chart.csv, 기존 daily.csv는 원Gold를 유지한다.
+
+meta.synthetic=false/input_version/analysis_data_version으로 실제 여부·입력·계산묶음을 전달한다. A의 a-proposal-1 validator와 쿼리·응답 구조는 조정이 필요하며 endpoint별 대응은 S4 문서에 기록했다. 기존샘플v1과 새 fixtures/api/s4 샘플을 구분한다.

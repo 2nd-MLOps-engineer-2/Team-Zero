@@ -4,7 +4,7 @@ from pathlib import Path
 import httpx
 from tz_api.settings import Settings
 
-def run(project,port=18000,backend='auto',fixtures=None):
+def run(project,port=18000,backend='auto',fixtures=None,analysis_dir=None):
  output=project/'build/api_http'/ (datetime.datetime.now().strftime('%Y%m%d_%H%M%S')+'_'+uuid.uuid4().hex[:4])
  output.mkdir(parents=True,exist_ok=False)
  checks=[('health','/health',200),('stocks','/stocks',200),('compare','/stocks/compare?as_of=2026-06-30',200),
@@ -17,7 +17,12 @@ def run(project,port=18000,backend='auto',fixtures=None):
   ('unknown_stock','/stocks/999999/daily',404),
   ('missing_analysis','/exports/analysis/g_stock_daily_analysis.csv',409),
   ('openapi','/openapi.json',200),('docs','/docs',200)]
+ checks += [('chart_csv','/exports/stocks/005930/chart.csv?start=2026-06-01&end=2026-06-30',200),
+  ('empty','/stocks/005930/daily?start=2021-01-01&end=2021-01-02',200),
+  ('financial_csv','/exports/stocks/005930/financials.csv?year=2025&report_code=11011',200)]
+ if analysis_dir:checks=[(name,url,200 if name=='missing_analysis' else status) for name,url,status in checks]
  command=[sys.executable,'-X','utf8',str(Path(__file__).with_name('run.py')),'--project-root',str(project),'--backend',backend,'--port',str(port)]
+ if analysis_dir:command+=['--analysis-dir',str(analysis_dir)]
  results=[];samples={}
  with (output/'server.log').open('w',encoding='utf-8') as log:
   process=subprocess.Popen(command,stdout=log,stderr=subprocess.STDOUT,creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
@@ -54,5 +59,6 @@ def run(project,port=18000,backend='auto',fixtures=None):
 
 if __name__=='__main__':
  ap=argparse.ArgumentParser();ap.add_argument('--project-root',type=Path,default=Settings().project);ap.add_argument('--port',type=int,default=18000)
- ap.add_argument('--backend',choices=['csv','delta','auto'],default='auto');ap.add_argument('--fixtures',type=Path);a=ap.parse_args()
- run(a.project_root.resolve(),a.port,a.backend,a.fixtures)
+ ap.add_argument('--backend',choices=['csv','delta','auto'],default='auto');ap.add_argument('--fixtures',type=Path)
+ ap.add_argument('--analysis-dir',type=Path);a=ap.parse_args()
+ run(a.project_root.resolve(),a.port,a.backend,a.fixtures,a.analysis_dir)
