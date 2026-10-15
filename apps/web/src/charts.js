@@ -1,4 +1,6 @@
-import { escape as e, integer, ratio } from './format.js';
+import { escape as e, integer, money, ratio } from './format.js';
+
+let chartId=0;
 
 // Only chart coordinates are calculated here. Financial metrics remain server values.
 export function chart(rows, series, labelKey, unit, title, options={}) {
@@ -6,6 +8,7 @@ export function chart(rows, series, labelKey, unit, title, options={}) {
   const numeric=(r,s)=>r[s.key]==null?null:Number(r[s.key])/(s.scale||1);
   const values=rows.flatMap(r=>series.map(s=>numeric(r,s))).filter(v=>v!==null&&Number.isFinite(v));
   if(!values.length)return '<p class="empty">표시할 값이 없습니다. 결측 사유를 확인하세요.</p>';
+  const gradientId=`chart-fill-${++chartId}`;
   const bars=options.type==='bar',zero=bars||['주','조 원'].includes(unit);
   const min=Math.min(...values),max=Math.max(...values),padding=(max-min||Math.abs(max)||1)*.14;
   const low=zero?Math.min(0,min-padding):min-padding,high=zero?Math.max(0,max+padding):max+padding,span=high-low||1;
@@ -19,30 +22,32 @@ export function chart(rows, series, labelKey, unit, title, options={}) {
   if(baseline>=low&&baseline<=high)body+=`<line x1="70" x2="682" y1="${y(baseline)}" y2="${y(baseline)}" stroke="#7c9299" stroke-dasharray="5 5"/><text x="690" y="${y(baseline)+4}">${baseline}</text>`;
   series.forEach((s,si)=>{
     body+=`<g data-series="${si}">`;let segment=[];
-    const flush=()=>{if(segment.length)body+=`<polyline points="${segment.join(' ')}" fill="none" stroke="${colors[si]}" stroke-width="2.5" stroke-linejoin="round" ${si%2?'stroke-dasharray="7 4"':''}/>`;segment=[];};
+    const flush=()=>{if(segment.length>1&&si===0)body+=`<polygon class="chart-area" points="${segment[0].split(',')[0]},238 ${segment.join(' ')} ${segment.at(-1).split(',')[0]},238" fill="url(#${gradientId})"/>`;if(segment.length)body+=`<polyline points="${segment.join(' ')}" fill="none" stroke="${colors[si]}" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" ${si%2?'stroke-dasharray="7 4"':''}/>`;segment=[];};
     rows.forEach((r,i)=>{
       const n=numeric(r,s);if(n===null||!Number.isFinite(n)){flush();return;}
       const tip=`${e(r[labelKey])} · ${e(s.label)} ${e(r[s.key])} (${e(s.rawUnit||unit)})`;
       if(bars){const group=Math.min(100,584/rows.length*.68),width=group/series.length;
         body+=`<rect x="${x(i)-group/2+si*width}" y="${Math.min(y(n),y(0))}" width="${Math.max(.3,width-2)}" height="${Math.max(1,Math.abs(y(n)-y(0)))}" rx="2" fill="${colors[si]}"><title>${tip}</title></rect>`;
-      }else{segment.push(`${x(i)},${y(n)}`);body+=`<circle cx="${x(i)}" cy="${y(n)}" r="${rows.length>40?1.5:3}" fill="${colors[si]}"><title>${tip}</title></circle>`;}
+      }else{segment.push(`${x(i)},${y(n)}`);body+=`<circle class="data-dot ${i===rows.length-1?'last-dot':''}" cx="${x(i)}" cy="${y(n)}" r="${rows.length>40?1.5:3}" fill="${colors[si]}"><title>${tip}</title></circle>`;}
     });flush();body+='</g>';
   });
   const labels=[...new Set([0,Math.floor((rows.length-1)/2),rows.length-1])];
   body+=labels.map(i=>`<text x="${x(i)}" y="270" text-anchor="${i===0?'start':i===rows.length-1?'end':'middle'}">${e(rows[i][labelKey])}</text>`).join('');
-  const points=rows.map((r,i)=>({x:x(i),date:r[labelKey],values:series.map(s=>({label:s.label,value:r[s.key]??null,unit:s.rawUnit||unit}))}));
-  return `<div class="interactive-chart" data-points="${e(JSON.stringify(points))}"><div class="legend">${series.map((s,i)=>`<button type="button" data-series-toggle="${i}" aria-pressed="true"><i style="background:${colors[i]}"></i>${e(s.label)}</button>`).join('')}<span>단위: ${e(unit)}</span></div><svg viewBox="0 0 740 290" role="img" aria-label="${e(title)}"><title>${e(title)}</title>${body}<line class="chart-cursor" x1="${x(rows.length-1)}" x2="${x(rows.length-1)}" y1="40" y2="240" stroke="#c4d4d8" stroke-dasharray="3 4"/></svg><div class="chart-readout" aria-live="polite"></div><label class="chart-scrubber">관측일 탐색 <input type="range" min="0" max="${rows.length-1}" value="${rows.length-1}" aria-label="${e(title)} 관측일 선택"></label></div>`;
+  const points=rows.map((r,i)=>({x:x(i),date:r[labelKey],values:series.map(s=>({y:numeric(r,s)==null?null:y(numeric(r,s)),label:s.label,value:r[s.key]??null,unit:s.rawUnit||unit}))}));
+  return `<div class="interactive-chart" data-points="${e(JSON.stringify(points))}"><div class="legend">${series.map((s,i)=>`<button type="button" data-series-toggle="${i}" aria-pressed="true"><i style="background:${colors[i]}"></i>${e(s.label)}</button>`).join('')}<span>단위: ${e(unit)}</span></div><svg viewBox="0 0 740 290" role="img" aria-label="${e(title)}"><title>${e(title)}</title><defs><linearGradient id="${gradientId}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#63d6bd" stop-opacity=".3"/><stop offset="100%" stop-color="#63d6bd" stop-opacity=".015"/></linearGradient></defs>${body}<g class="active-points"></g><line class="chart-cursor" x1="${x(rows.length-1)}" x2="${x(rows.length-1)}" y1="40" y2="240" stroke="#c4d4d8" stroke-dasharray="3 4"/></svg><div class="chart-tooltip" aria-hidden="true" hidden></div><div class="chart-readout" aria-live="polite"></div><label class="chart-scrubber">관측일 탐색 <input type="range" min="0" max="${rows.length-1}" value="${rows.length-1}" aria-label="${e(title)} 관측일 선택"></label></div>`;
 }
 
 export function bindCharts(root){
  root.querySelectorAll('.interactive-chart').forEach(wrap=>{
   const points=JSON.parse(wrap.dataset.points),svg=wrap.querySelector('svg'),range=wrap.querySelector('input'),readout=wrap.querySelector('.chart-readout');
   const show=i=>{const p=points[i];range.value=i;range.setAttribute('aria-valuetext',p.date);const cursor=wrap.querySelector('.chart-cursor');cursor.setAttribute('x1',p.x);cursor.setAttribute('x2',p.x);
-   readout.innerHTML=`<b>${e(p.date)}</b>${p.values.map((v,si)=>`<span data-readout-series="${si}">${e(v.label)} <strong>${v.value===null?'미제공 (NULL)':v.unit==='원'||v.unit==='주'?integer(v.value,v.unit):v.unit==='소수 비율'?ratio(v.value):e(v.value)+' '+e(v.unit)}</strong></span>`).join('')}`;
-   wrap.querySelectorAll('[data-series-toggle]').forEach(b=>{readout.querySelector(`[data-readout-series="${b.dataset.seriesToggle}"]`).hidden=b.getAttribute('aria-pressed')==='false';});
+   readout.innerHTML=`<b>${e(p.date)}</b>${p.values.map((v,si)=>`<span data-readout-series="${si}">${e(v.label)} <strong title="${e(v.value==null?'미제공 (NULL)':String(v.value)+' '+v.unit)}">${v.value===null?'미제공 (NULL)':v.unit==='원'?money(v.value):v.unit==='주'?integer(v.value,v.unit):v.unit==='소수 비율'?ratio(v.value):e(Number(v.value).toLocaleString('ko-KR',{maximumFractionDigits:2}))+' '+e(v.unit)}</strong></span>`).join('')}`;
+   svg.querySelector('.active-points').innerHTML=p.values.map((v,si)=>v.y==null?'':`<circle data-active-series="${si}" cx="${p.x}" cy="${v.y}" r="5" fill="${['#63d6bd','#e8b96d','#849ff0','#d795d1'][si]}" stroke="#142329" stroke-width="2"/>`).join('');
+   wrap.querySelectorAll('[data-series-toggle]').forEach(b=>{const marker=svg.querySelector(`[data-active-series="${b.dataset.seriesToggle}"]`);if(marker)marker.style.display=b.getAttribute('aria-pressed')==='false'?'none':'';readout.querySelector(`[data-readout-series="${b.dataset.seriesToggle}"]`).hidden=b.getAttribute('aria-pressed')==='false';});
   };
   range.addEventListener('input',()=>show(Number(range.value)));
-  svg.addEventListener('pointermove',event=>{const box=svg.getBoundingClientRect(),px=(event.clientX-box.left)/box.width*740;let nearest=0;points.forEach((p,i)=>{if(Math.abs(p.x-px)<Math.abs(points[nearest].x-px))nearest=i;});show(nearest);});
+  svg.addEventListener('pointermove',event=>{const box=svg.getBoundingClientRect(),px=(event.clientX-box.left)/box.width*740;let nearest=0;points.forEach((p,i)=>{if(Math.abs(p.x-px)<Math.abs(points[nearest].x-px))nearest=i;});show(nearest);const tip=wrap.querySelector('.chart-tooltip'),outer=wrap.getBoundingClientRect();tip.innerHTML=readout.innerHTML;tip.hidden=false;tip.style.left=Math.max(0,Math.min(event.clientX-outer.left+16,outer.width-tip.offsetWidth))+'px';tip.style.top=Math.max(30,event.clientY-outer.top-tip.offsetHeight-18)+'px';});
+  svg.addEventListener('pointerleave',()=>{wrap.querySelector('.chart-tooltip').hidden=true;});
   wrap.querySelectorAll('[data-series-toggle]').forEach(b=>b.addEventListener('click',()=>{const pressed=b.getAttribute('aria-pressed')!=='true';b.setAttribute('aria-pressed',String(pressed));wrap.querySelector(`[data-series="${b.dataset.seriesToggle}"]`).style.display=pressed?'':'none';show(Number(range.value));}));
   show(points.length-1);
  });

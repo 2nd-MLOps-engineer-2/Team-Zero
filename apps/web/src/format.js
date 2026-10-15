@@ -20,3 +20,17 @@ export function csv(rows) {
   };
   return '\uFEFF' + [keys, ...rows.map(row => keys.map(key => row[key]))].map(row => row.map(cell).join(',')).join('\r\n');
 }
+
+// BigInt keeps large won amounts exact until display-only rounding.
+export function money(value) {
+  if(value==null)return missing;
+  const text=String(value);
+  if(!/^-?\d+(?:\.0+)?$/.test(text))return '형식 오류';
+  const n=BigInt(text.split('.')[0]),abs=n<0n?-n:n;
+  if(abs<100000000n)return integer(n);
+  let divisor=abs>=1000000000000n?1000000000000n:100000000n;
+  let rounded=(abs*100n+divisor/2n)/divisor;
+  if(divisor===100000000n&&rounded>=1000000n){divisor=1000000000000n;rounded=(abs*100n+divisor/2n)/divisor;}
+  const fraction=String(rounded%100n).padStart(2,'0').replace(/0+$/,'');
+  return `${n<0n?'-':''}${(rounded/100n).toLocaleString('ko-KR')}${fraction?'.'+fraction:''} ${divisor===1000000000000n?'조 원':'억 원'}`;
+}

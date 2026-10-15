@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fixture from '../src/fixtures/sample.json' with {type:'json'};
-import { integer, ratio, csv, escape } from '../src/format.js';
+import { integer, money, ratio, csv, escape } from '../src/format.js';
 import { validate, dashboard } from '../src/api.js';
 import { exportRows } from '../src/export.js';
 import { chart } from '../src/charts.js';
@@ -96,4 +96,8 @@ test('sample price windows begin at 100 on the first requested observation',asyn
  assert.equal(d.meta.price_base_date,'2026-06-15');
  assert.equal(d.daily[0].stock_base100,100);assert.equal(d.daily[0].market_base100,100);
  assert.equal(d.daily[0].frgn_flow_20d_rt,'0.014');
+});
+
+test('Korean money display rounds exact integers with won/eok/jo boundaries',()=>{
+ for(const [input,expected] of [[null,'미제공 (NULL)'],['0','0 원'],['12345678','12,345,678 원'],['99999999','99,999,999 원'],['100000000','1 억 원'],['123456789000','1,234.57 억 원'],['333605938000000','333.61 조 원'],['-123456789000','-1,234.57 억 원'],['999999999999','1 조 원'],['9007199254740993','9,007.2 조 원'],['100.0000','100 원'],['bad','형식 오류']])assert.equal(money(input),expected);
 });

@@ -127,3 +127,20 @@ test('report charts support keyboard observations, series toggles and period sel
  await expect(price).toBeInViewport();
  await page.screenshot({path:'test-results/report-chart.png'});
 });
+
+test('compact financial cards retain exact amounts and charts expose hover and view controls',async({page})=>{
+ await page.goto('/');await ready(page);
+ const card=page.locator('.metric').first();
+ await expect(card.locator('strong')).toHaveText('11.2 조 원');
+ await expect(card.locator('.exact-amount span')).toBeHidden();
+ await card.locator('summary').click();await expect(card.locator('.exact-amount span')).toHaveText('11,200,000,000,000 원');
+ await page.locator('[data-financial-view="line"]').click();
+ await expect(page.locator('#financial-chart polyline')).not.toHaveCount(0);
+ await page.locator('[data-financial-view="bar"]').click();
+ await expect(page.locator('#financial-chart rect')).not.toHaveCount(0);
+ const chart=page.locator('#price-report svg');await chart.hover();
+ await expect(page.locator('#price-report .chart-tooltip')).toBeVisible();
+ await expect(page.locator('#price-report .chart-tooltip')).toContainText('종목');
+ await page.setViewportSize({width:390,height:844});
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+});
