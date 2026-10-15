@@ -1,0 +1,86 @@
+name: A B C integration checks
+on:
+  pull_request:
+    branches: [integration, main]
+  push:
+    branches: [integration]
+permissions:
+  contents: read
+jobs:
+  integration:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install B locked environment
+        run: |
+          python -m venv build/b-venv
+          build/b-venv/bin/pip install -r backend/service/requirements.lock.txt
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install C environment
+        run: |
+          python -m venv build/c-venv
+          build/c-venv/bin/pip install -r analysis/requirements.txt
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: apps/web/package-lock.json
+      - name: Verify immutable input and regression suites
+        run: |
+          python scripts/check_handoff.py
+          build/b-venv/bin/python -m pytest backend/service/tests -q
+          build/b-venv/bin/python -m unittest discover -s backend/medallion_pipeline -p test_safety.py -q
+          build/c-venv/bin/python -m unittest discover -s analysis/tests -q
+      - name: Rebuild C output and package for B
+        run: |
+          build/c-venv/bin/python -m analysis.run --output build/analysis
+          build/b-venv/bin/python backend/service/pack_c_analysis.py --source build/analysis --output build/c-artifact --project-root .
+          build/b-venv/bin/python backend/service/import_analysis.py --source build/c-artifact --project-root . --output build/c-delta
+          python apps/web/scripts/prepare-c-review.py --c-output build/analysis --output build/c-browser.json
+      - name: Start real B APIs and compare C values
+        env:
+          TZ_CORS_ORIGINS: http://127.0.0.1:4175
+        run: |
+          build/b-venv/bin/python backend/service/run.py --backend csv --analysis-dir build/c-artifact --port 8000 > build/api.log 2>&1 &
+          build/b-venv/bin/python backend/service/run.py --backend csv --port 8001 > build/api-no-c.log 2>&1 &
+          python - <<'PY'
+          import time, urllib.request
+          for port in (8000, 8001):
+              for attempt in range(60):
+                  try:
+                      urllib.request.urlopen(f'http://127.0.0.1:{port}/health', timeout=2)
+                      break
+                  except OSError:
+                      time.sleep(1)
+              else:
+                  raise RuntimeError(f'API {port} startup failed')
+          PY
+          build/c-venv/bin/python -m analysis.verify_api --gold build/analysis --base http://127.0.0.1:8000 --out build/c-api-check.json
+      - name: Browser and frontend regression
+        env:
+          S4_API_BASE_URL: http://127.0.0.1:8000
+          S4_NO_C_API_URL: http://127.0.0.1:8001
+          C_REVIEW_BUNDLE: ${{ github.workspace }}/build/c-browser.json
+        run: |
+          npm --prefix apps/web ci
+          npm --prefix apps/web test
+          npm --prefix apps/web run build
+          cd apps/web
+          npx playwright install --with-deps chromium
+          npm run test:e2e
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: integration-validation
+          path: |
+            build/c-api-check.json
+            build/analysis/validation.json
+            build/api*.log
+            apps/web/test-results/
+          retention-days: 7

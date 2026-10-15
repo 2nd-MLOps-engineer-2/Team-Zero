@@ -1,5 +1,7 @@
 # S4 API 전달 보완 — B → A (2026-10-15 / API 1.1.0 로컬 검증본)
 
+**최신 통합 갱신:** B 1.1 고정 SHA와 C 검증 수정 3건을 A 작업 위에 병합하고 회귀검사를 통과했다. 이전 ZIP·미커밋·SHA 대기 기록은 역사 기록이다. 현재 판정·실행법·제한은 [S5 통합 기록](S5-integration.md)을 따른다.
+
 
 ```powershell
 & .\backend\service\.venv\Scripts\python.exe -X utf8 .\backend\service\pack_c_analysis.py --source .\build\analysis --output .\build\c_api_artifact

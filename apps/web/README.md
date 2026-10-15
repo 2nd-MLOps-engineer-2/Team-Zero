@@ -1,3 +1,5 @@
+> 최신 통합 실행은 [S5 통합 기록](../../docs/handoffs/S5-integration.md)을 따른다. 아래 S4 ZIP runtime은 과거 수신 환경이며 현재는 병합된 backend/service를 실행한다.
+
 # TEAM ZERO A 프론트엔드
 
 상태: 합성 샘플 화면 구현·검증 완료. 실제 B API 연동 및 C 지표/차트 의미 합의 대기.

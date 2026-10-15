@@ -13,7 +13,9 @@ Run: python -m analysis.verify_api --gold build/analysis [--base http://127.0.0.
 from __future__ import annotations
 
 import argparse
+import csv
 import hashlib
+import io
 import json
 import re
 import urllib.error
@@ -247,12 +249,33 @@ def check_exports(base: str, gold_dir: Path) -> list[dict]:
     for name in ("g_fin_rpt_analysis.csv", "g_stock_daily_analysis.csv"):
         gold_hash = hashlib.sha256((gold_dir / name).read_bytes()).hexdigest()
         try:
-            api_hash = hashlib.sha256(get(base, f"/exports/analysis/{name}")).hexdigest()
-        except API_ERRORS as exc:
+            raw = get(base, f"/exports/analysis/{name}")
+            api_hash = hashlib.sha256(raw).hexdigest()
+            def read(raw):
+                reader = csv.DictReader(io.StringIO(raw.decode('utf-8-sig')), strict=True)
+                columns = reader.fieldnames
+                if not columns or len(columns) != len(set(columns)):
+                    raise ValueError('Missing or duplicate CSV columns')
+                rows = list(reader)
+                if any(None in row or any(v is None for v in row.values()) for row in rows):
+                    raise ValueError('Malformed CSV row')
+                return columns, rows
+            columns, gold = read((gold_dir / name).read_bytes())
+            api_columns, rows = read(raw)
+            keys = ['fin_rpt_id'] if name.startswith('g_fin') else ['stock_cd', 'trd_dt']
+            key = lambda row: json.dumps([row[k] for k in keys])
+            tally = Tally(f"export {name}")
+            if columns != api_columns:
+                tally.errors.append('CSV columns or order differ')
+            for row in rows:
+                tally.add_api(key(row), row)
+            result = tally.result([(key(row), row) for row in gold], columns)
+        except (*API_ERRORS, csv.Error) as exc:
             out.append({"check": f"export {name}", "status": "FAIL", "api_sha256": None,
                         "gold_sha256": gold_hash, "errors": [describe(exc)]})
             continue
-        out.append({"check": f"export {name}", "status": "PASS" if api_hash == gold_hash else "FAIL",
+        out.append({**result, "byte_identical": api_hash == gold_hash,
+                    "comparison": "schema-aware values; identifiers exact; hashes retained",
                     "api_sha256": api_hash, "gold_sha256": gold_hash})
     return out
 
