@@ -171,16 +171,19 @@ def fetch_daily(base: str, code: str, t: Tally, page_size: int = DAILY_PAGE) -> 
     return rows
 
 
-def check_daily(base: str, daily: pd.DataFrame, codes: list[str], page_size: int = DAILY_PAGE) -> dict:
+def check_daily(base: str, daily: pd.DataFrame, codes: list[str], page_size: int = DAILY_PAGE,
+                listed: set[str] | None = None) -> dict:
     t = Tally("daily analysis (all stocks, all dates)")
     for code in codes:
         for r in fetch_daily(base, code, t, page_size):
             t.add_api(f"{code}/{r['trd_dt']}", r.get("analysis"))
+    for code in sorted(set(t.not_found) & (listed or set())):
+        t.errors.append(f"{code}: listed by /stocks but daily returned HTTP 404")
     gold = [(f"{g['stock_cd']}/{g['trd_dt']}", g) for g in daily.to_dict("records")]
     return t.result(gold, list(daily.columns))
 
 
-def check_financials(base: str, fin: pd.DataFrame, codes: list[str]) -> dict:
+def check_financials(base: str, fin: pd.DataFrame, codes: list[str], listed: set[str] | None = None) -> dict:
     # as_of 없음 = 부적격 보고서 포함 전체
     t = Tally("financial report analysis (all reports)")
     for code in codes:
@@ -189,6 +192,8 @@ def check_financials(base: str, fin: pd.DataFrame, codes: list[str]) -> dict:
         except API_ERRORS as exc:
             if is_not_found(exc):
                 t.not_found.append(code)
+                if code in (listed or set()):
+                    t.errors.append(f"{code}: listed by /stocks but financials returned HTTP 404")
             else:
                 t.errors.append(f"{code}: financials: {describe(exc)}")
             continue
@@ -254,7 +259,7 @@ def run(base: str, gold_dir: Path, page_size: int = DAILY_PAGE) -> dict:
         listed = set()
         errors.append(f"/stocks: {describe(exc)}")
     codes = sorted((set(daily["stock_cd"]) | set(fin["stock_cd"]) | listed) - {""})
-    results = [check_daily(base, daily, codes, page_size), check_financials(base, fin, codes),
+    results = [check_daily(base, daily, codes, page_size, listed), check_financials(base, fin, codes, listed),
                check_compare(base, daily, meta.get("data_final_date"))]
     results += check_exports(base, gold_dir)
     return {
