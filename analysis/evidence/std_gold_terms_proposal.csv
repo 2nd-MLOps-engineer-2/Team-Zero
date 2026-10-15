@@ -1,0 +1,146 @@
+﻿tbl_nm,col_nm,term_kor_nm,data_type_nm,null_allow_yn,pk_yn,reuse_term_yn,proposal_ver,definition_ref
+g_fin_rpt_analysis,fin_rpt_id,재무 보고서 식별자,VARCHAR(64),N,Y,Y,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,corp_cd,기업 코드,CHAR(8),Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,bsns_yr,사업 연도,CHAR(4),Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,rpt_cd,보고서 코드,VARCHAR(50),Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,fs_div_cd,재무제표 구분 코드,VARCHAR(50),Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,rcept_no,접수 번호,CHAR(14),Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,crncy_cd,통화 코드,VARCHAR(50),Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,flow_prd_mm_cnt,흐름 기간 개월 건수,INT,Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,prd_start_dt,기간 시작 일자,DATE,Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,prd_end_dt,기간 종료 일자,DATE,Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,dscl_join_stts_cd,공시 연결 상태 코드,VARCHAR(50),Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,cal_prd_stts_cd,달력 기간 상태 코드,VARCHAR(50),Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,cf_prd_stts_cd,현금흐름 기간 상태 코드,VARCHAR(50),Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,pit_join_elig_yn,시점 조인 적격 여부,CHAR(1),Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,same_prd_cmpr_elig_yn,동일 기간 비교 적격 여부,CHAR(1),Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,mtrc_review_cnt,지표 검토 건수,INT,Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,custom_map_cnt,사용자정의 매핑 건수,INT,Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,mtrc_conflict_cnt,지표 충돌 건수,INT,Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,core_mtrc_miss_txt,핵심 지표 누락 내용,VARCHAR(2000),Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,src_team_cd,원천 팀 코드,VARCHAR(50),Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,src_file_path,원천 파일 경로,VARCHAR(500),Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,src_row_no,원천 행 번호,INT,Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,src_ver,원천 버전,VARCHAR(80),Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,pipln_ver,파이프라인 버전,VARCHAR(80),Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,stock_cd,종목 코드,CHAR(6),Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,dscl_dt,공시 일자,DATE,Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,rev_ytd_amt,매출 누적 금액,"DECIMAL(20,0)",Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,rev_prior_ytd_amt,매출 전년동기 연초누적 금액,"DECIMAL(21,0)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,op_prft_ytd_amt,영업 이익 누적 금액,"DECIMAL(20,0)",Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,op_prft_prior_ytd_amt,영업 이익 전년동기 연초누적 금액,"DECIMAL(21,0)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,net_incm_ytd_amt,순이익 누적 금액,"DECIMAL(20,0)",Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,net_incm_prior_ytd_amt,순 순이익 전년동기 연초누적 금액,"DECIMAL(21,0)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,op_cf_ytd_amt,영업 현금흐름 누적 금액,"DECIMAL(20,0)",Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,op_cf_prior_ytd_amt,영업 현금흐름 전년동기 연초누적 금액,"DECIMAL(21,0)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,tot_asst_asof_amt,총 자산 기말 금액,"DECIMAL(21,0)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,tot_liab_asof_amt,총 부채 기말 금액,"DECIMAL(21,0)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,tot_eqty_asof_amt,총 자본 기말 금액,"DECIMAL(21,0)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,rev_yoy_rt,매출 전년동기대비 율,"DECIMAL(18,8)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,rev_yoy_rt_stts_cd,매출 전년동기대비 율 상태 코드,VARCHAR(100),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,op_margin_rt,영업 이익률 율,"DECIMAL(18,8)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,op_margin_rt_stts_cd,영업 이익률 율 상태 코드,VARCHAR(100),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,debt_equity_rt,부채 자본 율,"DECIMAL(18,8)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,debt_equity_rt_stts_cd,부채 자본 율 상태 코드,VARCHAR(100),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,op_cf_sales_rt,영업 현금흐름 매출 율,"DECIMAL(18,8)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,op_cf_sales_rt_stts_cd,영업 현금흐름 매출 율 상태 코드,VARCHAR(100),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,op_cf_yoy_rt,영업 현금흐름 전년동기대비 율,"DECIMAL(18,8)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,op_cf_yoy_rt_stts_cd,영업 현금흐름 전년동기대비 율 상태 코드,VARCHAR(100),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,op_prft_delta_amt,영업 이익 증감 금액,"DECIMAL(21,0)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,op_prft_delta_stts_cd,영업 이익 증감 상태 코드,VARCHAR(100),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,op_prft_transition_cd,영업 이익 전환 코드,VARCHAR(100),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,op_cf_delta_amt,영업 현금흐름 증감 금액,"DECIMAL(21,0)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,op_cf_delta_stts_cd,영업 현금흐름 증감 상태 코드,VARCHAR(100),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,review_required_yn,검토 필요 여부,CHAR(1),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_fin_rpt_analysis,calc_ver,계산 버전,VARCHAR(100),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,stock_cd,종목 코드,CHAR(6),N,Y,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,trd_dt,거래 일자,DATE,N,Y,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,corp_cd,기업 코드,CHAR(8),Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,mkt_cd,시장 코드,VARCHAR(50),Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,open_prc,시가 가격,"DECIMAL(18,4)",Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,high_prc,고가 가격,"DECIMAL(18,4)",Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,low_prc,저가 가격,"DECIMAL(18,4)",Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,close_prc,종가 가격,"DECIMAL(18,4)",Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,trd_qty,거래 수량,BIGINT,Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,close_rtn_rt,종가 수익률(전 관측일 대비),"DECIMAL(12,8)",Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,idx_close_prc,지수 종가 가격,"DECIMAL(18,4)",Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,idx_rtn_rt,지수 수익률(전 관측일 대비),"DECIMAL(12,8)",Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,indv_net_buy_qty,개인 순매수 수량(기간 합),BIGINT,Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,frgn_net_buy_qty,외국인 순매수 수량(기간 합),BIGINT,Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,inst_net_buy_qty,기관 순매수 수량(기간 합),BIGINT,Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,other_corp_net_buy_qty,기타법인 순매수 수량,BIGINT,Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,frgn_hold_rt,외국인 보유 율,"DECIMAL(12,8)",Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,cfd_buy_bal_rt,CFD 매수 잔고 율,"DECIMAL(12,8)",Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,invstr_exist_yn,수급 존재 여부,CHAR(1),Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,fin_avail_yn,재무 가용 여부,CHAR(1),Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,fin_rpt_id,재무 보고서 식별자,VARCHAR(64),Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,fin_bsns_yr,재무 사업 연도,CHAR(4),Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,fin_rpt_cd,재무 보고서 코드,VARCHAR(50),Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,fin_fs_div_cd,재무 재무제표 구분 코드,VARCHAR(50),Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,dscl_dt,공시 일자,DATE,Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,dscl_elps_day_cnt,공시 경과 일 건수,INT,Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,rev_ytd_amt,매출 누적 금액,"DECIMAL(20,0)",Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,op_prft_ytd_amt,영업 이익 누적 금액,"DECIMAL(20,0)",Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,net_incm_ytd_amt,순이익 누적 금액,"DECIMAL(20,0)",Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,op_cf_ytd_amt,영업 현금흐름 누적 금액,"DECIMAL(20,0)",Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,tot_asst_amt,총 자산 금액,"DECIMAL(20,0)",Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,tot_liab_amt,총 부채 금액,"DECIMAL(20,0)",Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,tot_eqty_amt,총 자본 금액,"DECIMAL(20,0)",Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,pipln_ver,파이프라인 버전,VARCHAR(80),Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,rev_yoy_rt,매출 전년동기대비 율,"DECIMAL(18,8)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,rev_yoy_rt_stts_cd,매출 전년동기대비 율 상태 코드,VARCHAR(100),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,op_margin_rt,영업 이익률 율,"DECIMAL(18,8)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,op_cf_delta_amt,영업 현금흐름 증감 금액,"DECIMAL(21,0)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,op_cf_sales_rt,영업 현금흐름 매출 율,"DECIMAL(18,8)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,op_prft_transition_cd,영업 이익 전환 코드,VARCHAR(100),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,review_required_yn,검토 필요 여부,CHAR(1),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,cal_prd_stts_cd,달력 기간 상태 코드,VARCHAR(50),Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,cf_prd_stts_cd,현금흐름 기간 상태 코드,VARCHAR(50),Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,same_prd_cmpr_elig_yn,동일 기간 비교 적격 여부,CHAR(1),Y,N,Y,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,rtn_1d_rt,수익률 1관측일 율,"DECIMAL(18,8)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,rtn_1d_stts_cd,수익률 1관측일 상태 코드,VARCHAR(100),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,idx_rtn_1d_rt,지수 수익률 1관측일 율,"DECIMAL(18,8)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,excess_1d_rt,초과성과 1관측일 율,"DECIMAL(18,8)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,excess_1d_stts_cd,초과성과 1관측일 상태 코드,VARCHAR(100),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,rtn_5d_rt,수익률 5관측일 율,"DECIMAL(18,8)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,rtn_5d_stts_cd,수익률 5관측일 상태 코드,VARCHAR(100),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,idx_rtn_5d_rt,지수 수익률 5관측일 율,"DECIMAL(18,8)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,excess_5d_rt,초과성과 5관측일 율,"DECIMAL(18,8)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,excess_5d_stts_cd,초과성과 5관측일 상태 코드,VARCHAR(100),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,rtn_20d_rt,수익률 20관측일 율,"DECIMAL(18,8)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,rtn_20d_stts_cd,수익률 20관측일 상태 코드,VARCHAR(100),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,idx_rtn_20d_rt,지수 수익률 20관측일 율,"DECIMAL(18,8)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,excess_20d_rt,초과성과 20관측일 율,"DECIMAL(18,8)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,excess_20d_stts_cd,초과성과 20관측일 상태 코드,VARCHAR(100),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,frgn_net_5d_qty,외국인 순 5관측일 수량,"DECIMAL(21,0)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,frgn_flow_5d_rt,외국인 수급 5관측일 율,"DECIMAL(18,8)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,frgn_flow_5d_stts_cd,외국인 수급 5관측일 상태 코드,VARCHAR(100),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,inst_net_5d_qty,기관 순 5관측일 수량,"DECIMAL(21,0)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,inst_flow_5d_rt,기관 수급 5관측일 율,"DECIMAL(18,8)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,inst_flow_5d_stts_cd,기관 수급 5관측일 상태 코드,VARCHAR(100),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,indv_net_5d_qty,개인 순 5관측일 수량,"DECIMAL(21,0)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,indv_flow_5d_rt,개인 수급 5관측일 율,"DECIMAL(18,8)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,indv_flow_5d_stts_cd,개인 수급 5관측일 상태 코드,VARCHAR(100),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,frgn_net_20d_qty,외국인 순 20관측일 수량,"DECIMAL(21,0)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,frgn_flow_20d_rt,외국인 수급 20관측일 율,"DECIMAL(18,8)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,frgn_flow_20d_stts_cd,외국인 수급 20관측일 상태 코드,VARCHAR(100),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,inst_net_20d_qty,기관 순 20관측일 수량,"DECIMAL(21,0)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,inst_flow_20d_rt,기관 수급 20관측일 율,"DECIMAL(18,8)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,inst_flow_20d_stts_cd,기관 수급 20관측일 상태 코드,VARCHAR(100),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,indv_net_20d_qty,개인 순 20관측일 수량,"DECIMAL(21,0)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,indv_flow_20d_rt,개인 수급 20관측일 율,"DECIMAL(18,8)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,indv_flow_20d_stts_cd,개인 수급 20관측일 상태 코드,VARCHAR(100),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,frgn_hold_change_20d_rt,외국인 보유 변화 20관측일 율,"DECIMAL(18,8)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,frgn_hold_change_20d_stts_cd,외국인 보유 변화 20관측일 상태 코드,VARCHAR(100),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,volatility_20d_rt,변동성 20관측일 율,"DECIMAL(18,8)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,volatility_20d_stts_cd,변동성 20관측일 상태 코드,VARCHAR(100),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,event_base_dt,공시사건 기준 일자,DATE,Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,event_rtn_rt,공시사건 수익률 율,"DECIMAL(18,8)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,event_idx_rtn_rt,공시사건 지수 수익률 율,"DECIMAL(18,8)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,event_excess_rt,공시사건 초과성과 율,"DECIMAL(18,8)",Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,event_stts_cd,공시사건 상태 코드,VARCHAR(100),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,co_move_cd,동반 움직임 코드,VARCHAR(100),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,co_move_stts_cd,동반 움직임 상태 코드,VARCHAR(100),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,joint_improve_yn,공동 개선 여부,CHAR(1),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,joint_improve_stts_cd,공동 개선 상태 코드,VARCHAR(100),Y,N,N,c-gold-0.1.0,contracts/analysis.md
+g_stock_daily_analysis,calc_ver,계산 버전,VARCHAR(100),Y,N,N,c-gold-0.1.0,contracts/analysis.md

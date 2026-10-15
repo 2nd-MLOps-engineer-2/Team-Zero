@@ -1,0 +1,889 @@
+{
+  "g_fin_rpt_analysis": {
+    "primary_key": [
+      "fin_rpt_id"
+    ],
+    "rows": 320,
+    "columns": [
+      {
+        "name": "fin_rpt_id",
+        "type": "VARCHAR(64)",
+        "nullable": false,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "corp_cd",
+        "type": "CHAR(8)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "bsns_yr",
+        "type": "CHAR(4)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "rpt_cd",
+        "type": "VARCHAR(50)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "fs_div_cd",
+        "type": "VARCHAR(50)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "rcept_no",
+        "type": "CHAR(14)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "crncy_cd",
+        "type": "VARCHAR(50)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "flow_prd_mm_cnt",
+        "type": "INT",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "prd_start_dt",
+        "type": "DATE",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "prd_end_dt",
+        "type": "DATE",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "dscl_join_stts_cd",
+        "type": "VARCHAR(50)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "cal_prd_stts_cd",
+        "type": "VARCHAR(50)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "cf_prd_stts_cd",
+        "type": "VARCHAR(50)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "pit_join_elig_yn",
+        "type": "CHAR(1)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "same_prd_cmpr_elig_yn",
+        "type": "CHAR(1)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "mtrc_review_cnt",
+        "type": "INT",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "custom_map_cnt",
+        "type": "INT",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "mtrc_conflict_cnt",
+        "type": "INT",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "core_mtrc_miss_txt",
+        "type": "VARCHAR(2000)",
+        "nullable": true,
+        "actual_blank_count": 320
+      },
+      {
+        "name": "src_team_cd",
+        "type": "VARCHAR(50)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "src_file_path",
+        "type": "VARCHAR(500)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "src_row_no",
+        "type": "INT",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "src_ver",
+        "type": "VARCHAR(80)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "pipln_ver",
+        "type": "VARCHAR(80)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "stock_cd",
+        "type": "CHAR(6)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "dscl_dt",
+        "type": "DATE",
+        "nullable": true,
+        "actual_blank_count": 61
+      },
+      {
+        "name": "rev_ytd_amt",
+        "type": "DECIMAL(20,0)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "rev_prior_ytd_amt",
+        "type": "DECIMAL(21,0)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "op_prft_ytd_amt",
+        "type": "DECIMAL(20,0)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "op_prft_prior_ytd_amt",
+        "type": "DECIMAL(21,0)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "net_incm_ytd_amt",
+        "type": "DECIMAL(20,0)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "net_incm_prior_ytd_amt",
+        "type": "DECIMAL(21,0)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "op_cf_ytd_amt",
+        "type": "DECIMAL(20,0)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "op_cf_prior_ytd_amt",
+        "type": "DECIMAL(21,0)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "tot_asst_asof_amt",
+        "type": "DECIMAL(21,0)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "tot_liab_asof_amt",
+        "type": "DECIMAL(21,0)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "tot_eqty_asof_amt",
+        "type": "DECIMAL(21,0)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "rev_yoy_rt",
+        "type": "DECIMAL(18,8)",
+        "nullable": true,
+        "actual_blank_count": 61
+      },
+      {
+        "name": "rev_yoy_rt_stts_cd",
+        "type": "VARCHAR(100)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "op_margin_rt",
+        "type": "DECIMAL(18,8)",
+        "nullable": true,
+        "actual_blank_count": 61
+      },
+      {
+        "name": "op_margin_rt_stts_cd",
+        "type": "VARCHAR(100)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "debt_equity_rt",
+        "type": "DECIMAL(18,8)",
+        "nullable": true,
+        "actual_blank_count": 61
+      },
+      {
+        "name": "debt_equity_rt_stts_cd",
+        "type": "VARCHAR(100)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "op_cf_sales_rt",
+        "type": "DECIMAL(18,8)",
+        "nullable": true,
+        "actual_blank_count": 61
+      },
+      {
+        "name": "op_cf_sales_rt_stts_cd",
+        "type": "VARCHAR(100)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "op_cf_yoy_rt",
+        "type": "DECIMAL(18,8)",
+        "nullable": true,
+        "actual_blank_count": 106
+      },
+      {
+        "name": "op_cf_yoy_rt_stts_cd",
+        "type": "VARCHAR(100)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "op_prft_delta_amt",
+        "type": "DECIMAL(21,0)",
+        "nullable": true,
+        "actual_blank_count": 61
+      },
+      {
+        "name": "op_prft_delta_stts_cd",
+        "type": "VARCHAR(100)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "op_prft_transition_cd",
+        "type": "VARCHAR(100)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "op_cf_delta_amt",
+        "type": "DECIMAL(21,0)",
+        "nullable": true,
+        "actual_blank_count": 61
+      },
+      {
+        "name": "op_cf_delta_stts_cd",
+        "type": "VARCHAR(100)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "review_required_yn",
+        "type": "CHAR(1)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "calc_ver",
+        "type": "VARCHAR(100)",
+        "nullable": true,
+        "actual_blank_count": 0
+      }
+    ]
+  },
+  "g_stock_daily_analysis": {
+    "primary_key": [
+      "stock_cd",
+      "trd_dt"
+    ],
+    "rows": 17440,
+    "columns": [
+      {
+        "name": "stock_cd",
+        "type": "CHAR(6)",
+        "nullable": false,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "trd_dt",
+        "type": "DATE",
+        "nullable": false,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "corp_cd",
+        "type": "CHAR(8)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "mkt_cd",
+        "type": "VARCHAR(50)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "open_prc",
+        "type": "DECIMAL(18,4)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "high_prc",
+        "type": "DECIMAL(18,4)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "low_prc",
+        "type": "DECIMAL(18,4)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "close_prc",
+        "type": "DECIMAL(18,4)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "trd_qty",
+        "type": "BIGINT",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "close_rtn_rt",
+        "type": "DECIMAL(12,8)",
+        "nullable": true,
+        "actual_blank_count": 20
+      },
+      {
+        "name": "idx_close_prc",
+        "type": "DECIMAL(18,4)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "idx_rtn_rt",
+        "type": "DECIMAL(12,8)",
+        "nullable": true,
+        "actual_blank_count": 20
+      },
+      {
+        "name": "indv_net_buy_qty",
+        "type": "BIGINT",
+        "nullable": true,
+        "actual_blank_count": 1
+      },
+      {
+        "name": "frgn_net_buy_qty",
+        "type": "BIGINT",
+        "nullable": true,
+        "actual_blank_count": 1
+      },
+      {
+        "name": "inst_net_buy_qty",
+        "type": "BIGINT",
+        "nullable": true,
+        "actual_blank_count": 1
+      },
+      {
+        "name": "other_corp_net_buy_qty",
+        "type": "BIGINT",
+        "nullable": true,
+        "actual_blank_count": 1
+      },
+      {
+        "name": "frgn_hold_rt",
+        "type": "DECIMAL(12,8)",
+        "nullable": true,
+        "actual_blank_count": 1
+      },
+      {
+        "name": "cfd_buy_bal_rt",
+        "type": "DECIMAL(12,8)",
+        "nullable": true,
+        "actual_blank_count": 3721
+      },
+      {
+        "name": "invstr_exist_yn",
+        "type": "CHAR(1)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "fin_avail_yn",
+        "type": "CHAR(1)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "fin_rpt_id",
+        "type": "VARCHAR(64)",
+        "nullable": true,
+        "actual_blank_count": 1607
+      },
+      {
+        "name": "fin_bsns_yr",
+        "type": "CHAR(4)",
+        "nullable": true,
+        "actual_blank_count": 1607
+      },
+      {
+        "name": "fin_rpt_cd",
+        "type": "VARCHAR(50)",
+        "nullable": true,
+        "actual_blank_count": 1607
+      },
+      {
+        "name": "fin_fs_div_cd",
+        "type": "VARCHAR(50)",
+        "nullable": true,
+        "actual_blank_count": 1607
+      },
+      {
+        "name": "dscl_dt",
+        "type": "DATE",
+        "nullable": true,
+        "actual_blank_count": 1607
+      },
+      {
+        "name": "dscl_elps_day_cnt",
+        "type": "INT",
+        "nullable": true,
+        "actual_blank_count": 1607
+      },
+      {
+        "name": "rev_ytd_amt",
+        "type": "DECIMAL(20,0)",
+        "nullable": true,
+        "actual_blank_count": 1607
+      },
+      {
+        "name": "op_prft_ytd_amt",
+        "type": "DECIMAL(20,0)",
+        "nullable": true,
+        "actual_blank_count": 1607
+      },
+      {
+        "name": "net_incm_ytd_amt",
+        "type": "DECIMAL(20,0)",
+        "nullable": true,
+        "actual_blank_count": 1607
+      },
+      {
+        "name": "op_cf_ytd_amt",
+        "type": "DECIMAL(20,0)",
+        "nullable": true,
+        "actual_blank_count": 1607
+      },
+      {
+        "name": "tot_asst_amt",
+        "type": "DECIMAL(20,0)",
+        "nullable": true,
+        "actual_blank_count": 1607
+      },
+      {
+        "name": "tot_liab_amt",
+        "type": "DECIMAL(20,0)",
+        "nullable": true,
+        "actual_blank_count": 1607
+      },
+      {
+        "name": "tot_eqty_amt",
+        "type": "DECIMAL(20,0)",
+        "nullable": true,
+        "actual_blank_count": 1607
+      },
+      {
+        "name": "pipln_ver",
+        "type": "VARCHAR(80)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "rev_yoy_rt",
+        "type": "DECIMAL(18,8)",
+        "nullable": true,
+        "actual_blank_count": 1607
+      },
+      {
+        "name": "rev_yoy_rt_stts_cd",
+        "type": "VARCHAR(100)",
+        "nullable": true,
+        "actual_blank_count": 1607
+      },
+      {
+        "name": "op_margin_rt",
+        "type": "DECIMAL(18,8)",
+        "nullable": true,
+        "actual_blank_count": 1607
+      },
+      {
+        "name": "op_cf_delta_amt",
+        "type": "DECIMAL(21,0)",
+        "nullable": true,
+        "actual_blank_count": 1607
+      },
+      {
+        "name": "op_cf_sales_rt",
+        "type": "DECIMAL(18,8)",
+        "nullable": true,
+        "actual_blank_count": 1607
+      },
+      {
+        "name": "op_prft_transition_cd",
+        "type": "VARCHAR(100)",
+        "nullable": true,
+        "actual_blank_count": 1607
+      },
+      {
+        "name": "review_required_yn",
+        "type": "CHAR(1)",
+        "nullable": true,
+        "actual_blank_count": 1607
+      },
+      {
+        "name": "cal_prd_stts_cd",
+        "type": "VARCHAR(50)",
+        "nullable": true,
+        "actual_blank_count": 1607
+      },
+      {
+        "name": "cf_prd_stts_cd",
+        "type": "VARCHAR(50)",
+        "nullable": true,
+        "actual_blank_count": 1607
+      },
+      {
+        "name": "same_prd_cmpr_elig_yn",
+        "type": "CHAR(1)",
+        "nullable": true,
+        "actual_blank_count": 1607
+      },
+      {
+        "name": "rtn_1d_rt",
+        "type": "DECIMAL(18,8)",
+        "nullable": true,
+        "actual_blank_count": 20
+      },
+      {
+        "name": "rtn_1d_stts_cd",
+        "type": "VARCHAR(100)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "idx_rtn_1d_rt",
+        "type": "DECIMAL(18,8)",
+        "nullable": true,
+        "actual_blank_count": 20
+      },
+      {
+        "name": "excess_1d_rt",
+        "type": "DECIMAL(18,8)",
+        "nullable": true,
+        "actual_blank_count": 20
+      },
+      {
+        "name": "excess_1d_stts_cd",
+        "type": "VARCHAR(100)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "rtn_5d_rt",
+        "type": "DECIMAL(18,8)",
+        "nullable": true,
+        "actual_blank_count": 100
+      },
+      {
+        "name": "rtn_5d_stts_cd",
+        "type": "VARCHAR(100)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "idx_rtn_5d_rt",
+        "type": "DECIMAL(18,8)",
+        "nullable": true,
+        "actual_blank_count": 100
+      },
+      {
+        "name": "excess_5d_rt",
+        "type": "DECIMAL(18,8)",
+        "nullable": true,
+        "actual_blank_count": 100
+      },
+      {
+        "name": "excess_5d_stts_cd",
+        "type": "VARCHAR(100)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "rtn_20d_rt",
+        "type": "DECIMAL(18,8)",
+        "nullable": true,
+        "actual_blank_count": 400
+      },
+      {
+        "name": "rtn_20d_stts_cd",
+        "type": "VARCHAR(100)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "idx_rtn_20d_rt",
+        "type": "DECIMAL(18,8)",
+        "nullable": true,
+        "actual_blank_count": 400
+      },
+      {
+        "name": "excess_20d_rt",
+        "type": "DECIMAL(18,8)",
+        "nullable": true,
+        "actual_blank_count": 400
+      },
+      {
+        "name": "excess_20d_stts_cd",
+        "type": "VARCHAR(100)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "frgn_net_5d_qty",
+        "type": "DECIMAL(21,0)",
+        "nullable": true,
+        "actual_blank_count": 85
+      },
+      {
+        "name": "frgn_flow_5d_rt",
+        "type": "DECIMAL(18,8)",
+        "nullable": true,
+        "actual_blank_count": 92
+      },
+      {
+        "name": "frgn_flow_5d_stts_cd",
+        "type": "VARCHAR(100)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "inst_net_5d_qty",
+        "type": "DECIMAL(21,0)",
+        "nullable": true,
+        "actual_blank_count": 85
+      },
+      {
+        "name": "inst_flow_5d_rt",
+        "type": "DECIMAL(18,8)",
+        "nullable": true,
+        "actual_blank_count": 92
+      },
+      {
+        "name": "inst_flow_5d_stts_cd",
+        "type": "VARCHAR(100)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "indv_net_5d_qty",
+        "type": "DECIMAL(21,0)",
+        "nullable": true,
+        "actual_blank_count": 85
+      },
+      {
+        "name": "indv_flow_5d_rt",
+        "type": "DECIMAL(18,8)",
+        "nullable": true,
+        "actual_blank_count": 92
+      },
+      {
+        "name": "indv_flow_5d_stts_cd",
+        "type": "VARCHAR(100)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "frgn_net_20d_qty",
+        "type": "DECIMAL(21,0)",
+        "nullable": true,
+        "actual_blank_count": 400
+      },
+      {
+        "name": "frgn_flow_20d_rt",
+        "type": "DECIMAL(18,8)",
+        "nullable": true,
+        "actual_blank_count": 400
+      },
+      {
+        "name": "frgn_flow_20d_stts_cd",
+        "type": "VARCHAR(100)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "inst_net_20d_qty",
+        "type": "DECIMAL(21,0)",
+        "nullable": true,
+        "actual_blank_count": 400
+      },
+      {
+        "name": "inst_flow_20d_rt",
+        "type": "DECIMAL(18,8)",
+        "nullable": true,
+        "actual_blank_count": 400
+      },
+      {
+        "name": "inst_flow_20d_stts_cd",
+        "type": "VARCHAR(100)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "indv_net_20d_qty",
+        "type": "DECIMAL(21,0)",
+        "nullable": true,
+        "actual_blank_count": 400
+      },
+      {
+        "name": "indv_flow_20d_rt",
+        "type": "DECIMAL(18,8)",
+        "nullable": true,
+        "actual_blank_count": 400
+      },
+      {
+        "name": "indv_flow_20d_stts_cd",
+        "type": "VARCHAR(100)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "frgn_hold_change_20d_rt",
+        "type": "DECIMAL(18,8)",
+        "nullable": true,
+        "actual_blank_count": 402
+      },
+      {
+        "name": "frgn_hold_change_20d_stts_cd",
+        "type": "VARCHAR(100)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "volatility_20d_rt",
+        "type": "DECIMAL(18,8)",
+        "nullable": true,
+        "actual_blank_count": 400
+      },
+      {
+        "name": "volatility_20d_stts_cd",
+        "type": "VARCHAR(100)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "event_base_dt",
+        "type": "DATE",
+        "nullable": true,
+        "actual_blank_count": 1607
+      },
+      {
+        "name": "event_rtn_rt",
+        "type": "DECIMAL(18,8)",
+        "nullable": true,
+        "actual_blank_count": 1607
+      },
+      {
+        "name": "event_idx_rtn_rt",
+        "type": "DECIMAL(18,8)",
+        "nullable": true,
+        "actual_blank_count": 1607
+      },
+      {
+        "name": "event_excess_rt",
+        "type": "DECIMAL(18,8)",
+        "nullable": true,
+        "actual_blank_count": 1607
+      },
+      {
+        "name": "event_stts_cd",
+        "type": "VARCHAR(100)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "co_move_cd",
+        "type": "VARCHAR(100)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "co_move_stts_cd",
+        "type": "VARCHAR(100)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "joint_improve_yn",
+        "type": "CHAR(1)",
+        "nullable": true,
+        "actual_blank_count": 1627
+      },
+      {
+        "name": "joint_improve_stts_cd",
+        "type": "VARCHAR(100)",
+        "nullable": true,
+        "actual_blank_count": 0
+      },
+      {
+        "name": "calc_ver",
+        "type": "VARCHAR(100)",
+        "nullable": true,
+        "actual_blank_count": 0
+      }
+    ]
+  }
+}
