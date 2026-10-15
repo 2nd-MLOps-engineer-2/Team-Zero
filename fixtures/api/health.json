@@ -1,0 +1,27 @@
+{
+  "fixture_source": "actual_provided_handoff_or_matching_Delta; not synthetic",
+  "request": "/health",
+  "response": {
+    "data": {
+      "status": "ok",
+      "read_only": true,
+      "analysis_available": false
+    },
+    "meta": {
+      "api_version": "1.0.0",
+      "data_version": "delta-run:20261015_101647_d567",
+      "source_backend": "delta",
+      "data_min_date": "2022-12-01",
+      "data_final_date": "2026-06-30",
+      "stock_count": 20,
+      "calculation_version": "c-integration-1.0.0",
+      "analysis_status": "PENDING_C_DELIVERY",
+      "units": {
+        "amount": "KRW",
+        "quantity": "shares",
+        "ratio": "decimal_fraction"
+      },
+      "numeric_encoding": "decimal_string"
+    }
+  }
+}
