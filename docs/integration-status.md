@@ -15,6 +15,8 @@
 
 ## A 최신 기능 기록 — 준비 이후 재개
 
+**현재 A 검토 PR: [#5](https://github.com/2nd-MLOps-engineer-2/Team-Zero/pull/5)** — `joblessking00`이 팀 저장소 `handoff/s5-a-to-team-v1`에서 `integration`으로 제출한 초안. 계정 전환 전 PR #3과 같은 기능이므로 중복 병합하지 않는다. 기능 변경/재검사 추가 없음, 기존 검사 증빙 유지. 실제 API 연결·수신 확인·병합 미실행.
+
 **A 전달 게시:** [초안 PR #3](https://github.com/2nd-MLOps-engineer-2/Team-Zero/pull/3), 개인 포크 `jobless-fish:handoff/s5-a-to-team-v1` → integration. 생성 시 게시 SHA `7d49452ca4ba6e2f0521cf8365b91baca12b8579`, 검사한 기능 SHA `8061fce53fc4cc4076e226f9419380c24e8ea9f9`. PR 링크를 기록하는 문서 커밋 외 기능 변경 없음. 상태: 합성 화면 전달 / 실제 API·수신 확인 대기 / 미병합.
 
 PR 요청 후 갱신: A 코드 커밋 `ab2264a29bc788214d611042e45ad923315b6978`을 보존하고, integration에서 A 변경만 적용한 전달 커밋 `8061fce53fc4cc4076e226f9419380c24e8ea9f9`를 재검증(단위 10·브라우저 9·build PASS)했다. 전달 브랜치는 handoff/s5-a-to-team-v1. jobless-fish 계정은 팀 저장소 push 권한이 없어 개인 포크에서 integration 대상 초안 PR을 준비한다. 최종 게시 상태·head는 PR에서 확인하며 실제 API·수신 확인·통합 완료 상태는 변경하지 않는다.

@@ -2,6 +2,8 @@
 
 ## PR 준비 갱신
 
+**현재 검토 대상: [초안 PR #5](https://github.com/2nd-MLOps-engineer-2/Team-Zero/pull/5).** 사용자 지정 계정 `joblessking00` 인증·팀 저장소 push 권한을 확인하고 팀 저장소의 `handoff/s5-a-to-team-v1` → `integration`으로 제출했다. 최초 head는 `939084b8f151b5b7b6f45e987cc0c5193622dd92`, 이후 이 안내 문서만 갱신한다. 아래 PR #3은 이전 계정의 동일 기능 제출 기록이며 중복 병합하지 않는다. 기존 커밋 작성 이력과 PR #3은 보존. 실제 API 연동·수신 확인·병합은 계속 대기.
+
 **게시 완료:** [초안 PR #3](https://github.com/2nd-MLOps-engineer-2/Team-Zero/pull/3), `jobless-fish:handoff/s5-a-to-team-v1` → `integration`. 생성 시 게시 SHA `7d49452ca4ba6e2f0521cf8365b91baca12b8579` (검증한 기능 SHA 8061fce… + 전달 메타데이터). 이후 이 PR 링크 기록만 추가했으며 최신 head는 PR에서 확인한다. 수신 확인·병합은 미실행.
 
 - A 원본 기능 커밋: `ab2264a29bc788214d611042e45ad923315b6978` (feature/a-dashboard).
