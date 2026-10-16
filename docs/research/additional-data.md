@@ -91,3 +91,15 @@ python3 -m unittest discover -s scripts/research -v
 실행 결과: 고정 인계본 75파일 무결성 PASS, Silver/Gold 19테이블 전행·전열 값 대사 PASS, 추가 7테이블 전행·전열 값 대사 PASS, 원문 173개 저장 SHA-256 대사 PASS, 독립 SQL 검사 9개 PASS, 회귀 검사 4개 PASS. 기존 전망 DB의 모든 기본 테이블은 전후 전체 값 해시가 같았다.
 
 [실제 검증 결과](20261016-validation.json) · [네 정보군 조회 SQL](queries.sql)
+
+## README 시각 자료 재현
+
+README의 주가·수급·보유율 차트는 고정 인계본 일별 Gold의 2026-06-01~06-30 값을 읽는다. 시작 종가를 100으로 맞추고, 시작일 이후 20거래일의 외국인 순매수와 실제 보유율을 표시한다. 코드에서 종목별 21개 관측과 기말 종가·누적 순매수 값을 검증한다.
+
+가치평가 차트는 실제 DB에서 추출한 [6개 관측값과 출처](valuation-snapshot.json)를 사용한다. 해당 JSON에는 지표·단위·참조기간·수집시각·원문 URL·해시가 있다. 그래프는 2026-10-16 스냅샷이며 실시간으로 갱신되지 않는다.
+
+```bash
+python3 docs/research/make_readme_charts.py
+```
+
+Matplotlib과 한글 글꼴이 필요하다. macOS에서는 Apple SD Gothic Neo를 사용하며, 다른 환경에서는 맑은 고딕·나눔고딕을 순서대로 찾는다. 결과는 `docs/media/insights/03-price-foreign-divergence.png`, `04-valuation-evidence.png`다.
