@@ -1,0 +1,1056 @@
+{
+  "status": "PASS",
+  "databases": {
+    "bronze": "tz_share_20261016_094109_f7c1_bronze",
+    "silver": "tz_share_20261016_094109_f7c1_silver",
+    "gold": "tz_share_20261016_094109_f7c1_gold",
+    "meta": "tz_share_20261016_094109_f7c1_meta"
+  },
+  "created_databases": [
+    "tz_share_20261016_094109_f7c1_bronze",
+    "tz_share_20261016_094109_f7c1_silver",
+    "tz_share_20261016_094109_f7c1_gold",
+    "tz_share_20261016_094109_f7c1_meta"
+  ],
+  "tables": [
+    {
+      "layer": "bronze",
+      "table": "b_raw_dart_corp",
+      "rows": 119606,
+      "values": 1076454,
+      "canonical_digest": "db5f69a82e911475fae9c4f03f9ea8c4c3387ff841545210002a0bdcfaa97156",
+      "status": "PASS"
+    },
+    {
+      "layer": "bronze",
+      "table": "b_raw_dart_documents",
+      "rows": 753,
+      "values": 10542,
+      "canonical_digest": "de916fd662f2544db4123e799ee229b6b81f297d4e996f2064c2249e1ea2a85e",
+      "status": "PASS"
+    },
+    {
+      "layer": "bronze",
+      "table": "b_raw_dart_disclosures",
+      "rows": 902097,
+      "values": 11727261,
+      "canonical_digest": "143163649c81e37e967f6dae9e31273c7f654a8db93e4594e34692001d715c9c",
+      "status": "PASS"
+    },
+    {
+      "layer": "bronze",
+      "table": "b_raw_dart_financials",
+      "rows": 66729,
+      "values": 1734954,
+      "canonical_digest": "13116936a0c9d3f99e6ce744144aed68971512d2a3183d89bb37c52c6b8b7080",
+      "status": "PASS"
+    },
+    {
+      "layer": "bronze",
+      "table": "b_raw_toss_price",
+      "rows": 17440,
+      "values": 209280,
+      "canonical_digest": "04e4e501c6868901353ec68bcf1d2c0534d00440ccfdf53ba16a0fa7dd514c2c",
+      "status": "PASS"
+    },
+    {
+      "layer": "bronze",
+      "table": "b_raw_toss_investor",
+      "rows": 17440,
+      "values": 226720,
+      "canonical_digest": "7cb6d9b4755ee7bfdf92d568b801010fa7567d69f91faca5f49a23caace06a8c",
+      "status": "PASS"
+    },
+    {
+      "layer": "bronze",
+      "table": "b_raw_toss_index",
+      "rows": 1744,
+      "values": 19184,
+      "canonical_digest": "8b95e4d4ee7e85839d3893727f27a5ab649e5256fac15a09dfaf0c95ea61d7c3",
+      "status": "PASS"
+    },
+    {
+      "layer": "bronze",
+      "table": "b_raw_toss_stocks",
+      "rows": 20,
+      "values": 360,
+      "canonical_digest": "e31f065c87c76c014d790c34fcb8c6d1f30d16788a413932520b51708dbb3e56",
+      "status": "PASS"
+    },
+    {
+      "layer": "bronze",
+      "table": "b_a_company_master",
+      "rows": 20,
+      "values": 240,
+      "canonical_digest": "ec80acd1d32292ff88722bc0f4d4f7e52a4721f610032e07095452c6b51c11d1",
+      "status": "PASS"
+    },
+    {
+      "layer": "bronze",
+      "table": "b_a_disclosures",
+      "rows": 11748,
+      "values": 223212,
+      "canonical_digest": "9fdb39a304d16c54aee0e2906b97f5d0e2c5d7771d3f9270c5b08062ae359948",
+      "status": "PASS"
+    },
+    {
+      "layer": "bronze",
+      "table": "b_a_disclosure_documents",
+      "rows": 753,
+      "values": 12801,
+      "canonical_digest": "0768e99f0fb6b7c25f49173c517109babd85d982dd38b32d3350d507193c6e31",
+      "status": "PASS"
+    },
+    {
+      "layer": "bronze",
+      "table": "b_a_financial_items",
+      "rows": 66729,
+      "values": 2202057,
+      "canonical_digest": "8a525bc3aaf24085866e68dbebbb314665b12788bcd11a9edc7076e2eaf6eb41",
+      "status": "PASS"
+    },
+    {
+      "layer": "bronze",
+      "table": "b_a_financial_summary",
+      "rows": 320,
+      "values": 40320,
+      "canonical_digest": "3746adf83adce36aa55360a21763893ff35577908713916955a0c3aeba234704",
+      "status": "PASS"
+    },
+    {
+      "layer": "bronze",
+      "table": "b_a_metric_definitions",
+      "rows": 36,
+      "values": 396,
+      "canonical_digest": "4dbe3f07315800c9e6d4430d72d2e9ae0ce57411993c8206c1b88ec44fe86e1e",
+      "status": "PASS"
+    },
+    {
+      "layer": "bronze",
+      "table": "b_a_review_issues",
+      "rows": 1855,
+      "values": 18550,
+      "canonical_digest": "9c39f9d9f519e05371f70334ff1a2e4b7c556135f07e29b16bf550ec85429818",
+      "status": "PASS"
+    },
+    {
+      "layer": "bronze",
+      "table": "b_b_security_master",
+      "rows": 20,
+      "values": 540,
+      "canonical_digest": "27dd28d624a83a686b561e86e84ef331c3170d21c372790ff4c031955fcc7246",
+      "status": "PASS"
+    },
+    {
+      "layer": "bronze",
+      "table": "b_b_stock_daily_price",
+      "rows": 17440,
+      "values": 383680,
+      "canonical_digest": "44209858b55516179aeb216c789439f8ade80380f087b705ec98f638582737a9",
+      "status": "PASS"
+    },
+    {
+      "layer": "bronze",
+      "table": "b_b_market_index_daily",
+      "rows": 1744,
+      "values": 36624,
+      "canonical_digest": "e4231f63d3f7c1a10fb58447bfaa749112181605f08d7d21d23a88e12c1d71af",
+      "status": "PASS"
+    },
+    {
+      "layer": "bronze",
+      "table": "b_b_investor_trading_daily",
+      "rows": 191829,
+      "values": 4412067,
+      "canonical_digest": "558ed406bf8d395a8365f8901b9dadd01c321f843158228edcb1e1d8726e88f7",
+      "status": "PASS"
+    },
+    {
+      "layer": "bronze",
+      "table": "b_b_foreign_holding_daily",
+      "rows": 17439,
+      "values": 348780,
+      "canonical_digest": "7f1a9936e572c7f0aa20e7c419b212427405544bb2677ee8252886ded6802d78",
+      "status": "PASS"
+    },
+    {
+      "layer": "bronze",
+      "table": "b_b_cfd_daily",
+      "rows": 13719,
+      "values": 288099,
+      "canonical_digest": "5579befd738ed19a19eae609e0e3c5bf467326598d402e6760751bfb5020a582",
+      "status": "PASS"
+    },
+    {
+      "layer": "bronze",
+      "table": "b_b_price_investor_availability",
+      "rows": 17440,
+      "values": 331360,
+      "canonical_digest": "b63a9b73b3e674b4460140fcb32d14b9c7574bcdc722ba1ad78e249f7c23f78e",
+      "status": "PASS"
+    },
+    {
+      "layer": "bronze",
+      "table": "b_b_investor_source_daily",
+      "rows": 17439,
+      "values": 383658,
+      "canonical_digest": "c4512091f3120e964bab1f65f37a41efa085ac97f85c6eff61bbbb6da29d322d",
+      "status": "PASS"
+    },
+    {
+      "layer": "bronze",
+      "table": "b_b_data_quality_issues",
+      "rows": 0,
+      "values": 0,
+      "canonical_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "PASS"
+    },
+    {
+      "layer": "bronze",
+      "table": "b_b_bronze_unresolved_issues",
+      "rows": 1,
+      "values": 16,
+      "canonical_digest": "ad983ee22736b3a813065527907eb354fa0c65246da7140a462ddc8388e7032a",
+      "status": "PASS"
+    },
+    {
+      "layer": "bronze",
+      "table": "b_b_pending_recovery_review",
+      "rows": 1,
+      "values": 20,
+      "canonical_digest": "1addd64c58c7379c8a602450ad5c3ef85a85fef6586eb750879ed29aa02e7173",
+      "status": "PASS"
+    },
+    {
+      "layer": "bronze",
+      "table": "b_api_captured_response",
+      "rows": 270,
+      "values": 1890,
+      "canonical_digest": "5c7e7d2c43241c88c15291e6d9ea804ba3feae51facd0bbe7af7570c1ab98b96",
+      "status": "PASS"
+    },
+    {
+      "layer": "bronze",
+      "table": "b_corruption_manifest",
+      "rows": 107846,
+      "values": 1078460,
+      "canonical_digest": "647ae67dd4e4a4b51385d68c07cf46967d406ae991a112a66339a767aa6d0503",
+      "status": "PASS"
+    },
+    {
+      "layer": "silver",
+      "table": "s_cmn_cd",
+      "rows": 133,
+      "values": 798,
+      "canonical_digest": "562367770a2f983a8a33e3554f974ec47b93b7ae7901f3767984f02b40fbad91",
+      "status": "PASS"
+    },
+    {
+      "layer": "silver",
+      "table": "s_corp",
+      "rows": 20,
+      "values": 200,
+      "canonical_digest": "68dd2bf72f62e96261e63cb9ef57288b5ca983a2c3cd3d4ece8fe30a1c2376c2",
+      "status": "PASS"
+    },
+    {
+      "layer": "silver",
+      "table": "s_stock",
+      "rows": 20,
+      "values": 480,
+      "canonical_digest": "97332561db72bfdf8fffa7c3d0276ff51494650d7b59e4d77d7560c1c0061389",
+      "status": "PASS"
+    },
+    {
+      "layer": "silver",
+      "table": "s_dscl",
+      "rows": 11748,
+      "values": 164472,
+      "canonical_digest": "0af3a85cf45cf2f6da187f4fc990728b96c89c77780ddcec0d3221673027757f",
+      "status": "PASS"
+    },
+    {
+      "layer": "silver",
+      "table": "s_dscl_doc",
+      "rows": 753,
+      "values": 8283,
+      "canonical_digest": "db29829f7c644be2c9d630116b31ac5b1ffb374328ca8442ef3b071dd8b8d806",
+      "status": "PASS"
+    },
+    {
+      "layer": "silver",
+      "table": "s_fin_rpt",
+      "rows": 320,
+      "values": 7680,
+      "canonical_digest": "2cd8f302f9d5ce2c62fcfe3b46d1599bc5ed416fc75c882e489e8bdb06dba667",
+      "status": "PASS"
+    },
+    {
+      "layer": "silver",
+      "table": "s_fin_mtrc_def",
+      "rows": 36,
+      "values": 288,
+      "canonical_digest": "a80467cbad572ee94e7cde00fbd2a12ffc35882168b1f542a9a8cb2b84dbe2c1",
+      "status": "PASS"
+    },
+    {
+      "layer": "silver",
+      "table": "s_fin_mtrc",
+      "rows": 30080,
+      "values": 180480,
+      "canonical_digest": "637cee2b7d9374b6e6e6016586e9e5d413844a76687bc8ffa7b491e92459ad5b",
+      "status": "PASS"
+    },
+    {
+      "layer": "silver",
+      "table": "s_fin_item",
+      "rows": 66729,
+      "values": 1868412,
+      "canonical_digest": "7af3e513cf9878e971aa53271c9cb2213fdc5bae33814dbfe8f8a9b8f8767c82",
+      "status": "PASS"
+    },
+    {
+      "layer": "silver",
+      "table": "s_stock_daily_prc",
+      "rows": 17440,
+      "values": 331360,
+      "canonical_digest": "ca293f3927445bd875e23c07e7c770a9cbb96d1eaf396cb3cbfbc9963fd0b604",
+      "status": "PASS"
+    },
+    {
+      "layer": "silver",
+      "table": "s_idx_daily_prc",
+      "rows": 1744,
+      "values": 31392,
+      "canonical_digest": "ac40cbad1fb5d0e14d02b56a5fcab9d8f0e4d2a9542055a191e929e10e0dfab1",
+      "status": "PASS"
+    },
+    {
+      "layer": "silver",
+      "table": "s_invstr_trd_daily",
+      "rows": 191829,
+      "values": 3836580,
+      "canonical_digest": "e9d88356945abbcbd4dbf4657418aa0444d0cf2cb73e2aad2f27f9cbbf4e8db0",
+      "status": "PASS"
+    },
+    {
+      "layer": "silver",
+      "table": "s_frgn_hold_daily",
+      "rows": 17439,
+      "values": 296463,
+      "canonical_digest": "2faf4a528e6edcfa5f7704b436b1414d44851315a64328c88caf4f5ca26aaa92",
+      "status": "PASS"
+    },
+    {
+      "layer": "silver",
+      "table": "s_cfd_bal_daily",
+      "rows": 13719,
+      "values": 246942,
+      "canonical_digest": "2e2d63fbd8b195c4226c1417425d1bbc34cd3a0e92b5b7d8e1f54734fec87d73",
+      "status": "PASS"
+    },
+    {
+      "layer": "silver",
+      "table": "s_corp_stock_map",
+      "rows": 20,
+      "values": 220,
+      "canonical_digest": "16549700fba6a47f4bf2d6a76fc0be0b624cce5988b0240e442453c996441245",
+      "status": "PASS"
+    },
+    {
+      "layer": "silver",
+      "table": "s_conn_stts",
+      "rows": 17440,
+      "values": 226720,
+      "canonical_digest": "43fca0b0c182bc1be6fe5ebb08ab224ccec693d8e296f9c7d319cc1fc4f84a3a",
+      "status": "PASS"
+    },
+    {
+      "layer": "silver",
+      "table": "s_dq_issue",
+      "rows": 1967,
+      "values": 25571,
+      "canonical_digest": "d763d126bf1844472b2ad4ef0e42768ad95e29835c44f7c18182081720e63f46",
+      "status": "PASS"
+    },
+    {
+      "layer": "gold",
+      "table": "g_ai_stock_daily",
+      "rows": 17440,
+      "values": 592960,
+      "canonical_digest": "1d210175df343e3d8c480e4eb8ffeda05e8068822830fde45197b9f60ab4c7c4",
+      "status": "PASS"
+    },
+    {
+      "layer": "gold",
+      "table": "g_fin_rpt_mkt_smry",
+      "rows": 320,
+      "values": 6720,
+      "canonical_digest": "184ac92dec0b7cc608ba710efd028c28030397998e604b697642d8e6a7c71d13",
+      "status": "PASS"
+    },
+    {
+      "layer": "meta",
+      "table": "m_snapshot_asis_tobe_column_map",
+      "rows": 260,
+      "values": 2080,
+      "canonical_digest": "f00cf1a04ea94a6831fee6504a23acc4ca34d737d74d589b9b3b3e43f43020f6",
+      "status": "PASS"
+    },
+    {
+      "layer": "meta",
+      "table": "m_snapshot_std_code",
+      "rows": 133,
+      "values": 1330,
+      "canonical_digest": "89ed8196bc4ac4843d01a1d86d1b852977433645d88d4556dfe2e90d2a548e99",
+      "status": "PASS"
+    },
+    {
+      "layer": "meta",
+      "table": "m_snapshot_std_domain",
+      "rows": 26,
+      "values": 260,
+      "canonical_digest": "aa5402da826a4a12d95a4bc1b5afc317aa0ed2c0f2ea57ed847ccbdda1992691",
+      "status": "PASS"
+    },
+    {
+      "layer": "meta",
+      "table": "m_snapshot_std_naming_rule",
+      "rows": 12,
+      "values": 84,
+      "canonical_digest": "ed78db04246e452fc7ab48dad79a86455111c80e26473d64a5459b5c94c393a3",
+      "status": "PASS"
+    },
+    {
+      "layer": "meta",
+      "table": "m_snapshot_std_table",
+      "rows": 23,
+      "values": 322,
+      "canonical_digest": "db2c86bd5d427d303e8e2f6dbb991d225210a128816191358132dc3434cf6e8c",
+      "status": "PASS"
+    },
+    {
+      "layer": "meta",
+      "table": "m_snapshot_std_term",
+      "rows": 345,
+      "values": 5865,
+      "canonical_digest": "8939cc2c9514a1ea260021acaed97dad54255f9a28387a06fd350597f36fcdc4",
+      "status": "PASS"
+    },
+    {
+      "layer": "meta",
+      "table": "m_snapshot_std_word",
+      "rows": 168,
+      "values": 1512,
+      "canonical_digest": "28544040a33df0b81f563f4f20ad652fdf6ed3819fcc4b80810c0c0044f89364",
+      "status": "PASS"
+    },
+    {
+      "layer": "meta",
+      "table": "m_exec_log",
+      "rows": 21,
+      "values": 210,
+      "canonical_digest": "1245439a22ec36b5f96170fc70725e464b7a3498d5c8d5893b31cdfac783f70d",
+      "status": "PASS"
+    },
+    {
+      "layer": "meta",
+      "table": "m_std_word",
+      "rows": 168,
+      "values": 672,
+      "canonical_digest": "f3a785440a951f8323a466b4e17156d384d23ec11fc0e2ead32eaafced0a5eab",
+      "status": "PASS"
+    },
+    {
+      "layer": "meta",
+      "table": "m_std_dmn",
+      "rows": 26,
+      "values": 156,
+      "canonical_digest": "8deecca86f5761932853725d37371541bf6d02e2e10e5fece9a634754c41ab6f",
+      "status": "PASS"
+    },
+    {
+      "layer": "meta",
+      "table": "m_std_term",
+      "rows": 345,
+      "values": 3450,
+      "canonical_digest": "6bcaa5ce75a1c98bd17ec49867fae6470bdb109167dd8c0a5aefce008e0bbbcc",
+      "status": "PASS"
+    },
+    {
+      "layer": "gold",
+      "table": "g_fin_rpt_analysis",
+      "rows": 320,
+      "values": 17280,
+      "canonical_digest": "ddd2e43d19fc000fad078ce27779d0176aeb3eb2ebe2b5c13ea17b4632751cec",
+      "status": "PASS"
+    },
+    {
+      "layer": "gold",
+      "table": "g_stock_daily_analysis",
+      "rows": 17440,
+      "values": 1587040,
+      "canonical_digest": "1027a63c0f69bc0ea69524bb91385762238f38692f84c9db73dec8afa38dd709",
+      "status": "PASS"
+    }
+  ],
+  "checks": [
+    {
+      "name": "b_raw_dart_corp.row_count",
+      "expected": 119606,
+      "actual": 119606,
+      "status": "PASS"
+    },
+    {
+      "name": "b_raw_dart_documents.row_count",
+      "expected": 753,
+      "actual": 753,
+      "status": "PASS"
+    },
+    {
+      "name": "b_raw_dart_disclosures.row_count",
+      "expected": 902097,
+      "actual": 902097,
+      "status": "PASS"
+    },
+    {
+      "name": "b_raw_dart_financials.row_count",
+      "expected": 66729,
+      "actual": 66729,
+      "status": "PASS"
+    },
+    {
+      "name": "b_raw_toss_price.row_count",
+      "expected": 17440,
+      "actual": 17440,
+      "status": "PASS"
+    },
+    {
+      "name": "b_raw_toss_investor.row_count",
+      "expected": 17440,
+      "actual": 17440,
+      "status": "PASS"
+    },
+    {
+      "name": "b_raw_toss_index.row_count",
+      "expected": 1744,
+      "actual": 1744,
+      "status": "PASS"
+    },
+    {
+      "name": "b_raw_toss_stocks.row_count",
+      "expected": 20,
+      "actual": 20,
+      "status": "PASS"
+    },
+    {
+      "name": "b_a_company_master.row_count",
+      "expected": 20,
+      "actual": 20,
+      "status": "PASS"
+    },
+    {
+      "name": "b_a_disclosures.row_count",
+      "expected": 11748,
+      "actual": 11748,
+      "status": "PASS"
+    },
+    {
+      "name": "b_a_disclosure_documents.row_count",
+      "expected": 753,
+      "actual": 753,
+      "status": "PASS"
+    },
+    {
+      "name": "b_a_financial_items.row_count",
+      "expected": 66729,
+      "actual": 66729,
+      "status": "PASS"
+    },
+    {
+      "name": "b_a_financial_summary.row_count",
+      "expected": 320,
+      "actual": 320,
+      "status": "PASS"
+    },
+    {
+      "name": "b_a_metric_definitions.row_count",
+      "expected": 36,
+      "actual": 36,
+      "status": "PASS"
+    },
+    {
+      "name": "b_a_review_issues.row_count",
+      "expected": 1855,
+      "actual": 1855,
+      "status": "PASS"
+    },
+    {
+      "name": "b_b_security_master.row_count",
+      "expected": 20,
+      "actual": 20,
+      "status": "PASS"
+    },
+    {
+      "name": "b_b_stock_daily_price.row_count",
+      "expected": 17440,
+      "actual": 17440,
+      "status": "PASS"
+    },
+    {
+      "name": "b_b_market_index_daily.row_count",
+      "expected": 1744,
+      "actual": 1744,
+      "status": "PASS"
+    },
+    {
+      "name": "b_b_investor_trading_daily.row_count",
+      "expected": 191829,
+      "actual": 191829,
+      "status": "PASS"
+    },
+    {
+      "name": "b_b_foreign_holding_daily.row_count",
+      "expected": 17439,
+      "actual": 17439,
+      "status": "PASS"
+    },
+    {
+      "name": "b_b_cfd_daily.row_count",
+      "expected": 13719,
+      "actual": 13719,
+      "status": "PASS"
+    },
+    {
+      "name": "b_b_price_investor_availability.row_count",
+      "expected": 17440,
+      "actual": 17440,
+      "status": "PASS"
+    },
+    {
+      "name": "b_b_investor_source_daily.row_count",
+      "expected": 17439,
+      "actual": 17439,
+      "status": "PASS"
+    },
+    {
+      "name": "b_b_data_quality_issues.row_count",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "b_b_bronze_unresolved_issues.row_count",
+      "expected": 1,
+      "actual": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "b_b_pending_recovery_review.row_count",
+      "expected": 1,
+      "actual": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "b_api_captured_response.row_count",
+      "expected": 270,
+      "actual": 270,
+      "status": "PASS"
+    },
+    {
+      "name": "b_corruption_manifest.row_count",
+      "expected": 107846,
+      "actual": 107846,
+      "status": "PASS"
+    },
+    {
+      "name": "s_cmn_cd.row_count",
+      "expected": 133,
+      "actual": 133,
+      "status": "PASS"
+    },
+    {
+      "name": "s_corp.row_count",
+      "expected": 20,
+      "actual": 20,
+      "status": "PASS"
+    },
+    {
+      "name": "s_stock.row_count",
+      "expected": 20,
+      "actual": 20,
+      "status": "PASS"
+    },
+    {
+      "name": "s_dscl.row_count",
+      "expected": 11748,
+      "actual": 11748,
+      "status": "PASS"
+    },
+    {
+      "name": "s_dscl.fk.corp_cd",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "s_dscl_doc.row_count",
+      "expected": 753,
+      "actual": 753,
+      "status": "PASS"
+    },
+    {
+      "name": "s_dscl_doc.fk.rcept_no",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "s_dscl_doc.fk.corp_cd",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "s_fin_rpt.row_count",
+      "expected": 320,
+      "actual": 320,
+      "status": "PASS"
+    },
+    {
+      "name": "s_fin_rpt.fk.corp_cd",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "s_fin_mtrc_def.row_count",
+      "expected": 36,
+      "actual": 36,
+      "status": "PASS"
+    },
+    {
+      "name": "s_fin_mtrc.row_count",
+      "expected": 30080,
+      "actual": 30080,
+      "status": "PASS"
+    },
+    {
+      "name": "s_fin_mtrc.fk.fin_rpt_id",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "s_fin_mtrc.fk.mtrc_cd",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "s_fin_item.row_count",
+      "expected": 66729,
+      "actual": 66729,
+      "status": "PASS"
+    },
+    {
+      "name": "s_fin_item.fk.fin_rpt_id",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "s_fin_item.fk.corp_cd",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "s_stock_daily_prc.row_count",
+      "expected": 17440,
+      "actual": 17440,
+      "status": "PASS"
+    },
+    {
+      "name": "s_stock_daily_prc.fk.stock_cd",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "s_idx_daily_prc.row_count",
+      "expected": 1744,
+      "actual": 1744,
+      "status": "PASS"
+    },
+    {
+      "name": "s_invstr_trd_daily.row_count",
+      "expected": 191829,
+      "actual": 191829,
+      "status": "PASS"
+    },
+    {
+      "name": "s_invstr_trd_daily.fk.stock_cd",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "s_frgn_hold_daily.row_count",
+      "expected": 17439,
+      "actual": 17439,
+      "status": "PASS"
+    },
+    {
+      "name": "s_frgn_hold_daily.fk.stock_cd",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "s_cfd_bal_daily.row_count",
+      "expected": 13719,
+      "actual": 13719,
+      "status": "PASS"
+    },
+    {
+      "name": "s_cfd_bal_daily.fk.stock_cd",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "s_corp_stock_map.row_count",
+      "expected": 20,
+      "actual": 20,
+      "status": "PASS"
+    },
+    {
+      "name": "s_corp_stock_map.fk.corp_cd",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "s_corp_stock_map.fk.stock_cd",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "s_conn_stts.row_count",
+      "expected": 17440,
+      "actual": 17440,
+      "status": "PASS"
+    },
+    {
+      "name": "s_conn_stts.fk.stock_cd",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "s_dq_issue.row_count",
+      "expected": 1967,
+      "actual": 1967,
+      "status": "PASS"
+    },
+    {
+      "name": "g_ai_stock_daily.row_count",
+      "expected": 17440,
+      "actual": 17440,
+      "status": "PASS"
+    },
+    {
+      "name": "g_ai_stock_daily.fk.stock_cd",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "g_ai_stock_daily.fk.fin_rpt_id",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "g_fin_rpt_mkt_smry.row_count",
+      "expected": 320,
+      "actual": 320,
+      "status": "PASS"
+    },
+    {
+      "name": "g_fin_rpt_mkt_smry.fk.fin_rpt_id",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "m_snapshot_asis_tobe_column_map.row_count",
+      "expected": 260,
+      "actual": 260,
+      "status": "PASS"
+    },
+    {
+      "name": "m_snapshot_std_code.row_count",
+      "expected": 133,
+      "actual": 133,
+      "status": "PASS"
+    },
+    {
+      "name": "m_snapshot_std_domain.row_count",
+      "expected": 26,
+      "actual": 26,
+      "status": "PASS"
+    },
+    {
+      "name": "m_snapshot_std_naming_rule.row_count",
+      "expected": 12,
+      "actual": 12,
+      "status": "PASS"
+    },
+    {
+      "name": "m_snapshot_std_table.row_count",
+      "expected": 23,
+      "actual": 23,
+      "status": "PASS"
+    },
+    {
+      "name": "m_snapshot_std_term.row_count",
+      "expected": 345,
+      "actual": 345,
+      "status": "PASS"
+    },
+    {
+      "name": "m_snapshot_std_word.row_count",
+      "expected": 168,
+      "actual": 168,
+      "status": "PASS"
+    },
+    {
+      "name": "m_exec_log.row_count",
+      "expected": 21,
+      "actual": 21,
+      "status": "PASS"
+    },
+    {
+      "name": "m_std_word.row_count",
+      "expected": 168,
+      "actual": 168,
+      "status": "PASS"
+    },
+    {
+      "name": "m_std_dmn.row_count",
+      "expected": 26,
+      "actual": 26,
+      "status": "PASS"
+    },
+    {
+      "name": "m_std_term.row_count",
+      "expected": 345,
+      "actual": 345,
+      "status": "PASS"
+    },
+    {
+      "name": "pit_no_future_financials",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "investor_net_identity",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "unresolved_conversion_errors",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "investor_missing_kept",
+      "expected": 1,
+      "actual": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "daily_finance_matched",
+      "expected": 15833,
+      "actual": 15833,
+      "status": "PASS"
+    },
+    {
+      "name": "daily_finance_unmatched",
+      "expected": 1607,
+      "actual": 1607,
+      "status": "PASS"
+    },
+    {
+      "name": "gold_revenue_preservation",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "gold_operating_profit_preservation",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "gold_foreign_flow_preservation",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "s_stock_daily_prc.ohlc",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "s_idx_daily_prc.ohlc",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "g_fin_rpt_analysis.row_count",
+      "expected": 320,
+      "actual": 320,
+      "status": "PASS"
+    },
+    {
+      "name": "g_stock_daily_analysis.row_count",
+      "expected": 17440,
+      "actual": 17440,
+      "status": "PASS"
+    },
+    {
+      "name": "analysis.pit_no_same_or_future_day",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "analysis.financial_report_reference",
+      "expected": 0,
+      "actual": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "analysis.stock_count",
+      "expected": 20,
+      "actual": 20,
+      "status": "PASS"
+    }
+  ],
+  "source_databases_unchanged": true,
+  "password_saved": false,
+  "scope": "60 tables: historical 58-table MySQL snapshot + verified C analysis 2-table snapshot",
+  "server_version": "8.4.11",
+  "completed_at": "2026-10-16T09:43:25.173164+09:00"
+}
