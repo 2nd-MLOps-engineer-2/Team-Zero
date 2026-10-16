@@ -14,6 +14,8 @@
 
 [화면 둘러보기](docs/live-screen-review.md) · [인사이트](#6-인사이트--이-데이터로-무엇을-알게-됐나) · [활용 제안](#7-활용--이-데이터로-무엇을-할-수-있나) · [검증 결과](#8-검증--검사마다-확인한-범위가-다릅니다) · [로컬 실행](#11-로컬-실행) · [상세 문서(전체판)](docs/project-details.md) · [팀 개발 안내](START_HERE.md)
 
+**DB 내려받기:** [60테이블 복원 검증 스냅샷](https://github.com/2nd-MLOps-engineer-2/Team-Zero/releases/tag/db-snapshot-20261016) · [첨부 DB와 추가 수집 자료의 차이](#db-스냅샷-다운로드와-추가-자료)
+
 ## 프로젝트 개요
 
 **주제: 레거시 데이터의 AI Ready Data 변환 및 표준 사전 구축**
@@ -218,7 +220,7 @@ Gold로 이어지는 선은 분석 계보를 나타냅니다. 모든 선이 물�
 
 이것이 프로젝트의 출발점입니다. 기존 실적·주가 분석에 **외국인 보유 변화·가치평가·사업 전망**을 더해, 상승의 근거와 과열을 의심할 만한 괴리를 함께 살핍니다. 기업의 내재가치나 거품 여부를 확정했다는 뜻은 아닙니다.
 
-아래 ①~⑥은 기존 데이터 기준 분석입니다. ⑦의 추가 수집 자료는 수집 시점을 따로 표시합니다.
+아래 ①~⑥은 기존 데이터 기준 분석입니다. ⑦~⑧의 추가 수집 자료와 팀 예상은 수집 시점을 따로 표시합니다.
 - 기준일: 2026-06-30
 - 계산 버전: `c-gold-0.1.0`
 - 공시일 다음 거래일부터 연결(PIT)
@@ -303,7 +305,7 @@ SK하이닉스에서는 **주가 상승과 외국인 이탈이 동시에 관측*
 
 추가 자료에서는 **현재 실적 기준 PER와 전망을 반영한 추정 PER를 구분**해 볼 수 있습니다. 낮은 추정 PER는 이익 증가 전망이 반영된 결과일 수 있으므로, 회사가 제시한 사업·제품 전망과 실제 현금 창출을 함께 검토해야 합니다. 배수 하나만으로 거품·적정가를 판정하지 않습니다.
 
-먼저 로컬 DB를 확인한 결과 기존 10월 전망 DB에는 GitHub의 통합 Silver 전체가 없어, 별도 `tz_teamzero_research_20261016` 스키마에 **Silver 17테이블·371,437행과 기존 Gold 2테이블·17,760행**, 추가 자료와 메타데이터를 적재했습니다. 총 28테이블이며 기존 전망 DB는 전후 전체 값 해시가 일치했습니다.
+먼저 로컬 DB를 확인한 결과 기존 10월 전망 DB에는 GitHub의 통합 Silver 전체가 없어, 별도 `tz_teamzero_research_20261016` 스키마에 **Silver 17테이블·371,437행과 기존 Gold 2테이블·17,760행**, 추가 자료와 메타데이터를 적재했습니다. 초기 적재는 28테이블이며 ⑧의 예상 결과를 더한 현재 구성은 **29테이블·394,286행**입니다. 초기 적재 전후 기존 전망 DB의 전체 값 해시가 일치했습니다.
 
 **①~⑥은 6월 30일 기준이며, ⑦은 10월 16일 수집 스냅샷입니다.** 두 차트는 고정 CSV와 DB에 저장된 실제 수치로 작성했으며, 최신 평가 배수·전망을 6월의 정보로 소급하지 않습니다. 공식 자료 수치화는 삼성전자·SK하이닉스 사례 중심이고, 신규 현금흐름 원문 수치화는 삼성전자에 한정됩니다. 20종목 전체 사업부·전망 수치화를 완료했다는 뜻은 아닙니다. 새 DB를 웹 API에 연결하는 작업은 별도입니다.
 
@@ -423,6 +425,29 @@ python3 docs/insights/make_insights.py build/analysis \
 AI Ready의 뜻은 다음과 같습니다. 데이터의 의미·시점·단위·키·품질 상태·버전·검증이 정의되어 후속 모델링 입력으로 쓸 수 있는 상태입니다. 모델을 이미 학습했다는 뜻은 아닙니다. 예측 라벨과 train/validation/test 확정은 후속 범위입니다([AI 입력 제안](https://github.com/2nd-MLOps-engineer-2/Team-Zero/blob/5372c4dade48036e8e3265af66472058417d3cf2/analysis/ai-input.md)).
 
 ## 11. 로컬 실행
+
+### DB 스냅샷 다운로드와 추가 자료
+
+MySQL 데이터가 필요한 팀원은 [DB 스냅샷 릴리스](https://github.com/2nd-MLOps-engineer-2/Team-Zero/releases/tag/db-snapshot-20261016)에서 `TEAM_ZERO_DB_20261016_VERIFIED.zip`과 같은 이름의 `.sha256` 파일을 내려받습니다.
+
+| 자료 | 포함 범위 | 확인·사용 방법 |
+|---|---|---|
+| **릴리스 첨부 ZIP** | Bronze 28·Silver 17·Gold 4·Meta 11, 총 **60테이블·2,000,962행**. 일별 2022-12-01~2026-06-30, 재무 2022~2025 | ZIP 내부 안내에 따라 해시 확인 후 새 MySQL DB 4개에 복원 |
+| **추가 수집용 로컬 DB** | `tz_teamzero_research_20261016`의 **29테이블·394,286행**. 기존 정제 데이터와 10월 추가 수집 자료·20종목 예상 결과 | [수집·적재 안내](docs/research/additional-data.md), [팀 예상과 DB 조회](docs/research/assessment.md) |
+| **GitHub에 공개한 예상 자료** | 20종목의 입력 스냅샷·예상·수치 근거·규칙·민감도 | [전체 예상](docs/research/assessment.md) · [입력 JSON](docs/research/assessment-inputs.json) · [결과 JSON](docs/research/assessment-results.json) |
+
+**첨부 ZIP에는 추가 수집용 29테이블과 20종목 예상 결과가 포함되지 않습니다.** 두 구성은 기존 정제 데이터를 일부 공유하므로 테이블·행 수를 합쳐 고유 데이터 규모로 표시하지 않습니다. GitHub의 다운로드·`git pull`만으로 개인 MySQL이나 대시보드 데이터가 자동 갱신되지는 않습니다.
+
+릴리스 패키지는 **MySQL 8.4.11에서 60테이블 실제 복원, 34,213,807개 값 전량 대사, SQL 규칙 92개 PASS**를 확인했습니다. 검증 결과 JSON은 릴리스에도 별도 첨부되어 있습니다.
+
+1. ZIP과 `.sha256`의 해시를 비교합니다.
+2. ZIP을 완전히 풀고 `먼저읽기_복원안내.txt`를 읽습니다.
+3. 패키지의 `restore_db.py check`로 해시·gzip·DDL을 확인합니다.
+4. 안내에 따라 `restore_db.py restore`로 새 DB에 복원하고 결과 JSON의 생성 DB명과 PASS 여부를 확인합니다.
+
+기존 DB를 보존하는 복원 절차와 환경별 명령은 [고정 버전 복원 안내](https://github.com/2nd-MLOps-engineer-2/Team-Zero/blob/c2caaac9b34ecc85f7e9467ca584e5db5799c548/docs/releases/db-snapshot-20261016.md)에 있습니다. 이어지는 웹 실행은 기존 CSV API 기준입니다.
+
+### 웹 대시보드 실행
 
 macOS/Linux 기준이며 **Python 3.12(B), Python 3.13(C), Node 22.12 이상**이 필요합니다. 서비스 코드의 통합 기준은 `integration` 브랜치입니다. Windows는 [B 서비스 안내](https://github.com/2nd-MLOps-engineer-2/Team-Zero/blob/5372c4dade48036e8e3265af66472058417d3cf2/backend/service/README.md)를 참고하세요.
 
