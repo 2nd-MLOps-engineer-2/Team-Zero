@@ -63,7 +63,7 @@
 
 `tz_teamzero_research_20261016.research_overheating_assessment_v1`에 20종목의 예상·근거·비교값·규칙 버전을 저장했다. 기존 28테이블에 결과 테이블이 추가되어 현재 29테이블이다. 기존 전망 DB는 이 작업의 쓰기 대상이 아니다.
 
-[입력 스냅샷](assessment-inputs.json) · [20종목 예상과 상세 근거](assessment-results.json) · [실행 코드](../../scripts/research/assess.py)
+[20종목 예상과 근거(공개용, 제공사 원값 제외)](assessment-results.json) · [실행 코드](../../scripts/research/assess.py)
 
 ```sql
 SELECT stock_cd,label,version,result_json
@@ -74,4 +74,4 @@ FROM tz_teamzero_research_20261016.research_overheating_assessment_v1;
 python3 -m unittest discover -s scripts/research -v
 ```
 
-입력 스냅샷만으로 20종목 결과를 재계산해 저장 결과와 비교한다. 실제 수치의 출처·수집시각·원문 해시는 입력 JSON에서 확인할 수 있다. 예상 규칙의 세 분기, 경계값, 결측 입력 실패도 검사한다. 데이터가 빠지면 수집 오류로 처리하고 예상을 임의로 채우지 않는다.
+수집 원값(제공사 응답)은 공개 저장소에 두지 않는다. 로컬에서 수집한 경우 `scripts/research/assess.py`가 `build/research/`(Git 제외)에 입력·전체 결과를 쓰고, 테스트가 이를 읽어 공개 결과와 비교한다. 입력이 없으면 해당 재현 테스트는 건너뛴다. 출처 URL·수집시각·원문 해시는 로컬 DB `research_source`에 있다. 예상 규칙의 세 분기, 경계값, 결측 입력 실패도 검사한다. 데이터가 빠지면 수집 오류로 처리하고 예상을 임의로 채우지 않는다.

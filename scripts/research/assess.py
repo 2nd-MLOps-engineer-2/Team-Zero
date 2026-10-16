@@ -113,6 +113,19 @@ def evaluate(bundle):
     return rows
 
 
+# Provider level values omitted from the public results file (ratios, labels and reasons are kept).
+RAW_FIELDS = ('current_pbr', 'historical_pbr_median', 'provider_peer_pbr_median', 'operating_profit',
+              'prior_operating_profit', 'short_foreign_net_qty', 'short_price_return')
+
+
+def published(result):
+    rows = [{k: v for k, v in r.items() if k not in RAW_FIELDS} for r in result['rows']]
+    note = ('Provider level values (PBR levels, medians, operating profit amounts, short-window flow and '
+            'return) are omitted from the public file. Full results and inputs are regenerated locally '
+            'under build/research/ by scripts/research/assess.py.')
+    return {**{k: v for k, v in result.items() if k != 'rows'}, 'rows': rows, 'published_fields_note': note}
+
+
 def run(folder, schema, password):
     from load_mysql import qi
     data = json.loads((folder / 'collection.json').read_text())
@@ -132,12 +145,16 @@ def run(folder, schema, password):
     public['tables']['company_info'] = [r for r in public['tables']['company_info'] if r['category'] == 'provider_peer_group']
     public['tables']['market_daily'] = [r for r in public['tables']['market_daily'] if r['stock_cd'] in data['stock_names']]
     public['sources'] = [s for s in data['sources'] if s['kind'] in ['integration','finance/annual','finance/quarter']]
-    out = ROOT / 'docs/research'
-    (out / 'assessment-inputs.json').write_text(json.dumps(public, ensure_ascii=False, indent=2))
+    # Collected provider values stay local (build/ is git-ignored); only derived results are published.
+    local = ROOT / 'build/research'
+    local.mkdir(parents=True, exist_ok=True)
+    (local / 'assessment-inputs.json').write_text(json.dumps(public, ensure_ascii=False, indent=2))
     result = dict(version=VERSION, snapshot_date='2026-10-16', threshold='1.5',
                   counts=dict(Counter(r['label'] for r in rows)), rows=rows)
     serialized = json.loads(json.dumps(result, ensure_ascii=False, default=str))
-    (out / 'assessment-results.json').write_text(json.dumps(serialized, ensure_ascii=False, indent=2))
+    (local / 'assessment-results.json').write_text(json.dumps(serialized, ensure_ascii=False, indent=2))
+    (ROOT / 'docs/research/assessment-results.json').write_text(
+        json.dumps(published(serialized), ensure_ascii=False, indent=2))
     con = pymysql.connect(host='127.0.0.1', user='root', password=password, database=schema, charset='utf8mb4')
     table = 'research_overheating_assessment_v1'
     try:

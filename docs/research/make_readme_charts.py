@@ -84,7 +84,12 @@ def historical():
 
 
 def valuation():
-    data = json.loads((ROOT / 'docs/research/valuation-snapshot.json').read_text())['rows']
+    # Collected provider values are local only (build/ is git-ignored); keep the committed PNG otherwise.
+    path = ROOT / 'build/research/valuation-snapshot.json'
+    if not path.exists():
+        print('skip 04-valuation-evidence.png: local build/research/valuation-snapshot.json absent')
+        return
+    data = json.loads(path.read_text())['rows']
     assert len(data) == 6 and all(r['observed_at'].startswith('2026-10-16') for r in data)
     values = {(r['stock_cd'], r['metric']): float(r['value']) for r in data}
     fig, axes = plt.subplots(1, 2, figsize=(12, 5.3))

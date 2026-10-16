@@ -5,7 +5,7 @@ import unittest
 from collect import ROOT, number
 from enrich_official import require_checked
 from load_mysql import qi
-from assess import classify, evaluate, LABELS
+from assess import classify, evaluate, LABELS, RAW_FIELDS, published
 from decimal import Decimal
 import json
 from forecast_cleaned import calculate as calculate_cleaned, classify as classify_cleaned
@@ -49,13 +49,21 @@ class ResearchChecks(unittest.TestCase):
         with self.assertRaises(ValueError):
             classify(None, 2, .1, 3, 2, t)
 
-    def test_public_snapshot_reproduces_all_twenty_forecasts(self):
-        inputs = json.loads((ROOT / 'docs/research/assessment-inputs.json').read_text())
+    def test_published_results_have_no_provider_values(self):
         expected = json.loads((ROOT / 'docs/research/assessment-results.json').read_text())
-        actual = json.loads(json.dumps(evaluate(inputs), default=str))
+        self.assertEqual(len(expected['rows']), 20)
+        self.assertTrue(all(r['label'] in LABELS.values() for r in expected['rows']))
+        self.assertFalse(any(f in r for r in expected['rows'] for f in RAW_FIELDS))
+
+    def test_local_snapshot_reproduces_all_twenty_forecasts(self):
+        # Collected inputs are not in the public repository; they exist only after a local collection run.
+        path = ROOT / 'build/research/assessment-inputs.json'
+        if not path.exists():
+            self.skipTest('local collected inputs absent (build/research); run scripts/research/assess.py')
+        inputs = json.loads(path.read_text())
+        expected = json.loads((ROOT / 'docs/research/assessment-results.json').read_text())
+        actual = published(dict(rows=json.loads(json.dumps(evaluate(inputs), default=str))))['rows']
         self.assertEqual(actual, expected['rows'])
-        self.assertEqual(len(actual), 20)
-        self.assertTrue(all(r['label'] in LABELS.values() for r in actual))
 
     def test_cleaned_forecast_thresholds_and_invalid_flags(self):
         self.assertEqual(classify_cleaned([True]*4+[False]), '시장 대비 강세 예상')

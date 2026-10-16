@@ -96,7 +96,7 @@ python3 -m unittest discover -s scripts/research -v
 
 README의 주가·수급·보유율 차트는 고정 인계본 일별 Gold의 2026-06-01~06-30 값을 읽는다. 시작 종가를 100으로 맞추고, 시작일 이후 20거래일의 외국인 순매수와 실제 보유율을 표시한다. 코드에서 종목별 21개 관측과 기말 종가·누적 순매수 값을 검증한다.
 
-가치평가 차트는 실제 DB에서 추출한 [6개 관측값과 출처](valuation-snapshot.json)를 사용한다. 해당 JSON에는 지표·단위·참조기간·수집시각·원문 URL·해시가 있다. 그래프는 2026-10-16 스냅샷이며 실시간으로 갱신되지 않는다.
+가치평가 차트는 실제 DB에서 추출한 6개 관측값을 사용한다. 이 값 파일(`build/research/valuation-snapshot.json`)은 제공사 원값이라 공개 저장소에 두지 않으며, 없으면 차트 재생성을 건너뛰고 커밋된 PNG를 유지한다. 그래프는 2026-10-16 스냅샷이며 실시간으로 갱신되지 않는다.
 
 ```bash
 python3 docs/research/make_readme_charts.py
