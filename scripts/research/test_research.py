@@ -5,6 +5,9 @@ import unittest
 from collect import ROOT, number
 from enrich_official import require_checked
 from load_mysql import qi
+from assess import classify, evaluate, LABELS
+from decimal import Decimal
+import json
 
 
 class ResearchChecks(unittest.TestCase):
@@ -35,6 +38,23 @@ class ResearchChecks(unittest.TestCase):
     def test_changed_curated_source_rejected(self):
         with self.assertRaisesRegex(ValueError, 'Official source changed'):
             require_checked(b'changed source', '0' * 64)
+
+    def test_forecast_requires_valuation_and_earnings(self):
+        t = Decimal('1.5')
+        self.assertEqual(classify(2, 2, -.1, 1, 2, t), 'STRONG')
+        self.assertEqual(classify(2, 2, .1, 3, 2, t), 'WATCH')
+        self.assertEqual(classify(1, 1, -.1, -1, 2, t), 'NOT_MET')
+        self.assertEqual(classify(t, 1, .1, 3, 2, t), 'WATCH')
+        with self.assertRaises(ValueError):
+            classify(None, 2, .1, 3, 2, t)
+
+    def test_public_snapshot_reproduces_all_twenty_forecasts(self):
+        inputs = json.loads((ROOT / 'docs/research/assessment-inputs.json').read_text())
+        expected = json.loads((ROOT / 'docs/research/assessment-results.json').read_text())
+        actual = json.loads(json.dumps(evaluate(inputs), default=str))
+        self.assertEqual(actual, expected['rows'])
+        self.assertEqual(len(actual), 20)
+        self.assertTrue(all(r['label'] in LABELS.values() for r in actual))
 
 
 if __name__ == '__main__':
