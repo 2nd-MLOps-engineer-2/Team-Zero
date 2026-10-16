@@ -8,6 +8,7 @@ from load_mysql import qi
 from assess import classify, evaluate, LABELS
 from decimal import Decimal
 import json
+from forecast_cleaned import calculate as calculate_cleaned, classify as classify_cleaned
 
 
 class ResearchChecks(unittest.TestCase):
@@ -55,6 +56,20 @@ class ResearchChecks(unittest.TestCase):
         self.assertEqual(actual, expected['rows'])
         self.assertEqual(len(actual), 20)
         self.assertTrue(all(r['label'] in LABELS.values() for r in actual))
+
+    def test_cleaned_forecast_thresholds_and_invalid_flags(self):
+        self.assertEqual(classify_cleaned([True]*4+[False]), '시장 대비 강세 예상')
+        self.assertEqual(classify_cleaned([True]*3+[False]*2), '혼조 예상')
+        self.assertEqual(classify_cleaned([True]+[False]*4), '시장 대비 약세 예상')
+        with self.assertRaises(ValueError):
+            classify_cleaned([True,True,None,False,False])
+
+    def test_cleaned_forecast_reproduction_and_disclosure_boundary(self):
+        expected=json.loads((ROOT/'docs/research/cleaned-data-forecast.json').read_text())
+        actual=json.loads(json.dumps(calculate_cleaned(),default=str))
+        self.assertEqual(actual,expected['rows'])
+        self.assertEqual(len(actual),20)
+        self.assertTrue(all(r['disclosure_date'] < r['as_of'] for r in actual))
 
 
 if __name__ == '__main__':

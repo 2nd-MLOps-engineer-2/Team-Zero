@@ -116,7 +116,33 @@ def valuation():
     plt.close(fig)
 
 
+def cleaned_forecast():
+    from matplotlib.colors import ListedColormap
+    data = json.loads((ROOT / 'docs/research/cleaned-data-forecast.json').read_text())
+    rows = sorted(data['rows'], key=lambda r: (-r['positive_count'],r['stock_cd']))
+    assert len(rows) == 20 and all(len(r['positive_flags'])==5 for r in rows)
+    fig, ax = plt.subplots(figsize=(12,10))
+    fig.subplots_adjust(left=.23,right=.74,top=.80,bottom=.12)
+    fig.text(.055,.94,'정제한 데이터로 우리는 이렇게 예상한다',fontsize=21,weight='bold')
+    fig.text(.055,.89,'2026.06.30 기준 → 다음 20거래일 시장 대비 방향에 대한 팀의 가설',color='#526276',fontsize=12)
+    ax.imshow([[int(v) for v in r['positive_flags']] for r in rows],
+              cmap=ListedColormap(['#e1e7ee','#087f8c']),vmin=0,vmax=1,aspect='auto')
+    ax.set_xticks(range(5),['매출 성장','시장 대비 성과','영업CF 증가','외국인 순매수','기관 순매수'])
+    ax.xaxis.tick_top();ax.tick_params(axis='x',length=0,pad=12,labelsize=10)
+    ax.set_yticks(range(20),[r['stock_nm'] for r in rows]);ax.tick_params(axis='y',length=0,pad=12)
+    for i,row in enumerate(rows):
+        for k,flag in enumerate(row['positive_flags']):
+            ax.text(k,i,'+' if flag else '- / 0',ha='center',va='center',fontsize=11,
+                    color='white' if flag else '#526276')
+        ax.text(4.7,i,f"{row['positive_count']}/5  {row['forecast']}",va='center',fontsize=10,
+                color='#087f8c' if row['positive_count']>=4 else '#b86028' if row['positive_count']<=1 else '#526276')
+    fig.text(.055,.065,'강세 4종목 · 혼조 12종목 · 약세 4종목  |  추가 수집 자료 없이 정제 인계본만 사용',fontsize=11,weight='bold')
+    fig.text(.055,.025,'양수 신호 4~5개: 강세 / 2~3개: 혼조 / 0~1개: 약세. 탐색용 규칙이며 미래 적중률은 미검증.',fontsize=10,color='#526276')
+    fig.savefig(OUT/'05-cleaned-data-forecast.png',dpi=150)
+    plt.close(fig)
+
+
 if __name__ == '__main__':
     OUT.mkdir(parents=True, exist_ok=True)
-    style(); historical(); valuation()
-    print('Rendered 2 charts; historical endpoints and snapshot dates checked.')
+    style(); historical(); valuation(); cleaned_forecast()
+    print('Rendered 3 charts; historical endpoints, snapshot dates and twenty cleaned-data forecasts checked.')
