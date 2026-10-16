@@ -1,3 +1,5 @@
+**신규 Gold 최종 수용 검증:** C 계산→Delta→격리 MySQL 전량 대사·222 SQL 검사 및 실제 CSV API/브라우저 검증 PASS. [범위·증빙·남은 전체 프로젝트 작업](handoffs/Gold-final-acceptance.md). 아래 신규 C MySQL 대기 문구는 과거 이력이다. main 승격·전체 Bronze 재현 완료를 뜻하지 않는다.
+
 # 단계별 통합 진행표
 
 **main·integration 정렬 — 2026-10-16:** main에 직접 병합된 PR #16~#20을 integration에 합치고, README를 Bronze→Silver→Gold 결과 중심으로 정리했으며, 수집 원값 파일을 공개 트리에서 제거했다. 이후 PR #11로 main 승격. 팀 확인 항목(이력·DB 릴리스·이용 조건)은 [정렬 기록](handoffs/main-sync-20261016.md).
